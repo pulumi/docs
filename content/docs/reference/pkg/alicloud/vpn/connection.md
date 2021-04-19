@@ -26,33 +26,19 @@ VPN connection can be imported using the id, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ConnectionIkeConfigArgs]]]]</span> = None<span class="p">,</span>
-               <span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ConnectionIpsecConfigArgs]]]]</span> = None<span class="p">,</span>
-               <span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-               <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -87,32 +73,22 @@ VPN connection can be imported using the id, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -121,7 +97,7 @@ VPN connection can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -145,7 +121,7 @@ VPN connection can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -352,7 +328,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -361,7 +337,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-required"
@@ -370,7 +346,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-required"
@@ -379,7 +355,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -388,7 +364,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -397,7 +373,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Connection<wbr>Ike<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -406,7 +382,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Connection<wbr>Ipsec<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -415,7 +391,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
 {{% /md %}}</dd></dl>
@@ -428,7 +404,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -437,7 +413,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-required"
@@ -446,7 +422,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-required"
@@ -455,7 +431,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -464,7 +440,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -473,7 +449,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">Input[Connection<wbr>Ike<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -482,7 +458,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">Input[Connection<wbr>Ipsec<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -491,7 +467,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
 {{% /md %}}</dd></dl>
@@ -596,31 +572,20 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ConnectionIkeConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ConnectionIpsecConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -899,7 +864,7 @@ The following state arguments are supported:
 <a href="#state_customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +873,7 @@ The following state arguments are supported:
 <a href="#state_effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +882,7 @@ The following state arguments are supported:
 <a href="#state_ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Connection<wbr>Ike<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +891,7 @@ The following state arguments are supported:
 <a href="#state_ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Connection<wbr>Ipsec<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +927,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
 {{% /md %}}</dd></dl>
@@ -984,7 +949,7 @@ The following state arguments are supported:
 <a href="#state_customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +958,7 @@ The following state arguments are supported:
 <a href="#state_effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">Input[Connection<wbr>Ike<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +976,7 @@ The following state arguments are supported:
 <a href="#state_ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">Input[Connection<wbr>Ipsec<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +985,7 @@ The following state arguments are supported:
 <a href="#state_local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +994,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
 {{% /md %}}</dd></dl>
@@ -1250,7 +1215,7 @@ The following state arguments are supported:
 <a href="#ikeauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1224,7 @@ The following state arguments are supported:
 <a href="#ikeencalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1233,7 @@ The following state arguments are supported:
 <a href="#ikelifetime_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1242,7 @@ The following state arguments are supported:
 <a href="#ikelocalid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1251,7 @@ The following state arguments are supported:
 <a href="#ikemode_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1260,7 @@ The following state arguments are supported:
 <a href="#ikepfs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1269,7 @@ The following state arguments are supported:
 <a href="#ikeremoteid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1278,7 @@ The following state arguments are supported:
 <a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1287,7 @@ The following state arguments are supported:
 <a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd></dl>
@@ -1335,7 +1300,7 @@ The following state arguments are supported:
 <a href="#ike_auth_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>auth_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1309,7 @@ The following state arguments are supported:
 <a href="#ike_enc_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>enc_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1318,7 @@ The following state arguments are supported:
 <a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1327,7 @@ The following state arguments are supported:
 <a href="#ike_local_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>local_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1336,7 @@ The following state arguments are supported:
 <a href="#ike_mode_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1345,7 @@ The following state arguments are supported:
 <a href="#ike_pfs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>pfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1354,7 @@ The following state arguments are supported:
 <a href="#ike_remote_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>remote_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1363,7 @@ The following state arguments are supported:
 <a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1372,7 @@ The following state arguments are supported:
 <a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd></dl>
@@ -1502,7 +1467,7 @@ The following state arguments are supported:
 <a href="#ipsecauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1476,7 @@ The following state arguments are supported:
 <a href="#ipsecencalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1485,7 @@ The following state arguments are supported:
 <a href="#ipseclifetime_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1494,7 @@ The following state arguments are supported:
 <a href="#ipsecpfs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
 {{% /md %}}</dd></dl>
@@ -1542,7 +1507,7 @@ The following state arguments are supported:
 <a href="#ipsec_auth_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>auth_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1516,7 @@ The following state arguments are supported:
 <a href="#ipsec_enc_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>enc_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1525,7 @@ The following state arguments are supported:
 <a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1534,7 @@ The following state arguments are supported:
 <a href="#ipsec_pfs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>pfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
 {{% /md %}}</dd></dl>

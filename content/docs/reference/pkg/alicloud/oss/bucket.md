@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/oss"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -121,40 +121,19 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketLoggingArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketRefererConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketServerSideEncryptionRuleArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-           <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[BucketArgs]</a></span> = None<span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -189,32 +168,22 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -223,7 +192,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -247,7 +216,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -578,7 +547,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://www.alibabacloud.com/help/doc-detail/31898.htm) to apply. Can be "private", "public-read" and "public-read-write". Defaults to "private".
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +556,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +564,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -604,7 +573,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable. Defaults to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -613,7 +582,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -622,7 +591,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A Settings of [bucket logging](https://www.alibabacloud.com/help/doc-detail/31900.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -631,7 +600,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#loggingisenable_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Isenable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag of using logging enable container. Defaults true.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated from 1.37.0. When `logging` is set, the bucket logging will be able.{{% /md %}}</p></dd><dt class="property-optional"
@@ -640,7 +609,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +618,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd><dt class="property-optional"
@@ -658,7 +627,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#refererconfig_nodejs" style="color: inherit; text-decoration: inherit;">referer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketrefererconfig">pulumi.<wbr>Input<Bucket<wbr>Referer<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketrefererconfig">Bucket<wbr>Referer<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration of [referer](https://www.alibabacloud.com/help/doc-detail/31901.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -667,7 +636,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#serversideencryptionrule_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of server-side encryption (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -676,7 +645,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +654,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +663,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +672,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object(documented below).
 {{% /md %}}</dd></dl>
@@ -716,7 +685,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://www.alibabacloud.com/help/doc-detail/31898.htm) to apply. Can be "private", "public-read" and "public-read-write". Defaults to "private".
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +694,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +702,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">Input[Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +711,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable. Defaults to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -751,7 +720,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -760,7 +729,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Settings of [bucket logging](https://www.alibabacloud.com/help/doc-detail/31900.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -769,7 +738,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_isenable_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>isenable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag of using logging enable container. Defaults true.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated from 1.37.0. When `logging` is set, the bucket logging will be able.{{% /md %}}</p></dd><dt class="property-optional"
@@ -778,7 +747,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +756,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +765,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#referer_config_python" style="color: inherit; text-decoration: inherit;">referer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketrefererconfig">Input[Bucket<wbr>Referer<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketrefererconfig">Bucket<wbr>Referer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of [referer](https://www.alibabacloud.com/help/doc-detail/31901.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +774,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#server_side_encryption_rule_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of server-side encryption (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +783,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,7 +792,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +801,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +810,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object(documented below).
 {{% /md %}}</dd></dl>
@@ -1090,42 +1059,20 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">extranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">intranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketLoggingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketRefererConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketServerSideEncryptionRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">intranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1600,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://www.alibabacloud.com/help/doc-detail/31898.htm) to apply. Can be "private", "public-read" and "public-read-write". Defaults to "private".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_extranetendpoint_nodejs" style="color: inherit; text-decoration: inherit;">extranet<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extranet access endpoint of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable. Defaults to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_intranetendpoint_nodejs" style="color: inherit; text-decoration: inherit;">intranet<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intranet access endpoint of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A Settings of [bucket logging](https://www.alibabacloud.com/help/doc-detail/31900.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1689,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_loggingisenable_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Isenable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag of using logging enable container. Defaults true.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated from 1.37.0. When `logging` is set, the bucket logging will be able.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1698,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1725,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_refererconfig_nodejs" style="color: inherit; text-decoration: inherit;">referer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketrefererconfig">pulumi.<wbr>Input<Bucket<wbr>Referer<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketrefererconfig">Bucket<wbr>Referer<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration of [referer](https://www.alibabacloud.com/help/doc-detail/31901.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1681,7 @@ The following state arguments are supported:
 <a href="#state_serversideencryptionrule_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of server-side encryption (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1699,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1708,7 @@ The following state arguments are supported:
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1717,7 @@ The following state arguments are supported:
 <a href="#state_website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object(documented below).
 {{% /md %}}</dd></dl>
@@ -1783,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://www.alibabacloud.com/help/doc-detail/31898.htm) to apply. Can be "private", "public-read" and "public-read-write". Defaults to "private".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1747,7 @@ The following state arguments are supported:
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">Input[Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1809,7 +1756,7 @@ The following state arguments are supported:
 <a href="#state_creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1765,7 @@ The following state arguments are supported:
 <a href="#state_extranet_endpoint_python" style="color: inherit; text-decoration: inherit;">extranet_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extranet access endpoint of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1774,7 @@ The following state arguments are supported:
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable. Defaults to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1783,7 @@ The following state arguments are supported:
 <a href="#state_intranet_endpoint_python" style="color: inherit; text-decoration: inherit;">intranet_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The intranet access endpoint of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1792,7 @@ The following state arguments are supported:
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1810,7 @@ The following state arguments are supported:
 <a href="#state_logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Settings of [bucket logging](https://www.alibabacloud.com/help/doc-detail/31900.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1872,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_logging_isenable_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>isenable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag of using logging enable container. Defaults true.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated from 1.37.0. When `logging` is set, the bucket logging will be able.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1881,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Json format text of bucket policy [bucket policy management](https://www.alibabacloud.com/help/doc-detail/100680.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1846,7 @@ The following state arguments are supported:
 <a href="#state_redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [redundancy type](https://www.alibabacloud.com/help/doc-detail/90589.htm) to enable. Can be "LRS", and "ZRS". Defaults to "LRS".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1908,7 +1855,7 @@ The following state arguments are supported:
 <a href="#state_referer_config_python" style="color: inherit; text-decoration: inherit;">referer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketrefererconfig">Input[Bucket<wbr>Referer<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketrefererconfig">Bucket<wbr>Referer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of [referer](https://www.alibabacloud.com/help/doc-detail/31901.htm) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1917,7 +1864,7 @@ The following state arguments are supported:
 <a href="#state_server_side_encryption_rule_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of server-side encryption (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1926,7 +1873,7 @@ The following state arguments are supported:
 <a href="#state_storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1882,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1944,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +1900,7 @@ The following state arguments are supported:
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object(documented below).
 {{% /md %}}</dd></dl>
@@ -2075,7 +2022,7 @@ The following state arguments are supported:
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be GET, PUT, POST, DELETE or HEAD.
 {{% /md %}}</dd><dt class="property-required"
@@ -2084,7 +2031,7 @@ The following state arguments are supported:
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2040,7 @@ The following state arguments are supported:
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2049,7 @@ The following state arguments are supported:
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2058,7 @@ The following state arguments are supported:
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -2124,7 +2071,7 @@ The following state arguments are supported:
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be GET, PUT, POST, DELETE or HEAD.
 {{% /md %}}</dd><dt class="property-required"
@@ -2133,7 +2080,7 @@ The following state arguments are supported:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2089,7 @@ The following state arguments are supported:
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2098,7 @@ The following state arguments are supported:
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2107,7 @@ The following state arguments are supported:
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -2180,15 +2127,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="abortmultipartuploads_csharp">
-<a href="#abortmultipartuploads_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Multipart<wbr>Uploads</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleabortmultipartupload">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Abort<wbr>Multipart<wbr>Upload<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="expirations_csharp">
 <a href="#expirations_csharp" style="color: inherit; text-decoration: inherit;">Expirations</a>
 </span>
@@ -2205,24 +2143,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversionexpirations_csharp">
-<a href="#noncurrentversionexpirations_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expirations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversiontransitions_csharp">
-<a href="#noncurrentversiontransitions_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Transitions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
@@ -2256,15 +2176,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="abortmultipartuploads_go">
-<a href="#abortmultipartuploads_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Multipart<wbr>Uploads</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleabortmultipartupload">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Abort<wbr>Multipart<wbr>Upload</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="expirations_go">
 <a href="#expirations_go" style="color: inherit; text-decoration: inherit;">Expirations</a>
 </span>
@@ -2281,24 +2192,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversionexpirations_go">
-<a href="#noncurrentversionexpirations_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expirations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversiontransitions_go">
-<a href="#noncurrentversiontransitions_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Transitions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
@@ -2327,25 +2220,16 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="abortmultipartuploads_nodejs">
-<a href="#abortmultipartuploads_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Multipart<wbr>Uploads</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleabortmultipartupload">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Abort<wbr>Multipart<wbr>Upload<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirations_nodejs">
 <a href="#expirations_nodejs" style="color: inherit; text-decoration: inherit;">expirations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,34 +2238,16 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversionexpirations_nodejs">
-<a href="#noncurrentversionexpirations_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expirations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrentversiontransitions_nodejs">
-<a href="#noncurrentversiontransitions_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Transitions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2256,7 @@ The following state arguments are supported:
 <a href="#transitions_nodejs" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time when an object is converted to the IA or archive storage class during a valid life cycle. (documented below).
 {{% /md %}}</dd></dl>
@@ -2403,25 +2269,16 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="abort_multipart_uploads_python">
-<a href="#abort_multipart_uploads_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>multipart_<wbr>uploads</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleabortmultipartupload">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Abort<wbr>Multipart<wbr>Upload<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirations_python">
 <a href="#expirations_python" style="color: inherit; text-decoration: inherit;">expirations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,34 +2287,16 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. If omitted, OSS bucket will assign a unique name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrent_version_expirations_python">
-<a href="#noncurrent_version_expirations_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expirations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrent_version_transitions_python">
-<a href="#noncurrent_version_transitions_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>transitions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies. Default value is null, the rule applies to all objects in a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,99 +2305,9 @@ The following state arguments are supported:
 <a href="#transitions_python" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time when an object is converted to the IA or archive storage class during a valid life cycle. (documented below).
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketlifecycleruleabortmultipartupload">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Abort<wbr>Multipart<wbr>Upload</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_csharp">
-<a href="#createdbeforedate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_csharp">
-<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_go">
-<a href="#createdbeforedate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_go">
-<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_nodejs">
-<a href="#createdbeforedate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_nodejs">
-<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="created_before_date_python">
-<a href="#created_before_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_python">
-<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2566,15 +2315,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_csharp">
-<a href="#createdbeforedate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -2591,29 +2331,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expiredobjectdeletemarker_csharp">
-<a href="#expiredobjectdeletemarker_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_go">
-<a href="#createdbeforedate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -2630,35 +2353,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expiredobjectdeletemarker_go">
-<a href="#expiredobjectdeletemarker_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdbeforedate_nodejs">
-<a href="#createdbeforedate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect. The value obeys ISO8601 format like `2017-03-09`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2667,37 +2373,20 @@ The following state arguments are supported:
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expiredobjectdeletemarker_nodejs">
-<a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="created_before_date_python">
-<a href="#created_before_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect. The value obeys ISO8601 format like `2017-03-09`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,161 +2395,9 @@ The following state arguments are supported:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expired_object_delete_marker_python">
-<a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_csharp">
-<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_go">
-<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_nodejs">
-<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_python">
-<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketlifecyclerulenoncurrentversiontransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_csharp">
-<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageclass_csharp">
-<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_go">
-<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageclass_go">
-<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_nodejs">
-<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storageclass_nodejs">
-<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="days_python">
-<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storage_class_python">
-<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2875,7 +2412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
+    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
@@ -2884,7 +2421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
@@ -2906,7 +2443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
+    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_go">
@@ -2915,7 +2452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
@@ -2935,25 +2472,25 @@ The following state arguments are supported:
 <a href="#createdbeforedate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
+    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd></dl>
@@ -2966,25 +2503,25 @@ The following state arguments are supported:
 <a href="#created_before_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that parts created before 2002-10-11T00:00:00.000Z are deleted, and parts created after this time (including this time) are not deleted.
+    <dd>{{% md %}}Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
+    <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: `IA`, `Archive`.
 {{% /md %}}</dd></dl>
@@ -3043,7 +2580,7 @@ The following state arguments are supported:
 <a href="#targetbucket_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3052,7 +2589,7 @@ The following state arguments are supported:
 <a href="#targetprefix_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd></dl>
@@ -3065,7 +2602,7 @@ The following state arguments are supported:
 <a href="#target_bucket_python" style="color: inherit; text-decoration: inherit;">target_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3074,7 +2611,7 @@ The following state arguments are supported:
 <a href="#target_prefix_python" style="color: inherit; text-decoration: inherit;">target_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd></dl>
@@ -3133,7 +2670,7 @@ The following state arguments are supported:
 <a href="#referers_nodejs" style="color: inherit; text-decoration: inherit;">referers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of referer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3142,7 +2679,7 @@ The following state arguments are supported:
 <a href="#allowempty_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Empty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows referer to be empty. Defaults false.
 {{% /md %}}</dd></dl>
@@ -3155,7 +2692,7 @@ The following state arguments are supported:
 <a href="#referers_python" style="color: inherit; text-decoration: inherit;">referers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of referer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3164,7 +2701,7 @@ The following state arguments are supported:
 <a href="#allow_empty_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>empty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows referer to be empty. Defaults false.
 {{% /md %}}</dd></dl>
@@ -3223,7 +2760,7 @@ The following state arguments are supported:
 <a href="#ssealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3232,7 +2769,7 @@ The following state arguments are supported:
 <a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd></dl>
@@ -3245,7 +2782,7 @@ The following state arguments are supported:
 <a href="#sse_algorithm_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Possible values: `AES256` and `KMS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3254,7 +2791,7 @@ The following state arguments are supported:
 <a href="#kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd></dl>
@@ -3295,7 +2832,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the versioning state of a bucket. Valid values: `Enabled` and `Suspended`.
 {{% /md %}}</dd></dl>
@@ -3308,7 +2845,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the versioning state of a bucket. Valid values: `Enabled` and `Suspended`.
 {{% /md %}}</dd></dl>
@@ -3367,7 +2904,7 @@ The following state arguments are supported:
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud OSS returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3376,7 +2913,7 @@ The following state arguments are supported:
 <a href="#errordocument_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd></dl>
@@ -3389,7 +2926,7 @@ The following state arguments are supported:
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alicloud OSS returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3398,7 +2935,7 @@ The following state arguments are supported:
 <a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd></dl>

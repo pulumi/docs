@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -141,32 +141,17 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypes<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypes<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                       <span class="nx">eni_amount</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                       <span class="nx">gpu_amount</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                       <span class="nx">gpu_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">instance_type_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">is_outdated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                       <span class="nx">kubernetes_node_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
-                       <span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">eni_amount</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gpu_amount</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gpu_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_outdated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubernetes_node_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetInstanceTypes` in the Go SDK.
 
@@ -175,7 +160,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypes </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1379,7 +1364,7 @@ The following output properties are available:
 <a href="#burstableinstance_csharp" style="color: inherit; text-decoration: inherit;">Burstable<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The burstable instance attribution:
 {{% /md %}}</dd><dt class="property-required"
@@ -1415,7 +1400,7 @@ The following output properties are available:
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU attribution of an instance type:
 {{% /md %}}</dd><dt class="property-required"
@@ -1433,7 +1418,7 @@ The following output properties are available:
 <a href="#localstorage_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local storage of an instance type:
 {{% /md %}}</dd><dt class="property-required"
@@ -1658,7 +1643,7 @@ The following output properties are available:
 <a href="#burstable_instance_python" style="color: inherit; text-decoration: inherit;">burstable_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The burstable instance attribution:
 {{% /md %}}</dd><dt class="property-required"
@@ -1694,7 +1679,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU attribution of an instance type:
 {{% /md %}}</dd><dt class="property-required"
@@ -1712,7 +1697,7 @@ The following output properties are available:
 <a href="#local_storage_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local storage of an instance type:
 {{% /md %}}</dd><dt class="property-required"

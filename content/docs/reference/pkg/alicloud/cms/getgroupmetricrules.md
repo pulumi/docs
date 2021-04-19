@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cms"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -134,27 +134,17 @@ export const firstCmsGroupMetricRuleId = example.then(example => example.rules[0
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMetricRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupMetricRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMetricRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupMetricRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group_metric_rules(</span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">enable_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                           <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupMetricRulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group_metric_rules(</span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupMetricRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMetricRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupMetricRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMetricRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupMetricRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetGroupMetricRules` in the Go SDK.
 
@@ -163,7 +153,7 @@ export const firstCmsGroupMetricRuleId = example.then(example => example.rules[0
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroupMetricRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupMetricRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupMetricRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupMetricRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1051,7 +1041,7 @@ The following output properties are available:
 <a href="#escalations_csharp" style="color: inherit; text-decoration: inherit;">Escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalation">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalation">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Alarm level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1576,7 +1566,7 @@ The following output properties are available:
 <a href="#escalations_python" style="color: inherit; text-decoration: inherit;">escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalation">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation]</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalation">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1710,7 +1700,7 @@ The following output properties are available:
 <a href="#criticals_csharp" style="color: inherit; text-decoration: inherit;">Criticals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationcritical">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Critical&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationcritical">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Critical<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The critical level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1719,7 +1709,7 @@ The following output properties are available:
 <a href="#infos_csharp" style="color: inherit; text-decoration: inherit;">Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationinfo">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Info&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationinfo">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The info level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1728,7 +1718,7 @@ The following output properties are available:
 <a href="#warns_csharp" style="color: inherit; text-decoration: inherit;">Warns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationwarn">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Warn&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationwarn">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Warn<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The warn level.
 {{% /md %}}</dd></dl>
@@ -1803,7 +1793,7 @@ The following output properties are available:
 <a href="#criticals_python" style="color: inherit; text-decoration: inherit;">criticals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationcritical">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationcritical">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Critical<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The critical level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1812,7 +1802,7 @@ The following output properties are available:
 <a href="#infos_python" style="color: inherit; text-decoration: inherit;">infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationinfo">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Info]</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationinfo">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The info level.
 {{% /md %}}</dd><dt class="property-required"
@@ -1821,7 +1811,7 @@ The following output properties are available:
 <a href="#warns_python" style="color: inherit; text-decoration: inherit;">warns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmetricrulesruleescalationwarn">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Warn]</a></span>
+        <span class="property-type"><a href="#getgroupmetricrulesruleescalationwarn">Sequence[Get<wbr>Group<wbr>Metric<wbr>Rules<wbr>Rule<wbr>Escalation<wbr>Warn<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The warn level.
 {{% /md %}}</dd></dl>

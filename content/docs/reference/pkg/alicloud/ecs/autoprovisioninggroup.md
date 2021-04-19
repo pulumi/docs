@@ -109,11 +109,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
@@ -309,45 +309,19 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">auto_provisioning_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">auto_provisioning_group_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">default_target_capacity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AutoProvisioningGroupLaunchTemplateConfigArgs]]]]</span> = None<span class="p">,</span>
-                          <span class="nx">launch_template_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">launch_template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">max_spot_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                          <span class="nx">pay_as_you_go_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">pay_as_you_go_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">spot_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">spot_instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">spot_instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                          <span class="nx">spot_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                          <span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                          <span class="nx">total_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_provisioning_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_provisioning_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_target_capacity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoProvisioningGroupLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_spot_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">pay_as_you_go_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_as_you_go_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">spot_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">total_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoProvisioningGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoProvisioningGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoProvisioningGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoProvisioningGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoProvisioningGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoProvisioningGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -382,32 +356,22 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AutoProvisioningGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -416,7 +380,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -440,7 +404,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -863,7 +827,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -872,7 +836,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-required"
@@ -881,7 +845,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +854,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +863,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +872,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +881,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +890,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +899,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +908,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +917,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +926,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +935,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -980,7 +944,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +953,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -998,7 +962,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1007,7 +971,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1016,7 +980,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +989,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +998,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
 {{% /md %}}</dd></dl>
@@ -1047,7 +1011,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Input[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Sequence[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1056,7 +1020,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1065,7 +1029,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1038,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1047,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1056,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1065,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1074,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1083,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1092,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1101,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1110,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1119,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1128,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1137,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1146,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1155,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1164,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1173,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1182,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
 {{% /md %}}</dd></dl>
@@ -1287,42 +1251,20 @@ Get an existing AutoProvisioningGroup resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AutoProvisioningGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AutoProvisioningGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AutoProvisioningGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AutoProvisioningGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_provisioning_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_provisioning_group_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_target_capacity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AutoProvisioningGroupLaunchTemplateConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_template_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">max_spot_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">pay_as_you_go_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pay_as_you_go_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spot_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spot_instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spot_instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">spot_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">total_target_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AutoProvisioningGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_provisioning_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_provisioning_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_target_capacity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoProvisioningGroupLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_spot_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">pay_as_you_go_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_as_you_go_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">spot_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">total_target_capacity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AutoProvisioningGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoProvisioningGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AutoProvisioningGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoProvisioningGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoProvisioningGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AutoProvisioningGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoProvisioningGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AutoProvisioningGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AutoProvisioningGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AutoProvisioningGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AutoProvisioningGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1799,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1862,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1880,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1889,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1898,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1907,7 +1849,7 @@ The following state arguments are supported:
 <a href="#state_spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1858,7 @@ The following state arguments are supported:
 <a href="#state_spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1876,7 @@ The following state arguments are supported:
 <a href="#state_terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1885,7 @@ The following state arguments are supported:
 <a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +1894,7 @@ The following state arguments are supported:
 <a href="#state_totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +1903,7 @@ The following state arguments are supported:
 <a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
 {{% /md %}}</dd></dl>
@@ -1983,7 +1925,7 @@ The following state arguments are supported:
 <a href="#state_auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +1952,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +1961,7 @@ The following state arguments are supported:
 <a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +1970,7 @@ The following state arguments are supported:
 <a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Input[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Sequence[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +1979,7 @@ The following state arguments are supported:
 <a href="#state_launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +1988,7 @@ The following state arguments are supported:
 <a href="#state_launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2055,7 +1997,7 @@ The following state arguments are supported:
 <a href="#state_max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2082,7 +2024,7 @@ The following state arguments are supported:
 <a href="#state_spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2051,7 @@ The following state arguments are supported:
 <a href="#state_spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2060,7 @@ The following state arguments are supported:
 <a href="#state_terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2069,7 @@ The following state arguments are supported:
 <a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2087,7 @@ The following state arguments are supported:
 <a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2096,7 @@ The following state arguments are supported:
 <a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
 {{% /md %}}</dd></dl>
@@ -2266,7 +2208,7 @@ The following state arguments are supported:
 <a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2274,7 +2216,7 @@ The following state arguments are supported:
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2282,7 +2224,7 @@ The following state arguments are supported:
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2232,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2240,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2310,7 +2252,7 @@ The following state arguments are supported:
 <a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2318,7 +2260,7 @@ The following state arguments are supported:
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2326,7 +2268,7 @@ The following state arguments are supported:
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2276,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2284,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

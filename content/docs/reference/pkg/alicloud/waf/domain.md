@@ -85,8 +85,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/waf"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -201,42 +201,19 @@ const domain = new alicloud.waf.Domain("domain", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-           <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainLogHeaderArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-           <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,32 +248,22 @@ const domain = new alicloud.waf.Domain("domain", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -305,7 +272,7 @@ const domain = new alicloud.waf.Domain("domain", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -329,7 +296,7 @@ const domain = new alicloud.waf.Domain("domain", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -704,7 +671,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -713,7 +680,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#isaccessproduct_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Access<wbr>Product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +689,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +698,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#connectiontime_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -740,7 +707,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -749,7 +716,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd><dt class="property-optional"
@@ -758,7 +725,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#http2ports_nodejs" style="color: inherit; text-decoration: inherit;">http2Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP 2.0 ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +734,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +743,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#httptouserip_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>To<wbr>User<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
@@ -786,7 +753,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#httpsports_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +762,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +771,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +780,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#logheaders_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Log<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domainlogheader">Domain<wbr>Log<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -824,7 +791,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#readtime_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The read timeout of a WAF exclusive cluster. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +800,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +809,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +818,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 {{% /md %}}</dd></dl>
@@ -864,7 +831,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -873,7 +840,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#is_access_product_python" style="color: inherit; text-decoration: inherit;">is_<wbr>access_<wbr>product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +849,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +858,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#connection_time_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -900,7 +867,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -909,7 +876,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +885,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#http2_ports_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP 2.0 ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +894,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +903,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#http_to_user_ip_python" style="color: inherit; text-decoration: inherit;">http_<wbr>to_<wbr>user_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
@@ -946,7 +913,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#https_ports_python" style="color: inherit; text-decoration: inherit;">https_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +922,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +931,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +940,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">Input[Domain<wbr>Log<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domainlogheader">Sequence[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -984,7 +951,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#read_time_python" style="color: inherit; text-decoration: inherit;">read_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The read timeout of a WAF exclusive cluster. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +960,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +969,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +978,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#write_time_python" style="color: inherit; text-decoration: inherit;">write_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 {{% /md %}}</dd></dl>
@@ -1116,40 +1083,20 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainLogHeaderArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1596,7 +1543,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1552,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CNAME record assigned by the WAF instance to the specified domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1561,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_connectiontime_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1623,7 +1570,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1632,7 +1579,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1588,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_http2ports_nodejs" style="color: inherit; text-decoration: inherit;">http2Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP 2.0 ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1597,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1606,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_httptouserip_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>To<wbr>User<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
@@ -1669,7 +1616,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_httpsports_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1625,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1634,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1643,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_isaccessproduct_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Access<wbr>Product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1652,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1661,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_logheaders_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Log<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domainlogheader">Domain<wbr>Log<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -1725,7 +1672,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_readtime_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The read timeout of a WAF exclusive cluster. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1681,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1690,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1699,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 {{% /md %}}</dd></dl>
@@ -1765,7 +1712,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1721,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CNAME record assigned by the WAF instance to the specified domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1730,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_connection_time_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1792,7 +1739,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1801,7 +1748,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1757,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_http2_ports_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP 2.0 ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1766,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1775,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_http_to_user_ip_python" style="color: inherit; text-decoration: inherit;">http_<wbr>to_<wbr>user_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
@@ -1838,7 +1785,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_https_ports_python" style="color: inherit; text-decoration: inherit;">https_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1794,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1803,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1812,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_is_access_product_python" style="color: inherit; text-decoration: inherit;">is_<wbr>access_<wbr>product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1821,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1830,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">Input[Domain<wbr>Log<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domainlogheader">Sequence[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -1894,7 +1841,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_read_time_python" style="color: inherit; text-decoration: inherit;">read_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The read timeout of a WAF exclusive cluster. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1903,7 +1850,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1859,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1868,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_write_time_python" style="color: inherit; text-decoration: inherit;">write_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 {{% /md %}}</dd></dl>
@@ -1985,7 +1932,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +1940,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2005,7 +1952,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +1960,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

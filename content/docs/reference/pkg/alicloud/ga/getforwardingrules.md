@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ga"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ga"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -137,22 +137,17 @@ export const firstGaForwardingRuleId = example.then(example => example.forwardin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getForwardingRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetForwardingRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getForwardingRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetForwardingRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_forwarding_rules(</span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetForwardingRulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_forwarding_rules(</span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetForwardingRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetForwardingRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetForwardingRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetForwardingRules` in the Go SDK.
 
@@ -161,7 +156,7 @@ export const firstGaForwardingRuleId = example.then(example => example.forwardin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetForwardingRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetForwardingRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetForwardingRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetForwardingRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -685,7 +680,7 @@ The following output properties are available:
 <a href="#ruleactions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol used by the GA instance.
 `order` - Forwarding priority.
@@ -699,7 +694,7 @@ The following output properties are available:
 <a href="#ruleconditions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingrulerulecondition">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingrulerulecondition">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 `rule_condition_type` - Forwarding condition type.
@@ -940,7 +935,7 @@ The following output properties are available:
 <a href="#rule_actions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleaction">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleaction">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol used by the GA instance.
 `order` - Forwarding priority.
@@ -954,7 +949,7 @@ The following output properties are available:
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingrulerulecondition">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingrulerulecondition">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 `rule_condition_type` - Forwarding condition type.
@@ -976,7 +971,7 @@ The following output properties are available:
 <a href="#forwardgroupconfigs_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1060,7 +1055,7 @@ The following output properties are available:
 <a href="#forward_group_configs_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>group_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1092,7 +1087,7 @@ The following output properties are available:
 <a href="#servergrouptuples_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Group<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfigservergrouptuple">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfigservergrouptuple">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1128,7 +1123,7 @@ The following output properties are available:
 <a href="#server_group_tuples_python" style="color: inherit; text-decoration: inherit;">server_<wbr>group_<wbr>tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfigservergrouptuple">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleactionforwardgroupconfigservergrouptuple">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,7 +1191,7 @@ The following output properties are available:
 <a href="#hostconfigs_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionhostconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionhostconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1204,7 +1199,7 @@ The following output properties are available:
 <a href="#pathconfigs_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionpathconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionpathconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1280,7 +1275,7 @@ The following output properties are available:
 <a href="#host_configs_python" style="color: inherit; text-decoration: inherit;">host_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionhostconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionhostconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1288,7 +1283,7 @@ The following output properties are available:
 <a href="#path_configs_python" style="color: inherit; text-decoration: inherit;">path_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionpathconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getforwardingrulesforwardingruleruleconditionpathconfig">Sequence[Get<wbr>Forwarding<wbr>Rules<wbr>Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

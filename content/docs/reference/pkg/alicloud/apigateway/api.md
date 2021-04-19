@@ -26,39 +26,19 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiConstantParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiFcServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiHttpServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiHttpVpcServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiMockServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiRequestConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiRequestParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiSystemParameterArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -93,32 +73,22 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ApiArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -127,7 +97,7 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -151,7 +121,7 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -466,7 +436,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd><dt class="property-required"
@@ -475,7 +445,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -484,7 +454,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd><dt class="property-required"
@@ -493,7 +463,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestconfig_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">pulumi.<wbr>Input<Api<wbr>Request<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-required"
@@ -502,7 +472,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -511,7 +481,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constantparameters_nodejs" style="color: inherit; text-decoration: inherit;">constant<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Constant<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -520,7 +490,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#fcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">fc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">pulumi.<wbr>Input<Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -529,7 +499,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#httpserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">pulumi.<wbr>Input<Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -538,7 +508,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#httpvpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Vpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">pulumi.<wbr>Input<Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -547,7 +517,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mockserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">mock<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">pulumi.<wbr>Input<Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -556,7 +526,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -565,7 +535,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Request<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -574,7 +544,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stagenames_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd><dt class="property-optional"
@@ -583,7 +553,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#systemparameters_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>System<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>
@@ -596,7 +566,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd><dt class="property-required"
@@ -605,7 +575,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -614,7 +584,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd><dt class="property-required"
@@ -623,7 +593,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#request_config_python" style="color: inherit; text-decoration: inherit;">request_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Input[Api<wbr>Request<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-required"
@@ -632,7 +602,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -641,7 +611,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constant_parameters_python" style="color: inherit; text-decoration: inherit;">constant_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Input[Api<wbr>Constant<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Sequence[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -650,7 +620,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#fc_service_config_python" style="color: inherit; text-decoration: inherit;">fc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Input[Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -659,7 +629,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#http_service_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Input[Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,7 +638,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#http_vpc_service_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>vpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Input[Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +647,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mock_service_config_python" style="color: inherit; text-decoration: inherit;">mock_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Input[Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +656,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -695,7 +665,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Input[Api<wbr>Request<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Sequence[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +674,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stage_names_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +683,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#system_parameters_python" style="color: inherit; text-decoration: inherit;">system_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Input[Api<wbr>System<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Sequence[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>
@@ -818,37 +788,20 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Api</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Api</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiConstantParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiFcServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiHttpServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiHttpVpcServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiMockServiceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiRequestConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiRequestParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiSystemParameterArgs]]]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApiState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Api</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApiState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Api</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApiState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1235,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1206,7 @@ The following state arguments are supported:
 <a href="#state_constantparameters_nodejs" style="color: inherit; text-decoration: inherit;">constant<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Constant<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_fcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">fc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">pulumi.<wbr>Input<Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1233,7 @@ The following state arguments are supported:
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1242,7 @@ The following state arguments are supported:
 <a href="#state_httpserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">pulumi.<wbr>Input<Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1251,7 @@ The following state arguments are supported:
 <a href="#state_httpvpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Vpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">pulumi.<wbr>Input<Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1260,7 @@ The following state arguments are supported:
 <a href="#state_mockserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">mock<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">pulumi.<wbr>Input<Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1269,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1278,7 @@ The following state arguments are supported:
 <a href="#state_requestconfig_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">pulumi.<wbr>Input<Api<wbr>Request<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1287,7 @@ The following state arguments are supported:
 <a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Request<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1296,7 @@ The following state arguments are supported:
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1305,7 @@ The following state arguments are supported:
 <a href="#state_stagenames_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_systemparameters_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>System<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>
@@ -1374,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1336,7 @@ The following state arguments are supported:
 <a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_constant_parameters_python" style="color: inherit; text-decoration: inherit;">constant_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Input[Api<wbr>Constant<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Sequence[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_fc_service_config_python" style="color: inherit; text-decoration: inherit;">fc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Input[Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_http_service_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Input[Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1390,7 @@ The following state arguments are supported:
 <a href="#state_http_vpc_service_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>vpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Input[Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1399,7 @@ The following state arguments are supported:
 <a href="#state_mock_service_config_python" style="color: inherit; text-decoration: inherit;">mock_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Input[Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1408,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_request_config_python" style="color: inherit; text-decoration: inherit;">request_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Input[Api<wbr>Request<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1426,7 @@ The following state arguments are supported:
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Input[Api<wbr>Request<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Sequence[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1435,7 @@ The following state arguments are supported:
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1444,7 @@ The following state arguments are supported:
 <a href="#state_stage_names_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1453,7 @@ The following state arguments are supported:
 <a href="#state_system_parameters_python" style="color: inherit; text-decoration: inherit;">system_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Input[Api<wbr>System<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Sequence[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>
@@ -1604,7 +1557,7 @@ The following state arguments are supported:
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -1613,7 +1566,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -1622,7 +1575,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Constant parameter value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1584,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd></dl>
@@ -1644,7 +1597,7 @@ The following state arguments are supported:
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -1653,7 +1606,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -1662,7 +1615,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Constant parameter value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1624,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd></dl>
@@ -1784,7 +1737,7 @@ The following state arguments are supported:
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name of function compute service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1793,7 +1746,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the function compute service belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -1802,7 +1755,7 @@ The following state arguments are supported:
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of function compute service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1811,7 +1764,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1773,7 @@ The following state arguments are supported:
 <a href="#arnrole_nodejs" style="color: inherit; text-decoration: inherit;">arn<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd></dl>
@@ -1833,7 +1786,7 @@ The following state arguments are supported:
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function name of function compute service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1842,7 +1795,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region that the function compute service belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -1851,7 +1804,7 @@ The following state arguments are supported:
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name of function compute service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1860,7 +1813,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1822,7 @@ The following state arguments are supported:
 <a href="#arn_role_python" style="color: inherit; text-decoration: inherit;">arn_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd></dl>
@@ -1980,7 +1933,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1989,7 +1942,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -1998,7 +1951,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2007,7 +1960,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +1969,7 @@ The following state arguments are supported:
 <a href="#aonename_nodejs" style="color: inherit; text-decoration: inherit;">aone<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2028,7 +1981,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2037,7 +1990,7 @@ The following state arguments are supported:
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2046,7 +1999,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2055,7 +2008,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2017,7 @@ The following state arguments are supported:
 <a href="#aone_name_python" style="color: inherit; text-decoration: inherit;">aone_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2174,7 +2127,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2183,7 +2136,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2192,7 +2145,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2201,7 +2154,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2163,7 @@ The following state arguments are supported:
 <a href="#aonename_nodejs" style="color: inherit; text-decoration: inherit;">aone<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2222,7 +2175,7 @@ The following state arguments are supported:
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2231,7 +2184,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2240,7 +2193,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2249,7 +2202,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2211,7 @@ The following state arguments are supported:
 <a href="#aone_name_python" style="color: inherit; text-decoration: inherit;">aone_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2314,7 +2267,7 @@ The following state arguments are supported:
 <a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2276,7 @@ The following state arguments are supported:
 <a href="#aonename_nodejs" style="color: inherit; text-decoration: inherit;">aone<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2288,7 @@ The following state arguments are supported:
 <a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2297,7 @@ The following state arguments are supported:
 <a href="#aone_name_python" style="color: inherit; text-decoration: inherit;">aone_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2456,7 +2409,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2465,7 +2418,7 @@ The following state arguments are supported:
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the parameters between request parameters and service parameters, which support the values of 'MAPPING' and 'PASSTHROUGH'
 {{% /md %}}</dd><dt class="property-required"
@@ -2474,7 +2427,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2483,7 +2436,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2492,7 +2445,7 @@ The following state arguments are supported:
 <a href="#bodyformat_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
 {{% /md %}}</dd></dl>
@@ -2505,7 +2458,7 @@ The following state arguments are supported:
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The http method of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2514,7 +2467,7 @@ The following state arguments are supported:
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode of the parameters between request parameters and service parameters, which support the values of 'MAPPING' and 'PASSTHROUGH'
 {{% /md %}}</dd><dt class="property-required"
@@ -2523,7 +2476,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of backend service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2532,7 +2485,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2494,7 @@ The following state arguments are supported:
 <a href="#body_format_python" style="color: inherit; text-decoration: inherit;">body_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
 {{% /md %}}</dd></dl>
@@ -2708,7 +2661,7 @@ The following state arguments are supported:
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -2717,7 +2670,7 @@ The following state arguments are supported:
 <a href="#inservice_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter location; values: BODY, HEAD, QUERY, and PATH.
 {{% /md %}}</dd><dt class="property-required"
@@ -2726,7 +2679,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2735,7 +2688,7 @@ The following state arguments are supported:
 <a href="#nameservice_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2744,7 +2697,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter required or not; values: REQUIRED and OPTIONAL.
 {{% /md %}}</dd><dt class="property-required"
@@ -2753,7 +2706,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
 {{% /md %}}</dd><dt class="property-optional"
@@ -2762,7 +2715,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2771,7 +2724,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd></dl>
@@ -2784,7 +2737,7 @@ The following state arguments are supported:
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -2793,7 +2746,7 @@ The following state arguments are supported:
 <a href="#in_service_python" style="color: inherit; text-decoration: inherit;">in_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter location; values: BODY, HEAD, QUERY, and PATH.
 {{% /md %}}</dd><dt class="property-required"
@@ -2802,7 +2755,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2811,7 +2764,7 @@ The following state arguments are supported:
 <a href="#name_service_python" style="color: inherit; text-decoration: inherit;">name_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2820,7 +2773,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter required or not; values: REQUIRED and OPTIONAL.
 {{% /md %}}</dd><dt class="property-required"
@@ -2829,7 +2782,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2791,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2847,7 +2800,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd></dl>
@@ -2924,7 +2877,7 @@ The following state arguments are supported:
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -2933,7 +2886,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2942,7 +2895,7 @@ The following state arguments are supported:
 <a href="#nameservice_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter name.
 {{% /md %}}</dd></dl>
@@ -2955,7 +2908,7 @@ The following state arguments are supported:
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter location; values: 'HEAD' and 'QUERY'.
 {{% /md %}}</dd><dt class="property-required"
@@ -2964,7 +2917,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -2973,7 +2926,7 @@ The following state arguments are supported:
 <a href="#name_service_python" style="color: inherit; text-decoration: inherit;">name_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backend service's parameter name.
 {{% /md %}}</dd></dl>
