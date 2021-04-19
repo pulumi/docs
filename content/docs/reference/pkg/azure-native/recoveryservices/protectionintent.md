@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionIntent
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup ProtectionIntent.
-API Version: 2021-02-01.
+API Version: 2017-07-01.
 
 {{% examples %}}
 
@@ -125,33 +125,19 @@ const protectionIntent = new azure_native.recoveryservices.ProtectionIntent("pro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">intent_object_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureRecoveryServiceVaultProtectionIntentArgs, AzureResourceProtectionIntentArgs, AzureWorkloadAutoProtectionIntentArgs, AzureWorkloadSQLAutoProtectionIntentArgs]]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">intent_object_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureRecoveryServiceVaultProtectionIntentArgs, AzureResourceProtectionIntentArgs, AzureWorkloadAutoProtectionIntentArgs, AzureWorkloadSQLAutoProtectionIntentArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionIntent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionIntent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,32 +172,22 @@ const protectionIntent = new azure_native.recoveryservices.ProtectionIntent("pro
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProtectionIntentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,7 +411,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -443,7 +419,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -451,7 +427,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +435,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +443,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#intentobjectname_nodejs" style="color: inherit; text-decoration: inherit;">intent<wbr>Object<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intent object name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +451,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +459,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">pulumi.<wbr>Input<Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args></a> | <a href="#azureresourceprotectionintent">pulumi.<wbr>Input<Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args></a> | <a href="#azureworkloadautoprotectionintent">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args></a> | <a href="#azureworkloadsqlautoprotectionintent">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent</a> | <a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent</a> | <a href="#azureworkloadautoprotectionintent">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent</a> | <a href="#azureworkloadsqlautoprotectionintent">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +467,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -503,7 +479,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,7 +487,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -519,7 +495,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +503,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +511,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#intent_object_name_python" style="color: inherit; text-decoration: inherit;">intent_<wbr>object_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Intent object name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +519,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +527,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Input[Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args]</a> | <a href="#azureresourceprotectionintent">Input[Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args]</a> | <a href="#azureworkloadautoprotectionintent">Input[Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args]</a> | <a href="#azureworkloadsqlautoprotectionintent">Input[Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadautoprotectionintent">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadsqlautoprotectionintent">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +535,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -790,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstatus">pulumi.<wbr>Input<Protection<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -834,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstatus">Input[Protection<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -968,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1012,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstatus">pulumi.<wbr>Input<Protection<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstatus">Input[Protection<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1372,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1388,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1464,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1566,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1574,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstatus">pulumi.<wbr>Input<Protection<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1610,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstatus">Input[Protection<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1744,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1752,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1760,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstatus">pulumi.<wbr>Input<Protection<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloaditemtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloaditemtype">pulumi.<wbr>Input<Workload<wbr>Item<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#workloaditemtype">Workload<wbr>Item<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1990,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstatus">Input[Protection<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#protectionstatus">Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_item_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>item_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloaditemtype">Input[Workload<wbr>Item<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#workloaditemtype">Workload<wbr>Item<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2148,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2156,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2180,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloaditemtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2200,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_item_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>item_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd></dl>
 {{% /choosable %}}

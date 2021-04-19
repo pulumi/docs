@@ -67,7 +67,7 @@ package main
 
 import (
 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -192,7 +192,7 @@ package main
 
 import (
 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -304,7 +304,7 @@ package main
 
 import (
 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -395,34 +395,19 @@ const rule = new azure_native.servicebus.Rule("rule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-         <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionArgs]]</span> = None<span class="p">,</span>
-         <span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CorrelationFilterArgs]]</span> = None<span class="p">,</span>
-         <span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FilterType]]</span> = None<span class="p">,</span>
-         <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SqlFilterArgs]]</span> = None<span class="p">,</span>
-         <span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ActionArgs]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[CorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[FilterType]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[SqlFilterArgs]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Rule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Rule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -457,32 +442,22 @@ const rule = new azure_native.servicebus.Rule("rule", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -722,7 +697,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -730,7 +705,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -738,7 +713,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -746,7 +721,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +729,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">pulumi.<wbr>Input<Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#action">Action</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +737,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#correlationfilter_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilter">pulumi.<wbr>Input<Correlation<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#correlationfilter">Correlation<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +745,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertype">pulumi.<wbr>Input<Filter<wbr>Type></a></span>
+        <span class="property-type"><a href="#filtertype">Filter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +753,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +761,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sqlfilter_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilter">pulumi.<wbr>Input<Sql<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlfilter">Sql<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -798,7 +773,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -806,7 +781,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -814,7 +789,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subscription_name_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -822,7 +797,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +805,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Input[Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#action">Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +813,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#correlation_filter_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilter">Input[Correlation<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#correlationfilter">Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +821,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertype">Input[Filter<wbr>Type]</a></span>
+        <span class="property-type"><a href="#filtertype">Filter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +829,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +837,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sql_filter_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilter">Input[Sql<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlfilter">Sql<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlexpression_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_expression_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlexpression_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_expression_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1401,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content type of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the correlation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application specific label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replyto_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the queue to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replytosessionid_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Session<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session identifier to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionid_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address to send to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1485,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content type of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the correlation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application specific label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of the queue to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reply_to_session_id_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>session_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Session identifier to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Session identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address to send to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1739,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content type of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the correlation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application specific label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replyto_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the queue to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replytosessionid_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Session<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session identifier to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionid_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address to send to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1823,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content type of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the correlation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application specific label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of the queue to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reply_to_session_id_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>session_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Session identifier to reply to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Session identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address to send to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1991,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlexpression_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2019,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2027,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2035,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_expression_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2105,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirespreprocessing_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlexpression_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2133,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2141,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requires_preprocessing_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>preprocessing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether the rule action requires preprocessing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_expression_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd></dl>
 {{% /choosable %}}

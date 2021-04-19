@@ -22,20 +22,17 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_streaming_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStreamingPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_streaming_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStreamingPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStreamingPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStreamingPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStreamingPolicy` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStreamingPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -527,7 +524,7 @@ The following output properties are available:
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +532,7 @@ The following output properties are available:
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +540,7 @@ The following output properties are available:
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -611,7 +608,7 @@ The following output properties are available:
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +616,7 @@ The following output properties are available:
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +624,7 @@ The following output properties are available:
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -643,7 +640,7 @@ The following output properties are available:
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +648,7 @@ The following output properties are available:
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +700,7 @@ The following output properties are available:
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +708,7 @@ The following output properties are available:
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +724,7 @@ The following output properties are available:
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +732,7 @@ The following output properties are available:
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +740,7 @@ The following output properties are available:
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +748,7 @@ The following output properties are available:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +832,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +840,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +848,7 @@ The following output properties are available:
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +856,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +872,7 @@ The following output properties are available:
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +880,7 @@ The following output properties are available:
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +888,7 @@ The following output properties are available:
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +896,7 @@ The following output properties are available:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +980,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -991,7 +988,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +996,7 @@ The following output properties are available:
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1004,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1252,7 @@ The following output properties are available:
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1260,7 @@ The following output properties are available:
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1276,7 @@ The following output properties are available:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1360,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1368,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1384,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1403,7 +1400,7 @@ The following output properties are available:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1439,7 +1436,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1468,7 @@ The following output properties are available:
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1552,7 @@ The following output properties are available:
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1568,7 @@ The following output properties are available:
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1576,7 @@ The following output properties are available:
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1631,7 +1628,7 @@ The following output properties are available:
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1636,7 @@ The following output properties are available:
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2200,7 @@ The following output properties are available:
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2236,7 @@ The following output properties are available:
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}

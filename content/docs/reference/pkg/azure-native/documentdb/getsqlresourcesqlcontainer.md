@@ -22,21 +22,17 @@ API Version: 2021-03-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSqlResourceSqlContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSqlResourceSqlContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSqlResourceSqlContainerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSqlResourceSqlContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSqlResourceSqlContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sql_resource_sql_container(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSqlResourceSqlContainerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sql_resource_sql_container(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSqlResourceSqlContainerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSqlResourceSqlContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSqlResourceSqlContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSqlResourceSqlContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSqlResourceSqlContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSqlResourceSqlContainerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSqlResourceSqlContainer` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2021-03-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSqlResourceSqlContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSqlResourceSqlContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSqlResourceSqlContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSqlResourceSqlContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSqlResourceSqlContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -916,7 +912,7 @@ The following output properties are available:
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +972,7 @@ The following output properties are available:
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1120,7 @@ The following output properties are available:
 <a href="#compositeindexes_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response&gt;&gt;</a></span>
+        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response<wbr>Args&gt;&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1128,7 @@ The following output properties are available:
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1136,7 @@ The following output properties are available:
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1152,7 @@ The following output properties are available:
 <a href="#spatialindexes_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1280,7 +1276,7 @@ The following output properties are available:
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response]]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1284,7 @@ The following output properties are available:
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1292,7 @@ The following output properties are available:
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1308,7 @@ The following output properties are available:
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1412,7 +1408,7 @@ The following output properties are available:
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1468,7 @@ The following output properties are available:
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1532,7 @@ The following output properties are available:
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1548,7 @@ The following output properties are available:
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1556,7 @@ The following output properties are available:
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1564,7 @@ The following output properties are available:
 <a href="#uniquekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1784,7 @@ The following output properties are available:
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1800,7 @@ The following output properties are available:
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1808,7 @@ The following output properties are available:
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1816,7 @@ The following output properties are available:
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1836,7 +1832,7 @@ The following output properties are available:
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1872,7 +1868,7 @@ The following output properties are available:
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}

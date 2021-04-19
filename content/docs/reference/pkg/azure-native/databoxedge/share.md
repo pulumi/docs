@@ -76,7 +76,7 @@ package main
 
 import (
 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -193,37 +193,19 @@ const share = new azure_native.databoxedge.Share("share", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Share</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Share</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ShareAccessProtocol]]]</span> = None<span class="p">,</span>
-          <span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AzureContainerInfoArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClientAccessRightArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DataPolicy]]]</span> = None<span class="p">,</span>
-          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, MonitoringStatus]]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RefreshDetailsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ShareStatus]]]</span> = None<span class="p">,</span>
-          <span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UserAccessRightArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShareAccessProtocol]]</span> = None<span class="p">, </span><span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[AzureContainerInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataPolicy]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, MonitoringStatus]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[RefreshDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShareStatus]]</span> = None<span class="p">, </span><span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccessRightArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Share</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Share</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Share</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Share</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -258,32 +240,22 @@ const share = new azure_native.databoxedge.Share("share", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ShareArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +543,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accessprotocol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#shareaccessprotocol">pulumi.<wbr>Input<Share<wbr>Access<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#shareaccessprotocol">Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -579,7 +551,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -587,7 +559,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#monitoringstatus">pulumi.<wbr>Input<Monitoring<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -595,7 +567,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +575,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sharestatus">pulumi.<wbr>Input<Share<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#sharestatus">Share<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +583,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#azurecontainerinfo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Container<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinfo">pulumi.<wbr>Input<Azure<wbr>Container<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +591,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clientaccessrights_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessright">pulumi.<wbr>Input<pulumi.<wbr>Input<Client<wbr>Access<wbr>Right<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clientaccessright">Client<wbr>Access<wbr>Right[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +599,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datapolicy_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datapolicy">pulumi.<wbr>Input<Data<wbr>Policy></a></span>
+        <span class="property-type">string | <a href="#datapolicy">Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +607,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +615,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +623,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refreshdetails_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetails">pulumi.<wbr>Input<Refresh<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +631,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#useraccessrights_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessright">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Access<wbr>Right<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#useraccessright">User<wbr>Access<wbr>Right[]</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -671,7 +643,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_protocol_python" style="color: inherit; text-decoration: inherit;">access_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#shareaccessprotocol">Input[Share<wbr>Access<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#shareaccessprotocol">Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -679,7 +651,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -687,7 +659,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#monitoringstatus">Input[Monitoring<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +667,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +675,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sharestatus">Input[Share<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#sharestatus">Share<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +683,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#azure_container_info_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>container_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinfo">Input[Azure<wbr>Container<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +691,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#client_access_rights_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessright">Input[Client<wbr>Access<wbr>Right<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clientaccessright">Sequence[Client<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +699,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#data_policy_python" style="color: inherit; text-decoration: inherit;">data_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datapolicy">Input[Data<wbr>Policy]</a></span>
+        <span class="property-type">str | <a href="#datapolicy">Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +707,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +715,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +723,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refresh_details_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetails">Input[Refresh<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +731,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#user_access_rights_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access_<wbr>rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessright">Input[User<wbr>Access<wbr>Right<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#useraccessright">Sequence[User<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1020,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1028,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azurecontainerdataformat">pulumi.<wbr>Input<Azure<wbr>Container<wbr>Data<wbr>Format></a></span>
+        <span class="property-type">string | <a href="#azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1036,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1048,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1056,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azurecontainerdataformat">Input[Azure<wbr>Container<wbr>Data<wbr>Format]</a></span>
+        <span class="property-type">str | <a href="#azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1064,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_credential_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1142,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1150,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1170,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1178,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_credential_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1232,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#clientpermissiontype">pulumi.<wbr>Input<Client<wbr>Permission<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#clientpermissiontype">Client<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1240,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_nodejs" style="color: inherit; text-decoration: inherit;">client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1252,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#clientpermissiontype">Input[Client<wbr>Permission<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#clientpermissiontype">Client<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1260,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_python" style="color: inherit; text-decoration: inherit;">client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1314,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1322,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_nodejs" style="color: inherit; text-decoration: inherit;">client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1334,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1342,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_python" style="color: inherit; text-decoration: inherit;">client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1534,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mounttype_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1542,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1550,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1558,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1578,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_type_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1586,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1594,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1602,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1688,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanifestfile_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Manifest<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inprogressrefreshjobid_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastcompletedrefreshjobtimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastjob_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1724,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_manifest_file_python" style="color: inherit; text-decoration: inherit;">error_<wbr>manifest_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1732,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_progress_refresh_job_id_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>refresh_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_completed_refresh_job_time_in_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>completed_<wbr>refresh_<wbr>job_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_job_python" style="color: inherit; text-decoration: inherit;">last_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1834,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanifestfile_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Manifest<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inprogressrefreshjobid_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1850,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastcompletedrefreshjobtimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastjob_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1870,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_manifest_file_python" style="color: inherit; text-decoration: inherit;">error_<wbr>manifest_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_progress_refresh_job_id_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>refresh_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_completed_refresh_job_time_in_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>completed_<wbr>refresh_<wbr>job_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_job_python" style="color: inherit; text-decoration: inherit;">last_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2106,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2114,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2122,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2158,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2252,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#shareaccesstype">pulumi.<wbr>Input<Share<wbr>Access<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2260,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2272,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#shareaccesstype">Input[Share<wbr>Access<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2280,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2334,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2342,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2354,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2362,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}

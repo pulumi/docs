@@ -202,41 +202,19 @@ const route = new azure_native.cdn.Route("route", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">compression_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CompressionSettingsArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">custom_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ResourceReferenceArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EnabledState]]]</span> = None<span class="p">,</span>
-          <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">forwarding_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ForwardingProtocol]]]</span> = None<span class="p">,</span>
-          <span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HttpsRedirect]]]</span> = None<span class="p">,</span>
-          <span class="nx">link_to_default_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, LinkToDefaultDomain]]]</span> = None<span class="p">,</span>
-          <span class="nx">origin_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceReferenceArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">patterns_to_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AfdQueryStringCachingBehavior]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">route_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">rule_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ResourceReferenceArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">supported_protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, AFDEndpointProtocols]]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compression_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[CompressionSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">custom_domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnabledState]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ForwardingProtocol]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[Union[str, HttpsRedirect]]</span> = None<span class="p">, </span><span class="nx">link_to_default_domain</span><span class="p">:</span> <span class="nx">Optional[Union[str, LinkToDefaultDomain]]</span> = None<span class="p">, </span><span class="nx">origin_group</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">patterns_to_match</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[AfdQueryStringCachingBehavior]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">supported_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AFDEndpointProtocols]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,32 +249,22 @@ const route = new azure_native.cdn.Route("route", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -648,7 +616,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -656,7 +624,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#origingroup_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -664,7 +632,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +640,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +648,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#compressionsettings_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compressionsettings">pulumi.<wbr>Input<pulumi.<wbr>Input<Compression<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#compressionsettings">Compression<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +656,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +664,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#enabledstate">pulumi.<wbr>Input<Enabled<wbr>State></a></span>
+        <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +672,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#forwardingprotocol">pulumi.<wbr>Input<Forwarding<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#forwardingprotocol">Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +680,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#httpsredirect">pulumi.<wbr>Input<Https<wbr>Redirect></a></span>
+        <span class="property-type">string | <a href="#httpsredirect">Https<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +688,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#linktodefaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>To<wbr>Default<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#linktodefaultdomain">pulumi.<wbr>Input<Link<wbr>To<wbr>Default<wbr>Domain></a></span>
+        <span class="property-type">string | <a href="#linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +696,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +704,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#patternstomatch_nodejs" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +712,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querystringcachingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afdquerystringcachingbehavior">pulumi.<wbr>Input<Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior></a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +720,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#routename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +728,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +736,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#supportedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | AFDEndpoint<wbr>Protocols>[]></span>
+        <span class="property-type">string | AFDEndpoint<wbr>Protocols[]</span>
     </dt>
     <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -780,7 +748,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -788,7 +756,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#origin_group_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -796,7 +764,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -804,7 +772,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +780,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#compression_settings_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compressionsettings">Input[Compression<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#compressionsettings">Sequence[Compression<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +788,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +796,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#enabledstate">Input[Enabled<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +804,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#forwardingprotocol">Input[Forwarding<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#forwardingprotocol">Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +812,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#httpsredirect">Input[Https<wbr>Redirect]</a></span>
+        <span class="property-type">str | <a href="#httpsredirect">Https<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +820,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#link_to_default_domain_python" style="color: inherit; text-decoration: inherit;">link_<wbr>to_<wbr>default_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#linktodefaultdomain">Input[Link<wbr>To<wbr>Default<wbr>Domain]</a></span>
+        <span class="property-type">str | <a href="#linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +828,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +836,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#patterns_to_match_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +844,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#query_string_caching_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>caching_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afdquerystringcachingbehavior">Input[Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +852,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#route_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +860,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +868,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#supported_protocols_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, AFDEndpoint<wbr>Protocols]]]]</span>
+        <span class="property-type">Sequence[Union[str, AFDEndpoint<wbr>Protocols]]</span>
     </dt>
     <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttypestocompress_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttypestocompress_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1337,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1491,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1671,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1723,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1731,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}

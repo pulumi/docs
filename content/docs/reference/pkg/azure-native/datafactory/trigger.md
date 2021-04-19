@@ -334,29 +334,19 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[BlobEventsTriggerArgs, BlobTriggerArgs, ChainingTriggerArgs, CustomEventsTriggerArgs, MultiplePipelineTriggerArgs, RerunTumblingWindowTriggerArgs, ScheduleTriggerArgs, TumblingWindowTriggerArgs]]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[BlobEventsTriggerArgs, BlobTriggerArgs, ChainingTriggerArgs, CustomEventsTriggerArgs, MultiplePipelineTriggerArgs, RerunTumblingWindowTriggerArgs, ScheduleTriggerArgs, TumblingWindowTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -391,32 +381,22 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +556,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -584,7 +564,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobeventstrigger">pulumi.<wbr>Input<Blob<wbr>Events<wbr>Trigger<wbr>Args></a> | <a href="#blobtrigger">pulumi.<wbr>Input<Blob<wbr>Trigger<wbr>Args></a> | <a href="#chainingtrigger">pulumi.<wbr>Input<Chaining<wbr>Trigger<wbr>Args></a> | <a href="#customeventstrigger">pulumi.<wbr>Input<Custom<wbr>Events<wbr>Trigger<wbr>Args></a> | <a href="#multiplepipelinetrigger">pulumi.<wbr>Input<Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args></a> | <a href="#reruntumblingwindowtrigger">pulumi.<wbr>Input<Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args></a> | <a href="#scheduletrigger">pulumi.<wbr>Input<Schedule<wbr>Trigger<wbr>Args></a> | <a href="#tumblingwindowtrigger">pulumi.<wbr>Input<Tumbling<wbr>Window<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger</a> | <a href="#blobtrigger">Blob<wbr>Trigger</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -592,7 +572,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +580,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#triggername_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -612,7 +592,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +600,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobeventstrigger">Input[Blob<wbr>Events<wbr>Trigger<wbr>Args]</a> | <a href="#blobtrigger">Input[Blob<wbr>Trigger<wbr>Args]</a> | <a href="#chainingtrigger">Input[Chaining<wbr>Trigger<wbr>Args]</a> | <a href="#customeventstrigger">Input[Custom<wbr>Events<wbr>Trigger<wbr>Args]</a> | <a href="#multiplepipelinetrigger">Input[Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args]</a> | <a href="#reruntumblingwindowtrigger">Input[Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args]</a> | <a href="#scheduletrigger">Input[Schedule<wbr>Trigger<wbr>Args]</a> | <a href="#tumblingwindowtrigger">Input[Tumbling<wbr>Window<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -628,7 +608,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +616,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Blob<wbr>Event<wbr>Types>[]></span>
+        <span class="property-type">string | Blob<wbr>Event<wbr>Types[]</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathendswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreemptyblobs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Empty<wbr>Blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Blob<wbr>Event<wbr>Types]]]]</span>
+        <span class="property-type">Sequence[Union[str, Blob<wbr>Event<wbr>Types]]</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1049,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_begins_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_ends_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_empty_blobs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>empty_<wbr>blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathendswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreemptyblobs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Empty<wbr>Blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_begins_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_ends_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_empty_blobs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>empty_<wbr>blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1529,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">pulumi.<wbr>Input<Linked<wbr>Service<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1537,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1573,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1581,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Input[Linked<wbr>Service<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1589,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1597,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1747,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">pulumi.<wbr>Input<Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Input[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1831,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1965,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1973,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rundimension_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2001,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Input[Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Sequence[Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2009,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2017,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_dimension_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2151,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rundimension_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Input[Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_dimension_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2227,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2243,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2385,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2425,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2437,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2445,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2643,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2651,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2659,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2675,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2691,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2703,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2711,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2719,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2727,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2735,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2743,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2751,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2759,7 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2921,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2929,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2937,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2949,7 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2957,7 +2937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3035,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3043,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3063,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3079,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3149,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3279,7 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3287,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3295,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3303,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3315,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3323,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3331,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3339,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3409,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3417,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3437,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3445,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3523,7 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3531,7 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3539,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3551,7 +3531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3559,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3715,7 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3723,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3731,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">pulumi.<wbr>Input<pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3747,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Days<wbr>Of<wbr>Week>[]></a></span>
+        <span class="property-type"><a href="#daysofweek">Days<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3759,7 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3767,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3783,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Input[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">Input[Days<wbr>Of<wbr>Week]]]</a></span>
+        <span class="property-type"><a href="#daysofweek">Sequence[Days<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3845,7 +3825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<Day<wbr>Of<wbr>Week></a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3865,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]</a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3873,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3927,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3935,7 +3915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3947,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3955,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4057,7 +4037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4081,7 +4061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4101,7 +4081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4109,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Input[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4259,7 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedendtime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4267,7 +4247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedstarttime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4275,7 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerunconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4283,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +4271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4311,7 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_end_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4319,7 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_start_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4327,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerun_concurrency_python" style="color: inherit; text-decoration: inherit;">rerun_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4335,7 +4315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4343,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4485,7 +4465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedendtime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4493,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedstarttime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4501,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerunconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4509,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4525,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4545,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_end_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4553,7 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_start_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4561,7 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerun_concurrency_python" style="color: inherit; text-decoration: inherit;">rerun_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4569,7 +4549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4577,7 +4557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4585,7 +4565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4647,7 +4627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4667,7 +4647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4729,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4835,7 +4815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">pulumi.<wbr>Input<Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args></a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4843,7 +4823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4851,7 +4831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4859,7 +4839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4871,7 +4851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">Input[Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4879,7 +4859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5013,7 +4993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5021,7 +5001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#recurrencefrequency">pulumi.<wbr>Input<Recurrence<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5037,7 +5017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5045,7 +5025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5065,7 +5045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5073,7 +5053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#recurrencefrequency">Input[Recurrence<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5081,7 +5061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5089,7 +5069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Input[Recurrence<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5097,7 +5077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5105,7 +5085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5223,7 +5203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5231,7 +5211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5239,7 +5219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5247,7 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5255,7 +5235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5263,7 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5275,7 +5255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5283,7 +5263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5291,7 +5271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5299,7 +5279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Input[Recurrence<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5307,7 +5287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5315,7 +5295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5417,7 +5397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">pulumi.<wbr>Input<Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5425,7 +5405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5433,7 +5413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5441,7 +5421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5449,7 +5429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5461,7 +5441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Input[Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5469,7 +5449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5477,7 +5457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5485,7 +5465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5493,7 +5473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5547,7 +5527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5555,7 +5535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5567,7 +5547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5575,7 +5555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5629,7 +5609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5637,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5649,7 +5629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5657,7 +5637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5695,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">pulumi.<wbr>Input<Trigger<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5707,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Input[Trigger<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5745,7 +5725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">pulumi.<wbr>Input<Trigger<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5757,7 +5737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Input[Trigger<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5811,7 +5791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5819,7 +5799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">pulumi.<wbr>Input<Pipeline<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5831,7 +5811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5839,7 +5819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Input[Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5893,7 +5873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5901,7 +5881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">pulumi.<wbr>Input<Pipeline<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5913,7 +5893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5921,7 +5901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Input[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5975,7 +5955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5983,7 +5963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5995,7 +5975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6003,7 +5983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6057,7 +6037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6065,7 +6045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6077,7 +6057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6085,7 +6065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6313,7 +6293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#tumblingwindowfrequency">pulumi.<wbr>Input<Tumbling<wbr>Window<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#tumblingwindowfrequency">Tumbling<wbr>Window<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6321,7 +6301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6329,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6337,7 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6345,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6353,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6369,7 +6349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args | Trigger<wbr>Dependency<wbr>Reference<wbr>Args | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args>[]></span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6377,7 +6357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6385,7 +6365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6393,7 +6373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">pulumi.<wbr>Input<Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6405,7 +6385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#tumblingwindowfrequency">Input[Tumbling<wbr>Window<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#tumblingwindowfrequency">Tumbling<wbr>Window<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6413,7 +6393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6421,7 +6401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6429,7 +6409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6437,7 +6417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6445,7 +6425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6461,7 +6441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6469,7 +6449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6477,7 +6457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6485,7 +6465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Input[Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6555,7 +6535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">pulumi.<wbr>Input<Trigger<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6563,7 +6543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6571,7 +6551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6583,7 +6563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Input[Trigger<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6591,7 +6571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6599,7 +6579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6669,7 +6649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">pulumi.<wbr>Input<Trigger<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6677,7 +6657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6685,7 +6665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6697,7 +6677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Input[Trigger<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6705,7 +6685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6713,7 +6693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6927,7 +6907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6935,7 +6915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6943,7 +6923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6951,7 +6931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">pulumi.<wbr>Input<Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6959,7 +6939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6967,7 +6947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6975,7 +6955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6991,7 +6971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args | Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6999,7 +6979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7007,7 +6987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7015,7 +6995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">pulumi.<wbr>Input<Retry<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7027,7 +7007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7035,7 +7015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7043,7 +7023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7051,7 +7031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Input[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7059,7 +7039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7067,7 +7047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7075,7 +7055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7091,7 +7071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7099,7 +7079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7107,7 +7087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7115,7 +7095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Input[Retry<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

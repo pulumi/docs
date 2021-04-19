@@ -65,7 +65,7 @@ package main
 
 import (
 	blockchain "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blockchain"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -159,38 +159,19 @@ const blockchainMember = new azure_native.blockchain.BlockchainMember("blockchai
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallRuleArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BlockchainProtocol]]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BlockchainMemberNodesSkuArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, BlockchainProtocol]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[BlockchainMemberNodesSkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlockchainMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlockchainMember</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlockchainMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlockchainMember</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlockchainMemberArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,32 +206,22 @@ const blockchainMember = new azure_native.blockchain.BlockchainMember("blockchai
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BlockchainMemberArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +525,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +533,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#blockchainmembername_nodejs" style="color: inherit; text-decoration: inherit;">blockchain<wbr>Member<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +541,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortium_nodejs" style="color: inherit; text-decoration: inherit;">consortium</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the consortium for the blockchain member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +549,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortiummanagementaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">consortium<wbr>Management<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the managed consortium management account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +557,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortiummemberdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">consortium<wbr>Member<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the display name of the member in the consortium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +565,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortiumrole_nodejs" style="color: inherit; text-decoration: inherit;">consortium<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the role of the member in the consortium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +573,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallrule">Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +581,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GEO location of the blockchain service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +589,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the basic auth password of the blockchain member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +597,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#blockchainprotocol">pulumi.<wbr>Input<Blockchain<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#blockchainprotocol">Blockchain<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +605,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +613,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describes the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +621,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#validatornodessku_nodejs" style="color: inherit; text-decoration: inherit;">validator<wbr>Nodes<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodessku">pulumi.<wbr>Input<Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#blockchainmembernodessku">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -662,7 +633,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +641,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#blockchain_member_name_python" style="color: inherit; text-decoration: inherit;">blockchain_<wbr>member_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +649,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortium_python" style="color: inherit; text-decoration: inherit;">consortium</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the consortium for the blockchain member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +657,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortium_management_account_password_python" style="color: inherit; text-decoration: inherit;">consortium_<wbr>management_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the managed consortium management account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +665,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortium_member_display_name_python" style="color: inherit; text-decoration: inherit;">consortium_<wbr>member_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the display name of the member in the consortium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +673,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#consortium_role_python" style="color: inherit; text-decoration: inherit;">consortium_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the role of the member in the consortium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +681,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">Input[Firewall<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallrule">Sequence[Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +689,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GEO location of the blockchain service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +697,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the basic auth password of the blockchain member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +705,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#blockchainprotocol">Input[Blockchain<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#blockchainprotocol">Blockchain<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +713,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +721,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describes the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +729,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#validator_nodes_sku_python" style="color: inherit; text-decoration: inherit;">validator_<wbr>nodes_<wbr>sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodessku">Input[Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blockchainmembernodessku">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1117,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the nodes capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the nodes capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the nodes capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the nodes capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1515,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1523,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Sku tier{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -106,7 +106,7 @@ package main
 
 import (
 	redhatopenshift "github.com/pulumi/pulumi-azure-native/sdk/go/azure/redhatopenshift"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -288,38 +288,19 @@ const openShiftCluster = new azure_native.redhatopenshift.OpenShiftCluster("open
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">apiserver_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[APIServerProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">cluster_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">console_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConsoleProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">ingress_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IngressProfileArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MasterProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServicePrincipalProfileArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">worker_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WorkerProfileArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apiserver_profile</span><span class="p">:</span> <span class="nx">Optional[APIServerProfileArgs]</span> = None<span class="p">, </span><span class="nx">cluster_profile</span><span class="p">:</span> <span class="nx">Optional[ClusterProfileArgs]</span> = None<span class="p">, </span><span class="nx">console_profile</span><span class="p">:</span> <span class="nx">Optional[ConsoleProfileArgs]</span> = None<span class="p">, </span><span class="nx">ingress_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[IngressProfileArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[MasterProfileArgs]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[ServicePrincipalProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">worker_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerProfileArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OpenShiftClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -354,32 +335,22 @@ const openShiftCluster = new azure_native.redhatopenshift.OpenShiftCluster("open
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OpenShiftClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -683,7 +654,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +662,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiserverprofile_nodejs" style="color: inherit; text-decoration: inherit;">apiserver<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofile">pulumi.<wbr>Input<APIServer<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#apiserverprofile">APIServer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +670,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#clusterprofile_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofile">pulumi.<wbr>Input<Cluster<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterprofile">Cluster<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -707,7 +678,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#consoleprofile_nodejs" style="color: inherit; text-decoration: inherit;">console<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofile">pulumi.<wbr>Input<Console<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#consoleprofile">Console<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +686,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ingressprofiles_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Ingress<wbr>Profile<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ingressprofile">Ingress<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +694,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +702,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#masterprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofile">pulumi.<wbr>Input<Master<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#masterprofile">Master<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +710,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">pulumi.<wbr>Input<Network<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +718,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster provisioning state (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +726,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +734,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofile">pulumi.<wbr>Input<Service<wbr>Principal<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceprincipalprofile">Service<wbr>Principal<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +742,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +750,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#workerprofiles_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Worker<wbr>Profile<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workerprofile">Worker<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +762,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +770,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiserver_profile_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofile">Input[APIServer<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiserverprofile">APIServer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +778,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#cluster_profile_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofile">Input[Cluster<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterprofile">Cluster<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +786,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#console_profile_python" style="color: inherit; text-decoration: inherit;">console_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofile">Input[Console<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#consoleprofile">Console<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +794,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ingress_profiles_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofile">Input[Ingress<wbr>Profile<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ingressprofile">Sequence[Ingress<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +802,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +810,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofile">Input[Master<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#masterprofile">Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +818,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Input[Network<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +826,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster provisioning state (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +834,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +842,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofile">Input[Service<wbr>Principal<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofile">Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +850,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -887,7 +858,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#worker_profiles_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofile">Input[Worker<wbr>Profile<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workerprofile">Sequence[Worker<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1086,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API server visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1114,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP of the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API server visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1200,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API server visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1228,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP of the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster API server (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1244,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API server visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pullsecret_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pull secret for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster resource group (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1366,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pull_secret_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pull secret for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster resource group (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1476,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pullsecret_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pull secret for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster resource group (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1512,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1520,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pull_secret_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pull secret for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster resource group (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1574,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster console (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1586,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster console (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1624,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster console (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1636,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the cluster console (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1706,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the ingress (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ingress profile name.  Must be "default" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ingress visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1734,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP of the ingress (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ingress profile name.  Must be "default" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1750,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ingress visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1820,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the ingress (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1828,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ingress profile name.  Must be "default" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ingress visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1848,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP of the ingress (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ingress profile name.  Must be "default" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ingress visibility (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1918,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the master subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the master VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the master subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the master VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2000,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the master subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the master VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the master subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the master VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2082,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Pods (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Services (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2102,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Pods (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Services (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2164,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Pods (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Services (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2184,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Pods (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR used for OpenShift/Kubernetes Services (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID used for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2254,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret used for the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2266,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID used for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret used for the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2328,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID used for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret used for the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2348,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID used for the cluster (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret used for the cluster (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2458,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The worker profile name.  Must be "worker" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the worker subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the worker VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2502,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2510,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2518,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The worker profile name.  Must be "worker" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2526,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the worker subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2534,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the worker VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2636,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The worker profile name.  Must be "worker" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the worker subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2668,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the worker VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2680,7 +2651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The worker profile name.  Must be "worker" (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the worker subnet (immutable).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the worker VMs (immutable).{{% /md %}}</dd></dl>
 {{% /choosable %}}

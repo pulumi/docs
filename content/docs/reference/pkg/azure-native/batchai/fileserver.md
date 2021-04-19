@@ -72,7 +72,7 @@ package main
 
 import (
 	batchai "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batchai"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -181,32 +181,19 @@ const fileServer = new azure_native.batchai.FileServer("fileServer", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataDisksArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">ssh_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SshConfigurationArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[DataDisksArgs]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_configuration</span><span class="p">:</span> <span class="nx">Optional[SshConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -241,32 +228,22 @@ const fileServer = new azure_native.batchai.FileServer("fileServer", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FileServerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -474,7 +451,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisks">pulumi.<wbr>Input<Data<wbr>Disks<wbr>Args></a></span>
+        <span class="property-type"><a href="#datadisks">Data<wbr>Disks</a></span>
     </dt>
     <dd>{{% md %}}Settings for the data disks which will be created for the File Server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -482,7 +459,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +467,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sshconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">pulumi.<wbr>Input<Ssh<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for the File Server node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +475,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine for the File Server. For information about available VM sizes from the Virtual Machines Marketplace, see Sizes for Virtual Machines (Linux).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +483,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +491,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#fileservername_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +499,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Identifier of an existing virtual network subnet to put the File Server in. If not provided, a new virtual network and subnet will be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -534,7 +511,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisks">Input[Data<wbr>Disks<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadisks">Data<wbr>Disks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the data disks which will be created for the File Server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -542,7 +519,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -550,7 +527,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ssh_configuration_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Input[Ssh<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for the File Server node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -558,7 +535,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine for the File Server. For information about available VM sizes from the Virtual Machines Marketplace, see Sizes for Virtual Machines (Linux).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -566,7 +543,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +551,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#file_server_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +559,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Input[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifier of an existing virtual network subnet to put the File Server in. If not provided, a new virtual network and subnet will be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -971,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageaccounttype">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtype">pulumi.<wbr>Input<Caching<wbr>Type></a></span>
+        <span class="property-type"><a href="#cachingtype">Caching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -991,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -999,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageaccounttype">Input[Storage<wbr>Account<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_type_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtype">Input[Caching<wbr>Type]</a></span>
+        <span class="property-type"><a href="#cachingtype">Caching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1109,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1117,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1145,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1153,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_type_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1231,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserverinternalip_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Internal<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserverpublicip_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Public<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_server_internal_ip_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>internal_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_server_public_ip_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1429,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">pulumi.<wbr>Input<User<wbr>Account<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipstoallow_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs<wbr>To<wbr>Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">Input[User<wbr>Account<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">pulumi.<wbr>Input<User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipstoallow_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs<wbr>To<wbr>Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">Input[User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminusersshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_ssh_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>ssh_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminusersshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_user_ssh_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>ssh_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}

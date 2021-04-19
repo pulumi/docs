@@ -55,7 +55,7 @@ package main
 
 import (
 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -119,45 +119,19 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                       <span class="nx">auto_apply_decisions_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">backup_reviewers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessReviewReviewerArgs]]]]</span> = None<span class="p">,</span>
-                                       <span class="nx">default_decision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DefaultDecisionType]]]</span> = None<span class="p">,</span>
-                                       <span class="nx">default_decision_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">description_for_admins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">description_for_reviewers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">instance_duration_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                                       <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessReviewInstanceArgs]]]]</span> = None<span class="p">,</span>
-                                       <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                                       <span class="nx">justification_required_on_approval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">mail_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">number_of_occurrences</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                                       <span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">reminder_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                       <span class="nx">reviewers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessReviewReviewerArgs]]]]</span> = None<span class="p">,</span>
-                                       <span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                       <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, AccessReviewRecurrenceRangeType]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AccessReviewScheduleDefinitionByIdArgs]</a></span> = None<span class="p">,</span>
-                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_apply_decisions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backup_reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">, </span><span class="nx">default_decision</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultDecisionType]]</span> = None<span class="p">, </span><span class="nx">default_decision_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description_for_admins</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_for_reviewers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_duration_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewInstanceArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">justification_required_on_approval</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_occurrences</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reminder_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AccessReviewRecurrenceRangeType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessReviewScheduleDefinitionById</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessReviewScheduleDefinitionById</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,32 +166,22 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -633,7 +597,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#autoapplydecisionsenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Apply<wbr>Decisions<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +605,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#backupreviewers_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Review<wbr>Reviewer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +613,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#defaultdecision_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Decision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#defaultdecisiontype">pulumi.<wbr>Input<Default<wbr>Decision<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#defaultdecisiontype">Default<wbr>Decision<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +621,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#defaultdecisionenabled_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Decision<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +629,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#descriptionforadmins_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>For<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +637,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#descriptionforreviewers_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>For<wbr>Reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +645,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +653,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +661,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instancedurationindays_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +669,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewinstance">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Review<wbr>Instance<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessreviewinstance">Access<wbr>Review<wbr>Instance[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +677,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +685,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#justificationrequiredonapproval_nodejs" style="color: inherit; text-decoration: inherit;">justification<wbr>Required<wbr>On<wbr>Approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +693,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#mailnotificationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Notifications<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +701,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#numberofoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +709,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +717,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#remindernotificationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">reminder<wbr>Notifications<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +725,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#reviewers_nodejs" style="color: inherit; text-decoration: inherit;">reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Review<wbr>Reviewer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +733,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#scheduledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +741,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +749,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#accessreviewrecurrencerangetype">pulumi.<wbr>Input<Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +761,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#auto_apply_decisions_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>apply_<wbr>decisions_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +769,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#backup_reviewers_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">Input[Access<wbr>Review<wbr>Reviewer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Sequence[Access<wbr>Review<wbr>Reviewer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +777,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#default_decision_python" style="color: inherit; text-decoration: inherit;">default_<wbr>decision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#defaultdecisiontype">Input[Default<wbr>Decision<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#defaultdecisiontype">Default<wbr>Decision<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +785,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#default_decision_enabled_python" style="color: inherit; text-decoration: inherit;">default_<wbr>decision_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +793,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#description_for_admins_python" style="color: inherit; text-decoration: inherit;">description_<wbr>for_<wbr>admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +801,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#description_for_reviewers_python" style="color: inherit; text-decoration: inherit;">description_<wbr>for_<wbr>reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +809,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +817,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +825,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instance_duration_in_days_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>duration_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +833,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewinstance">Input[Access<wbr>Review<wbr>Instance<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessreviewinstance">Sequence[Access<wbr>Review<wbr>Instance<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +841,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +849,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#justification_required_on_approval_python" style="color: inherit; text-decoration: inherit;">justification_<wbr>required_<wbr>on_<wbr>approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +857,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#mail_notifications_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>notifications_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +865,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#number_of_occurrences_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +873,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +881,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#reminder_notifications_enabled_python" style="color: inherit; text-decoration: inherit;">reminder_<wbr>notifications_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +889,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#reviewers_python" style="color: inherit; text-decoration: inherit;">reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">Input[Access<wbr>Review<wbr>Reviewer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Sequence[Access<wbr>Review<wbr>Reviewer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +897,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#schedule_definition_id_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +905,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +913,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#accessreviewrecurrencerangetype">Input[Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1356,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddatetime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1376,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1502,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1510,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1518,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1526,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddatetime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1554,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1570,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1578,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1662,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1674,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1728,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}

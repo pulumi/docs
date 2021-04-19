@@ -22,19 +22,17 @@ API Version: 2019-11-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataCollectionRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataCollectionRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataCollectionRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataCollectionRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataCollectionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataCollectionRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_collection_rule(</span><span class="nx">data_collection_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataCollectionRuleResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_collection_rule(</span><span class="nx">data_collection_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataCollectionRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataCollectionRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataCollectionRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataCollectionRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataCollectionRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataCollectionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataCollectionRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDataCollectionRule` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2019-11-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataCollectionRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataCollectionRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataCollectionRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataCollectionRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataCollectionRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -594,7 +592,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +600,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +608,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +616,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +700,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +708,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +716,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +724,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -742,7 +740,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +748,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -802,7 +800,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +808,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}

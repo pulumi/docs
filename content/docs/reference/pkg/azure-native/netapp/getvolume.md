@@ -22,21 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolume<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVolumeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolume<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVolumeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVolumeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVolumeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVolume` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVolume </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -360,7 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitystyle_csharp">
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -588,7 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitystyle_go">
 <a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -816,7 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitystyle_nodejs">
 <a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
@@ -1044,7 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_style_python">
 <a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
@@ -2080,7 +2076,7 @@ The following output properties are available:
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2084,7 @@ The following output properties are available:
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2092,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2164,7 +2160,7 @@ The following output properties are available:
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2168,7 @@ The following output properties are available:
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2180,7 +2176,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2196,7 +2192,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2232,7 +2228,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

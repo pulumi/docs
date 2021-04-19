@@ -86,7 +86,7 @@ package main
 
 import (
 	machinelearningcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningcompute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -228,36 +228,19 @@ const operationalizationCluster = new azure_native.machinelearningcompute.Operat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                              <span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AppInsightsPropertiesArgs]]</span> = None<span class="p">,</span>
-                              <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                              <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ClusterType]]]</span> = None<span class="p">,</span>
-                              <span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerRegistryPropertiesArgs]]</span> = None<span class="p">,</span>
-                              <span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AcsClusterPropertiesArgs]]</span> = None<span class="p">,</span>
-                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                              <span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalServiceConfigurationArgs]]</span> = None<span class="p">,</span>
-                              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                              <span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StorageAccountPropertiesArgs]]</span> = None<span class="p">,</span>
-                              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">,</span>
-                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[AppInsightsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ClusterType]]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[ContainerRegistryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[AcsClusterPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalServiceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[StorageAccountPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -292,32 +275,22 @@ const operationalizationCluster = new azure_native.machinelearningcompute.Operat
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -589,7 +562,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#clustertype">pulumi.<wbr>Input<Cluster<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#clustertype">Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -597,7 +570,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which the cluster is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +578,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#appinsights_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsproperties">pulumi.<wbr>Input<App<wbr>Insights<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#appinsightsproperties">App<wbr>Insights<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +586,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +594,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerregistry_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryproperties">pulumi.<wbr>Input<Container<wbr>Registry<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerregistryproperties">Container<wbr>Registry<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +602,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerservice_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterproperties">pulumi.<wbr>Input<Acs<wbr>Cluster<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#acsclusterproperties">Acs<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +610,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +618,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#globalserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfiguration">pulumi.<wbr>Input<Global<wbr>Service<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +626,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +634,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +642,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -681,7 +654,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#clustertype">Input[Cluster<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#clustertype">Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -689,7 +662,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which the cluster is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +670,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#app_insights_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsproperties">Input[App<wbr>Insights<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appinsightsproperties">App<wbr>Insights<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +678,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +686,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#container_registry_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryproperties">Input[Container<wbr>Registry<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerregistryproperties">Container<wbr>Registry<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +694,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#container_service_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterproperties">Input[Acs<wbr>Cluster<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#acsclusterproperties">Acs<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +702,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +710,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#global_service_configuration_python" style="color: inherit; text-decoration: inherit;">global_<wbr>service_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfiguration">Input[Global<wbr>Service<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +718,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +726,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Input[Storage<wbr>Account<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +734,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#orchestratortype">pulumi.<wbr>Input<Orchestrator<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#orchestratortype">Orchestrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentcount_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of agent nodes in the Container Service. This can be changed to scale the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#agentvmsizetypes">pulumi.<wbr>Input<Agent<wbr>VMSize<wbr>Types></a></span>
+        <span class="property-type">string | <a href="#agentvmsizetypes">Agent<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1160,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastercount_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of master nodes in the container service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1168,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">pulumi.<wbr>Input<Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">pulumi.<wbr>Input<pulumi.<wbr>Input<System<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#systemservice">System<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1188,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#orchestratortype">Input[Orchestrator<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#orchestratortype">Orchestrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of agent nodes in the Container Service. This can be changed to scale the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#agentvmsizetypes">Input[Agent<wbr>VMSize<wbr>Types]</a></span>
+        <span class="property-type">str | <a href="#agentvmsizetypes">Agent<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_count_python" style="color: inherit; text-decoration: inherit;">master_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of master nodes in the container service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Input[Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">Input[System<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#systemservice">Sequence[System<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1362,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterfqdn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the cluster. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1370,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1378,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentcount_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of agent nodes in the Container Service. This can be changed to scale the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastercount_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of master nodes in the container service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">pulumi.<wbr>Input<Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<System<wbr>Service<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1422,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the cluster. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1430,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of agent nodes in the Container Service. This can be changed to scale the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_count_python" style="color: inherit; text-decoration: inherit;">master_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of master nodes in the container service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Input[Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">Input[System<wbr>Service<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1714,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the App Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1726,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the App Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the App Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1776,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the App Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1878,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshperiodinseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Period<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Refresh period in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1902,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#status">pulumi.<wbr>Input<Status></a></span>
+        <span class="property-type">string | <a href="#status">Status</a></span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target utilization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1922,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_period_in_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>period_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Refresh period in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#status">Input[Status]</a></span>
+        <span class="property-type">str | <a href="#status">Status</a></span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target utilization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2056,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2064,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2072,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshperiodinseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Period<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Refresh period in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target utilization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2100,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2108,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas for each service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_period_in_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>period_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Refresh period in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2124,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target utilization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2196,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2208,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2258,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2320,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2332,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2340,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2410,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2418,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2426,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2446,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">pulumi.<wbr>Input<Error<wbr>Response<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2504,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Input[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2590,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">pulumi.<wbr>Input<Auto<wbr>Scale<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2598,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration ETag for updates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2606,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">pulumi.<wbr>Input<Service<wbr>Auth<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2614,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">pulumi.<wbr>Input<Ssl<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2626,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Input[Auto<wbr>Scale<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration ETag for updates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2642,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Input[Service<wbr>Auth<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2650,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Input[Ssl<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2736,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">pulumi.<wbr>Input<Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration ETag for updates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2752,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">pulumi.<wbr>Input<Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2760,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">pulumi.<wbr>Input<Ssl<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2772,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Input[Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2780,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration ETag for updates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Input[Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2796,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Input[Ssl<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2834,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">pulumi.<wbr>Input<Service<wbr>Principal<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2846,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Input[Service<wbr>Principal<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2884,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">pulumi.<wbr>Input<Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2896,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Input[Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryauthkeyhash_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Auth<wbr>Key<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2984,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryauthkeyhash_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Auth<wbr>Key<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2996,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_auth_key_hash_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>auth_<wbr>key_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3004,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_auth_key_hash_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>auth_<wbr>key_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3058,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryauthkeyhash_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Auth<wbr>Key<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3066,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryauthkeyhash_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Auth<wbr>Key<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3078,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_auth_key_hash_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>auth_<wbr>key_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3086,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_auth_key_hash_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>auth_<wbr>key_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3140,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal client ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3148,7 +3121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3160,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal client ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3168,7 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3222,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal client ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3230,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3242,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal client ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3250,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3336,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL cert data in PEM format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3344,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CName of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3352,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3360,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#status">pulumi.<wbr>Input<Status></a></span>
+        <span class="property-type">string | <a href="#status">Status</a></span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3372,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL cert data in PEM format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3380,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CName of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3388,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#status">Input[Status]</a></span>
+        <span class="property-type">str | <a href="#status">Status</a></span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3482,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL cert data in PEM format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3490,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CName of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3498,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3506,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3518,7 +3491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL cert data in PEM format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3526,7 +3499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CName of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3534,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3542,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3606,7 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3618,7 +3591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3656,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3668,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3706,7 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#systemservicetype">pulumi.<wbr>Input<System<wbr>Service<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#systemservicetype">System<wbr>Service<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3718,7 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#systemservicetype">Input[System<wbr>Service<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#systemservicetype">System<wbr>Service<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3788,7 +3761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address of the system service{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3796,7 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3804,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the system service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address of the system service{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3824,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3832,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the system service{{% /md %}}</dd></dl>
 {{% /choosable %}}

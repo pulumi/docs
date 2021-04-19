@@ -83,7 +83,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -208,35 +208,19 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">interaction_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RelationshipLinkFieldMappingArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">profile_property_references</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ParticipantProfilePropertyReferenceArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">related_profile_property_references</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ParticipantProfilePropertyReferenceArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">relationship_link_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">relationship_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interaction_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[RelationshipLinkFieldMappingArgs]]</span> = None<span class="p">, </span><span class="nx">profile_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantProfilePropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">related_profile_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantProfilePropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">relationship_link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relationship_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRelationshipLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RelationshipLink</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRelationshipLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RelationshipLink</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,32 +255,22 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RelationshipLinkArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +526,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -560,7 +534,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#interactiontype_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -568,7 +542,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#profilepropertyreferences_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Participant<wbr>Profile<wbr>Property<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -576,7 +550,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relatedprofilepropertyreferences_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Participant<wbr>Profile<wbr>Property<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -584,7 +558,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relationshipname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -592,7 +566,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +574,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +582,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +590,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmapping">Relationship<wbr>Link<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +598,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relationshiplinkname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Link<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +610,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -644,7 +618,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#interaction_type_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -652,7 +626,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#profile_property_references_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">Input[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -660,7 +634,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#related_profile_property_references_python" style="color: inherit; text-decoration: inherit;">related_<wbr>profile_<wbr>property_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">Input[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -668,7 +642,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relationship_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +650,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +658,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +666,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +674,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmapping">Input[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmapping">Sequence[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +682,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relationship_link_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>link_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1045,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interactionpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1053,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1073,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interactionpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interactionfieldname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1233,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relationshipfieldname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">pulumi.<wbr>Input<Link<wbr>Types></a></span>
+        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1261,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Input[Link<wbr>Types]</a></span>
+        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interactionfieldname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relationshipfieldname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1355,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1383,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

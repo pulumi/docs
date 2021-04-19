@@ -22,20 +22,17 @@ API Version: 2021-02-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagementPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagementPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagementPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagementPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagementPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_management_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">management_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagementPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_management_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagementPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagementPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagementPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagementPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagementPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagementPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagementPolicy` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-02-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagementPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagementPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagementPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagementPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagementPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -503,7 +500,7 @@ The following output properties are available:
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +508,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +516,7 @@ The following output properties are available:
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +584,7 @@ The following output properties are available:
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +592,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +600,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +616,7 @@ The following output properties are available:
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +632,7 @@ The following output properties are available:
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +640,7 @@ The following output properties are available:
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +724,7 @@ The following output properties are available:
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +740,7 @@ The following output properties are available:
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +748,7 @@ The following output properties are available:
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -767,7 +764,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +772,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +824,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +832,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +856,7 @@ The following output properties are available:
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +940,7 @@ The following output properties are available:
 <a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +964,7 @@ The following output properties are available:
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1072,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1112,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1148,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1164,7 @@ The following output properties are available:
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1172,7 @@ The following output properties are available:
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1180,7 @@ The following output properties are available:
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1248,7 @@ The following output properties are available:
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1256,7 @@ The following output properties are available:
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1264,7 @@ The following output properties are available:
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1280,7 @@ The following output properties are available:
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1288,7 @@ The following output properties are available:
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1296,7 @@ The following output properties are available:
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1364,7 @@ The following output properties are available:
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1372,7 @@ The following output properties are available:
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1383,7 +1380,7 @@ The following output properties are available:
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}

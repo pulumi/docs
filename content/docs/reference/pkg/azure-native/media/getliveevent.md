@@ -22,20 +22,17 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLiveEvent<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLiveEventArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLiveEvent<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_live_event(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLiveEventResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_live_event(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLiveEventResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLiveEventArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLiveEventResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLiveEventResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLiveEvent` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLiveEvent </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLiveEventArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLiveEventArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -899,7 +896,7 @@ The following output properties are available:
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +932,7 @@ The following output properties are available:
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1296,7 @@ The following output properties are available:
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1332,7 @@ The following output properties are available:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1356,7 @@ The following output properties are available:
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1372,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1488,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1507,7 +1504,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1699,7 +1696,7 @@ The following output properties are available:
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1732,7 @@ The following output properties are available:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1751,7 +1748,7 @@ The following output properties are available:
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1764,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1880,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1896,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1928,7 @@ The following output properties are available:
 <a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1944,7 @@ The following output properties are available:
 <a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2015,7 +2012,7 @@ The following output properties are available:
 <a href="#input_track_selection_python" style="color: inherit; text-decoration: inherit;">input_<wbr>track_<wbr>selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2031,7 +2028,7 @@ The following output properties are available:
 <a href="#output_transcription_track_python" style="color: inherit; text-decoration: inherit;">output_<wbr>transcription_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}

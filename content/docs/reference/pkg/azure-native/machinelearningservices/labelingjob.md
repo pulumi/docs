@@ -284,29 +284,19 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">labeling_job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LabelingJobPropertiesArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">labeling_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[LabelingJobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -341,32 +331,22 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LabelingJobArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,7 +506,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,7 +514,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +522,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labelingjobid_nodejs" style="color: inherit; text-decoration: inherit;">labeling<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +530,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobproperties">pulumi.<wbr>Input<Labeling<wbr>Job<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingjobproperties">Labeling<wbr>Job<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -562,7 +542,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -570,7 +550,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +558,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labeling_job_id_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +566,7 @@ The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobproperties">Input[Labeling<wbr>Job<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingjobproperties">Labeling<wbr>Job<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -883,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -911,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classes_nodejs" style="color: inherit; text-decoration: inherit;">classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Class<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Class}</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultiselect_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Select</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Class<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_select_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>select</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1125,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classes_nodejs" style="color: inherit; text-decoration: inherit;">classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Class<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Class<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultiselect_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Select</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Class<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_select_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>select</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1223,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subclasses_nodejs" style="color: inherit; text-decoration: inherit;">subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Class<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Class}</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subclasses_python" style="color: inherit; text-decoration: inherit;">subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Class<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subclasses_nodejs" style="color: inherit; text-decoration: inherit;">subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Class<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Class<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subclasses_python" style="color: inherit; text-decoration: inherit;">subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Class<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1403,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1411,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetversion_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableincrementaldatasetrefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Incremental<wbr>Dataset<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1439,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_version_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_incremental_dataset_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>incremental_<wbr>dataset_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1517,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1525,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetversion_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableincrementaldatasetrefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Incremental<wbr>Dataset<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1545,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1553,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_version_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_incremental_dataset_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>incremental_<wbr>dataset_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mediatype_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#mediatype">pulumi.<wbr>Input<Media<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#mediatype">Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#imageannotationtype">pulumi.<wbr>Input<Image<wbr>Annotation<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#imageannotationtype">Image<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#media_type_python" style="color: inherit; text-decoration: inherit;">media_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#mediatype">Input[Media<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#mediatype">Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#imageannotationtype">Input[Image<wbr>Annotation<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#imageannotationtype">Image<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1697,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mediatype_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#media_type_python" style="color: inherit; text-decoration: inherit;">media_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1763,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1775,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1825,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfiguration">pulumi.<wbr>Input<Labeling<wbr>Dataset<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingdatasetconfiguration">Labeling<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobinstructions_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructions">pulumi.<wbr>Input<Labeling<wbr>Job<wbr>Instructions<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingjobinstructions">Labeling<wbr>Job<wbr>Instructions</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1975,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelcategories_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Category<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Category}</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1983,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelingjobmediaproperties_nodejs" style="color: inherit; text-decoration: inherit;">labeling<wbr>Job<wbr>Media<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimageproperties">pulumi.<wbr>Input<Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingjobimageproperties">Labeling<wbr>Job<wbr>Image<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mlassistconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfiguration">pulumi.<wbr>Input<MLAssist<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#mlassistconfiguration">MLAssist<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2019,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_configuration_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfiguration">Input[Labeling<wbr>Dataset<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingdatasetconfiguration">Labeling<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2027,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_instructions_python" style="color: inherit; text-decoration: inherit;">job_<wbr>instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructions">Input[Labeling<wbr>Job<wbr>Instructions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingjobinstructions">Labeling<wbr>Job<wbr>Instructions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2035,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_categories_python" style="color: inherit; text-decoration: inherit;">label_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Category<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Category<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labeling_job_media_properties_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>media_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimageproperties">Input[Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingjobimageproperties">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ml_assist_configuration_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfiguration">Input[MLAssist<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mlassistconfiguration">MLAssist<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2059,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2281,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2289,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">pulumi.<wbr>Input<Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2297,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobinstructions_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructionsresponse">pulumi.<wbr>Input<Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2305,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelcategories_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Label<wbr>Category<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Label<wbr>Category<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2313,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelingjobmediaproperties_nodejs" style="color: inherit; text-decoration: inherit;">labeling<wbr>Job<wbr>Media<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">pulumi.<wbr>Input<Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2321,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progressmetrics_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progressmetricsresponse">pulumi.<wbr>Input<Progress<wbr>Metrics<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2329,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2337,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2345,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusmessages_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusmessageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Message<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statusmessageresponse">Status<wbr>Message<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mlassistconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfigurationresponse">pulumi.<wbr>Input<MLAssist<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2381,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2389,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_configuration_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Input[Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2397,7 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_instructions_python" style="color: inherit; text-decoration: inherit;">job_<wbr>instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructionsresponse">Input[Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2405,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_categories_python" style="color: inherit; text-decoration: inherit;">label_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Label<wbr>Category<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Category<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2413,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labeling_job_media_properties_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>media_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Input[Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2421,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_metrics_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progressmetricsresponse">Input[Progress<wbr>Metrics<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2429,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2437,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2445,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_messages_python" style="color: inherit; text-decoration: inherit;">status_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusmessageresponse">Input[Status<wbr>Message<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statusmessageresponse">Sequence[Status<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ml_assist_configuration_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfigurationresponse">Input[MLAssist<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2571,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inferencingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">inferencing<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebinding">pulumi.<wbr>Input<Compute<wbr>Binding<wbr>Args></a></span>
+        <span class="property-type"><a href="#computebinding">Compute<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2579,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2587,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebinding">pulumi.<wbr>Input<Compute<wbr>Binding<wbr>Args></a></span>
+        <span class="property-type"><a href="#computebinding">Compute<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mlassistenabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prelabelaccuracythreshold_nodejs" style="color: inherit; text-decoration: inherit;">prelabel<wbr>Accuracy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2615,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inferencing_compute_binding_python" style="color: inherit; text-decoration: inherit;">inferencing_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebinding">Input[Compute<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#computebinding">Compute<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_name_prefix_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_compute_binding_python" style="color: inherit; text-decoration: inherit;">training_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebinding">Input[Compute<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#computebinding">Compute<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ml_assist_enabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2647,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prelabel_accuracy_threshold_python" style="color: inherit; text-decoration: inherit;">prelabel_<wbr>accuracy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2749,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inferencingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">inferencing<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">pulumi.<wbr>Input<Compute<wbr>Binding<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2757,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2765,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">pulumi.<wbr>Input<Compute<wbr>Binding<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mlassistenabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prelabelaccuracythreshold_nodejs" style="color: inherit; text-decoration: inherit;">prelabel<wbr>Accuracy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2793,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inferencing_compute_binding_python" style="color: inherit; text-decoration: inherit;">inferencing_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Input[Compute<wbr>Binding<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2801,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_name_prefix_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2809,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_compute_binding_python" style="color: inherit; text-decoration: inherit;">training_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Input[Compute<wbr>Binding<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2817,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ml_assist_enabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prelabel_accuracy_threshold_python" style="color: inherit; text-decoration: inherit;">prelabel_<wbr>accuracy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2937,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeddatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>Datapoint<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2945,7 +2925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incrementaldatasetlastrefreshtime_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Dataset<wbr>Last<wbr>Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2953,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skippeddatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Datapoint<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2961,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totaldatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Datapoint<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2973,7 +2953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completed_datapoint_count_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>datapoint_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2981,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incremental_dataset_last_refresh_time_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>dataset_<wbr>last_<wbr>refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2989,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipped_datapoint_count_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>datapoint_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2997,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_datapoint_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>datapoint_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3091,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3099,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3107,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3119,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3127,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3135,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3143,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3261,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3313,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}

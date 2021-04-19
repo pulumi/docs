@@ -63,7 +63,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -186,7 +186,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -277,39 +277,19 @@ const syncGroup = new azure_native.sql.SyncGroup("syncGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">conflict_logging_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SyncConflictResolutionPolicy]]]</span> = None<span class="p">,</span>
-              <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">enable_conflict_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">hub_database_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">hub_database_user_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyncGroupSchemaArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">sync_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">conflict_logging_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, SyncConflictResolutionPolicy]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_conflict_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hub_database_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_database_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[SyncGroupSchemaArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">sync_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -344,32 +324,22 @@ const syncGroup = new azure_native.sql.SyncGroup("syncGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -689,7 +659,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database on which the sync group is hosted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -697,7 +667,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,7 +675,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +683,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#conflictloggingretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Logging<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +691,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#syncconflictresolutionpolicy">pulumi.<wbr>Input<Sync<wbr>Conflict<wbr>Resolution<wbr>Policy></a></span>
+        <span class="property-type">string | <a href="#syncconflictresolutionpolicy">Sync<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +699,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enableconflictlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Conflict<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +707,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hubdatabasepassword_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Database<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +715,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hubdatabaseusername_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Database<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the sync group hub database credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +723,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sync interval of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +731,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschema">pulumi.<wbr>Input<Sync<wbr>Group<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#syncgroupschema">Sync<wbr>Group<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +739,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +747,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#syncdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync database in the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +755,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +763,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#useprivatelinkconnection_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Link<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If use private link connection is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +775,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database on which the sync group is hosted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +783,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +791,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +799,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#conflict_logging_retention_in_days_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>logging_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Conflict logging retention period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +807,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#syncconflictresolutionpolicy">Input[Sync<wbr>Conflict<wbr>Resolution<wbr>Policy]</a></span>
+        <span class="property-type">str | <a href="#syncconflictresolutionpolicy">Sync<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +815,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enable_conflict_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>conflict_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +823,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hub_database_password_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>database_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +831,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hub_database_user_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>database_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the sync group hub database credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +839,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync interval of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +847,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschema">Input[Sync<wbr>Group<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncgroupschema">Sync<wbr>Group<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +855,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +863,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sync_database_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync database in the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +871,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +879,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#use_private_link_connection_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>link_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If use private link connection is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1236,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1244,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1280,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1458,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1482,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastersyncmembername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Sync<wbr>Member<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">pulumi.<wbr>Input<pulumi.<wbr>Input<Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#syncgroupschematable">Sync<wbr>Group<wbr>Schema<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_sync_member_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>sync_<wbr>member_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">Input[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#syncgroupschematable">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastersyncmembername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Sync<wbr>Member<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1672,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_sync_member_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>sync_<wbr>member_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1680,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">Input[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1734,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1754,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">Input[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1832,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasize_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data size of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data type of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1860,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data size of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1868,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data type of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1876,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1946,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasize_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data size of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data type of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1974,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data size of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data type of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2044,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2052,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2064,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Input[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2072,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd></dl>
 {{% /choosable %}}

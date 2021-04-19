@@ -75,7 +75,7 @@ package main
 
 import (
 	analysisservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/analysisservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -190,37 +190,19 @@ const serverDetails = new azure_native.analysisservices.ServerDetails("serverDet
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerAdministratorsArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GatewayDetailsArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IPv4FirewallSettingsArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">managed_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConnectionMode]]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">server_monitor_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceSkuArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_mode</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_monitor_mode</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerDetails</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerDetails</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerDetailsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,32 +237,22 @@ const serverDetails = new azure_native.analysisservices.ServerDetails("serverDet
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServerDetailsArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,7 +540,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -576,7 +548,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">pulumi.<wbr>Input<Resource<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +556,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#asadministrators_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministrators">pulumi.<wbr>Input<Server<wbr>Administrators<wbr>Args></a></span>
+        <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +564,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backupblobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Container<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +572,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gatewaydetails_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetails">pulumi.<wbr>Input<Gateway<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +580,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipv4firewallsettings_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>V4Firewall<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettings">pulumi.<wbr>Input<IPv4Firewall<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +588,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +596,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managedmode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +604,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">querypool<wbr>Connection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmode">pulumi.<wbr>Input<Connection<wbr>Mode></a></span>
+        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +612,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#servermonitormode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Monitor<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +620,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +628,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -668,7 +640,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +648,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Input[Resource<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +656,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#as_administrators_python" style="color: inherit; text-decoration: inherit;">as_<wbr>administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministrators">Input[Server<wbr>Administrators<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +664,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backup_blob_container_uri_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>container_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +672,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gateway_details_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetails">Input[Gateway<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +680,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ip_v4_firewall_settings_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>v4_<wbr>firewall_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettings">Input[IPv4Firewall<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +688,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +696,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managed_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +704,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypool_connection_mode_python" style="color: inherit; text-decoration: inherit;">querypool_<wbr>connection_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmode">Input[Connection<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +712,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#server_monitor_mode_python" style="color: inherit; text-decoration: inherit;">server_<wbr>monitor_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +720,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +728,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1045,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_resource_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dmtsclusteruri_nodejs" style="color: inherit; text-decoration: inherit;">dmts<wbr>Cluster<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayobjectid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dmts_cluster_uri_python" style="color: inherit; text-decoration: inherit;">dmts_<wbr>cluster_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_object_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_resource_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrulename_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1269,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rule_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrulename_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rule_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1391,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1399,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1453,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepowerbiservice_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Power<wbr>BIService</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">pulumi.<wbr>Input<pulumi.<wbr>Input<IPv4Firewall<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">IPv4Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_power_bi_service_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>power_<wbr>bi_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">Input[IPv4Firewall<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">Sequence[IPv4Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepowerbiservice_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Power<wbr>BIService</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">IPv4Firewall<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_power_bi_service_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>power_<wbr>bi_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">Input[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skutier">pulumi.<wbr>Input<Sku<wbr>Tier></a></span>
+        <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1661,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skutier">Input[Sku<wbr>Tier]</a></span>
+        <span class="property-type">str | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1747,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1775,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1841,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1879,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1891,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}

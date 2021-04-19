@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionPolicy
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup policy. Workload-specific backup policies are derived from this class.
-API Version: 2021-02-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 
@@ -894,32 +894,19 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureFileShareProtectionPolicyArgs, AzureIaaSVMProtectionPolicyArgs, AzureSqlProtectionPolicyArgs, AzureVmWorkloadProtectionPolicyArgs, GenericProtectionPolicyArgs, MabProtectionPolicyArgs]]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFileShareProtectionPolicyArgs, AzureIaaSVMProtectionPolicyArgs, AzureSqlProtectionPolicyArgs, AzureVmWorkloadProtectionPolicyArgs, GenericProtectionPolicyArgs, MabProtectionPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectionPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -954,32 +941,22 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProtectionPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1187,7 +1164,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1172,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1180,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1188,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1196,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup policy to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1204,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicy">pulumi.<wbr>Input<Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Args></a> | <a href="#azureiaasvmprotectionpolicy">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Args></a> | <a href="#azuresqlprotectionpolicy">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Args></a> | <a href="#azurevmworkloadprotectionpolicy">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Args></a> | <a href="#genericprotectionpolicy">pulumi.<wbr>Input<Generic<wbr>Protection<wbr>Policy<wbr>Args></a> | <a href="#mabprotectionpolicy">pulumi.<wbr>Input<Mab<wbr>Protection<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicy">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy</a> | <a href="#azureiaasvmprotectionpolicy">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy</a> | <a href="#azuresqlprotectionpolicy">Azure<wbr>Sql<wbr>Protection<wbr>Policy</a> | <a href="#azurevmworkloadprotectionpolicy">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy</a> | <a href="#genericprotectionpolicy">Generic<wbr>Protection<wbr>Policy</a> | <a href="#mabprotectionpolicy">Mab<wbr>Protection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1212,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1224,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1232,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1240,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1248,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1256,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup policy to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1264,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicy">Input[Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Args]</a> | <a href="#azureiaasvmprotectionpolicy">Input[Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Args]</a> | <a href="#azuresqlprotectionpolicy">Input[Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Args]</a> | <a href="#azurevmworkloadprotectionpolicy">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Args]</a> | <a href="#genericprotectionpolicy">Input[Generic<wbr>Protection<wbr>Policy<wbr>Args]</a> | <a href="#mabprotectionpolicy">Input[Mab<wbr>Protection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicy">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#azureiaasvmprotectionpolicy">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Args</a> | <a href="#azuresqlprotectionpolicy">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#azurevmworkloadprotectionpolicy">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#genericprotectionpolicy">Generic<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#mabprotectionpolicy">Mab<wbr>Protection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1272,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a> | <a href="#simpleretentionpolicy">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#longtermschedulepolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#simpleschedulepolicy">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1558,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloadtype">pulumi.<wbr>Input<Workload<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a> | <a href="#simpleretentionpolicy">Input[Simple<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Input[Log<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#longtermschedulepolicy">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#simpleschedulepolicy">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloadtype">Input[Workload<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1704,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleretentionpolicyresponse">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#longtermschedulepolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleschedulepolicyresponse">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleretentionpolicyresponse">Input[Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Input[Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#longtermschedulepolicyresponse">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleschedulepolicyresponse">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1898,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetails">pulumi.<wbr>Input<Instant<wbr>RPAdditional<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a> | <a href="#simpleretentionpolicy">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#longtermschedulepolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#simpleschedulepolicy">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1950,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_details_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetails">Input[Instant<wbr>RPAdditional<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a> | <a href="#simpleretentionpolicy">Input[Simple<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Input[Log<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#longtermschedulepolicy">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#simpleschedulepolicy">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2108,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">pulumi.<wbr>Input<Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2124,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleretentionpolicyresponse">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2140,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#longtermschedulepolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleschedulepolicyresponse">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2148,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2160,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_details_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Input[Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleretentionpolicyresponse">Input[Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Input[Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#longtermschedulepolicyresponse">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleschedulepolicyresponse">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2254,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2262,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a> | <a href="#simpleretentionpolicy">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2274,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a> | <a href="#simpleretentionpolicy">Input[Simple<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleretentionpolicyresponse">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2356,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleretentionpolicyresponse">Input[Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2466,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#makepolicyconsistent_nodejs" style="color: inherit; text-decoration: inherit;">make<wbr>Policy<wbr>Consistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">pulumi.<wbr>Input<Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#settings">Settings</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Protection<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2498,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloadtype">pulumi.<wbr>Input<Workload<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2510,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#make_policy_consistent_python" style="color: inherit; text-decoration: inherit;">make_<wbr>policy_<wbr>consistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2518,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2526,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">Input[Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settings">Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2534,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Input[Sub<wbr>Protection<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloadtype">Input[Workload<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2644,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#makepolicyconsistent_nodejs" style="color: inherit; text-decoration: inherit;">make<wbr>Policy<wbr>Consistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">pulumi.<wbr>Input<Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2668,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2676,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2688,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#make_policy_consistent_python" style="color: inherit; text-decoration: inherit;">make_<wbr>policy_<wbr>consistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">Input[Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Input[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2720,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2758,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">pulumi.<wbr>Input<pulumi.<wbr>Input<Day<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#day">Day[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2770,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">Input[Day<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#day">Sequence[Day<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2808,7 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Day<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dayresponse">Day<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2820,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">Input[Day<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2874,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2882,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2894,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Input[Retention<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2902,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2956,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2964,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +2953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Input[Retention<wbr>Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3038,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islast_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3058,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3066,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_last_python" style="color: inherit; text-decoration: inherit;">is_<wbr>last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3166,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3174,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islast_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3186,7 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3194,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_last_python" style="color: inherit; text-decoration: inherit;">is_<wbr>last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3280,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3288,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3296,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Protection<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3316,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3324,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3332,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Input[Sub<wbr>Protection<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3340,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3426,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3442,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3450,7 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3462,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3470,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3478,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Input[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3486,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3540,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurebackuprgnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurebackuprgnamesuffix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_backup_rg_name_prefix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3568,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_backup_rg_name_suffix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3622,7 +3599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurebackuprgnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3630,7 +3607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurebackuprgnamesuffix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3642,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_backup_rg_name_prefix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3650,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_backup_rg_name_suffix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3688,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulefrequencyinmins_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Frequency<wbr>In<wbr>Mins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3700,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_frequency_in_mins_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>frequency_<wbr>in_<wbr>mins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3738,7 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulefrequencyinmins_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Frequency<wbr>In<wbr>Mins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3750,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_frequency_in_mins_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>frequency_<wbr>in_<wbr>mins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3836,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3844,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">pulumi.<wbr>Input<Monthly<wbr>Retention<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3852,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">pulumi.<wbr>Input<Yearly<wbr>Retention<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3872,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">Input[Daily<wbr>Retention<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">Input[Monthly<wbr>Retention<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">Input[Weekly<wbr>Retention<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3896,7 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">Input[Yearly<wbr>Retention<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3982,7 +3959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3990,7 +3967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">pulumi.<wbr>Input<Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3998,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4006,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">pulumi.<wbr>Input<Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4018,7 +3995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Input[Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4026,7 +4003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Input[Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4034,7 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Input[Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4042,7 +4019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Input[Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4148,7 +4125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4156,7 +4133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a> | <a href="#simpleretentionpolicy">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4164,7 +4141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#longtermschedulepolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#simpleschedulepolicy">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4176,7 +4153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4184,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a> | <a href="#simpleretentionpolicy">Input[Simple<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4192,7 +4169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Input[Log<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#longtermschedulepolicy">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#simpleschedulepolicy">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4262,7 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4270,7 +4247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleretentionpolicyresponse">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#longtermschedulepolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleschedulepolicyresponse">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4290,7 +4267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4298,7 +4275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleretentionpolicyresponse">Input[Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4306,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Input[Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#longtermschedulepolicyresponse">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleschedulepolicyresponse">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4478,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4486,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Format<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4494,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#retentionscheduleformat">pulumi.<wbr>Input<Retention<wbr>Schedule<wbr>Format></a></span>
+        <span class="property-type">string | <a href="#retentionscheduleformat">Retention<wbr>Schedule<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4502,7 +4479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Format<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4510,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4522,7 +4499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Input[Retention<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4530,7 +4507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Input[Daily<wbr>Retention<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4538,7 +4515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#retentionscheduleformat">Input[Retention<wbr>Schedule<wbr>Format]</a></span>
+        <span class="property-type">str | <a href="#retentionscheduleformat">Retention<wbr>Schedule<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4546,7 +4523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Input[Weekly<wbr>Retention<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4554,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4656,7 +4633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4664,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4672,7 +4649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4680,7 +4657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4688,7 +4665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4700,7 +4677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Input[Retention<wbr>Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4708,7 +4685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Input[Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4716,7 +4693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4724,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Input[Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4732,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4830,7 +4807,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd><dt class="property-optional"
@@ -4839,7 +4816,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#durationtype_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#retentiondurationtype">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#retentiondurationtype">Retention<wbr>Duration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4851,7 +4828,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd><dt class="property-optional"
@@ -4860,7 +4837,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#duration_type_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#retentiondurationtype">Input[Retention<wbr>Duration<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#retentiondurationtype">Retention<wbr>Duration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4916,7 +4893,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd><dt class="property-optional"
@@ -4925,7 +4902,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#durationtype_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4937,7 +4914,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd><dt class="property-optional"
@@ -4946,7 +4923,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 <a href="#duration_type_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5116,7 +5093,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#iscompression_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><dt class="property-optional"
@@ -5125,7 +5102,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#issqlcompression_nodejs" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5133,7 +5110,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5145,7 +5122,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#is_compression_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><dt class="property-optional"
@@ -5154,7 +5131,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#issqlcompression_python" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5162,7 +5139,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5234,7 +5211,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#iscompression_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><dt class="property-optional"
@@ -5243,7 +5220,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#issqlcompression_nodejs" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5251,7 +5228,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5263,7 +5240,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#is_compression_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><dt class="property-optional"
@@ -5272,7 +5249,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#issqlcompression_python" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5280,7 +5257,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5318,7 +5295,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5330,7 +5307,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Input[Retention<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5368,7 +5345,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5380,7 +5357,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Input[Retention<wbr>Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5466,7 +5443,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulerundays_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Day<wbr>Of<wbr>Week>[]></a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5474,7 +5451,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulerunfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#scheduleruntype">pulumi.<wbr>Input<Schedule<wbr>Run<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#scheduleruntype">Schedule<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5482,7 +5459,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#scheduleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5490,7 +5467,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#scheduleweeklyfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5502,7 +5479,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_days_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]]]</a></span>
+        <span class="property-type"><a href="#dayofweek">Sequence[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5510,7 +5487,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#scheduleruntype">Input[Schedule<wbr>Run<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#scheduleruntype">Schedule<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5518,7 +5495,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_times_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5526,7 +5503,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_weekly_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>weekly_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5612,7 +5589,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulerundays_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5620,7 +5597,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulerunfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5628,7 +5605,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#scheduleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5636,7 +5613,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#scheduleweeklyfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5648,7 +5625,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_days_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5656,7 +5633,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5664,7 +5641,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_run_times_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +5649,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_weekly_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>weekly_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5742,7 +5719,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#policytype">pulumi.<wbr>Input<Policy<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#policytype">Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5750,7 +5727,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a> | <a href="#simpleretentionpolicy">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5758,7 +5735,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#longtermschedulepolicy">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args></a> | <a href="#simpleschedulepolicy">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5770,7 +5747,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#policytype">Input[Policy<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#policytype">Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5778,7 +5755,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a> | <a href="#simpleretentionpolicy">Input[Simple<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5786,7 +5763,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Input[Log<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#longtermschedulepolicy">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args]</a> | <a href="#simpleschedulepolicy">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5856,7 +5833,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5864,7 +5841,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleretentionpolicyresponse">pulumi.<wbr>Input<Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5872,7 +5849,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">pulumi.<wbr>Input<Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#longtermschedulepolicyresponse">pulumi.<wbr>Input<Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a> | <a href="#simpleschedulepolicyresponse">pulumi.<wbr>Input<Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5884,7 +5861,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5892,7 +5869,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Input[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleretentionpolicyresponse">Input[Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5900,7 +5877,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Input[Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#longtermschedulepolicyresponse">Input[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a> | <a href="#simpleschedulepolicyresponse">Input[Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5996,7 +5973,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Day<wbr>Of<wbr>Week>[]></a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6004,7 +5981,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#weeksofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekofmonth">pulumi.<wbr>Input<pulumi.<wbr>Input<Week<wbr>Of<wbr>Month>[]></a></span>
+        <span class="property-type"><a href="#weekofmonth">Week<wbr>Of<wbr>Month[]</a></span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6016,7 +5993,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]]]</a></span>
+        <span class="property-type"><a href="#dayofweek">Sequence[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6024,7 +6001,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#weeks_of_the_month_python" style="color: inherit; text-decoration: inherit;">weeks_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekofmonth">Input[Week<wbr>Of<wbr>Month]]]</a></span>
+        <span class="property-type"><a href="#weekofmonth">Sequence[Week<wbr>Of<wbr>Month]</a></span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6078,7 +6055,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6086,7 +6063,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#weeksofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6098,7 +6075,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6106,7 +6083,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#weeks_of_the_month_python" style="color: inherit; text-decoration: inherit;">weeks_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6176,7 +6153,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Day<wbr>Of<wbr>Week>[]></a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6184,7 +6161,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6192,7 +6169,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6204,7 +6181,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]]]</a></span>
+        <span class="property-type"><a href="#dayofweek">Sequence[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6212,7 +6189,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Input[Retention<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6220,7 +6197,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6290,7 +6267,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6298,7 +6275,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6306,7 +6283,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6318,7 +6295,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6326,7 +6303,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Input[Retention<wbr>Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6334,7 +6311,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6530,7 +6507,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#monthsofyear_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthofyear">pulumi.<wbr>Input<pulumi.<wbr>Input<Month<wbr>Of<wbr>Year>[]></a></span>
+        <span class="property-type"><a href="#monthofyear">Month<wbr>Of<wbr>Year[]</a></span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6538,7 +6515,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6546,7 +6523,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Format<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6554,7 +6531,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#retentionscheduleformat">pulumi.<wbr>Input<Retention<wbr>Schedule<wbr>Format></a></span>
+        <span class="property-type">string | <a href="#retentionscheduleformat">Retention<wbr>Schedule<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6562,7 +6539,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Format<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6570,7 +6547,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6582,7 +6559,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#months_of_year_python" style="color: inherit; text-decoration: inherit;">months_<wbr>of_<wbr>year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthofyear">Input[Month<wbr>Of<wbr>Year]]]</a></span>
+        <span class="property-type"><a href="#monthofyear">Sequence[Month<wbr>Of<wbr>Year]</a></span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6590,7 +6567,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Input[Retention<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6598,7 +6575,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Input[Daily<wbr>Retention<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6606,7 +6583,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#retentionscheduleformat">Input[Retention<wbr>Schedule<wbr>Format]</a></span>
+        <span class="property-type">str | <a href="#retentionscheduleformat">Retention<wbr>Schedule<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6614,7 +6591,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Input[Weekly<wbr>Retention<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6622,7 +6599,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6740,7 +6717,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#monthsofyear_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6748,7 +6725,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">pulumi.<wbr>Input<Retention<wbr>Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6756,7 +6733,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">pulumi.<wbr>Input<Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6764,7 +6741,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6772,7 +6749,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">pulumi.<wbr>Input<Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6780,7 +6757,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6792,7 +6769,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#months_of_year_python" style="color: inherit; text-decoration: inherit;">months_<wbr>of_<wbr>year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6800,7 +6777,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Input[Retention<wbr>Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6808,7 +6785,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Input[Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6816,7 +6793,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6824,7 +6801,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Input[Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6832,7 +6809,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}

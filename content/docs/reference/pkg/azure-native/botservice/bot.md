@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.botservice.Bot resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
-API Version: 2021-03-01.
+API Version: 2020-06-02.
 
 {{% examples %}}
 
@@ -87,7 +87,7 @@ package main
 
 import (
 	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -238,33 +238,19 @@ const bot = new azure_native.botservice.Bot("bot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Kind]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BotPropertiesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BotPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,32 +285,22 @@ const bot = new azure_native.botservice.Bot("bot", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -548,7 +524,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +532,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +540,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#kind">pulumi.<wbr>Input<Kind></a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +548,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +556,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botproperties">pulumi.<wbr>Input<Bot<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#botproperties">Bot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -588,7 +564,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +572,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,7 +580,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -616,7 +592,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +600,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +608,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#kind">Input[Kind]</a></span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +616,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +624,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botproperties">Input[Bot<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botproperties">Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +632,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +640,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +648,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightkey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insight<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1063,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1071,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscmekenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cmek<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insight_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insight_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cmek_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cmek_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1465,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuredchannels_nodejs" style="color: inherit; text-decoration: inherit;">configured<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1473,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1481,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledchannels_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1489,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1497,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointversion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1505,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightkey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insight<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1537,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscmekenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cmek<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1589,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configured_channels_python" style="color: inherit; text-decoration: inherit;">configured_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1597,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1605,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_channels_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1613,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1621,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_version_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1629,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insight_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insight_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cmek_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cmek_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1773,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1873,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1885,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1893,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

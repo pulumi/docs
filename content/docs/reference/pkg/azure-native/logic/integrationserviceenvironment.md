@@ -103,7 +103,7 @@ package main
 
 import (
 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -278,31 +278,19 @@ const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceE
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                  <span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationServiceEnvironmentPropertiesArgs]]</span> = None<span class="p">,</span>
-                                  <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationServiceEnvironmentSkuArgs]]</span> = None<span class="p">,</span>
-                                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IntegrationServiceEnvironmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IntegrationServiceEnvironmentSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -337,32 +325,22 @@ const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceE
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +532,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +540,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#integrationserviceenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration service environment name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +548,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +556,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentproperties">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Integration<wbr>Service<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +564,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentsku">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentsku">Integration<wbr>Service<wbr>Environment<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +572,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -606,7 +584,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +592,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#integration_service_environment_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration service environment name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +600,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +608,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Input[Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +616,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentsku">Input[Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentsku">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +624,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Input[Ip<wbr>Address<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Input[Ip<wbr>Address<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_nodejs" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Input[Flow<wbr>Endpoints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Input[Flow<wbr>Endpoints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -993,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_nodejs" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1013,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Input[Flow<wbr>Endpoints<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Input[Flow<wbr>Endpoints<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1075,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Input[Ip<wbr>Address<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Input[Ip<wbr>Address<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1141,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkeyreference_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_reference_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Input[Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkeyreference_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_reference_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Input[Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the key name in the Key Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the version of the key specified in the keyName property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationserviceenvironmentaccessendpointtype">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#integrationserviceenvironmentaccessendpointtype">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1481,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationserviceenvironmentaccessendpointtype">Input[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#integrationserviceenvironmentaccessendpointtype">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the tracking id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">pulumi.<wbr>Input<Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workflowprovisioningstate">pulumi.<wbr>Input<Workflow<wbr>Provisioning<wbr>State></a></span>
+        <span class="property-type">string | <a href="#workflowprovisioningstate">Workflow<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workflowstate">pulumi.<wbr>Input<Workflow<wbr>State></a></span>
+        <span class="property-type">string | <a href="#workflowstate">Workflow<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1731,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Input[Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">Input[Flow<wbr>Endpoints<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the tracking id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Input[Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workflowprovisioningstate">Input[Workflow<wbr>Provisioning<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#workflowprovisioningstate">Workflow<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workflowstate">Input[Workflow<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#workflowstate">Workflow<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">pulumi.<wbr>Input<Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the tracking id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">pulumi.<wbr>Input<Network<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Input[Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Input[Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the tracking id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Input[Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2035,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2043,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationserviceenvironmentskuname">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#integrationserviceenvironmentskuname">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2055,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationserviceenvironmentskuname">Input[Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#integrationserviceenvironmentskuname">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2147,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2167,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2263,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2275,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the virtual network address space.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Input[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_address_space_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the virtual network address space.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2459,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">pulumi.<wbr>Input<Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2467,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2475,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the virtual network address space.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2487,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Input[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2495,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_address_space_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the virtual network address space.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2541,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2553,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2623,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2651,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2659,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}

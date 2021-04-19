@@ -64,7 +64,7 @@ package main
 
 import (
 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -155,31 +155,19 @@ const project = new azure_native.migrate.Project("project", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectPropertiesArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ProjectPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,32 +202,22 @@ const project = new azure_native.migrate.Project("project", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -431,7 +409,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +417,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +425,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +433,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +441,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectproperties">pulumi.<wbr>Input<Project<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectproperties">Project<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +461,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +469,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +477,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +485,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +493,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectproperties">Input[Project<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectproperties">Project<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,412 +635,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}ARM id for the private endpoint resource corresponding to the connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether there is an ongoing operation on the private endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_csharp">
-<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}ARM id for the private endpoint resource corresponding to the connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether there is an ongoing operation on the private endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_go">
-<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}ARM id for the private endpoint resource corresponding to the connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Indicates whether there is an ongoing operation on the private endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_nodejs">
-<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Input[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}ARM id for the private endpoint resource corresponding to the connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether there is an ongoing operation on the private endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_link_service_connection_state_python">
-<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Name of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Name of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Input[Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint endpoint connection.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="e_tag_python">
-<a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_csharp">
-<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Actions required on the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Connection status of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_go">
-<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Actions required on the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Connection status of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_nodejs">
-<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Actions required on the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Description of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Connection status of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actions_required_python">
-<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Actions required on the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Description of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Connection status of the private endpoint connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="projectproperties">Project<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
@@ -1075,14 +647,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerstorageaccountarmid_csharp">
-<a href="#customerstorageaccountarmid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_csharp">
 <a href="#customerworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
@@ -1106,15 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#projectstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Project<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1127,14 +683,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerstorageaccountarmid_go">
-<a href="#customerstorageaccountarmid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_go">
 <a href="#customerworkspaceid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
@@ -1158,15 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1176,23 +716,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmentsolutionid_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Solution<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerstorageaccountarmid_nodejs">
-<a href="#customerstorageaccountarmid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_nodejs">
 <a href="#customerworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerworkspacelocation_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,17 +740,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#projectstatus">pulumi.<wbr>Input<Project<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1228,23 +752,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_solution_id_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>solution_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customer_storage_account_arm_id_python">
-<a href="#customer_storage_account_arm_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>storage_<wbr>account_<wbr>arm_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_workspace_id_python">
 <a href="#customer_workspace_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_workspace_location_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,17 +776,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_status_python" style="color: inherit; text-decoration: inherit;">project_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#projectstatus">Input[Project<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectpropertiesresponse">Project<wbr>Properties<wbr>Response</h4>
@@ -1318,14 +826,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of private endpoint connections to the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -1358,14 +858,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customerstorageaccountarmid_csharp">
-<a href="#customerstorageaccountarmid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="customerworkspaceid_csharp">
 <a href="#customerworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
 </span>
@@ -1388,15 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1442,14 +926,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The list of private endpoint connections to the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -1482,14 +958,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="customerstorageaccountarmid_go">
-<a href="#customerstorageaccountarmid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="customerworkspaceid_go">
 <a href="#customerworkspaceid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
 </span>
@@ -1512,15 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1530,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1538,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastassessmenttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Assessment<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1546,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofassessments_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Assessments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1554,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofgroups_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,23 +1022,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}The list of private endpoint connections to the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1586,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1594,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,23 +1054,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmentsolutionid_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Solution<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerstorageaccountarmid_nodejs">
-<a href="#customerstorageaccountarmid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Storage<wbr>Account<wbr>Arm<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_nodejs">
 <a href="#customerworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerworkspacelocation_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,17 +1078,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1654,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1662,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_assessment_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>assessment_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1670,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_assessments_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>assessments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_groups_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1686,23 +1122,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Input[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of private endpoint connections to the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1710,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1718,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,23 +1154,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_solution_id_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>solution_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customer_storage_account_arm_id_python">
-<a href="#customer_storage_account_arm_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>storage_<wbr>account_<wbr>arm_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARM id of the storage account used for interactions when public access is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_workspace_id_python">
 <a href="#customer_workspace_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1750,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_workspace_location_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1758,17 +1178,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_status_python" style="color: inherit; text-decoration: inherit;">project_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectstatus">Project<wbr>Status</h4>
@@ -1795,56 +1207,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ACTIVE</dt>
     <dd>Active</dd><dt>INACTIVE</dt>
     <dd>Inactive</dd></dl>
-{{% /choosable %}}
-
-<h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

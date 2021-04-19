@@ -74,7 +74,7 @@ package main
 
 import (
 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -192,32 +192,19 @@ const eventHub = new azure_native.eventhub.EventHub("eventHub", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CaptureDescriptionArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-             <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntityStatus]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[EntityStatus]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHub</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHub</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -252,32 +239,22 @@ const eventHub = new azure_native.eventhub.EventHub("eventHub", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EventHubArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -485,7 +462,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -493,7 +470,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -501,7 +478,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capturedescription_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescription">pulumi.<wbr>Input<Capture<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#capturedescription">Capture<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +486,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Hub name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +494,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#messageretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +502,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +510,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">pulumi.<wbr>Input<Entity<wbr>Status></a></span>
+        <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -545,7 +522,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -553,7 +530,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +538,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescription">Input[Capture<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capturedescription">Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +546,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Event Hub name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +554,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#message_retention_in_days_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +562,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +570,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Input[Entity<wbr>Status]</a></span>
+        <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -936,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">pulumi.<wbr>Input<Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#destination">Destination</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether capture description is enabled. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encodingcapturedescription">pulumi.<wbr>Input<Encoding<wbr>Capture<wbr>Description></a></span>
+        <span class="property-type"><a href="#encodingcapturedescription">Encoding<wbr>Capture<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizelimitinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Limit<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipemptyarchives_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Empty<wbr>Archives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether to Skip Empty Archives{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Input[Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether capture description is enabled. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encodingcapturedescription">Input[Encoding<wbr>Capture<wbr>Description]</a></span>
+        <span class="property-type"><a href="#encodingcapturedescription">Encoding<wbr>Capture<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_empty_archives_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>empty_<wbr>archives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether to Skip Empty Archives{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">pulumi.<wbr>Input<Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether capture description is enabled. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizelimitinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Limit<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipemptyarchives_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Empty<wbr>Archives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether to Skip Empty Archives{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1198,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Input[Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether capture description is enabled. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_empty_archives_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>empty_<wbr>archives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether to Skip Empty Archives{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivenameformat_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobcontainer_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob container Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for capture destination{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource id of the storage account to be used to create the blobs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_name_format_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_container_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob container Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for capture destination{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource id of the storage account to be used to create the blobs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1470,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivenameformat_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobcontainer_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob container Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1486,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for capture destination{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1494,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource id of the storage account to be used to create the blobs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1506,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_name_format_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_container_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob container Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for capture destination{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource id of the storage account to be used to create the blobs{{% /md %}}</dd></dl>
 {{% /choosable %}}

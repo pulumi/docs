@@ -98,7 +98,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -332,7 +332,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -550,7 +550,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -725,34 +725,19 @@ const peering = new azure_native.peering.Peering("peering", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PeeringPropertiesDirectArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PeeringPropertiesExchangeArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Kind]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PeeringSkuArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesDirectArgs]</span> = None<span class="p">, </span><span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesExchangeArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -787,32 +772,22 @@ const peering = new azure_native.peering.Peering("peering", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1052,7 +1027,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#kind">pulumi.<wbr>Input<Kind></a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1060,7 +1035,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1068,7 +1043,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringsku">pulumi.<wbr>Input<Peering<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1051,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#direct_nodejs" style="color: inherit; text-decoration: inherit;">direct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesdirect">pulumi.<wbr>Input<Peering<wbr>Properties<wbr>Direct<wbr>Args></a></span>
+        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1059,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesexchange">pulumi.<wbr>Input<Peering<wbr>Properties<wbr>Exchange<wbr>Args></a></span>
+        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1067,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1075,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1083,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1091,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1128,7 +1103,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#kind">Input[Kind]</a></span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1136,7 +1111,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1144,7 +1119,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringsku">Input[Peering<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1127,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#direct_python" style="color: inherit; text-decoration: inherit;">direct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesdirect">Input[Peering<wbr>Properties<wbr>Direct<wbr>Args]</a></span>
+        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1160,7 +1135,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesexchange">Input[Peering<wbr>Properties<wbr>Exchange<wbr>Args]</a></span>
+        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1168,7 +1143,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1151,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1159,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1167,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv4_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv6_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#md5authenticationkey_nodejs" style="color: inherit; text-decoration: inherit;">md5Authentication<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftsessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftsessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peersessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peersessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionprefixv4_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionprefixv6_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1595,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_prefixes_advertised_v4_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_prefixes_advertised_v6_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#md5_authentication_key_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>authentication_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_prefix_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_prefix_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionstatev4_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1865,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionstatev6_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv4_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv6_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#md5authenticationkey_nodejs" style="color: inherit; text-decoration: inherit;">md5Authentication<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftsessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftsessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peersessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peersessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionprefixv4_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionprefixv6_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1949,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_state_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1957,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_state_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_prefixes_advertised_v4_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_prefixes_advertised_v6_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#md5_authentication_key_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>authentication_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_prefix_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_prefix_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2147,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">pulumi.<wbr>Input<Bgp<wbr>Session<wbr>Args></a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2163,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaddressprovider_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Address<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sessionaddressprovider">pulumi.<wbr>Input<Session<wbr>Address<wbr>Provider></a></span>
+        <span class="property-type">string | <a href="#sessionaddressprovider">Session<wbr>Address<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useforpeeringservice_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>For<wbr>Peering<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Input[Bgp<wbr>Session<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_address_provider_python" style="color: inherit; text-decoration: inherit;">session_<wbr>address_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sessionaddressprovider">Input[Session<wbr>Address<wbr>Provider]</a></span>
+        <span class="property-type">str | <a href="#sessionaddressprovider">Session<wbr>Address<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_for_peering_service_python" style="color: inherit; text-decoration: inherit;">use_<wbr>for_<wbr>peering_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2429,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2437,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsofttrackingid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Tracking<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2445,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisionedbandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">pulumi.<wbr>Input<Bgp<wbr>Session<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaddressprovider_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Address<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2493,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useforpeeringservice_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>For<wbr>Peering<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2505,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2513,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2521,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_tracking_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>tracking_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2529,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioned_bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>bandwidth_<wbr>in_<wbr>mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Input[Bgp<wbr>Session<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_address_provider_python" style="color: inherit; text-decoration: inherit;">session_<wbr>address_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_for_peering_service_python" style="color: inherit; text-decoration: inherit;">use_<wbr>for_<wbr>peering_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2689,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">pulumi.<wbr>Input<Bgp<wbr>Session<wbr>Args></a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2717,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Input[Bgp<wbr>Session<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2835,7 +2810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">pulumi.<wbr>Input<Bgp<wbr>Session<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2879,7 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2887,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Input[Bgp<wbr>Session<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3033,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">pulumi.<wbr>Input<pulumi.<wbr>Input<Direct<wbr>Connection<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#directconnection">Direct<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directpeeringtype_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#directpeeringtype">pulumi.<wbr>Input<Direct<wbr>Peering<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#directpeeringtype">Direct<wbr>Peering<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3049,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">Input[Direct<wbr>Connection<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#directconnection">Sequence[Direct<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3069,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direct_peering_type_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>peering_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#directpeeringtype">Input[Direct<wbr>Peering<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#directpeeringtype">Direct<wbr>Peering<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3163,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useforpeeringservice_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>For<wbr>Peering<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Direct<wbr>Connection<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directpeeringtype_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3199,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_for_peering_service_python" style="color: inherit; text-decoration: inherit;">use_<wbr>for_<wbr>peering_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3207,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">Input[Direct<wbr>Connection<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3215,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direct_peering_type_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>peering_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3223,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3277,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">pulumi.<wbr>Input<pulumi.<wbr>Input<Exchange<wbr>Connection<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#exchangeconnection">Exchange<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">Input[Exchange<wbr>Connection<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#exchangeconnection">Sequence[Exchange<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3359,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Exchange<wbr>Connection<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3367,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3379,7 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">Input[Exchange<wbr>Connection<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3473,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#family">pulumi.<wbr>Input<Family></a></span>
+        <span class="property-type">string | <a href="#family">Family</a></span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3481,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#size">pulumi.<wbr>Input<Size></a></span>
+        <span class="property-type">string | <a href="#size">Size</a></span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#tier">pulumi.<wbr>Input<Tier></a></span>
+        <span class="property-type">string | <a href="#tier">Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3509,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#family">Input[Family]</a></span>
+        <span class="property-type">str | <a href="#family">Family</a></span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#size">Input[Size]</a></span>
+        <span class="property-type">str | <a href="#size">Size</a></span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#tier">Input[Tier]</a></span>
+        <span class="property-type">str | <a href="#tier">Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3619,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3627,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3635,7 +3610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3655,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3671,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3679,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3773,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3785,7 +3760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3823,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

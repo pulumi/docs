@@ -161,33 +161,19 @@ const importPipeline = new azure_native.containerregistry.ImportPipeline("import
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IdentityPropertiesArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">import_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, PipelineOptions]]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ImportPipelineSourcePropertiesArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineTriggerPropertiesArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">import_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, PipelineOptions]]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ImportPipelineSourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[PipelineTriggerPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ImportPipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ImportPipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,32 +208,22 @@ const importPipeline = new azure_native.containerregistry.ImportPipeline("import
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ImportPipelineArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -471,7 +447,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -479,7 +455,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -487,7 +463,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourceproperties">pulumi.<wbr>Input<Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#importpipelinesourceproperties">Import<wbr>Pipeline<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +471,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">pulumi.<wbr>Input<Identity<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +479,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#importpipelinename_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Pipeline<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +487,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +495,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Pipeline<wbr>Options>[]></span>
+        <span class="property-type">string | Pipeline<wbr>Options[]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +503,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerproperties">pulumi.<wbr>Input<Pipeline<wbr>Trigger<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinetriggerproperties">Pipeline<wbr>Trigger<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -539,7 +515,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -547,7 +523,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -555,7 +531,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourceproperties">Input[Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#importpipelinesourceproperties">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +539,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Input[Identity<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +547,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#import_pipeline_name_python" style="color: inherit; text-decoration: inherit;">import_<wbr>pipeline_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +555,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +563,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Pipeline<wbr>Options]]]]</span>
+        <span class="property-type">Sequence[Union[str, Pipeline<wbr>Options]]</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +571,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerproperties">Input[Pipeline<wbr>Trigger<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerproperties">Pipeline<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -880,7 +856,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +864,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,7 +872,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +880,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -919,7 +895,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +903,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +911,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +919,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1038,7 +1014,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1022,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1030,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1038,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1077,7 +1053,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1061,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1069,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1077,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1178,7 +1154,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1162,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pipelinesourcetype">pulumi.<wbr>Input<Pipeline<wbr>Source<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#pipelinesourcetype">Pipeline<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1170,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1208,7 +1184,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1192,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pipelinesourcetype">Input[Pipeline<wbr>Source<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#pipelinesourcetype">Pipeline<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1200,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1300,7 +1276,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1284,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1316,7 +1292,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1330,7 +1306,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1314,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1322,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1420,7 +1396,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#triggerstatus">pulumi.<wbr>Input<Trigger<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1432,7 +1408,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#triggerstatus">Input[Trigger<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1470,7 +1446,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1482,7 +1458,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1542,7 +1518,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerproperties">pulumi.<wbr>Input<Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1554,7 +1530,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Input[Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1592,7 +1568,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">pulumi.<wbr>Input<Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1604,7 +1580,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Input[Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1756,7 +1732,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1740,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1748,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1756,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1764,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1772,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1808,7 +1784,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1792,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1800,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1808,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1816,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1824,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1928,7 +1904,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1912,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1948,7 +1924,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1956,7 +1932,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2010,7 +1986,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +1994,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2030,7 +2006,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2014,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}

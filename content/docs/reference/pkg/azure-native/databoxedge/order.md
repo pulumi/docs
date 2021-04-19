@@ -76,7 +76,7 @@ package main
 
 import (
 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -193,30 +193,19 @@ const order = new azure_native.databoxedge.Order("order", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContactDetailsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">shipment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ShipmentType]]]</span> = None<span class="p">,</span>
-          <span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AddressArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[ContactDetailsArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShipmentType]]</span> = None<span class="p">, </span><span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[AddressArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -251,32 +240,22 @@ const order = new azure_native.databoxedge.Order("order", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +431,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contactinformation_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -460,7 +439,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order details of a device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -468,7 +447,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,7 +455,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#shipmenttype">pulumi.<wbr>Input<Shipment<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#shipmenttype">Shipment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ShipmentType of the order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +463,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">pulumi.<wbr>Input<Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#address">Address</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -496,7 +475,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Input[Contact<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -504,7 +483,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The order details of a device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -512,7 +491,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +499,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipment_type_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#shipmenttype">Input[Shipment<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#shipmenttype">Shipment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ShipmentType of the order{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +507,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Input[Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline1_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline2_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline3_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -991,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line1_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line2_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line3_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline1_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline2_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressline3_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address line3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line1_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line2_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_line3_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address line3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1395,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactperson_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Person</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1411,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the company.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_person_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>person</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1439,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1447,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1533,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1541,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactperson_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Person</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1549,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1557,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1569,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the company.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1577,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_person_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>person</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1585,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1593,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1697,7 +1676,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#additionalorderdetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Order<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored
 by the already existing properties{{% /md %}}</dd><dt class="property-required"
@@ -1706,7 +1685,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1714,7 +1693,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#trackinginformation_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">pulumi.<wbr>Input<Tracking<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1722,7 +1701,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#updatedatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1709,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1742,7 +1721,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#additional_order_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>order_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored
 by the already existing properties{{% /md %}}</dd><dt class="property-required"
@@ -1751,7 +1730,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1738,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#tracking_information_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Input[Tracking<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1746,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#update_date_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of status update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1754,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1891,7 +1870,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1878,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1886,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1894,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1906,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1914,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1922,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1930,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

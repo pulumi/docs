@@ -422,31 +422,19 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MediaGraphAssetSinkArgs]]]]</span> = None<span class="p">,</span>
-               <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MediaGraphRtspSourceArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphAssetSinkArgs]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphRtspSourceArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMediaGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MediaGraph</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMediaGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MediaGraph</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -481,32 +469,22 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -698,7 +676,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -706,7 +684,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -714,7 +692,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">pulumi.<wbr>Input<pulumi.<wbr>Input<Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">Media<wbr>Graph<wbr>Asset<wbr>Sink[]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -722,7 +700,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">Media<wbr>Graph<wbr>Rtsp<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +708,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Media Graph description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +716,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mediagraphname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Graph<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Graph name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,7 +728,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -758,7 +736,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -766,7 +744,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">Input[Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">Sequence[Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -774,7 +752,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">Input[Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">Sequence[Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +760,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Media Graph description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +768,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#media_graph_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>graph_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Graph name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1093,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1101,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sink name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1121,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1129,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sink name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1215,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sink name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sink name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Input[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Input[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args></a> | <a href="#mediagraphtlsendpoint">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1585,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1593,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#mediagraphrtsptransport">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Rtsp<wbr>Transport></a></span>
+        <span class="property-type">string | <a href="#mediagraphrtsptransport">Media<wbr>Graph<wbr>Rtsp<wbr>Transport</a></span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1605,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Input[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args]</a> | <a href="#mediagraphtlsendpoint">Input[Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1613,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1621,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#mediagraphrtsptransport">Input[Media<wbr>Graph<wbr>Rtsp<wbr>Transport]</a></span>
+        <span class="property-type">str | <a href="#mediagraphrtsptransport">Media<wbr>Graph<wbr>Rtsp<wbr>Transport</a></span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args></a> | <a href="#mediagraphtlsendpointresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1699,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Input[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args]</a> | <a href="#mediagraphtlsendpointresponse">Input[Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1735,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1847,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1883,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Input[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Input[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Input[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1993,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">pulumi.<wbr>Input<Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2029,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Input[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2045,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Input[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Input[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorehostname_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2115,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoresignature_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2127,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_hostname_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_signature_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorehostname_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2197,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoresignature_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_hostname_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2217,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_signature_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2271,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2291,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2353,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2361,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2381,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}

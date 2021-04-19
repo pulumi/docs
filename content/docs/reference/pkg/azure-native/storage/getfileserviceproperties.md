@@ -22,20 +22,17 @@ API Version: 2021-02-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileServiceProperties<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileServicePropertiesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileServicePropertiesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileServiceProperties<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileServicePropertiesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_service_properties(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">file_services_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileServicePropertiesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_service_properties(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_services_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileServicePropertiesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFileServiceProperties<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFileServicePropertiesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFileServicePropertiesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFileServiceProperties<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFileServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFileServicePropertiesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFileServiceProperties` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-02-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileServiceProperties </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileServicePropertiesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileServicePropertiesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileServicePropertiesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileServicePropertiesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -611,7 +608,7 @@ The following output properties are available:
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +644,7 @@ The following output properties are available:
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -799,7 +796,7 @@ The following output properties are available:
 <a href="#smb_csharp" style="color: inherit; text-decoration: inherit;">Smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Response</a></span>
+        <span class="property-type"><a href="#smbsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +832,7 @@ The following output properties are available:
 <a href="#smb_python" style="color: inherit; text-decoration: inherit;">smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response</a></span>
+        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -959,7 +956,7 @@ The following output properties are available:
 <a href="#multichannel_csharp" style="color: inherit; text-decoration: inherit;">Multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Response</a></span>
+        <span class="property-type"><a href="#multichannelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +1088,7 @@ The following output properties are available:
 <a href="#multichannel_python" style="color: inherit; text-decoration: inherit;">multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response</a></span>
+        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -22,18 +22,17 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listBillingAccountInvoiceSectionsByCreateSubscriptionPermission<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listBillingAccountInvoiceSectionsByCreateSubscriptionPermission<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_billing_account_invoice_sections_by_create_subscription_permission(</span><span class="nx">billing_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                                                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_billing_account_invoice_sections_by_create_subscription_permission(</span><span class="nx">billing_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission` in the Go SDK.
 
@@ -42,7 +41,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -361,7 +360,7 @@ The following output properties are available:
 <a href="#enabledazureplans_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Billing.<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Billing.<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +612,7 @@ The following output properties are available:
 <a href="#enabled_azure_plans_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>azure_<wbr>plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureplanresponse">Sequence[Azure<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureplanresponse">Sequence[Azure<wbr>Plan<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}

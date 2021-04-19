@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.botservice.Channel resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot channel resource definition
-API Version: 2021-03-01.
+API Version: 2020-06-02.
 
 {{% examples %}}
 
@@ -448,34 +448,19 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">channel_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Kind]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AlexaChannelArgs, DirectLineChannelArgs, DirectLineSpeechChannelArgs, EmailChannelArgs, FacebookChannelArgs, KikChannelArgs, LineChannelArgs, MsTeamsChannelArgs, SkypeChannelArgs, SlackChannelArgs, SmsChannelArgs, TelegramChannelArgs, WebChatChannelArgs]]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AlexaChannelArgs, DirectLineChannelArgs, DirectLineSpeechChannelArgs, EmailChannelArgs, FacebookChannelArgs, KikChannelArgs, LineChannelArgs, MsTeamsChannelArgs, SkypeChannelArgs, SlackChannelArgs, SmsChannelArgs, TelegramChannelArgs, WebChatChannelArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -510,32 +495,22 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -775,7 +750,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -783,7 +758,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +766,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +774,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +782,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#kind">pulumi.<wbr>Input<Kind></a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +790,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +798,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannel">pulumi.<wbr>Input<Alexa<wbr>Channel<wbr>Args></a> | <a href="#directlinechannel">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Channel<wbr>Args></a> | <a href="#directlinespeechchannel">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args></a> | <a href="#emailchannel">pulumi.<wbr>Input<Email<wbr>Channel<wbr>Args></a> | <a href="#facebookchannel">pulumi.<wbr>Input<Facebook<wbr>Channel<wbr>Args></a> | <a href="#kikchannel">pulumi.<wbr>Input<Kik<wbr>Channel<wbr>Args></a> | <a href="#linechannel">pulumi.<wbr>Input<Line<wbr>Channel<wbr>Args></a> | <a href="#msteamschannel">pulumi.<wbr>Input<Ms<wbr>Teams<wbr>Channel<wbr>Args></a> | <a href="#skypechannel">pulumi.<wbr>Input<Skype<wbr>Channel<wbr>Args></a> | <a href="#slackchannel">pulumi.<wbr>Input<Slack<wbr>Channel<wbr>Args></a> | <a href="#smschannel">pulumi.<wbr>Input<Sms<wbr>Channel<wbr>Args></a> | <a href="#telegramchannel">pulumi.<wbr>Input<Telegram<wbr>Channel<wbr>Args></a> | <a href="#webchatchannel">pulumi.<wbr>Input<Web<wbr>Chat<wbr>Channel<wbr>Args></a></span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a> | <a href="#emailchannel">Email<wbr>Channel</a> | <a href="#facebookchannel">Facebook<wbr>Channel</a> | <a href="#kikchannel">Kik<wbr>Channel</a> | <a href="#linechannel">Line<wbr>Channel</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a> | <a href="#skypechannel">Skype<wbr>Channel</a> | <a href="#slackchannel">Slack<wbr>Channel</a> | <a href="#smschannel">Sms<wbr>Channel</a> | <a href="#telegramchannel">Telegram<wbr>Channel</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +806,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +814,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -851,7 +826,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -859,7 +834,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,7 +842,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +850,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +858,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#kind">Input[Kind]</a></span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +866,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +874,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannel">Input[Alexa<wbr>Channel<wbr>Args]</a> | <a href="#directlinechannel">Input[Direct<wbr>Line<wbr>Channel<wbr>Args]</a> | <a href="#directlinespeechchannel">Input[Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args]</a> | <a href="#emailchannel">Input[Email<wbr>Channel<wbr>Args]</a> | <a href="#facebookchannel">Input[Facebook<wbr>Channel<wbr>Args]</a> | <a href="#kikchannel">Input[Kik<wbr>Channel<wbr>Args]</a> | <a href="#linechannel">Input[Line<wbr>Channel<wbr>Args]</a> | <a href="#msteamschannel">Input[Ms<wbr>Teams<wbr>Channel<wbr>Args]</a> | <a href="#skypechannel">Input[Skype<wbr>Channel<wbr>Args]</a> | <a href="#slackchannel">Input[Slack<wbr>Channel<wbr>Args]</a> | <a href="#smschannel">Input[Sms<wbr>Channel<wbr>Args]</a> | <a href="#telegramchannel">Input[Telegram<wbr>Channel<wbr>Args]</a> | <a href="#webchatchannel">Input[Web<wbr>Chat<wbr>Channel<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +882,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +890,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1082,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">pulumi.<wbr>Input<Alexa<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1094,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">Input[Alexa<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1148,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alexaskillid_nodejs" style="color: inherit; text-decoration: inherit;">alexa<wbr>Skill<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1156,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1168,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alexa_skill_id_python" style="color: inherit; text-decoration: inherit;">alexa_<wbr>skill_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1176,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alexaskillid_nodejs" style="color: inherit; text-decoration: inherit;">alexa<wbr>Skill<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1270,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1278,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1286,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlfragment_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1298,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alexa_skill_id_python" style="color: inherit; text-decoration: inherit;">alexa_<wbr>skill_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1306,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1314,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1322,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_fragment_python" style="color: inherit; text-decoration: inherit;">url_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">pulumi.<wbr>Input<Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1372,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Input[Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1422,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">Input[Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1460,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">pulumi.<wbr>Input<pulumi.<wbr>Input<Direct<wbr>Line<wbr>Site<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#directlinesite">Direct<wbr>Line<wbr>Site[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">Input[Direct<wbr>Line<wbr>Site<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#directlinesite">Sequence[Direct<wbr>Line<wbr>Site<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1510,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">Direct<wbr>Line<wbr>Site<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1522,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">Input[Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">Sequence[Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1560,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Input[Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1698,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isv1enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V1Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1706,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V3Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1714,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecuresiteenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure<wbr>Site<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedorigins_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1742,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1750,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_v1_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v1_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1758,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_v3_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v3_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1766,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secure_site_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure_<wbr>site_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1782,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1948,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1956,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isv1enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V1Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1964,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V3Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1972,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1980,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1988,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#siteid_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1996,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecuresiteenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure<wbr>Site<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2012,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedorigins_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2024,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2032,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_v1_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v1_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2040,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_v3_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v3_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2048,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2056,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2064,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2072,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secure_site_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure_<wbr>site_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2126,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2138,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">Input[Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2240,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvoicedeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdefaultbotforcogsvcaccount_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2284,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_voice_deployment_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>voice_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_default_bot_for_cog_svc_account_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default_<wbr>bot_<wbr>for_<wbr>cog_<wbr>svc_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2316,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2418,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2426,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2434,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvoicedeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2442,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdefaultbotforcogsvcaccount_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2450,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2462,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2470,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2478,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_voice_deployment_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>voice_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_default_bot_for_cog_svc_account_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default_<wbr>bot_<wbr>for_<wbr>cog_<wbr>svc_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2494,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2532,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">pulumi.<wbr>Input<Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2544,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Input[Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2582,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">pulumi.<wbr>Input<Email<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2594,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">Input[Email<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2664,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2672,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2692,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2700,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2708,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2778,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2786,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2794,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2806,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2814,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2822,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2860,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">pulumi.<wbr>Input<Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2872,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Input[Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2910,7 +2885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">pulumi.<wbr>Input<Facebook<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2922,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">Input[Facebook<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3008,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3016,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3024,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appsecret_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3032,7 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">pulumi.<wbr>Input<pulumi.<wbr>Input<Facebook<wbr>Page<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#facebookpage">Facebook<wbr>Page[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3044,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3052,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3060,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_secret_python" style="color: inherit; text-decoration: inherit;">app_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3068,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">Input[Facebook<wbr>Page<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#facebookpage">Sequence[Facebook<wbr>Page<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3186,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3194,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3202,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3210,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verifytoken_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3218,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appsecret_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3226,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Facebook<wbr>Page<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#facebookpageresponse">Facebook<wbr>Page<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3238,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3246,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3254,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3262,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_token_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_secret_python" style="color: inherit; text-decoration: inherit;">app_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3278,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">Input[Facebook<wbr>Page<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">Sequence[Facebook<wbr>Page<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3316,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">pulumi.<wbr>Input<Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3328,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Input[Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3382,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3390,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3402,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3410,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3464,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3472,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3484,7 +3459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3492,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3530,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">pulumi.<wbr>Input<Kik<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3542,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">Input[Kik<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3628,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3636,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3664,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3672,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3680,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3688,7 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3774,7 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3782,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3790,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3810,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3818,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3826,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3872,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">pulumi.<wbr>Input<Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3884,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Input[Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3956,7 +3931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">pulumi.<wbr>Input<Line<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3968,7 +3943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">Input[Line<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4006,7 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">pulumi.<wbr>Input<pulumi.<wbr>Input<Line<wbr>Registration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lineregistration">Line<wbr>Registration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4018,7 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">Input[Line<wbr>Registration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lineregistration">Sequence[Line<wbr>Registration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4088,7 +4063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4096,7 +4071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4104,7 +4079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Line<wbr>Registration<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">Line<wbr>Registration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4116,7 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4124,7 +4099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4132,7 +4107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">Input[Line<wbr>Registration<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">Sequence[Line<wbr>Registration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4170,7 +4145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">pulumi.<wbr>Input<Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4182,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Input[Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4236,7 +4211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4244,7 +4219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelsecret_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4256,7 +4231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_access_token_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4264,7 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_secret_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4334,7 +4309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatedid_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4342,7 +4317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4350,7 +4325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelsecret_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4362,7 +4337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_id_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4370,7 +4345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_access_token_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4378,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_secret_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4416,7 +4391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">pulumi.<wbr>Input<Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4428,7 +4403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">Input[Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4498,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4506,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4514,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4526,7 +4501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4534,7 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4542,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4612,7 +4587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4620,7 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4628,7 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4640,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4648,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4656,7 +4631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4694,7 +4669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">pulumi.<wbr>Input<Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4706,7 +4681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Input[Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4744,7 +4719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4756,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4836,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4844,7 +4819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4856,7 +4831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4864,7 +4839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4902,7 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">pulumi.<wbr>Input<Skype<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4914,7 +4889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">Input[Skype<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5080,7 +5055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5088,7 +5063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5096,7 +5071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5104,7 +5079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablegroups_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5112,7 +5087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemediacards_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Media<wbr>Cards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5120,7 +5095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemessaging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Messaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5128,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablescreensharing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Screen<wbr>Sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5136,7 +5111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevideo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5144,7 +5119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupsmode_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5156,7 +5131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5164,7 +5139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5172,7 +5147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5180,7 +5155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_groups_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5188,7 +5163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_media_cards_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>media_<wbr>cards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5196,7 +5171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_messaging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>messaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5204,7 +5179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_screen_sharing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>screen_<wbr>sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5212,7 +5187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_video_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5220,7 +5195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_mode_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5386,7 +5361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5394,7 +5369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5402,7 +5377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5410,7 +5385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablegroups_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5418,7 +5393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemediacards_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Media<wbr>Cards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5426,7 +5401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemessaging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Messaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5434,7 +5409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablescreensharing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Screen<wbr>Sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5442,7 +5417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevideo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5450,7 +5425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupsmode_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5462,7 +5437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5470,7 +5445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5478,7 +5453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5486,7 +5461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_groups_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5494,7 +5469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_media_cards_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>media_<wbr>cards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5502,7 +5477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_messaging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>messaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5510,7 +5485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_screen_sharing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>screen_<wbr>sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5518,7 +5493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_video_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5526,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_mode_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5564,7 +5539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">pulumi.<wbr>Input<Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5576,7 +5551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Input[Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5614,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">pulumi.<wbr>Input<Slack<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5626,7 +5601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">Input[Slack<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5744,7 +5719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5752,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5760,7 +5735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5768,7 +5743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#landingpageurl_nodejs" style="color: inherit; text-decoration: inherit;">landing<wbr>Page<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5776,7 +5751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5784,7 +5759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5796,7 +5771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5804,7 +5779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5812,7 +5787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5820,7 +5795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#landing_page_url_python" style="color: inherit; text-decoration: inherit;">landing_<wbr>page_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5828,7 +5803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5836,7 +5811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6018,7 +5993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6026,7 +6001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6034,7 +6009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsubmissionid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Submission<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6042,7 +6017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectaction_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6050,7 +6025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registerbeforeoauthflow_nodejs" style="color: inherit; text-decoration: inherit;">register<wbr>Before<wbr>OAuth<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6058,7 +6033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6066,7 +6041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6074,7 +6049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#landingpageurl_nodejs" style="color: inherit; text-decoration: inherit;">landing<wbr>Page<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6082,7 +6057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6090,7 +6065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6102,7 +6077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6110,7 +6085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6118,7 +6093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_submission_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>submission_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6126,7 +6101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_action_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6134,7 +6109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#register_before_o_auth_flow_python" style="color: inherit; text-decoration: inherit;">register_<wbr>before_<wbr>o_<wbr>auth_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6142,7 +6117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6150,7 +6125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6158,7 +6133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#landing_page_url_python" style="color: inherit; text-decoration: inherit;">landing_<wbr>page_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6166,7 +6141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6174,7 +6149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6212,7 +6187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">pulumi.<wbr>Input<Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6224,7 +6199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Input[Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6262,7 +6237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">pulumi.<wbr>Input<Sms<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6274,7 +6249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">Input[Sms<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6376,7 +6351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>SID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6384,7 +6359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6392,7 +6367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6400,7 +6375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6408,7 +6383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6420,7 +6395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_sid_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6428,7 +6403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6436,7 +6411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6444,7 +6419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6452,7 +6427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6554,7 +6529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>SID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6562,7 +6537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6570,7 +6545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6578,7 +6553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6586,7 +6561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6598,7 +6573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_sid_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6606,7 +6581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6614,7 +6589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6622,7 +6597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6630,7 +6605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6668,7 +6643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">pulumi.<wbr>Input<Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6680,7 +6655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Input[Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6718,7 +6693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">pulumi.<wbr>Input<Telegram<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6730,7 +6705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">Input[Telegram<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6800,7 +6775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6808,7 +6783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6816,7 +6791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6828,7 +6803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6836,7 +6811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6844,7 +6819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6914,7 +6889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6922,7 +6897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6930,7 +6905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6942,7 +6917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6950,7 +6925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6958,7 +6933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6996,7 +6971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">pulumi.<wbr>Input<Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7008,7 +6983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Input[Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7046,7 +7021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">pulumi.<wbr>Input<Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7058,7 +7033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">Input[Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7096,7 +7071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">pulumi.<wbr>Input<pulumi.<wbr>Input<Web<wbr>Chat<wbr>Site<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#webchatsite">Web<wbr>Chat<wbr>Site[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7108,7 +7083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">Input[Web<wbr>Chat<wbr>Site<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#webchatsite">Sequence[Web<wbr>Chat<wbr>Site<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7162,7 +7137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webchatembedcode_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Chat<wbr>Embed<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7170,7 +7145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">Web<wbr>Chat<wbr>Site<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7182,7 +7157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_chat_embed_code_python" style="color: inherit; text-decoration: inherit;">web_<wbr>chat_<wbr>embed_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7190,7 +7165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">Input[Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">Sequence[Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7228,7 +7203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">pulumi.<wbr>Input<Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7240,7 +7215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Input[Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7310,7 +7285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepreview_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7318,7 +7293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7326,7 +7301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7338,7 +7313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_preview_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7346,7 +7321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7354,7 +7329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7472,7 +7447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepreview_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7480,7 +7455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7488,7 +7463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7496,7 +7471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7504,7 +7479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#siteid_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7512,7 +7487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7524,7 +7499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_preview_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7532,7 +7507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7540,7 +7515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7548,7 +7523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7556,7 +7531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7564,7 +7539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}

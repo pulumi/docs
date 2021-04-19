@@ -22,21 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiDiagnostic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApiDiagnosticArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApiDiagnosticResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiDiagnostic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApiDiagnosticArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApiDiagnosticResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_api_diagnostic(</span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApiDiagnosticResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_api_diagnostic(</span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApiDiagnosticResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiDiagnostic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApiDiagnosticArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApiDiagnosticResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiDiagnostic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApiDiagnosticArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApiDiagnosticResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApiDiagnostic` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApiDiagnostic </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetApiDiagnosticResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApiDiagnosticArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApiDiagnosticResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApiDiagnosticArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -760,7 +756,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +764,7 @@ The following output properties are available:
 <a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +816,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +824,7 @@ The following output properties are available:
 <a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -844,7 +840,7 @@ The following output properties are available:
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +848,7 @@ The following output properties are available:
 <a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Response</a></span>
+        <span class="property-type"><a href="#datamaskingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +924,7 @@ The following output properties are available:
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +932,7 @@ The following output properties are available:
 <a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response</a></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +956,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +964,7 @@ The following output properties are available:
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1020,7 +1016,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1024,7 @@ The following output properties are available:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}

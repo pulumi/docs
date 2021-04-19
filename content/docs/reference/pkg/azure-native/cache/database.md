@@ -83,7 +83,7 @@ package main
 
 import (
 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -219,34 +219,19 @@ const database = new azure_native.cache.Database("database", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">client_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Protocol]]]</span> = None<span class="p">,</span>
-             <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">clustering_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ClusteringPolicy]]]</span> = None<span class="p">,</span>
-             <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EvictionPolicy]]]</span> = None<span class="p">,</span>
-             <span class="nx">modules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ModuleArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">persistence</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PersistenceArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, Protocol]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clustering_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, ClusteringPolicy]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, EvictionPolicy]]</span> = None<span class="p">, </span><span class="nx">modules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ModuleArgs]]</span> = None<span class="p">, </span><span class="nx">persistence</span><span class="p">:</span> <span class="nx">Optional[PersistenceArgs]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -281,32 +266,22 @@ const database = new azure_native.cache.Database("database", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -546,7 +521,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -554,7 +529,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +537,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientprotocol_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protocol">pulumi.<wbr>Input<Protocol></a></span>
+        <span class="property-type">string | <a href="#protocol">Protocol</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +545,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clusteringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">clustering<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#clusteringpolicy">pulumi.<wbr>Input<Clustering<wbr>Policy></a></span>
+        <span class="property-type">string | <a href="#clusteringpolicy">Clustering<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +553,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +561,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#evictionpolicy">pulumi.<wbr>Input<Eviction<wbr>Policy></a></span>
+        <span class="property-type">string | <a href="#evictionpolicy">Eviction<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +569,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#modules_nodejs" style="color: inherit; text-decoration: inherit;">modules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#module">pulumi.<wbr>Input<pulumi.<wbr>Input<Module<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#module">Module[]</a></span>
     </dt>
     <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +577,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistence">pulumi.<wbr>Input<Persistence<wbr>Args></a></span>
+        <span class="property-type"><a href="#persistence">Persistence</a></span>
     </dt>
     <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +585,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -622,7 +597,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -630,7 +605,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +613,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#client_protocol_python" style="color: inherit; text-decoration: inherit;">client_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protocol">Input[Protocol]</a></span>
+        <span class="property-type">str | <a href="#protocol">Protocol</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +621,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clustering_policy_python" style="color: inherit; text-decoration: inherit;">clustering_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#clusteringpolicy">Input[Clustering<wbr>Policy]</a></span>
+        <span class="property-type">str | <a href="#clusteringpolicy">Clustering<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +629,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +637,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#evictionpolicy">Input[Eviction<wbr>Policy]</a></span>
+        <span class="property-type">str | <a href="#evictionpolicy">Eviction<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +645,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#modules_python" style="color: inherit; text-decoration: inherit;">modules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#module">Input[Module<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#module">Sequence[Module<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +653,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistence">Input[Persistence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#persistence">Persistence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +661,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1055,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1063,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1141,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1161,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1169,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aofenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aoffrequency_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#aoffrequency">pulumi.<wbr>Input<Aof<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#aoffrequency">Aof<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdbenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdbfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#rdbfrequency">pulumi.<wbr>Input<Rdb<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#rdbfrequency">Rdb<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aof_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aof_frequency_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#aoffrequency">Input[Aof<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#aoffrequency">Aof<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdb_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1323,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdb_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#rdbfrequency">Input[Rdb<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#rdbfrequency">Rdb<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aofenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aoffrequency_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdbenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdbfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aof_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aof_frequency_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdb_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rdb_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}

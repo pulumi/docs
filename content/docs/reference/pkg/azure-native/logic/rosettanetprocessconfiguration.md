@@ -111,7 +111,7 @@ package main
 
 import (
 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -325,38 +325,19 @@ const rosettaNetProcessConfiguration = new azure_native.logic.RosettaNetProcessC
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                   <span class="nx">activity_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RosettaNetPipActivitySettingsArgs]]</span> = None<span class="p">,</span>
-                                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">initiator_role_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RosettaNetPipRoleSettingsArgs]]</span> = None<span class="p">,</span>
-                                   <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                                   <span class="nx">process_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">process_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">process_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">responder_role_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RosettaNetPipRoleSettingsArgs]]</span> = None<span class="p">,</span>
-                                   <span class="nx">rosetta_net_process_configuration_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activity_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipActivitySettingsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initiator_role_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipRoleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">process_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responder_role_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipRoleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">rosetta_net_process_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RosettaNetProcessConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RosettaNetProcessConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -391,32 +372,22 @@ const rosettaNetProcessConfiguration = new azure_native.logic.RosettaNetProcessC
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RosettaNetProcessConfigurationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -720,7 +691,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#activitysettings_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettings">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettings">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -728,7 +699,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#initiatorrolesettings_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -736,7 +707,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -744,7 +715,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#processcode_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -752,7 +723,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#processname_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -760,7 +731,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#processversion_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -768,7 +739,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -776,7 +747,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#responderrolesettings_nodejs" style="color: inherit; text-decoration: inherit;">responder<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +755,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +763,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +771,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +779,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#rosettanetprocessconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">rosetta<wbr>Net<wbr>Process<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +787,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -828,7 +799,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#activity_settings_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettings">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettings">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -836,7 +807,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#initiator_role_settings_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>role_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -844,7 +815,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -852,7 +823,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#process_code_python" style="color: inherit; text-decoration: inherit;">process_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -860,7 +831,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#process_name_python" style="color: inherit; text-decoration: inherit;">process_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -868,7 +839,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#process_version_python" style="color: inherit; text-decoration: inherit;">process_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -876,7 +847,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -884,7 +855,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#responder_role_settings_python" style="color: inherit; text-decoration: inherit;">responder_<wbr>role_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +863,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +871,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +879,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +887,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#rosetta_net_process_configuration_name_python" style="color: inherit; text-decoration: inherit;">rosetta_<wbr>net_<wbr>process_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +895,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isnonrepudiationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Non<wbr>Repudiation<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1209,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoacknowledgeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Acknowledge<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_non_repudiation_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>non_<wbr>repudiation_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isnonrepudiationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Non<wbr>Repudiation<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1291,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoacknowledgeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Acknowledge<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_non_repudiation_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>non_<wbr>repudiation_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetactiontype">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Action<wbr>Type></a></span>
+        <span class="property-type"><a href="#rosettanetactiontype">Rosetta<wbr>Net<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1469,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isauthorizationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Authorization<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1477,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecuredtransportrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secured<wbr>Transport<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1485,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonrepudiationoforiginandcontent_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Repudiation<wbr>Of<wbr>Origin<wbr>And<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1493,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Confidentiality<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope></a></span>
+        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1501,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetresponsetype">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Response<wbr>Type></a></span>
+        <span class="property-type"><a href="#rosettanetresponsetype">Rosetta<wbr>Net<wbr>Response<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1509,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrycount_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoperforminseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Perform<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1529,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetactiontype">Input[Rosetta<wbr>Net<wbr>Action<wbr>Type]</a></span>
+        <span class="property-type"><a href="#rosettanetactiontype">Rosetta<wbr>Net<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1537,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_authorization_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>authorization_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1545,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secured_transport_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secured_<wbr>transport_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1553,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_repudiation_of_origin_and_content_python" style="color: inherit; text-decoration: inherit;">non_<wbr>repudiation_<wbr>of_<wbr>origin_<wbr>and_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1561,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_confidentiality_scope_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>confidentiality_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1569,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_type_python" style="color: inherit; text-decoration: inherit;">response_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetresponsetype">Input[Rosetta<wbr>Net<wbr>Response<wbr>Type]</a></span>
+        <span class="property-type"><a href="#rosettanetresponsetype">Rosetta<wbr>Net<wbr>Response<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1577,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1585,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isauthorizationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Authorization<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecuredtransportrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secured<wbr>Transport<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonrepudiationoforiginandcontent_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Repudiation<wbr>Of<wbr>Origin<wbr>And<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Confidentiality<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrycount_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoperforminseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Perform<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1811,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_authorization_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>authorization_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secured_transport_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secured_<wbr>transport_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_repudiation_of_origin_and_content_python" style="color: inherit; text-decoration: inherit;">non_<wbr>repudiation_<wbr>of_<wbr>origin_<wbr>and_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_confidentiality_scope_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>confidentiality_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_type_python" style="color: inherit; text-decoration: inherit;">response_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1937,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1945,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitytype">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type></a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitytype">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1965,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1973,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_type_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitytype">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitytype">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_type_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2325,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2353,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2529,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2537,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2545,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2553,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiproletype">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type></a></span>
+        <span class="property-type"><a href="#rosettanetpiproletype">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2561,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2569,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceclassification_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2589,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2597,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2605,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2613,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiproletype">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type]</a></span>
+        <span class="property-type"><a href="#rosettanetpiproletype">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2621,7 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2629,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_classification_python" style="color: inherit; text-decoration: inherit;">service_<wbr>classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">pulumi.<wbr>Input<Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceclassification_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2831,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2839,7 +2810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Input[Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2847,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2855,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2863,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2871,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_classification_python" style="color: inherit; text-decoration: inherit;">service_<wbr>classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2879,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -100,7 +100,7 @@ package main
 
 import (
 	alertsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/alertsmanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -253,34 +253,19 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[HealthAlertActionArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthAlertCriteriaArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[HealthAlertCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHealthAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHealthAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HealthAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HealthAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -315,32 +300,22 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">HealthAlertArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -580,7 +555,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteria">pulumi.<wbr>Input<Health<wbr>Alert<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -588,7 +563,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -596,7 +571,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -604,7 +579,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +587,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Health<wbr>Alert<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#healthalertaction">Health<wbr>Alert<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +595,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +603,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +611,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +619,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +631,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteria">Input[Health<wbr>Alert<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -664,7 +639,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +647,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -680,7 +655,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +663,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertaction">Input[Health<wbr>Alert<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#healthalertaction">Sequence[Health<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +671,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +679,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +687,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +695,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">pulumi.<wbr>Input<pulumi.<wbr>Input<Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">Input[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1145,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Input[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#healthstatename">pulumi.<wbr>Input<Health<wbr>State<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#healthstatename">Health<wbr>State<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#healthstatename">Input[Health<wbr>State<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#healthstatename">Health<wbr>State<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1307,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1315,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">pulumi.<wbr>Input<pulumi.<wbr>Input<Health<wbr>State<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#healthstate">Health<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitornames_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitortypes_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1433,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">Input[Health<wbr>State<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#healthstate">Sequence[Health<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_names_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_types_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Health<wbr>State<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#healthstateresponse">Health<wbr>State<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitornames_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitortypes_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">Input[Health<wbr>State<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_names_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_types_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}

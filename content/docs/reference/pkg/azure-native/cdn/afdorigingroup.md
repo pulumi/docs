@@ -71,7 +71,7 @@ package main
 
 import (
 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -180,33 +180,19 @@ const afdOriginGroup = new azure_native.cdn.AFDOriginGroup("afdOriginGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthProbeParametersArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancingSettingsParametersArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">response_based_afd_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResponseBasedOriginErrorDetectionParametersArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">session_affinity_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EnabledState]]]</span> = None<span class="p">,</span>
-                   <span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[HealthProbeParametersArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[LoadBalancingSettingsParametersArgs]</span> = None<span class="p">, </span><span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_based_afd_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[ResponseBasedOriginErrorDetectionParametersArgs]</span> = None<span class="p">, </span><span class="nx">session_affinity_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnabledState]]</span> = None<span class="p">, </span><span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOriginGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOriginGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -241,32 +227,22 @@ const afdOriginGroup = new azure_native.cdn.AFDOriginGroup("afdOriginGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AFDOriginGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -490,7 +466,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +474,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +482,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">pulumi.<wbr>Input<Health<wbr>Probe<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +490,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loadbalancingsettings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsparameters">pulumi.<wbr>Input<Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsparameters">Load<wbr>Balancing<wbr>Settings<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +498,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#origingroupname_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the origin group which is unique within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +506,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#responsebasedafdoriginerrordetectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Afd<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">pulumi.<wbr>Input<Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +514,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sessionaffinitystate_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#enabledstate">pulumi.<wbr>Input<Enabled<wbr>State></a></span>
+        <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +522,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#trafficrestorationtimetohealedornewendpointsinminutes_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -558,7 +534,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -566,7 +542,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +550,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Input[Health<wbr>Probe<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +558,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#load_balancing_settings_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsparameters">Input[Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsparameters">Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +566,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#origin_group_name_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the origin group which is unique within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +574,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#response_based_afd_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>afd_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Input[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +582,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#session_affinity_state_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#enabledstate">Input[Enabled<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +590,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">pulumi.<wbr>Input<Probe<wbr>Protocol></a></span>
+        <span class="property-type"><a href="#probeprotocol">Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">pulumi.<wbr>Input<Health<wbr>Probe<wbr>Request<wbr>Type></a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">Input[Probe<wbr>Protocol]</a></span>
+        <span class="property-type"><a href="#probeprotocol">Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">Input[Health<wbr>Probe<wbr>Request<wbr>Type]</a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1097,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1421,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionallatencyinmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>In<wbr>Milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successfulsamplesrequired_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_latency_in_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>in_<wbr>milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionallatencyinmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>In<wbr>Milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successfulsamplesrequired_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_latency_in_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>in_<wbr>milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Http<wbr>Error<wbr>Range<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">pulumi.<wbr>Input<Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types></a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1737,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">Input[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">Input[Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types]</a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1823,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">Input[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1985,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2037,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2045,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2077,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}

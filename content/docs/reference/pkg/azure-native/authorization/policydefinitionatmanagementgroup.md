@@ -212,34 +212,19 @@ const policyDefinitionAtManagementGroup = new azure_native.authorization.PolicyD
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                      <span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                      <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                                      <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                      <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[ParameterDefinitionsValueArgs]]]]</span> = None<span class="p">,</span>
-                                      <span class="nx">policy_definition_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                      <span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                                      <span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PolicyType]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">,</span>
-                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionsValueArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PolicyType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,32 +259,22 @@ const policyDefinitionAtManagementGroup = new azure_native.authorization.PolicyD
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -539,7 +514,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +522,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +530,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +546,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +554,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Parameter<wbr>Definitions<wbr>Value<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Definitions<wbr>Value}</span>
     </dt>
     <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +562,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#policydefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy definition to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +578,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#policytype">pulumi.<wbr>Input<Policy<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#policytype">Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +590,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +598,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +606,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +622,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +630,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Parameter<wbr>Definitions<wbr>Value<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +638,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#policy_definition_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy definition to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +654,7 @@ The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{<
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#policytype">Input[Policy<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#policytype">Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -894,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">pulumi.<wbr>Input<Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#parametertype">pulumi.<wbr>Input<Parameter<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#parametertype">Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -930,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Input[Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#parametertype">Input[Parameter<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#parametertype">Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1040,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignpermissions_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1076,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assign_permissions_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1186,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<any[]></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">pulumi.<wbr>Input<Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1210,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1222,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Sequence[Any]]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Input[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1332,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignpermissions_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1356,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assign_permissions_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}

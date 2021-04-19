@@ -22,19 +22,17 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listMonitorHosts<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListMonitorHostsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listMonitorHosts<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListMonitorHostsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_monitor_hosts(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListMonitorHostsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_monitor_hosts(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListMonitorHostsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListMonitorHosts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListMonitorHostsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListMonitorHosts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListMonitorHostsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListMonitorHosts` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListMonitorHosts </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListMonitorHostsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListMonitorHostsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListMonitorHostsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -246,7 +244,7 @@ The following output properties are available:
 <a href="#installmethod_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoginstallmethodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Install<wbr>Method<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoginstallmethodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -254,7 +252,7 @@ The following output properties are available:
 <a href="#logsagent_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoglogsagentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Logs<wbr>Agent<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoglogsagentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -330,7 +328,7 @@ The following output properties are available:
 <a href="#install_method_python" style="color: inherit; text-decoration: inherit;">install_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +336,7 @@ The following output properties are available:
 <a href="#logs_agent_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -370,7 +368,7 @@ The following output properties are available:
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoghostmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Host<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoghostmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +476,7 @@ The following output properties are available:
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoghostmetadataresponse">Datadog<wbr>Host<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadoghostmetadataresponse">Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -22,20 +22,17 @@ API Version: 2020-12-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConfigurations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConfigurationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListConfigurationsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConfigurations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConfigurationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListConfigurationsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_configurations(</span><span class="nx">configuration_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConfigurationFilters]]</span> = None<span class="p">,</span>
-                        <span class="nx">customer_subscription_details</span><span class="p">:</span> <span class="nx">Optional[CustomerSubscriptionDetails]</span> = None<span class="p">,</span>
-                        <span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConfigurationsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_configurations(</span><span class="nx">configuration_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConfigurationFiltersArgs]]</span> = None<span class="p">, </span><span class="nx">customer_subscription_details</span><span class="p">:</span> <span class="nx">Optional[CustomerSubscriptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConfigurationsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConfigurations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListConfigurationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListConfigurationsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConfigurations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListConfigurationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListConfigurationsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListConfigurations` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-12-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListConfigurations </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListConfigurationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListConfigurationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListConfigurationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListConfigurationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -60,7 +57,7 @@ The following arguments are supported:
 <a href="#configurationfilters_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationfilters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Configuration<wbr>Filters&gt;</a></span>
+        <span class="property-type"><a href="#configurationfilters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Configuration<wbr>Filters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Holds details about product hierarchy information and filterable property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -68,7 +65,7 @@ The following arguments are supported:
 <a href="#customersubscriptiondetails_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Subscription<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptiondetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Details</a></span>
+        <span class="property-type"><a href="#customersubscriptiondetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -144,7 +141,7 @@ The following arguments are supported:
 <a href="#configuration_filters_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationfilters">Sequence[Configuration<wbr>Filters]</a></span>
+        <span class="property-type"><a href="#configurationfilters">Sequence[Configuration<wbr>Filters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Holds details about product hierarchy information and filterable property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -152,7 +149,7 @@ The following arguments are supported:
 <a href="#customer_subscription_details_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>subscription_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details</a></span>
+        <span class="property-type"><a href="#customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -395,7 +392,7 @@ The following output properties are available:
 <a href="#meterdetails_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -503,7 +500,7 @@ The following output properties are available:
 <a href="#meter_details_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -535,7 +532,7 @@ The following output properties are available:
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information</a></span>
+        <span class="property-type"><a href="#hierarchyinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product hierarchy information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +540,7 @@ The following output properties are available:
 <a href="#filterableproperty_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterableproperty">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property&gt;</a></span>
+        <span class="property-type"><a href="#filterableproperty">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filters specific to product{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -595,7 +592,7 @@ The following output properties are available:
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformation">Hierarchy<wbr>Information</a></span>
+        <span class="property-type"><a href="#hierarchyinformation">Hierarchy<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product hierarchy information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +600,7 @@ The following output properties are available:
 <a href="#filterable_property_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterableproperty">Sequence[Filterable<wbr>Property]</a></span>
+        <span class="property-type"><a href="#filterableproperty">Sequence[Filterable<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filters specific to product{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +616,7 @@ The following output properties are available:
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +624,7 @@ The following output properties are available:
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -635,7 +632,7 @@ The following output properties are available:
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -651,7 +648,7 @@ The following output properties are available:
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +656,7 @@ The following output properties are available:
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -667,7 +664,7 @@ The following output properties are available:
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -675,7 +672,7 @@ The following output properties are available:
 <a href="#specifications_csharp" style="color: inherit; text-decoration: inherit;">Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#specificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Specification<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#specificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +820,7 @@ The following output properties are available:
 <a href="#availability_information_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +828,7 @@ The following output properties are available:
 <a href="#cost_information_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +836,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +852,7 @@ The following output properties are available:
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +860,7 @@ The following output properties are available:
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +868,7 @@ The following output properties are available:
 <a href="#image_information_python" style="color: inherit; text-decoration: inherit;">image_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -879,7 +876,7 @@ The following output properties are available:
 <a href="#specifications_python" style="color: inherit; text-decoration: inherit;">specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#specificationresponse">Sequence[Specification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#specificationresponse">Sequence[Specification<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +900,7 @@ The following output properties are available:
 <a href="#billingmeterdetails_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Meter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmeterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Meter<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -963,7 +960,7 @@ The following output properties are available:
 <a href="#billing_meter_details_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>meter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmeterdetailsresponse">Sequence[Billing<wbr>Meter<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">Sequence[Billing<wbr>Meter<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +992,7 @@ The following output properties are available:
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Registered<wbr>Features&gt;</a></span>
+        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1076,7 @@ The following output properties are available:
 <a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">Sequence[Customer<wbr>Subscription<wbr>Registered<wbr>Features]</a></span>
+        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">Sequence[Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1200,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Link<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1356,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkresponse">Sequence[Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkresponse">Sequence[Link<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">

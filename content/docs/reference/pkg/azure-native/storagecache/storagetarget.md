@@ -80,7 +80,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -249,7 +249,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -380,7 +380,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -468,35 +468,19 @@ const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">blob_nfs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BlobNfsTargetArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClfsTargetArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NamespaceJunctionArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Nfs3TargetArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ProvisioningStateType]]]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, StorageTargetType]]]</span> = None<span class="p">,</span>
-                  <span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UnknownTargetArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blob_nfs</span><span class="p">:</span> <span class="nx">Optional[BlobNfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[ClfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[Nfs3TargetArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageTargetType]]</span> = None<span class="p">, </span><span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[UnknownTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -531,32 +515,22 @@ const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">StorageTargetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -812,7 +786,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#cachename_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -820,7 +794,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -828,7 +802,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storagetargettype">pulumi.<wbr>Input<Storage<wbr>Target<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#storagetargettype">Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +810,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#blobnfs_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobnfstarget">pulumi.<wbr>Input<Blob<wbr>Nfs<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +818,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clfs_nodejs" style="color: inherit; text-decoration: inherit;">clfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstarget">pulumi.<wbr>Input<Clfs<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#clfstarget">Clfs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +826,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#junctions_nodejs" style="color: inherit; text-decoration: inherit;">junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunction">pulumi.<wbr>Input<pulumi.<wbr>Input<Namespace<wbr>Junction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#namespacejunction">Namespace<wbr>Junction[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +834,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nfs3_nodejs" style="color: inherit; text-decoration: inherit;">nfs3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3target">pulumi.<wbr>Input<Nfs3Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#nfs3target">Nfs3Target</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +842,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#provisioningstatetype">pulumi.<wbr>Input<Provisioning<wbr>State<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#provisioningstatetype">Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +850,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storagetargetname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Target<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +858,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntarget">pulumi.<wbr>Input<Unknown<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#unknowntarget">Unknown<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -896,7 +870,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#cache_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -904,7 +878,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -912,7 +886,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storagetargettype">Input[Storage<wbr>Target<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#storagetargettype">Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +894,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#blob_nfs_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobnfstarget">Input[Blob<wbr>Nfs<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +902,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clfs_python" style="color: inherit; text-decoration: inherit;">clfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstarget">Input[Clfs<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clfstarget">Clfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +910,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#junctions_python" style="color: inherit; text-decoration: inherit;">junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunction">Input[Namespace<wbr>Junction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#namespacejunction">Sequence[Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +918,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nfs3_python" style="color: inherit; text-decoration: inherit;">nfs3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3target">Input[Nfs3Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfs3target">Nfs3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +926,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#provisioningstatetype">Input[Provisioning<wbr>State<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#provisioningstatetype">Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +934,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_target_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>target_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +942,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntarget">Input[Unknown<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#unknowntarget">Unknown<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespacepath_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsexport_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpath_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_access_policy_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespacepath_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsexport_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpath_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_access_policy_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1771,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1791,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1853,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1861,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1873,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2075,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2083,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2099,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2107,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2115,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2127,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2205,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2217,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2255,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2267,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}

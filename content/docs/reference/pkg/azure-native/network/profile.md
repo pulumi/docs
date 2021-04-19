@@ -72,7 +72,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -223,7 +223,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -386,7 +386,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -617,7 +617,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -885,7 +885,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1092,7 +1092,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1279,40 +1279,19 @@ const profile = new azure_native.network.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">allowed_endpoint_record_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, AllowedEndpointRecordType]]]]]</span> = None<span class="p">,</span>
-            <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DnsConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-            <span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ProfileStatus]]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TrafficRoutingMethod]]]</span> = None<span class="p">,</span>
-            <span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TrafficViewEnrollmentStatus]]]</span> = None<span class="p">,</span>
-            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_endpoint_record_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AllowedEndpointRecordType]]]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1347,32 +1326,22 @@ const profile = new azure_native.network.Profile("profile", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1708,7 +1677,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1716,7 +1685,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#allowedendpointrecordtypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Endpoint<wbr>Record<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Allowed<wbr>Endpoint<wbr>Record<wbr>Type>[]></span>
+        <span class="property-type">string | Allowed<wbr>Endpoint<wbr>Record<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1724,7 +1693,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">pulumi.<wbr>Input<Dns<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1732,7 +1701,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1709,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1717,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1725,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1733,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">pulumi.<wbr>Input<Monitor<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1741,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1749,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1757,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profilestatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#profilestatus">pulumi.<wbr>Input<Profile<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#profilestatus">Profile<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1765,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1773,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trafficroutingmethod_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trafficroutingmethod">pulumi.<wbr>Input<Traffic<wbr>Routing<wbr>Method></a></span>
+        <span class="property-type">string | <a href="#trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1781,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trafficviewenrollmentstatus_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enrollment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trafficviewenrollmentstatus">pulumi.<wbr>Input<Traffic<wbr>View<wbr>Enrollment<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1789,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1832,7 +1801,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1809,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#allowed_endpoint_record_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>endpoint_<wbr>record_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Allowed<wbr>Endpoint<wbr>Record<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Allowed<wbr>Endpoint<wbr>Record<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1817,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">Input[Dns<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1825,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Input[Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpoint">Sequence[Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1833,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1841,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1849,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1888,7 +1857,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">Input[Monitor<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1896,7 +1865,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1873,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1881,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profile_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#profilestatus">Input[Profile<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#profilestatus">Profile<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1920,7 +1889,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1928,7 +1897,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#traffic_routing_method_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trafficroutingmethod">Input[Traffic<wbr>Routing<wbr>Method]</a></span>
+        <span class="property-type">str | <a href="#trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1905,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#traffic_view_enrollment_status_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enrollment_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trafficviewenrollmentstatus">Input[Traffic<wbr>View<wbr>Enrollment<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1944,7 +1913,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2097,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativename_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2117,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2195,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativename_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2517,7 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#endpointmonitorstatus">pulumi.<wbr>Input<Endpoint<wbr>Monitor<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2541,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#endpointstatus">pulumi.<wbr>Input<Endpoint<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geomapping_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Subnets<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Input[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#endpointmonitorstatus">Input[Endpoint<wbr>Monitor<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#endpointstatus">Input[Endpoint<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Input[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2865,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2885,7 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2947,7 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2967,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3045,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3073,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3089,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3159,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3175,7 +3144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3187,7 +3156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3481,7 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3505,7 +3474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3513,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geomapping_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3521,7 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3529,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3553,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3561,7 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +3546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3613,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Input[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3621,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3629,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3637,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3653,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3661,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3669,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3685,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Input[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3725,7 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3733,7 +3702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3925,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">pulumi.<wbr>Input<pulumi.<wbr>Input<Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">pulumi.<wbr>Input<pulumi.<wbr>Input<Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3949,7 +3918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3957,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3965,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profilemonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#profilemonitorstatus">pulumi.<wbr>Input<Profile<wbr>Monitor<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +3942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#monitorprotocol">pulumi.<wbr>Input<Monitor<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#monitorprotocol">Monitor<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3989,7 +3958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_nodejs" style="color: inherit; text-decoration: inherit;">tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4001,7 +3970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">Input[Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Sequence[Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Input[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +3986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4025,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4033,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4041,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_monitor_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>monitor_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#profilemonitorstatus">Input[Profile<wbr>Monitor<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4049,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#monitorprotocol">Input[Monitor<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#monitorprotocol">Monitor<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4057,7 +4026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4119,7 +4088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4139,7 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4201,7 +4170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4209,7 +4178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4221,7 +4190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4229,7 +4198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4395,7 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">pulumi.<wbr>Input<pulumi.<wbr>Input<Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4403,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">pulumi.<wbr>Input<pulumi.<wbr>Input<Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4411,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4419,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4427,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4435,7 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profilemonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4443,7 +4412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4451,7 +4420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4459,7 +4428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_nodejs" style="color: inherit; text-decoration: inherit;">tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4471,7 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Input[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4479,7 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Input[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4487,7 +4456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4495,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4503,7 +4472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4511,7 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_monitor_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>monitor_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4519,7 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4527,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4535,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4589,7 +4558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4597,7 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4609,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4617,7 +4586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4671,7 +4640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +4648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4691,7 +4660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4699,7 +4668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}

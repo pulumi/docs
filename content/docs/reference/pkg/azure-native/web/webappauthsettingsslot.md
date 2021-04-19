@@ -28,67 +28,19 @@ $ pulumi import azure-native:web:WebAppAuthSettingsSlot myresource1 /subscriptio
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                           <span class="nx">aad_claims_authorization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">additional_login_params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">allowed_audiences</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">allowed_external_redirect_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">auth_file_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_secret_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">default_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuiltInAuthenticationProvider]]</span> = None<span class="p">,</span>
-                           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                           <span class="nx">facebook_app_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">facebook_app_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">facebook_app_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">facebook_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">git_hub_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">git_hub_client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">git_hub_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">git_hub_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">google_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">google_client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">google_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">google_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">is_auth_from_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">microsoft_account_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">microsoft_account_client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">microsoft_account_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">microsoft_account_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">token_refresh_extension_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                           <span class="nx">token_store_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                           <span class="nx">twitter_consumer_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">twitter_consumer_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">twitter_consumer_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">unauthenticated_client_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UnauthenticatedClientAction]]</span> = None<span class="p">,</span>
-                           <span class="nx">validate_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_claims_authorization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_login_params</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_audiences</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_external_redirect_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auth_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_provider</span><span class="p">:</span> <span class="nx">Optional[BuiltInAuthenticationProvider]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">facebook_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facebook_app_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facebook_app_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facebook_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">git_hub_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">git_hub_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">git_hub_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">git_hub_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">google_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_auth_from_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_account_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_account_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_account_client_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">microsoft_account_o_auth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_refresh_extension_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">token_store_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">twitter_consumer_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">twitter_consumer_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">twitter_consumer_secret_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unauthenticated_client_action</span><span class="p">:</span> <span class="nx">Optional[UnauthenticatedClientAction]</span> = None<span class="p">, </span><span class="nx">validate_issuer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppAuthSettingsSlot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppAuthSettingsSlot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppAuthSettingsSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,32 +75,22 @@ $ pulumi import azure-native:web:WebAppAuthSettingsSlot myresource1 /subscriptio
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebAppAuthSettingsSlotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1020,7 +962,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1028,7 +970,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1036,7 +978,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +986,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#aadclaimsauthorization_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Claims<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +994,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additionalloginparams_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Login<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1003,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
@@ -1071,7 +1013,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property
 <a href="#allowedexternalredirecturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
@@ -1081,7 +1023,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#authfilepath_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
 If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1032,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
@@ -1101,7 +1043,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
@@ -1112,7 +1054,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
 <a href="#clientsecretcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
 a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1063,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
 <a href="#clientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1071,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
 <a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ConfigVersion of the Authentication / Authorization feature in use for the current app.
 The setting in this value can control the behavior of the control plane for Authentication / Authorization.{{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1080,7 @@ The setting in this value can control the behavior of the control plane for Auth
 <a href="#defaultprovider_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builtinauthenticationprovider">pulumi.<wbr>Input<Built<wbr>In<wbr>Authentication<wbr>Provider></a></span>
+        <span class="property-type"><a href="#builtinauthenticationprovider">Built<wbr>In<wbr>Authentication<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
@@ -1148,7 +1090,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1098,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#facebookappid_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
@@ -1166,7 +1108,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebookappsecret_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
@@ -1176,7 +1118,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebookappsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1126,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebookoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>OAuth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
@@ -1194,7 +1136,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#githubclientid_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
 This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1145,7 @@ This setting is required for enabling Github login{{% /md %}}</dd><dt class="pro
 <a href="#githubclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
 This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1154,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd><dt class="pr
 <a href="#githubclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
 app used for GitHub Login.{{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1163,7 @@ app used for GitHub Login.{{% /md %}}</dd><dt class="property-optional"
 <a href="#githuboauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>OAuth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 This setting is optional{{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1172,7 @@ This setting is optional{{% /md %}}</dd><dt class="property-optional"
 <a href="#googleclientid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
@@ -1240,7 +1182,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#googleclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
@@ -1250,7 +1192,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#googleclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
 the Google web application.{{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1201,7 @@ the Google web application.{{% /md %}}</dd><dt class="property-optional"
 <a href="#googleoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>OAuth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
@@ -1269,7 +1211,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#isauthfromfile_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Auth<wbr>From<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
 "false" otherwise{{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1220,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
@@ -1289,7 +1231,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1239,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <a href="#microsoftaccountclientid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
@@ -1307,7 +1249,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
 <a href="#microsoftaccountclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
@@ -1317,7 +1259,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
 <a href="#microsoftaccountclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
 app used for authentication.{{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1268,7 @@ app used for authentication.{{% /md %}}</dd><dt class="property-optional"
 <a href="#microsoftaccountoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>OAuth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
@@ -1336,7 +1278,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
 The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1287,7 @@ The setting in this value can control the behavior of certain features in the Au
 <a href="#tokenrefreshextensionhours_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
 call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1296,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="p
 <a href="#tokenstoreenabled_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
  The default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1305,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="p
 <a href="#twitterconsumerkey_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
@@ -1373,7 +1315,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
 <a href="#twitterconsumersecret_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
@@ -1383,7 +1325,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
 <a href="#twitterconsumersecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Secret<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
 application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1334,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#unauthenticatedclientaction_nodejs" style="color: inherit; text-decoration: inherit;">unauthenticated<wbr>Client<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unauthenticatedclientaction">pulumi.<wbr>Input<Unauthenticated<wbr>Client<wbr>Action></a></span>
+        <span class="property-type"><a href="#unauthenticatedclientaction">Unauthenticated<wbr>Client<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1342,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validateissuer_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1412,7 +1354,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1420,7 +1362,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1428,7 +1370,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1378,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#aad_claims_authorization_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>claims_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,7 +1386,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additional_login_params_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>login_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1395,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
@@ -1463,7 +1405,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property
 <a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
@@ -1473,7 +1415,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#auth_file_path_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
 If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1424,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
@@ -1493,7 +1435,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
@@ -1504,7 +1446,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
 <a href="#client_secret_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
 a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1455,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
 <a href="#client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1463,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt cla
 <a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ConfigVersion of the Authentication / Authorization feature in use for the current app.
 The setting in this value can control the behavior of the control plane for Authentication / Authorization.{{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1472,7 @@ The setting in this value can control the behavior of the control plane for Auth
 <a href="#default_provider_python" style="color: inherit; text-decoration: inherit;">default_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builtinauthenticationprovider">Input[Built<wbr>In<wbr>Authentication<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#builtinauthenticationprovider">Built<wbr>In<wbr>Authentication<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
@@ -1540,7 +1482,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1490,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#facebook_app_id_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
@@ -1558,7 +1500,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebook_app_secret_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
@@ -1568,7 +1510,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebook_app_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1576,7 +1518,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebook_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
@@ -1586,7 +1528,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#git_hub_client_id_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
 This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1537,7 @@ This setting is required for enabling Github login{{% /md %}}</dd><dt class="pro
 <a href="#git_hub_client_secret_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
 This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1546,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd><dt class="pr
 <a href="#git_hub_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
 app used for GitHub Login.{{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1555,7 @@ app used for GitHub Login.{{% /md %}}</dd><dt class="property-optional"
 <a href="#git_hub_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 This setting is optional{{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1564,7 @@ This setting is optional{{% /md %}}</dd><dt class="property-optional"
 <a href="#google_client_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
@@ -1632,7 +1574,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#google_client_secret_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
@@ -1642,7 +1584,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#google_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
 the Google web application.{{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1593,7 @@ the Google web application.{{% /md %}}</dd><dt class="property-optional"
 <a href="#google_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">google_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
@@ -1661,7 +1603,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#is_auth_from_file_python" style="color: inherit; text-decoration: inherit;">is_<wbr>auth_<wbr>from_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
 "false" otherwise{{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1612,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
@@ -1681,7 +1623,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1631,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 <a href="#microsoft_account_client_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
@@ -1699,7 +1641,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
 <a href="#microsoft_account_client_secret_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
@@ -1709,7 +1651,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
 <a href="#microsoft_account_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
 app used for authentication.{{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1660,7 @@ app used for authentication.{{% /md %}}</dd><dt class="property-optional"
 <a href="#microsoft_account_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
@@ -1728,7 +1670,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
 The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1679,7 @@ The setting in this value can control the behavior of certain features in the Au
 <a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
 call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1688,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="p
 <a href="#token_store_enabled_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
  The default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1697,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="p
 <a href="#twitter_consumer_key_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
@@ -1765,7 +1707,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
 <a href="#twitter_consumer_secret_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
@@ -1775,7 +1717,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
 <a href="#twitter_consumer_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>secret_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
 application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
@@ -1784,7 +1726,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#unauthenticated_client_action_python" style="color: inherit; text-decoration: inherit;">unauthenticated_<wbr>client_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unauthenticatedclientaction">Input[Unauthenticated<wbr>Client<wbr>Action]</a></span>
+        <span class="property-type"><a href="#unauthenticatedclientaction">Unauthenticated<wbr>Client<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1734,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validate_issuer_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -22,21 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiOperation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApiOperationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApiOperationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiOperation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApiOperationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApiOperationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_api_operation(</span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApiOperationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_api_operation(</span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApiOperationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiOperation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApiOperationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApiOperationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiOperation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApiOperationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApiOperationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApiOperation` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApiOperation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetApiOperationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApiOperationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApiOperationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApiOperationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -812,7 +808,7 @@ The following output properties are available:
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +940,7 @@ The following output properties are available:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +988,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +996,7 @@ The following output properties are available:
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1004,7 @@ The following output properties are available:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1100,7 +1096,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1104,7 @@ The following output properties are available:
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1112,7 @@ The following output properties are available:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1148,7 +1144,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1152,7 @@ The following output properties are available:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1256,7 +1252,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1260,7 @@ The following output properties are available:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}

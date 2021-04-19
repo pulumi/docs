@@ -22,25 +22,17 @@ API Version: 2019-01-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntityInsights<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEntityInsightsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntityInsights<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEntityInsightsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity_insights(</span><span class="nx">add_default_extended_time_range</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">insight_query_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityInsightsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity_insights(</span><span class="nx">add_default_extended_time_range</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insight_query_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityInsightsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntityInsights<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityInsightsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntityInsights<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityInsightsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetEntityInsights` in the Go SDK.
 
@@ -49,7 +41,7 @@ API Version: 2019-01-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEntityInsights </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEntityInsightsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEntityInsightsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEntityInsightsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -436,7 +428,7 @@ The following output properties are available:
 <a href="#chartqueryresults_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -452,7 +444,7 @@ The following output properties are available:
 <a href="#querytimeinterval_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval</a></span>
+        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +452,7 @@ The following output properties are available:
 <a href="#tablequeryresults_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -544,7 +536,7 @@ The following output properties are available:
 <a href="#chart_query_results_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>query_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +552,7 @@ The following output properties are available:
 <a href="#query_time_interval_python" style="color: inherit; text-decoration: inherit;">query_<wbr>time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval</a></span>
+        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +560,7 @@ The following output properties are available:
 <a href="#table_query_results_python" style="color: inherit; text-decoration: inherit;">table_<wbr>query_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -792,7 +784,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinsightserrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Get<wbr>Insights<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#getinsightserrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,7 +844,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinsightserrorresponse">Sequence[Get<wbr>Insights<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getinsightserrorresponse">Sequence[Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -868,7 +860,7 @@ The following output properties are available:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponsecolumns">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns&gt;</a></span>
+        <span class="property-type"><a href="#insightstableresultresponsecolumns">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +920,7 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponsecolumns">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns]</a></span>
+        <span class="property-type"><a href="#insightstableresultresponsecolumns">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

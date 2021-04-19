@@ -22,19 +22,17 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackupVault<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupVaultArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackupVaultResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackupVault<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackupVaultResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backup_vault(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackupVaultResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backup_vault(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackupVaultResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackupVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupVaultArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackupVaultResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackupVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackupVaultResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackupVault` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackupVault </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackupVaultResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupVaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackupVaultResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupVaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -168,13 +166,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Backup<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BackupVaultResource properties{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_csharp">
+<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Storage<wbr>Setting<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -244,13 +250,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultresponse">Backup<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BackupVaultResource properties{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_go">
+<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">[]Storage<wbr>Setting<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -320,13 +334,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultresponse">Backup<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BackupVaultResource properties{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_nodejs">
+<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -396,13 +418,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultresponse">Backup<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}BackupVaultResource properties{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storage_settings_python">
+<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -450,90 +480,6 @@ The following output properties are available:
 
 ## Supporting Types
 
-
-<h4 id="backupvaultresponse">Backup<wbr>Vault<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storagesettings_csharp">
-<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storagesettings_go">
-<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">[]Storage<wbr>Setting<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storagesettings_nodejs">
-<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="storage_settings_python">
-<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 <h4 id="dppidentitydetailsresponse">Dpp<wbr>Identity<wbr>Details<wbr>Response</h4>
 

@@ -69,7 +69,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -175,36 +175,19 @@ const sourceControl = new azure_native.automation.SourceControl("sourceControl",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                  <span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">publish_runbook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                  <span class="nx">repo_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">security_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SourceControlSecurityTokenPropertiesArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">source_control_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SourceType]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_runbook</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repo_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_token</span><span class="p">:</span> <span class="nx">Optional[SourceControlSecurityTokenPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">source_control_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SourceType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -239,32 +222,22 @@ const sourceControl = new azure_native.automation.SourceControl("sourceControl",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SourceControlArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -536,7 +509,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -544,7 +517,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +525,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto async of the source control. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +533,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repo branch of the source control. Include branch as empty string for VsoTfvc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +541,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user description of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +549,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder path of the source control. Path must be relative.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +557,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#publishrunbook_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto publish of the source control. Default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +565,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#repourl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repo url of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +573,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#securitytoken_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">pulumi.<wbr>Input<Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The authorization token for the repo of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +581,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sourcecontrolname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source control name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +589,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sourcetype">pulumi.<wbr>Input<Source<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#sourcetype">Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -628,7 +601,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -636,7 +609,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +617,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto async of the source control. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +625,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repo branch of the source control. Include branch as empty string for VsoTfvc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +633,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user description of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +641,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The folder path of the source control. Path must be relative.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +649,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#publish_runbook_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto publish of the source control. Default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +657,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repo url of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +665,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Input[Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization token for the repo of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +673,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#source_control_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source control name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +681,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sourcetype">Input[Source<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#sourcetype">Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#tokentype">pulumi.<wbr>Input<Token<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The token type. Must be either PersonalAccessToken or Oauth.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#tokentype">Input[Token<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The token type. Must be either PersonalAccessToken or Oauth.{{% /md %}}</dd></dl>
 {{% /choosable %}}

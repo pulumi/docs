@@ -22,20 +22,17 @@ API Version: 2021-02-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_storage_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStorageAccountResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_storage_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStorageAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStorageAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStorageAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStorageAccount` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-02-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStorageAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -245,9 +242,9 @@ The following output properties are available:
 <a href="#keycreationtime_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keycreationtimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypolicy_csharp">
 <a href="#keypolicy_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
@@ -553,9 +550,9 @@ The following output properties are available:
 <a href="#keycreationtime_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypolicy_go">
 <a href="#keypolicy_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
@@ -861,9 +858,9 @@ The following output properties are available:
 <a href="#keycreationtime_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypolicy_nodejs">
 <a href="#keypolicy_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Policy</a>
@@ -1169,9 +1166,9 @@ The following output properties are available:
 <a href="#key_creation_time_python" style="color: inherit; text-decoration: inherit;">key_<wbr>creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_policy_python">
 <a href="#key_policy_python" style="color: inherit; text-decoration: inherit;">key_<wbr>policy</a>
@@ -1643,7 +1640,7 @@ The following output properties are available:
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1703,7 +1700,7 @@ The following output properties are available:
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1716,7 @@ The following output properties are available:
 <a href="#blobranges_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1776,7 @@ The following output properties are available:
 <a href="#blob_ranges_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1895,7 +1892,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2003,7 +2000,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2176,7 @@ The following output properties are available:
 <a href="#encryptionidentity_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2184,7 @@ The following output properties are available:
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2200,7 @@ The following output properties are available:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2308,7 @@ The following output properties are available:
 <a href="#encryption_identity_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2316,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2332,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2467,7 +2464,7 @@ The following output properties are available:
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2475,7 +2472,7 @@ The following output properties are available:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2483,7 +2480,7 @@ The following output properties are available:
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2488,7 @@ The following output properties are available:
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2575,7 +2572,7 @@ The following output properties are available:
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2580,7 @@ The following output properties are available:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2588,7 @@ The following output properties are available:
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +2596,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2663,7 +2660,7 @@ The following output properties are available:
 <a href="#internetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2671,7 +2668,7 @@ The following output properties are available:
 <a href="#microsoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2867,7 +2864,7 @@ The following output properties are available:
 <a href="#internet_endpoints_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2872,7 @@ The following output properties are available:
 <a href="#microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3199,7 +3196,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3307,93 +3304,9 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key1_csharp">
-<a href="#key1_csharp" style="color: inherit; text-decoration: inherit;">Key1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key2_csharp">
-<a href="#key2_csharp" style="color: inherit; text-decoration: inherit;">Key2</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key1_go">
-<a href="#key1_go" style="color: inherit; text-decoration: inherit;">Key1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key2_go">
-<a href="#key2_go" style="color: inherit; text-decoration: inherit;">Key2</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key1_nodejs">
-<a href="#key1_nodejs" style="color: inherit; text-decoration: inherit;">key1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key2_nodejs">
-<a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key1_python">
-<a href="#key1_python" style="color: inherit; text-decoration: inherit;">key1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key2_python">
-<a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keypolicyresponse">Key<wbr>Policy<wbr>Response</h4>
@@ -3655,7 +3568,7 @@ The following output properties are available:
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3576,7 @@ The following output properties are available:
 <a href="#resourceaccessrules_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3671,7 +3584,7 @@ The following output properties are available:
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3787,7 +3700,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3708,7 @@ The following output properties are available:
 <a href="#resource_access_rules_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">Sequence[Resource<wbr>Access<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">Sequence[Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3716,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3748,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3859,7 +3772,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3991,7 +3904,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4015,7 +3928,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -977,35 +977,19 @@ const job = new azure_native.databox.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobDeliveryInfoArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, JobDeliveryType]]]</span> = None<span class="p">,</span>
-        <span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[DataBoxDiskJobDetailsArgs, DataBoxHeavyJobDetailsArgs, DataBoxJobDetailsArgs]]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">transfer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TransferType]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[JobDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, JobDeliveryType]]</span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[Union[DataBoxDiskJobDetailsArgs, DataBoxHeavyJobDetailsArgs, DataBoxJobDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transfer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, TransferType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1040,32 +1024,22 @@ const job = new azure_native.databox.Job("job", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">JobArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1321,7 +1295,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1329,7 +1303,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1337,7 +1311,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfertype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#transfertype">pulumi.<wbr>Input<Transfer<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#transfertype">Transfer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1319,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdeliveryinfo">pulumi.<wbr>Input<Job<wbr>Delivery<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobdeliveryinfo">Job<wbr>Delivery<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1327,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliverytype_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#jobdeliverytype">pulumi.<wbr>Input<Job<wbr>Delivery<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#jobdeliverytype">Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1335,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobdetails">pulumi.<wbr>Input<Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args></a> | <a href="#databoxheavyjobdetails">pulumi.<wbr>Input<Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args></a> | <a href="#databoxjobdetails">pulumi.<wbr>Input<Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</a> | <a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</a> | <a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1343,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1351,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1359,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1367,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1379,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1413,7 +1387,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1421,7 +1395,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfer_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#transfertype">Input[Transfer<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#transfertype">Transfer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1403,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdeliveryinfo">Input[Job<wbr>Delivery<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobdeliveryinfo">Job<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1411,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#jobdeliverytype">Input[Job<wbr>Delivery<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#jobdeliverytype">Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1419,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobdetails">Input[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args]</a> | <a href="#databoxheavyjobdetails">Input[Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args]</a> | <a href="#databoxjobdetails">Input[Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1427,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Input[Resource<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1435,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1443,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1451,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1988,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2008,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2108,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepathlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2124,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharelist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2136,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_prefix_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2222,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepathlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2230,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2238,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharelist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2250,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_prefix_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerlist_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2364,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2372,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_prefix_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2380,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_list_python" style="color: inherit; text-decoration: inherit;">container_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2450,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobpathlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2458,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerlist_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2478,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_prefix_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2494,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_list_python" style="color: inherit; text-decoration: inherit;">container_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2596,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">Additional<wbr>Error<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2604,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2612,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2640,7 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">Input[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2648,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Input[Cloud<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2664,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2672,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2790,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2798,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2806,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2814,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2822,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreference_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Notification<wbr>Preference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#notificationpreference">Notification<wbr>Preference[]</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2830,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2842,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2850,7 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2858,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2866,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2874,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_preference_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreference">Input[Notification<wbr>Preference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#notificationpreference">Sequence[Notification<wbr>Preference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2882,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3000,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3008,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3016,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3024,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3032,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreference_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Notification<wbr>Preference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3052,7 +3026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3060,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3068,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3076,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3084,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_preference_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">Input[Notification<wbr>Preference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">Sequence[Notification<wbr>Preference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3092,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3356,7 +3330,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3364,7 +3338,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#bytesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3372,7 +3346,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3380,7 +3354,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#directorieserroredout_nodejs" style="color: inherit; text-decoration: inherit;">directories<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3388,7 +3362,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#fileserroredout_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3396,7 +3370,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3404,7 +3378,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invaliddirectoriesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Directories<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3412,7 +3386,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invalidfilebytesuploaded_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3420,7 +3394,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invalidfilesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3428,7 +3402,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#isenumerationinprogress_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enumeration<wbr>In<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
 Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
@@ -3437,7 +3411,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#renamedcontainercount_nodejs" style="color: inherit; text-decoration: inherit;">renamed<wbr>Container<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3445,7 +3419,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3453,7 +3427,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#totalbytestoprocess_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3435,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#totalfilestoprocess_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Files<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3469,7 +3443,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfertype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3481,7 +3455,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3489,7 +3463,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#bytes_processed_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3497,7 +3471,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3505,7 +3479,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#directories_errored_out_python" style="color: inherit; text-decoration: inherit;">directories_<wbr>errored_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3513,7 +3487,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#files_errored_out_python" style="color: inherit; text-decoration: inherit;">files_<wbr>errored_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3521,7 +3495,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#files_processed_python" style="color: inherit; text-decoration: inherit;">files_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3529,7 +3503,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invalid_directories_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>directories_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3537,7 +3511,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invalid_file_bytes_uploaded_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>file_<wbr>bytes_<wbr>uploaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3545,7 +3519,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#invalid_files_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>files_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3553,7 +3527,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#is_enumeration_in_progress_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enumeration_<wbr>in_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
 Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
@@ -3562,7 +3536,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#renamed_container_count_python" style="color: inherit; text-decoration: inherit;">renamed_<wbr>container_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3570,7 +3544,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3578,7 +3552,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#total_bytes_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>to_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3586,7 +3560,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#total_files_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>files_<wbr>to_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3594,7 +3568,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3690,7 +3664,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3698,7 +3672,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3706,7 +3680,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyverboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3718,7 +3692,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3726,7 +3700,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3734,7 +3708,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3804,7 +3778,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#diskserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3812,7 +3786,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#errorloglink_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3820,7 +3794,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#verboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3832,7 +3806,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#disk_serial_number_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3840,7 +3814,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#error_log_link_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3848,7 +3822,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#verbose_log_link_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3934,7 +3908,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#bytescopied_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3942,7 +3916,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3950,7 +3924,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3958,7 +3932,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3970,7 +3944,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3978,7 +3952,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3986,7 +3960,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3994,7 +3968,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4160,7 +4134,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4168,7 +4142,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4176,7 +4150,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4184,7 +4158,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4192,7 +4166,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4200,7 +4174,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#passkey_nodejs" style="color: inherit; text-decoration: inherit;">passkey</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4208,7 +4182,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">pulumi.<wbr>Input<Preferences<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4216,7 +4190,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferreddisks_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<number>}></span>
+        <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4224,7 +4198,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4236,7 +4210,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Input[Contact<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4244,7 +4218,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">Input[Data<wbr>Export<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4252,7 +4226,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">Input[Data<wbr>Import<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4260,7 +4234,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4268,7 +4242,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Input[Key<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4276,7 +4250,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#passkey_python" style="color: inherit; text-decoration: inherit;">passkey</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4284,7 +4258,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Input[Preferences<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4292,7 +4266,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_disks_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4300,7 +4274,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Input[Shipping<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4594,7 +4568,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4602,7 +4576,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4610,7 +4584,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4618,7 +4592,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4626,7 +4600,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4634,7 +4608,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#disksandsizedetails_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>And<wbr>Size<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<number>}></span>
+        <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4642,7 +4616,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Stages<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4650,7 +4624,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4658,7 +4632,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4666,7 +4640,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4674,7 +4648,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4682,7 +4656,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4690,7 +4664,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4698,7 +4672,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#passkey_nodejs" style="color: inherit; text-decoration: inherit;">passkey</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4706,7 +4680,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">pulumi.<wbr>Input<Preferences<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4714,7 +4688,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferreddisks_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<number>}></span>
+        <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4722,7 +4696,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4734,7 +4708,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4742,7 +4716,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Input[Contact<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4750,7 +4724,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4758,7 +4732,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Input[Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Sequence[Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4766,7 +4740,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4774,7 +4748,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#disks_and_size_details_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>and_<wbr>size_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4782,7 +4756,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">Input[Job<wbr>Stages<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4790,7 +4764,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4798,7 +4772,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4806,7 +4780,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">Input[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4814,7 +4788,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">Input[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4822,7 +4796,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4830,7 +4804,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Input[Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4838,7 +4812,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#passkey_python" style="color: inherit; text-decoration: inherit;">passkey</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4846,7 +4820,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Input[Preferences<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4854,7 +4828,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_disks_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4862,7 +4836,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Input[Shipping<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4932,7 +4906,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4940,7 +4914,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4948,7 +4922,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyverboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4960,7 +4934,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4968,7 +4942,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4976,7 +4950,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5126,7 +5100,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5134,7 +5108,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5142,7 +5116,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5150,7 +5124,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5158,7 +5132,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5166,7 +5140,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5174,7 +5148,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">pulumi.<wbr>Input<Preferences<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5182,7 +5156,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5194,7 +5168,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Input[Contact<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5202,7 +5176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">Input[Data<wbr>Export<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5210,7 +5184,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">Input[Data<wbr>Import<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5218,7 +5192,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5226,7 +5200,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5234,7 +5208,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Input[Key<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5242,7 +5216,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Input[Preferences<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5250,7 +5224,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Input[Shipping<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5512,7 +5486,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5520,7 +5494,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5528,7 +5502,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5536,7 +5510,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Copy<wbr>Progress<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5544,7 +5518,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5552,7 +5526,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Stages<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5560,7 +5534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5568,7 +5542,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5576,7 +5550,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5584,7 +5558,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5592,7 +5566,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5600,7 +5574,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5608,7 +5582,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5616,7 +5590,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">pulumi.<wbr>Input<Preferences<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5624,7 +5598,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5636,7 +5610,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5644,7 +5618,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Input[Contact<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5652,7 +5626,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5660,7 +5634,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">Input[Copy<wbr>Progress<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5668,7 +5642,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5676,7 +5650,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">Input[Job<wbr>Stages<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5684,7 +5658,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5692,7 +5666,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5700,7 +5674,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">Input[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5708,7 +5682,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">Input[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5716,7 +5690,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5724,7 +5698,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5732,7 +5706,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Input[Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5740,7 +5714,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Input[Preferences<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5748,7 +5722,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Input[Shipping<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5898,7 +5872,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5906,7 +5880,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5914,7 +5888,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5922,7 +5896,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5930,7 +5904,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5938,7 +5912,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5946,7 +5920,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">pulumi.<wbr>Input<Preferences<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5954,7 +5928,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5966,7 +5940,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Input[Contact<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5974,7 +5948,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">Input[Data<wbr>Export<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5982,7 +5956,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">Input[Data<wbr>Import<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5990,7 +5964,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5998,7 +5972,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6006,7 +5980,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Input[Key<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6014,7 +5988,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Input[Preferences<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6022,7 +5996,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Input[Shipping<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6284,7 +6258,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6292,7 +6266,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">pulumi.<wbr>Input<Contact<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6300,7 +6274,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6308,7 +6282,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Copy<wbr>Progress<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6316,7 +6290,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6324,7 +6298,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Stages<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6332,7 +6306,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">pulumi.<wbr>Input<Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6340,7 +6314,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6348,7 +6322,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6356,7 +6330,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6364,7 +6338,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6372,7 +6346,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6380,7 +6354,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">pulumi.<wbr>Input<Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,7 +6362,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">pulumi.<wbr>Input<Preferences<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6396,7 +6370,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">pulumi.<wbr>Input<Shipping<wbr>Address<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6408,7 +6382,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6416,7 +6390,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Input[Contact<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6424,7 +6398,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6432,7 +6406,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">Input[Copy<wbr>Progress<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6440,7 +6414,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6448,7 +6422,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">Input[Job<wbr>Stages<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6456,7 +6430,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Input[Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6464,7 +6438,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6472,7 +6446,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">Input[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6480,7 +6454,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">Input[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6488,7 +6462,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6496,7 +6470,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6504,7 +6478,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Input[Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6512,7 +6486,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Input[Preferences<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6520,7 +6494,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Input[Shipping<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6590,7 +6564,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">pulumi.<wbr>Input<Managed<wbr>Disk<wbr>Details<wbr>Args></a> | <a href="#storageaccountdetails">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6598,7 +6572,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfiguration">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfiguration">Transfer<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6606,7 +6580,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#logcollectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#logcollectionlevel">pulumi.<wbr>Input<Log<wbr>Collection<wbr>Level></a></span>
+        <span class="property-type">string | <a href="#logcollectionlevel">Log<wbr>Collection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6618,7 +6592,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">Input[Managed<wbr>Disk<wbr>Details<wbr>Args]</a> | <a href="#storageaccountdetails">Input[Storage<wbr>Account<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6626,7 +6600,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_configuration_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfiguration">Input[Transfer<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfiguration">Transfer<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6634,7 +6608,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#logcollectionlevel">Input[Log<wbr>Collection<wbr>Level]</a></span>
+        <span class="property-type">str | <a href="#logcollectionlevel">Log<wbr>Collection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6704,7 +6678,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">pulumi.<wbr>Input<Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#storageaccountdetailsresponse">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6712,7 +6686,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponse">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6720,7 +6694,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#logcollectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6732,7 +6706,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">Input[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#storageaccountdetailsresponse">Input[Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6740,7 +6714,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_configuration_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponse">Input[Transfer<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6748,7 +6722,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6786,7 +6760,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">pulumi.<wbr>Input<Managed<wbr>Disk<wbr>Details<wbr>Args></a> | <a href="#storageaccountdetails">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6798,7 +6772,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">Input[Managed<wbr>Disk<wbr>Details<wbr>Args]</a> | <a href="#storageaccountdetails">Input[Storage<wbr>Account<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6836,7 +6810,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">pulumi.<wbr>Input<Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#storageaccountdetailsresponse">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6848,7 +6822,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">Input[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#storageaccountdetailsresponse">Input[Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6912,7 +6886,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#doubleencryption">pulumi.<wbr>Input<Double<wbr>Encryption></a></span>
+        <span class="property-type">string | <a href="#doubleencryption">Double<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6924,7 +6898,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#doubleencryption">Input[Double<wbr>Encryption]</a></span>
+        <span class="property-type">str | <a href="#doubleencryption">Double<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6962,7 +6936,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6974,7 +6948,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7028,7 +7002,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfilepath_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7036,7 +7010,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfiletype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#filterfiletype">pulumi.<wbr>Input<Filter<wbr>File<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#filterfiletype">Filter<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7048,7 +7022,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_path_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7056,7 +7030,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#filterfiletype">Input[Filter<wbr>File<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#filterfiletype">Filter<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7110,7 +7084,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfilepath_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7118,7 +7092,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfiletype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7130,7 +7104,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_path_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7138,7 +7112,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7218,7 +7192,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7226,7 +7200,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedproperties">pulumi.<wbr>Input<User<wbr>Assigned<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7238,7 +7212,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7246,7 +7220,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedproperties">Input[User<wbr>Assigned<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7300,7 +7274,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7308,7 +7282,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedpropertiesresponse">pulumi.<wbr>Input<User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7320,7 +7294,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7328,7 +7302,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedpropertiesresponse">Input[User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7366,7 +7340,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#scheduleddatetime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7378,7 +7352,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#scheduled_date_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7416,7 +7390,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#scheduleddatetime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7428,7 +7402,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#scheduled_date_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7556,7 +7530,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7572,7 +7546,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7580,7 +7554,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagestatus_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7588,7 +7562,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagetime_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7600,7 +7574,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7616,7 +7590,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7624,7 +7598,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stage_status_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7632,7 +7606,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stage_time_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7744,7 +7718,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#kektype">pulumi.<wbr>Input<Kek<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#kektype">Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7752,7 +7726,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">pulumi.<wbr>Input<Identity<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7760,7 +7734,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7768,7 +7742,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7780,7 +7754,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#kektype">Input[Kek<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#kektype">Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7788,7 +7762,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Input[Identity<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7796,7 +7770,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7804,7 +7778,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7890,7 +7864,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7898,7 +7872,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">pulumi.<wbr>Input<Identity<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7906,7 +7880,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7914,7 +7888,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7926,7 +7900,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7934,7 +7908,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Input[Identity<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7942,7 +7916,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7950,7 +7924,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8046,7 +8020,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8054,7 +8028,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8062,7 +8036,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8074,7 +8048,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8082,7 +8056,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8090,7 +8064,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8144,7 +8118,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8152,7 +8126,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8164,7 +8138,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8172,7 +8146,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8226,7 +8200,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#sendnotification_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8234,7 +8208,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#notificationstagename">pulumi.<wbr>Input<Notification<wbr>Stage<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#notificationstagename">Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8246,7 +8220,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#send_notification_python" style="color: inherit; text-decoration: inherit;">send_<wbr>notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8254,7 +8228,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#notificationstagename">Input[Notification<wbr>Stage<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#notificationstagename">Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8308,7 +8282,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#sendnotification_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8316,7 +8290,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8328,7 +8302,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#send_notification_python" style="color: inherit; text-decoration: inherit;">send_<wbr>notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8336,7 +8310,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8448,7 +8422,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8456,7 +8430,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8464,7 +8438,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8476,7 +8450,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8484,7 +8458,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8492,7 +8466,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8562,7 +8536,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferences">pulumi.<wbr>Input<Encryption<wbr>Preferences<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8570,7 +8544,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferreddatacenterregion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Data<wbr>Center<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8578,7 +8552,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferences">pulumi.<wbr>Input<Transport<wbr>Preferences<wbr>Args></a></span>
+        <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8590,7 +8564,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#encryption_preferences_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferences">Input[Encryption<wbr>Preferences<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8598,7 +8572,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_data_center_region_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>data_<wbr>center_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8606,7 +8580,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transport_preferences_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferences">Input[Transport<wbr>Preferences<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8676,7 +8650,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferencesresponse">pulumi.<wbr>Input<Encryption<wbr>Preferences<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8684,7 +8658,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferreddatacenterregion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Data<wbr>Center<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8692,7 +8666,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">pulumi.<wbr>Input<Transport<wbr>Preferences<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8704,7 +8678,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#encryption_preferences_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferencesresponse">Input[Encryption<wbr>Preferences<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8712,7 +8686,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_data_center_region_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>data_<wbr>center_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8720,7 +8694,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transport_preferences_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">Input[Transport<wbr>Preferences<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8774,7 +8748,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8782,7 +8756,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8794,7 +8768,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8802,7 +8776,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8888,7 +8862,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8896,7 +8870,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8904,7 +8878,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8912,7 +8886,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8924,7 +8898,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8932,7 +8906,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8940,7 +8914,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8948,7 +8922,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9130,7 +9104,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9138,7 +9112,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9146,7 +9120,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#addresstype">pulumi.<wbr>Input<Address<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9154,7 +9128,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9162,7 +9136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9170,7 +9144,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9178,7 +9152,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9186,7 +9160,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9194,7 +9168,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9202,7 +9176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9214,7 +9188,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9222,7 +9196,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9230,7 +9204,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#addresstype">Input[Address<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9238,7 +9212,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9246,7 +9220,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9254,7 +9228,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9262,7 +9236,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9270,7 +9244,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9278,7 +9252,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9286,7 +9260,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9468,7 +9442,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9476,7 +9450,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9484,7 +9458,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9492,7 +9466,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9500,7 +9474,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9508,7 +9482,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9516,7 +9490,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9524,7 +9498,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9532,7 +9506,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9540,7 +9514,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9552,7 +9526,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9560,7 +9534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9568,7 +9542,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9576,7 +9550,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9584,7 +9558,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9592,7 +9566,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9600,7 +9574,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9608,7 +9582,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9616,7 +9590,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9624,7 +9598,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9694,7 +9668,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9702,7 +9676,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9710,7 +9684,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9722,7 +9696,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9730,7 +9704,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9738,7 +9712,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9838,7 +9812,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9846,7 +9820,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9854,7 +9828,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9866,7 +9840,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9874,7 +9848,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9882,7 +9856,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9936,7 +9910,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9944,7 +9918,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9956,7 +9930,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9964,7 +9938,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10002,7 +9976,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10014,7 +9988,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10132,7 +10106,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10140,7 +10114,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10148,7 +10122,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10156,7 +10130,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10164,7 +10138,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10172,7 +10146,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10184,7 +10158,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10192,7 +10166,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10200,7 +10174,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10208,7 +10182,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10216,7 +10190,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10224,7 +10198,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10294,7 +10268,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#dataaccounttype">pulumi.<wbr>Input<Data<wbr>Account<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10302,7 +10276,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferallblobs_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10310,7 +10284,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferallfiles_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10322,7 +10296,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#dataaccounttype">Input[Data<wbr>Account<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10330,7 +10304,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_blobs_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10338,7 +10312,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_files_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10408,7 +10382,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10416,7 +10390,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferallblobs_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10424,7 +10398,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferallfiles_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10436,7 +10410,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10444,7 +10418,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_blobs_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10452,7 +10426,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_files_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10522,7 +10496,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#transferconfigurationtype">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10530,7 +10504,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferalldetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferalldetails">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10538,7 +10512,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10550,7 +10524,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#transferconfigurationtype">Input[Transfer<wbr>Configuration<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10558,7 +10532,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferalldetails">Input[Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10566,7 +10540,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_filter_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Input[Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10636,7 +10610,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10644,7 +10618,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferalldetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10652,7 +10626,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transferfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">pulumi.<wbr>Input<Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10664,7 +10638,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10672,7 +10646,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_all_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Input[Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10680,7 +10654,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#transfer_filter_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Input[Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10718,7 +10692,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetailsresponse">pulumi.<wbr>Input<Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10730,7 +10704,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetailsresponse">Input[Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10768,7 +10742,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetailsresponse">pulumi.<wbr>Input<Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10780,7 +10754,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetailsresponse">Input[Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10818,7 +10792,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetails">pulumi.<wbr>Input<Transfer<wbr>All<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferalldetails">Transfer<wbr>All<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10830,7 +10804,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetails">Input[Transfer<wbr>All<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferalldetails">Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10868,7 +10842,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetails">pulumi.<wbr>Input<Transfer<wbr>Filter<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferfilterdetails">Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10880,7 +10854,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetails">Input[Transfer<wbr>Filter<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferfilterdetails">Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10992,7 +10966,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#dataaccounttype">pulumi.<wbr>Input<Data<wbr>Account<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11000,7 +10974,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#azurefilefilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetails">pulumi.<wbr>Input<Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11008,7 +10982,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#blobfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetails">pulumi.<wbr>Input<Blob<wbr>Filter<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#blobfilterdetails">Blob<wbr>Filter<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11016,7 +10990,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfiledetails_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>File<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filterfiledetails">Filter<wbr>File<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11028,7 +11002,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#dataaccounttype">Input[Data<wbr>Account<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11036,7 +11010,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#azure_file_filter_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetails">Input[Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11044,7 +11018,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#blob_filter_details_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetails">Input[Blob<wbr>Filter<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobfilterdetails">Blob<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11052,7 +11026,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_details_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetails">Input[Filter<wbr>File<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filterfiledetails">Sequence[Filter<wbr>File<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11138,7 +11112,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11146,7 +11120,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#azurefilefilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetailsresponse">pulumi.<wbr>Input<Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11154,7 +11128,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#blobfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetailsresponse">pulumi.<wbr>Input<Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11162,7 +11136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filterfiledetails_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filterfiledetailsresponse">Filter<wbr>File<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11174,7 +11148,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11182,7 +11156,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#azure_file_filter_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Input[Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11190,7 +11164,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#blob_filter_details_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>filter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetailsresponse">Input[Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11198,7 +11172,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#filter_file_details_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetailsresponse">Input[Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filterfiledetailsresponse">Sequence[Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11262,7 +11236,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferredshipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#transportshipmenttypes">pulumi.<wbr>Input<Transport<wbr>Shipment<wbr>Types></a></span>
+        <span class="property-type">string | <a href="#transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11274,7 +11248,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#transportshipmenttypes">Input[Transport<wbr>Shipment<wbr>Types]</a></span>
+        <span class="property-type">str | <a href="#transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11312,7 +11286,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferredshipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11324,7 +11298,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11404,7 +11378,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11412,7 +11386,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11424,7 +11398,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11432,7 +11406,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11470,7 +11444,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11482,7 +11456,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11520,7 +11494,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11532,7 +11506,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}

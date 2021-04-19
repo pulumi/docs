@@ -88,7 +88,7 @@ package main
 
 import (
 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -234,39 +234,19 @@ const msixPackage = new azure_native.desktopvirtualization.MSIXPackage("msixPack
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">image_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">is_active</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">is_regular_registration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">last_updated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">msix_package_full_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">package_applications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MsixPackageApplicationsArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">package_dependencies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MsixPackageDependenciesArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">package_family_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">package_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">package_relative_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_regular_registration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msix_package_full_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MsixPackageApplicationsArgs]]</span> = None<span class="p">, </span><span class="nx">package_dependencies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MsixPackageDependenciesArgs]]</span> = None<span class="p">, </span><span class="nx">package_family_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_relative_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMSIXPackage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MSIXPackage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMSIXPackage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MSIXPackage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MSIXPackage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MSIXPackageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -301,32 +281,22 @@ const msixPackage = new azure_native.desktopvirtualization.MSIXPackage("msixPack
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MSIXPackageArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +616,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpoolname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -654,7 +624,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +632,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +640,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#imagepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +648,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#isactive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +656,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#isregularregistration_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Regular<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +664,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +672,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msixpackagefullname_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Full<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +680,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packageapplications_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackageapplications">pulumi.<wbr>Input<pulumi.<wbr>Input<Msix<wbr>Package<wbr>Applications<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#msixpackageapplications">Msix<wbr>Package<wbr>Applications[]</a></span>
     </dt>
     <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +688,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackagedependencies">pulumi.<wbr>Input<pulumi.<wbr>Input<Msix<wbr>Package<wbr>Dependencies<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#msixpackagedependencies">Msix<wbr>Package<wbr>Dependencies[]</a></span>
     </dt>
     <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +696,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagefamilyname_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Family<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +704,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagename_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +712,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +720,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -762,7 +732,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#host_pool_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -770,7 +740,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +748,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +756,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#image_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +764,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +772,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#is_regular_registration_python" style="color: inherit; text-decoration: inherit;">is_<wbr>regular_<wbr>registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +780,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +788,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msix_package_full_name_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>full_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +796,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_applications_python" style="color: inherit; text-decoration: inherit;">package_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackageapplications">Input[Msix<wbr>Package<wbr>Applications<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#msixpackageapplications">Sequence[Msix<wbr>Package<wbr>Applications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +804,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_dependencies_python" style="color: inherit; text-decoration: inherit;">package_<wbr>dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackagedependencies">Input[Msix<wbr>Package<wbr>Dependencies<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#msixpackagedependencies">Sequence[Msix<wbr>Package<wbr>Dependencies<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +812,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_family_name_python" style="color: inherit; text-decoration: inherit;">package_<wbr>family_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +820,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_name_python" style="color: inherit; text-decoration: inherit;">package_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +828,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_relative_path_python" style="color: inherit; text-decoration: inherit;">package_<wbr>relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +836,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appusermodelid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>User<wbr>Model<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iconimagename_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawicon_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Icon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawpng_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Png</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_user_model_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>user_<wbr>model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icon_image_name_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_icon_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>icon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_png_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>png</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1371,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appusermodelid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>User<wbr>Model<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iconimagename_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawicon_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Icon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawpng_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Png</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_user_model_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>user_<wbr>model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icon_image_name_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1471,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_icon_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>icon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_png_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>png</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1549,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencyname_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependency_name_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencyname_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependency_name_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1699,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1707,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}

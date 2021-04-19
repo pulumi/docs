@@ -62,7 +62,7 @@ package main
 
 import (
 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -147,37 +147,19 @@ const lab = new azure_native.devtestlab.Lab("lab", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">announcement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LabAnnouncementPropertiesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">environment_permission</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EnvironmentPermission]]]</span> = None<span class="p">,</span>
-        <span class="nx">extended_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">lab_storage_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, StorageType]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mandatory_artifacts_resource_ids_linux</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">mandatory_artifacts_resource_ids_windows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">premium_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PremiumDataDisk]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">support</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LabSupportPropertiesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">announcement</span><span class="p">:</span> <span class="nx">Optional[LabAnnouncementPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">environment_permission</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnvironmentPermission]]</span> = None<span class="p">, </span><span class="nx">extended_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lab_storage_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_linux</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mandatory_artifacts_resource_ids_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">premium_data_disks</span><span class="p">:</span> <span class="nx">Optional[Union[str, PremiumDataDisk]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support</span><span class="p">:</span> <span class="nx">Optional[LabSupportPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLab</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Lab</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLab</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Lab</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LabArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Lab</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LabArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,32 +194,22 @@ const lab = new azure_native.devtestlab.Lab("lab", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LabArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -529,7 +501,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -537,7 +509,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#announcement_nodejs" style="color: inherit; text-decoration: inherit;">announcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementproperties">pulumi.<wbr>Input<Lab<wbr>Announcement<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +517,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#environmentpermission_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#environmentpermission">pulumi.<wbr>Input<Environment<wbr>Permission></a></span>
+        <span class="property-type">string | <a href="#environmentpermission">Environment<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -553,7 +525,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +533,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#labstoragetype_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storagetype">pulumi.<wbr>Input<Storage<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +541,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +549,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatoryartifactsresourceidslinux_nodejs" style="color: inherit; text-decoration: inherit;">mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +557,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatoryartifactsresourceidswindows_nodejs" style="color: inherit; text-decoration: inherit;">mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +565,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +573,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#premiumdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">premium<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#premiumdatadisk">pulumi.<wbr>Input<Premium<wbr>Data<wbr>Disk></a></span>
+        <span class="property-type">string | <a href="#premiumdatadisk">Premium<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -611,7 +583,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_nodejs" style="color: inherit; text-decoration: inherit;">support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportproperties">pulumi.<wbr>Input<Lab<wbr>Support<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +591,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -631,7 +603,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -639,7 +611,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#announcement_python" style="color: inherit; text-decoration: inherit;">announcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementproperties">Input[Lab<wbr>Announcement<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +619,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#environment_permission_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#environmentpermission">Input[Environment<wbr>Permission]</a></span>
+        <span class="property-type">str | <a href="#environmentpermission">Environment<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +627,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +635,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#lab_storage_type_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storagetype">Input[Storage<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -671,7 +643,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +651,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatory_artifacts_resource_ids_linux_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -687,7 +659,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatory_artifacts_resource_ids_windows_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -695,7 +667,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +675,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#premium_data_disks_python" style="color: inherit; text-decoration: inherit;">premium_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#premiumdatadisk">Input[Premium<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type">str | <a href="#premiumdatadisk">Premium<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -713,7 +685,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_python" style="color: inherit; text-decoration: inherit;">support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportproperties">Input[Lab<wbr>Support<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +693,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1356,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#enablestatus">pulumi.<wbr>Input<Enable<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1388,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1400,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#enablestatus">Input[Enable<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1408,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1416,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1566,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1574,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1634,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1728,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#enablestatus">pulumi.<wbr>Input<Enable<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#enablestatus">Input[Enable<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1830,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1838,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}

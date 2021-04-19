@@ -22,20 +22,17 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMoveResource<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMoveResourceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMoveResource<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_move_resource(</span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMoveResourceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_move_resource(</span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMoveResourceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMoveResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMoveResourceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMoveResourceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMoveResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMoveResourceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMoveResource` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMoveResource </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMoveResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMoveResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -772,7 +769,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +904,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1104,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1112,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1239,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1250,7 +1247,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1420,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#automaticresolution_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1452,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#manualresolution_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1600,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#automatic_resolution_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1632,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#manual_resolution_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1672,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1780,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1812,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1848,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1864,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1872,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1891,7 +1888,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#movestatus_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1912,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourceresourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1931,7 +1928,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependsonoverrides_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1944,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2140,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2148,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2164,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#move_status_python" style="color: inherit; text-decoration: inherit;">move_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2188,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2207,7 +2204,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2220,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2236,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2275,7 +2272,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2296,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2304,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#jobstatus_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2383,7 +2380,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2388,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#job_status_python" style="color: inherit; text-decoration: inherit;">job_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2423,7 +2420,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2504,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2531,7 +2528,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#securityrules_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nsg<wbr>Security<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +2588,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2607,7 +2604,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2615,7 +2612,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancernatrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2652,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2660,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2811,7 +2808,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2816,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_nat_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Sequence[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Sequence[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2856,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2864,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3955,7 +3952,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nsg<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4039,7 +4036,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4237,7 +4234,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Resource<wbr>Settings<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4375,7 +4372,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -67,7 +67,7 @@ package main
 
 import (
 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -164,36 +164,19 @@ const privateCloud = new azure_native.avs.PrivateCloud("privateCloud", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IdentitySourceArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, InternetEnum]]]</span> = None<span class="p">,</span>
-                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagementClusterArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentitySourceArgs]]</span> = None<span class="p">, </span><span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[Union[str, InternetEnum]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[ManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -228,32 +211,22 @@ const privateCloud = new azure_native.avs.PrivateCloud("privateCloud", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PrivateCloudArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -525,7 +498,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementcluster">pulumi.<wbr>Input<Management<wbr>Cluster<wbr>Args></a></span>
+        <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -533,7 +506,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkblock_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -541,7 +514,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -549,7 +522,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +530,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysource">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#identitysource">Identity<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +538,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#internetenum">pulumi.<wbr>Input<Internet<wbr>Enum></a></span>
+        <span class="property-type">string | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +546,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +554,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +562,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +570,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +578,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +590,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementcluster">Input[Management<wbr>Cluster<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -625,7 +598,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_block_python" style="color: inherit; text-decoration: inherit;">network_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -633,7 +606,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -641,7 +614,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +622,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysource">Input[Identity<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#identitysource">Sequence[Identity<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +630,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#internetenum">Input[Internet<wbr>Enum]</a></span>
+        <span class="property-type">str | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +638,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +646,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +654,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +662,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +670,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1168,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressrouteid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1176,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressrouteprivatepeeringid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1184,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1192,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1204,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1212,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_private_peering_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>private_<wbr>peering_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1220,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_subnet_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1228,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_subnet_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1298,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hcxcloudmanager_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1306,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nsxtmanager_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1314,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcsa_nodejs" style="color: inherit; text-decoration: inherit;">vcsa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1326,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hcx_cloud_manager_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1334,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nsxt_manager_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1342,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcsa_python" style="color: inherit; text-decoration: inherit;">vcsa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1524,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basegroupdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseuserdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1556,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1564,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sslenum">pulumi.<wbr>Input<Ssl<wbr>Enum></a></span>
+        <span class="property-type">string | <a href="#sslenum">Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1608,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1616,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1624,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1656,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1664,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sslenum">Input[Ssl<wbr>Enum]</a></span>
+        <span class="property-type">str | <a href="#sslenum">Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1680,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1862,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basegroupdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseuserdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1902,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1934,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1946,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1986,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1994,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2082,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustersize_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2094,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2180,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2188,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustersize_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2196,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2204,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2224,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2232,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2240,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2278,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2290,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2328,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2340,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}

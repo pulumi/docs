@@ -71,7 +71,7 @@ package main
 
 import (
 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -214,7 +214,7 @@ package main
 
 import (
 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -314,30 +314,19 @@ const pipelineRun = new azure_native.containerregistry.PipelineRun("pipelineRun"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">pipeline_run_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineRunRequestArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[PipelineRunRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipelineRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PipelineRun</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipelineRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PipelineRun</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -372,32 +361,22 @@ const pipelineRun = new azure_native.containerregistry.PipelineRun("pipelineRun"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PipelineRunArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -573,7 +552,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -581,7 +560,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +568,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +576,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pipelinerunname_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Run<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +584,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequest">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinerunrequest">Pipeline<wbr>Run<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +596,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -625,7 +604,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +612,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +620,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pipeline_run_name_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>run_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +628,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequest">Input[Pipeline<wbr>Run<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinerunrequest">Pipeline<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -948,7 +927,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the target storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +935,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of target for the export pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +943,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target uri of the export pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -978,7 +957,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the target storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +965,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of target for the export pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +973,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target uri of the export pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1070,7 +1049,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1057,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1065,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1100,7 +1079,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1087,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1095,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
@@ -1226,7 +1205,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1237,7 +1216,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalogdigest_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1224,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipelineresourceid_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the pipeline to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1232,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1240,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1252,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1284,7 +1263,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalog_digest_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1271,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipeline_resource_id_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the pipeline to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1300,7 +1279,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Input[Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1287,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Input[Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1416,7 +1395,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1427,7 +1406,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalogdigest_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1414,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipelineresourceid_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the pipeline to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1422,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1430,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1463,7 +1442,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1474,7 +1453,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalog_digest_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1482,7 +1461,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipeline_resource_id_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the pipeline to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1469,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Input[Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1477,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Input[Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1680,7 +1659,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalogdigest_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1667,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#finishtime_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the pipeline run finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1675,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#importedartifacts_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The artifacts imported in the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1683,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipelinerunerrormessage_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Run<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detailed error message for the pipeline run in the case of failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1691,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">pulumi.<wbr>Input<Progress<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1699,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">pulumi.<wbr>Input<Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1707,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the pipeline run started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1715,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1723,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">pulumi.<wbr>Input<Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1752,7 +1731,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">pulumi.<wbr>Input<Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1743,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#catalog_digest_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The digest of the tar used to transfer the artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1751,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#finish_time_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the pipeline run finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1759,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#imported_artifacts_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The artifacts imported in the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1767,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#pipeline_run_error_message_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>run_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detailed error message for the pipeline run in the case of failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1775,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Input[Progress<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1783,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Input[Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1791,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the pipeline run started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1799,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1828,7 +1807,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Input[Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1815,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Input[Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1890,7 +1869,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1877,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pipelinerunsourcetype">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Source<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#pipelinerunsourcetype">Pipeline<wbr>Run<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1889,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1897,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pipelinerunsourcetype">Input[Pipeline<wbr>Run<wbr>Source<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#pipelinerunsourcetype">Pipeline<wbr>Run<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1972,7 +1951,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +1959,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1992,7 +1971,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +1979,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2076,7 +2055,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2084,7 +2063,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pipelineruntargettype">pulumi.<wbr>Input<Pipeline<wbr>Run<wbr>Target<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#pipelineruntargettype">Pipeline<wbr>Run<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2096,7 +2075,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2083,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pipelineruntargettype">Input[Pipeline<wbr>Run<wbr>Target<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#pipelineruntargettype">Pipeline<wbr>Run<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2158,7 +2137,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2145,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2157,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2165,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2225,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the source update happened.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2258,7 +2237,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when the source update happened.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2296,7 +2275,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">pulumi.<wbr>Input<Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2308,7 +2287,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Input[Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2346,7 +2325,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage complete of the copy operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2358,7 +2337,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage complete of the copy operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2476,7 +2455,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2463,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2471,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2479,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2487,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2495,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2528,7 +2507,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2536,7 +2515,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2523,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2552,7 +2531,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2560,7 +2539,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2568,7 +2547,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

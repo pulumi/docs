@@ -22,19 +22,17 @@ API Version: 2020-07-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitor(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitorResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitor(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitorResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitorResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMonitor` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-07-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMonitor </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -822,7 +820,7 @@ The following output properties are available:
 <a href="#elasticclouddeployment_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Cloud<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouddeploymentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>Deployment<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticclouddeploymentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>Deployment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the elastic cloud deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +828,7 @@ The following output properties are available:
 <a href="#elasticclouduser_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Cloud<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>User<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticclouduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the user's elastic account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -882,7 +880,7 @@ The following output properties are available:
 <a href="#elastic_cloud_deployment_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>cloud_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the elastic cloud deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +888,7 @@ The following output properties are available:
 <a href="#elastic_cloud_user_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>cloud_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the user's elastic account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1038,7 +1036,7 @@ The following output properties are available:
 <a href="#elasticproperties_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elastic cloud properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1168,7 @@ The following output properties are available:
 <a href="#elastic_properties_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elastic cloud properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

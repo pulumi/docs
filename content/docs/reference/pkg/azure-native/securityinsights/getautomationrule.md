@@ -22,21 +22,17 @@ API Version: 2019-01-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAutomationRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAutomationRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAutomationRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAutomationRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAutomationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAutomationRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_automation_rule(</span><span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutomationRuleResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_automation_rule(</span><span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutomationRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAutomationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAutomationRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAutomationRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAutomationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAutomationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAutomationRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAutomationRule` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2019-01-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAutomationRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAutomationRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAutomationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAutomationRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAutomationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -624,7 +620,7 @@ The following output properties are available:
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -684,7 +680,7 @@ The following output properties are available:
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -732,7 +728,7 @@ The following output properties are available:
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +736,7 @@ The following output properties are available:
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +908,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +916,7 @@ The following output properties are available:
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +948,7 @@ The following output properties are available:
 <a href="#conditionproperties_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +984,7 @@ The following output properties are available:
 <a href="#condition_properties_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1120,7 +1116,7 @@ The following output properties are available:
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1180,7 +1176,7 @@ The following output properties are available:
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1312,7 +1308,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,7 +1440,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -71,7 +71,7 @@ package main
 
 import (
 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -177,30 +177,19 @@ const deploymentAtScope = new azure_native.resources.DeploymentAtScope("deployme
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentPropertiesArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -235,32 +224,22 @@ const deploymentAtScope = new azure_native.resources.DeploymentAtScope("deployme
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeploymentAtScopeArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -436,7 +415,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentproperties">pulumi.<wbr>Input<Deployment<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -444,7 +423,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -452,7 +431,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +439,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +447,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -480,7 +459,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentproperties">Input[Deployment<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -488,7 +467,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +475,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +483,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +491,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -723,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">pulumi.<wbr>Input<Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">pulumi.<wbr>Input<Alias<wbr>Pattern<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Input[Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Input[Alias<wbr>Pattern<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrase_nodejs" style="color: inherit; text-decoration: inherit;">phrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrase_python" style="color: inherit; text-decoration: inherit;">phrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmetadata_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">pulumi.<wbr>Input<Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpattern_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">pulumi.<wbr>Input<Alias<wbr>Pattern<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Alias<wbr>Path<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aliaspathresponse">Alias<wbr>Path<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_metadata_python" style="color: inherit; text-decoration: inherit;">default_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Input[Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_pattern_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Input[Alias<wbr>Pattern<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathresponse">Input[Alias<wbr>Path<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aliaspathresponse">Sequence[Alias<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profileversion_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1267,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1275,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1427,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detaillevel_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1439,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detail_level_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1477,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detaillevel_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detail_level_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicdependencyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Basic<wbr>Dependency<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#basicdependencyresponse">Basic<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1611,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicdependencyresponse">Input[Basic<wbr>Dependency<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#basicdependencyresponse">Sequence[Basic<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1811,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">pulumi.<wbr>Input<Deployment<wbr>Mode></a></span>
+        <span class="property-type"><a href="#deploymentmode">Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsetting">pulumi.<wbr>Input<Debug<wbr>Setting<wbr>Args></a></span>
+        <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressionevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">expression<wbr>Evaluation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">pulumi.<wbr>Input<Expression<wbr>Evaluation<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeployment">pulumi.<wbr>Input<On<wbr>Error<wbr>Deployment<wbr>Args></a></span>
+        <span class="property-type"><a href="#onerrordeployment">On<wbr>Error<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslink">pulumi.<wbr>Input<Parameters<wbr>Link<wbr>Args></a></span>
+        <span class="property-type"><a href="#parameterslink">Parameters<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelink">pulumi.<wbr>Input<Template<wbr>Link<wbr>Args></a></span>
+        <span class="property-type"><a href="#templatelink">Template<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}The URI of the template. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1879,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">Input[Deployment<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#deploymentmode">Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_setting_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsetting">Input[Debug<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_evaluation_options_python" style="color: inherit; text-decoration: inherit;">expression_<wbr>evaluation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Input[Expression<wbr>Evaluation<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_deployment_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeployment">Input[On<wbr>Error<wbr>Deployment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onerrordeployment">On<wbr>Error<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_link_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslink">Input[Parameters<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parameterslink">Parameters<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_link_python" style="color: inherit; text-decoration: inherit;">template_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelink">Input[Template<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#templatelink">Template<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the template. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2229,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2237,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsettingresponse">pulumi.<wbr>Input<Debug<wbr>Setting<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2245,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dependencyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Dependency<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dependencyresponse">Dependency<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2253,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2261,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">pulumi.<wbr>Input<Error<wbr>Response<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2269,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2277,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymentextendedresponse">pulumi.<wbr>Input<On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2285,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputresources_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2309,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslinkresponse">pulumi.<wbr>Input<Parameters<wbr>Link<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Provider<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#providerresponse">Provider<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2325,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2333,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatehash_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2341,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelinkresponse">pulumi.<wbr>Input<Template<wbr>Link<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2349,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2357,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatedresources_nodejs" style="color: inherit; text-decoration: inherit;">validated<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2377,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_setting_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsettingresponse">Input[Debug<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2385,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dependencyresponse">Input[Dependency<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dependencyresponse">Sequence[Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2393,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2401,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Input[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2409,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2417,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_deployment_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymentextendedresponse">Input[On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2425,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_resources_python" style="color: inherit; text-decoration: inherit;">output_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2449,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_link_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslinkresponse">Input[Parameters<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2457,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">Input[Provider<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#providerresponse">Sequence[Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2465,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2473,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_hash_python" style="color: inherit; text-decoration: inherit;">template_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2481,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_link_python" style="color: inherit; text-decoration: inherit;">template_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelinkresponse">Input[Template<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2489,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2497,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validated_resources_python" style="color: inherit; text-decoration: inherit;">validated_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2559,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2579,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2681,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2689,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2697,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Error<wbr>Response<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2705,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2713,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2725,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">Input[Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Sequence[Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2733,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2741,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Input[Error<wbr>Response<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Sequence[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2749,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2757,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2795,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#expressionevaluationoptionsscopetype">pulumi.<wbr>Input<Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2807,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#expressionevaluationoptionsscopetype">Input[Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2891,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymenttype">pulumi.<wbr>Input<On<wbr>Error<wbr>Deployment<wbr>Type></a></span>
+        <span class="property-type"><a href="#onerrordeploymenttype">On<wbr>Error<wbr>Deployment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymenttype">Input[On<wbr>Error<wbr>Deployment<wbr>Type]</a></span>
+        <span class="property-type"><a href="#onerrordeploymenttype">On<wbr>Error<wbr>Deployment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3017,7 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3025,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3033,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3113,7 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3121,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3195,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3215,7 +3194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3223,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3293,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocations_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3321,7 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_locations_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3503,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiprofiles_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiprofileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Profile<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apiprofileresponse">Api<wbr>Profile<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3511,7 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultapiversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3519,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Alias<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aliasresponse">Alias<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3527,7 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3535,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationmappings_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerextendedlocationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3551,7 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3579,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_profiles_python" style="color: inherit; text-decoration: inherit;">api_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiprofileresponse">Input[Api<wbr>Profile<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apiprofileresponse">Sequence[Api<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3587,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_api_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3595,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasresponse">Input[Alias<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aliasresponse">Sequence[Alias<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3603,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3611,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3619,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_mappings_python" style="color: inherit; text-decoration: inherit;">location_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerextendedlocationresponse">Input[Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">Sequence[Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3627,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3635,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3745,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3753,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3761,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstate_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3769,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresourcetyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3789,7 +3768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3797,7 +3776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_policy_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3805,7 +3784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_state_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3813,7 +3792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresourcetyperesponse">Input[Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#providerresourcetyperesponse">Sequence[Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3859,7 +3838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3871,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3973,7 +3952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3989,7 +3968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3997,7 +3976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4005,7 +3984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4017,7 +3996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4025,7 +4004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4033,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4041,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4049,7 +4028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4151,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4159,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4167,7 +4146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4175,7 +4154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4183,7 +4162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4195,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4203,7 +4182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4211,7 +4190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4227,7 +4206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}

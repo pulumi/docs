@@ -28,30 +28,19 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AttestationServiceCreationSpecificParamsArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AttestationServiceCreationSpecificParamsArgs]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestationProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttestationProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestationProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttestationProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttestationProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AttestationProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -86,32 +75,22 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AttestationProviderArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -287,7 +266,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationservicecreationspecificparams">pulumi.<wbr>Input<Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args></a></span>
+        <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -295,7 +274,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -303,7 +282,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -311,7 +290,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -319,7 +298,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -331,7 +310,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationservicecreationspecificparams">Input[Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -339,7 +318,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -347,7 +326,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -355,7 +334,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -363,7 +342,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -690,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policysigningcertificates_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Signing<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">pulumi.<wbr>Input<JSONWeb<wbr>Key<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_signing_certificates_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>signing_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">Input[JSONWeb<wbr>Key<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1046,7 +1025,7 @@ certificate.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "kty" (key type) parameter identifies the cryptographic algorithm
 family used with the key, such as "RSA" or "EC". "kty" values should
@@ -1058,7 +1037,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt 
 <a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
 use with the key.  The values used should either be registered in the
@@ -1070,7 +1049,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#crv_nodejs" style="color: inherit; text-decoration: inherit;">crv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1057,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#d_nodejs" style="color: inherit; text-decoration: inherit;">d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1065,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dp_nodejs" style="color: inherit; text-decoration: inherit;">dp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1073,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dq_nodejs" style="color: inherit; text-decoration: inherit;">dq</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1081,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#e_nodejs" style="color: inherit; text-decoration: inherit;">e</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1089,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#k_nodejs" style="color: inherit; text-decoration: inherit;">k</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1097,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
 is used, for instance, to choose among a set of keys within a JWK Set
@@ -1134,7 +1113,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#n_nodejs" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1121,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#p_nodejs" style="color: inherit; text-decoration: inherit;">p</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1129,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#q_nodejs" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1137,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#qi_nodejs" style="color: inherit; text-decoration: inherit;">qi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1145,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
@@ -1177,7 +1156,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1164,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
 <a href="#x5c_nodejs" style="color: inherit; text-decoration: inherit;">x5c</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The "x5c" (X.509 certificate chain) parameter contains a chain of one
 or more PKIX certificates [RFC5280].  The certificate chain is
@@ -1199,7 +1178,7 @@ certificate.{{% /md %}}</dd><dt class="property-optional"
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1211,7 +1190,7 @@ certificate.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "kty" (key type) parameter identifies the cryptographic algorithm
 family used with the key, such as "RSA" or "EC". "kty" values should
@@ -1223,7 +1202,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt 
 <a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
 use with the key.  The values used should either be registered in the
@@ -1235,7 +1214,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#crv_python" style="color: inherit; text-decoration: inherit;">crv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1222,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#d_python" style="color: inherit; text-decoration: inherit;">d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1230,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dp_python" style="color: inherit; text-decoration: inherit;">dp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1238,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dq_python" style="color: inherit; text-decoration: inherit;">dq</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1246,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#e_python" style="color: inherit; text-decoration: inherit;">e</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1254,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#k_python" style="color: inherit; text-decoration: inherit;">k</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1262,7 @@ Resistant Name.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
 is used, for instance, to choose among a set of keys within a JWK Set
@@ -1299,7 +1278,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#n_python" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1286,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#p_python" style="color: inherit; text-decoration: inherit;">p</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1294,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#q_python" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1323,7 +1302,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#qi_python" style="color: inherit; text-decoration: inherit;">qi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1310,7 @@ value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
 <a href="#use_python" style="color: inherit; text-decoration: inherit;">use</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
@@ -1342,7 +1321,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,7 +1329,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
 <a href="#x5c_python" style="color: inherit; text-decoration: inherit;">x5c</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The "x5c" (X.509 certificate chain) parameter contains a chain of one
 or more PKIX certificates [RFC5280].  The certificate chain is
@@ -1364,7 +1343,7 @@ certificate.{{% /md %}}</dd><dt class="property-optional"
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,7 +1389,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">pulumi.<wbr>Input<pulumi.<wbr>Input<JSONWeb<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jsonwebkey">JSONWeb<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1426,7 +1405,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">Input[JSONWeb<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jsonwebkey">Sequence[JSONWeb<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1548,7 +1527,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1556,7 +1535,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1564,7 +1543,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1572,7 +1551,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1580,7 +1559,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1567,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1600,7 +1579,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1608,7 +1587,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1595,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1624,7 +1603,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1611,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1619,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1678,7 +1657,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1669,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1760,7 +1739,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1747,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1755,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1767,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1775,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1783,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1922,7 +1901,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1909,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1917,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1925,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1933,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +1941,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1974,7 +1953,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1961,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1969,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1977,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +1985,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +1993,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

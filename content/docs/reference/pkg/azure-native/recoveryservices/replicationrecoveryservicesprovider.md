@@ -78,7 +78,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -205,30 +205,19 @@ const replicationRecoveryServicesProvider = new azure_native.recoveryservices.Re
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                        <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AddRecoveryServicesProviderInputPropertiesArgs]]</span> = None<span class="p">,</span>
-                                        <span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                        <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">,</span>
-                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AddRecoveryServicesProviderInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryServicesProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryServicesProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -263,32 +252,22 @@ const replicationRecoveryServicesProvider = new azure_native.recoveryservices.Re
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,7 +443,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -472,7 +451,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">pulumi.<wbr>Input<Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add provider request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -480,7 +459,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -488,7 +467,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +475,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recovery services provider name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -508,7 +487,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -516,7 +495,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Input[Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add provider request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -524,7 +503,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -532,7 +511,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +519,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Recovery services provider name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -803,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">pulumi.<wbr>Input<Identity<wbr>Provider<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine where the provider is getting added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">pulumi.<wbr>Input<Identity<wbr>Provider<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -827,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataplaneauthenticationidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">pulumi.<wbr>Input<Identity<wbr>Provider<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machineid_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_identity_input_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Input[Identity<wbr>Provider<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the machine where the provider is getting added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_identity_input_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Input[Identity<wbr>Provider<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_plane_authentication_identity_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>authentication_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Input[Identity<wbr>Provider<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_id_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1141,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerresolvability_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorid_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Input[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1479,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadauthority_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base authority for Azure Active Directory authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_authority_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base authority for Azure Active Directory authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadauthority_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base authority for Azure Active Directory authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1665,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1673,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1681,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1689,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_authority_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base authority for Azure Active Directory authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1709,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1717,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1725,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1733,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1979,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1995,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2003,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2027,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2035,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2047,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2071,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2079,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2103,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2111,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2413,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedscenarios_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Scenarios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The scenarios allowed on this provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">pulumi.<wbr>Input<Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether DRA is responsive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draidentifier_nodejs" style="color: inherit; text-decoration: inherit;">dra<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DRA Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabrictype_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Health<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastheartbeat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heart<wbr>Beat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when last heartbeat was sent by the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of protected VMs currently managed by the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2493,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversion_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">pulumi.<wbr>Input<Version<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversionexpirydate_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Version<wbr>Expiry<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiry date of the version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversionstate_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Version<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DRA version status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">pulumi.<wbr>Input<Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fabric provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_scenarios_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>scenarios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The scenarios allowed on this provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_identity_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Input[Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value indicating whether DRA is responsive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dra_identifier_python" style="color: inherit; text-decoration: inherit;">dra_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DRA Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_type_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Input[Health<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_heart_beat_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heart_<wbr>beat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when last heartbeat was sent by the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of protected VMs currently managed by the DRA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_version_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2633,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_version_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Input[Version<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_version_expiry_date_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>version_<wbr>expiry_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiry date of the version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2649,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_version_state_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>version_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DRA version status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_identity_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Input[Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fabric provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2735,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirydate_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version expiry date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2743,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value indicating whether security update required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2751,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2763,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_date_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version expiry date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2771,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value indicating whether security update required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd></dl>
 {{% /choosable %}}

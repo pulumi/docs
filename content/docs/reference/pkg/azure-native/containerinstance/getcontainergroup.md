@@ -22,19 +22,17 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_container_group(</span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContainerGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_container_group(</span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContainerGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContainerGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupContainerGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupContainerGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupContainerGroup` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainerGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1030,7 +1028,7 @@ The following output properties are available:
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Response</a></span>
+        <span class="property-type"><a href="#loganalyticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container group log analytics information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1066,7 +1064,7 @@ The following output properties are available:
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsresponse">Log<wbr>Analytics<wbr>Response</a></span>
+        <span class="property-type"><a href="#loganalyticsresponse">Log<wbr>Analytics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container group log analytics information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1106,7 +1104,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1212,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1366,7 +1364,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of this container group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1426,7 +1424,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1458,7 +1456,7 @@ The following output properties are available:
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpheadersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1564,7 @@ The following output properties are available:
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadersresponse">Http<wbr>Headers<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpheadersresponse">Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1680,7 @@ The following output properties are available:
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerexecresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerexecresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execution command to probe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1696,7 @@ The following output properties are available:
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhttpgetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerhttpgetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Http Get settings to probe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1860,7 @@ The following output properties are available:
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerexecresponse">Container<wbr>Exec<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerexecresponse">Container<wbr>Exec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execution command to probe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1876,7 @@ The following output properties are available:
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhttpgetresponse">Container<wbr>Http<wbr>Get<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerhttpgetresponse">Container<wbr>Http<wbr>Get<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Http Get settings to probe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1924,7 @@ The following output properties are available:
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1934,7 +1932,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1942,7 +1940,7 @@ The following output properties are available:
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2034,7 +2032,7 @@ The following output properties are available:
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2042,7 +2040,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2050,7 +2048,7 @@ The following output properties are available:
 <a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2082,7 +2080,7 @@ The following output properties are available:
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container instance. Only valid in response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2098,7 +2096,7 @@ The following output properties are available:
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements of the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2114,7 +2112,7 @@ The following output properties are available:
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2122,7 +2120,7 @@ The following output properties are available:
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2128,7 @@ The following output properties are available:
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containerportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports on the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2136,7 @@ The following output properties are available:
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The readiness probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2144,7 @@ The following output properties are available:
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2334,7 +2332,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container instance. Only valid in response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2350,7 +2348,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements of the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2364,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +2372,7 @@ The following output properties are available:
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2380,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">Sequence[Container<wbr>Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerportresponse">Sequence[Container<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports on the container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2388,7 @@ The following output properties are available:
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The readiness probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2396,7 @@ The following output properties are available:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3554,7 +3552,7 @@ The following output properties are available:
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the init container. Only valid in response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3578,7 +3576,7 @@ The following output properties are available:
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the init container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3594,7 +3592,7 @@ The following output properties are available:
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the init container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3710,7 +3708,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the init container. Only valid in response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3734,7 +3732,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the init container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3750,7 +3748,7 @@ The following output properties are available:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the init container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3766,7 +3764,7 @@ The following output properties are available:
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3774,7 +3772,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3782,7 +3780,7 @@ The following output properties are available:
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The previous state of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3874,7 +3872,7 @@ The following output properties are available:
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3882,7 +3880,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3890,7 +3888,7 @@ The following output properties are available:
 <a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The previous state of the init container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3922,7 +3920,7 @@ The following output properties are available:
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Port<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ports exposed on the container group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4054,7 +4052,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ports exposed on the container group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4366,7 +4364,7 @@ The following output properties are available:
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU limit of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4450,7 +4448,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU limit of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4490,7 +4488,7 @@ The following output properties are available:
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU request of this container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4574,7 +4572,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU request of this container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4590,7 +4588,7 @@ The following output properties are available:
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requests of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4598,7 +4596,7 @@ The following output properties are available:
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource limits of this container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4650,7 +4648,7 @@ The following output properties are available:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requests of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4658,7 +4656,7 @@ The following output properties are available:
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource limits of this container instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4798,7 +4796,7 @@ The following output properties are available:
 <a href="#azurefile_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefilevolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure File volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4814,7 +4812,7 @@ The following output properties are available:
 <a href="#gitrepo_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Response</a></span>
+        <span class="property-type"><a href="#gitrepovolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The git repo volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4930,7 +4928,7 @@ The following output properties are available:
 <a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumeresponse">Azure<wbr>File<wbr>Volume<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefilevolumeresponse">Azure<wbr>File<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure File volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4946,7 +4944,7 @@ The following output properties are available:
 <a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumeresponse">Git<wbr>Repo<wbr>Volume<wbr>Response</a></span>
+        <span class="property-type"><a href="#gitrepovolumeresponse">Git<wbr>Repo<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The git repo volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

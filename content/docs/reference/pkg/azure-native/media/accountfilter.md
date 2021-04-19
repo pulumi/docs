@@ -115,7 +115,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -326,31 +326,19 @@ const accountFilter = new azure_native.media.AccountFilter("accountFilter", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">filter_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">first_quality</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirstQualityArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">presentation_time_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresentationTimeRangeArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">tracks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FilterTrackSelectionArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_quality</span><span class="p">:</span> <span class="nx">Optional[FirstQualityArgs]</span> = None<span class="p">, </span><span class="nx">presentation_time_range</span><span class="p">:</span> <span class="nx">Optional[PresentationTimeRangeArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tracks</span><span class="p">:</span> <span class="nx">Optional[Sequence[FilterTrackSelectionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -385,32 +373,22 @@ const accountFilter = new azure_native.media.AccountFilter("accountFilter", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AccountFilterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -602,7 +580,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -610,7 +588,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +596,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +604,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#firstquality_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstquality">pulumi.<wbr>Input<First<wbr>Quality<wbr>Args></a></span>
+        <span class="property-type"><a href="#firstquality">First<wbr>Quality</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +612,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#presentationtimerange_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerange">pulumi.<wbr>Input<Presentation<wbr>Time<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +620,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselection">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Track<wbr>Selection<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filtertrackselection">Filter<wbr>Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -654,7 +632,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -662,7 +640,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +648,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +656,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#first_quality_python" style="color: inherit; text-decoration: inherit;">first_<wbr>quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstquality">Input[First<wbr>Quality<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firstquality">First<wbr>Quality<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +664,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#presentation_time_range_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerange">Input[Presentation<wbr>Time<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +672,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselection">Input[Filter<wbr>Track<wbr>Selection<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filtertrackselection">Sequence[Filter<wbr>Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#filtertrackpropertycompareoperation">pulumi.<wbr>Input<Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation></a></span>
+        <span class="property-type">string | <a href="#filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#filtertrackpropertytype">pulumi.<wbr>Input<Filter<wbr>Track<wbr>Property<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -967,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#filtertrackpropertycompareoperation">Input[Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation]</a></span>
+        <span class="property-type">str | <a href="#filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#filtertrackpropertytype">Input[Filter<wbr>Track<wbr>Property<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -995,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1073,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1081,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1101,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1109,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">Filter<wbr>Track<wbr>Property<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">Input[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Input[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forceendtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_nodejs" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_end_timestamp_python" style="color: inherit; text-decoration: inherit;">force_<wbr>end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1537,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forceendtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_nodejs" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1731,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_end_timestamp_python" style="color: inherit; text-decoration: inherit;">force_<wbr>end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

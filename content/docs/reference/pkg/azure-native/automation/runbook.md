@@ -78,7 +78,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -243,7 +243,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -349,38 +349,19 @@ const runbook = new azure_native.automation.Runbook("runbook", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RunbookDraftArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContentLinkArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, RunbookTypeEnum]]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[RunbookDraftArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[ContentLinkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, RunbookTypeEnum]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRunbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Runbook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRunbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Runbook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RunbookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -415,32 +396,22 @@ const runbook = new azure_native.automation.Runbook("runbook", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RunbookArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -744,7 +715,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -752,7 +723,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -760,7 +731,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbooktype_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#runbooktypeenum">pulumi.<wbr>Input<Runbook<wbr>Type<wbr>Enum></a></span>
+        <span class="property-type">string | <a href="#runbooktypeenum">Runbook<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +739,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the description of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +747,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#draft_nodejs" style="color: inherit; text-decoration: inherit;">draft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraft">pulumi.<wbr>Input<Runbook<wbr>Draft<wbr>Args></a></span>
+        <span class="property-type"><a href="#runbookdraft">Runbook<wbr>Draft</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +755,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +763,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logactivitytrace_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Activity<wbr>Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the activity-level tracing options of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +771,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logprogress_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets progress log option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +779,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logverbose_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Verbose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets verbose log option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +787,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +795,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publishcontentlink_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">pulumi.<wbr>Input<Content<wbr>Link<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +803,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbookname_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runbook name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +811,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,7 +823,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -860,7 +831,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -868,7 +839,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbook_type_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#runbooktypeenum">Input[Runbook<wbr>Type<wbr>Enum]</a></span>
+        <span class="property-type">str | <a href="#runbooktypeenum">Runbook<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +847,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the description of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +855,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#draft_python" style="color: inherit; text-decoration: inherit;">draft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraft">Input[Runbook<wbr>Draft<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runbookdraft">Runbook<wbr>Draft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +863,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +871,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#log_activity_trace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>activity_<wbr>trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the activity-level tracing options of the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +879,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#log_progress_python" style="color: inherit; text-decoration: inherit;">log_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets progress log option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +887,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#log_verbose_python" style="color: inherit; text-decoration: inherit;">log_<wbr>verbose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets verbose log option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +895,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +903,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publish_content_link_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Input[Content<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +911,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbook_name_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runbook name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +919,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the content hash algorithm used to hash the content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1395,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets expected hash value of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the content hash algorithm used to hash the content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1415,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets expected hash value of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the content hash algorithm used to hash the content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1477,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets expected hash value of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the content hash algorithm used to hash the content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1497,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets expected hash value of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">pulumi.<wbr>Input<Content<wbr>Hash<wbr>Args></a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri of the runbook content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the version of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1595,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Input[Content<wbr>Hash<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri of the runbook content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the version of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1681,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">pulumi.<wbr>Input<Content<wbr>Hash<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri of the runbook content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the version of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Input[Content<wbr>Hash<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri of the runbook content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the version of the content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1843,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the creation time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_nodejs" style="color: inherit; text-decoration: inherit;">draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">pulumi.<wbr>Input<Content<wbr>Link<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inedit_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether runbook is in edit mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the last modified time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtypes_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Runbook<wbr>Parameter<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Runbook<wbr>Parameter}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the creation time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Input[Content<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_edit_python" style="color: inherit; text-decoration: inherit;">in_<wbr>edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether runbook is in edit mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the last modified time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Runbook<wbr>Parameter<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2053,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the creation time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_nodejs" style="color: inherit; text-decoration: inherit;">draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">pulumi.<wbr>Input<Content<wbr>Link<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inedit_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether runbook is in edit mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2077,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the last modified time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtypes_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Runbook<wbr>Parameter<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Runbook<wbr>Parameter<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2105,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the creation time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Input[Content<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_edit_python" style="color: inherit; text-decoration: inherit;">in_<wbr>edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether runbook is in edit mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the last modified time of the runbook draft.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Runbook<wbr>Parameter<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the default value of parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismandatory_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2267,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the default value of parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2283,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the default value of parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismandatory_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2413,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the default value of parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
