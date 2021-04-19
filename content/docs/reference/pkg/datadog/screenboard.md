@@ -1365,19 +1365,32 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScreenBoardTemplateVariableArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScreenBoardWidgetArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScreenBoard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScreenBoard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1412,22 +1425,32 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ScreenBoardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1436,7 +1459,7 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1460,7 +1483,7 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1649,7 +1672,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd><dt class="property-required"
@@ -1658,7 +1681,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1690,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1699,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The read-only status of the screenboard. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1708,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1717,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#templatevariables_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1726,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd></dl>
@@ -1716,7 +1739,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd><dt class="property-required"
@@ -1725,7 +1748,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Input[Screen<wbr>Board<wbr>Widget<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1757,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1766,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The read-only status of the screenboard. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1775,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1784,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Sequence[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Input[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1793,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd></dl>
@@ -1839,20 +1862,29 @@ Get an existing ScreenBoard resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ScreenBoardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScreenBoard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ScreenBoardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScreenBoard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScreenBoardTemplateVariableArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScreenBoardWidgetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScreenBoard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ScreenBoardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScreenBoard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScreenBoardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScreenBoard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ScreenBoardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScreenBoard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ScreenBoardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2095,7 +2127,7 @@ The following state arguments are supported:
 <a href="#state_height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The read-only status of the screenboard. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2145,7 @@ The following state arguments are supported:
 <a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_templatevariables_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2163,7 @@ The following state arguments are supported:
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2172,7 @@ The following state arguments are supported:
 <a href="#state_widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2181,7 @@ The following state arguments are supported:
 <a href="#state_width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd></dl>
@@ -2162,7 +2194,7 @@ The following state arguments are supported:
 <a href="#state_height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2203,7 @@ The following state arguments are supported:
 <a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The read-only status of the screenboard. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2212,7 @@ The following state arguments are supported:
 <a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2221,7 @@ The following state arguments are supported:
 <a href="#state_template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Sequence[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Input[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2230,7 @@ The following state arguments are supported:
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2239,7 @@ The following state arguments are supported:
 <a href="#state_widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Input[Screen<wbr>Board<wbr>Widget<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2248,7 @@ The following state arguments are supported:
 <a href="#state_width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd></dl>
@@ -2296,7 +2328,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2336,7 @@ The following state arguments are supported:
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2344,7 @@ The following state arguments are supported:
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2324,7 +2356,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2364,7 @@ The following state arguments are supported:
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2372,7 @@ The following state arguments are supported:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3370,7 +3402,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3378,7 +3410,7 @@ The following state arguments are supported:
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3386,7 +3418,7 @@ The following state arguments are supported:
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3394,7 +3426,7 @@ The following state arguments are supported:
 <a href="#alertid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3402,7 +3434,7 @@ The following state arguments are supported:
 <a href="#autorefresh_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3410,7 +3442,7 @@ The following state arguments are supported:
 <a href="#bgcolor_nodejs" style="color: inherit; text-decoration: inherit;">bgcolor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3418,7 +3450,7 @@ The following state arguments are supported:
 <a href="#check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3426,7 +3458,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3466,7 @@ The following state arguments are supported:
 <a href="#colorpreference_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3442,7 +3474,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3450,7 +3482,7 @@ The following state arguments are supported:
 <a href="#displayformat_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3458,7 +3490,7 @@ The following state arguments are supported:
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3466,7 +3498,7 @@ The following state arguments are supported:
 <a href="#eventsize_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3474,7 +3506,7 @@ The following state arguments are supported:
 <a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3482,7 +3514,7 @@ The following state arguments are supported:
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3490,7 +3522,7 @@ The following state arguments are supported:
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3498,7 +3530,7 @@ The following state arguments are supported:
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3506,7 +3538,7 @@ The following state arguments are supported:
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3514,7 +3546,7 @@ The following state arguments are supported:
 <a href="#hidezerocounts_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Zero<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,7 +3554,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3562,7 @@ The following state arguments are supported:
 <a href="#layoutversion_nodejs" style="color: inherit; text-decoration: inherit;">layout<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3570,7 @@ The following state arguments are supported:
 <a href="#legend_nodejs" style="color: inherit; text-decoration: inherit;">legend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3546,7 +3578,7 @@ The following state arguments are supported:
 <a href="#legendsize_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3554,7 +3586,7 @@ The following state arguments are supported:
 <a href="#logset_nodejs" style="color: inherit; text-decoration: inherit;">logset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3562,7 +3594,7 @@ The following state arguments are supported:
 <a href="#managestatusshowtitle_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Status<wbr>Show<wbr>Title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3570,7 +3602,7 @@ The following state arguments are supported:
 <a href="#managestatustitlealign_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Status<wbr>Title<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3578,7 +3610,7 @@ The following state arguments are supported:
 <a href="#managestatustitlesize_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Status<wbr>Title<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3586,7 +3618,7 @@ The following state arguments are supported:
 <a href="#managestatustitletext_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Status<wbr>Title<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3594,7 +3626,7 @@ The following state arguments are supported:
 <a href="#margin_nodejs" style="color: inherit; text-decoration: inherit;">margin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3602,7 +3634,7 @@ The following state arguments are supported:
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3610,7 +3642,7 @@ The following state arguments are supported:
 <a href="#mustshowbreakdown_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Breakdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3618,7 +3650,7 @@ The following state arguments are supported:
 <a href="#mustshowdistribution_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3626,7 +3658,7 @@ The following state arguments are supported:
 <a href="#mustshowerrors_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3634,7 +3666,7 @@ The following state arguments are supported:
 <a href="#mustshowhits_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Hits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3642,7 +3674,7 @@ The following state arguments are supported:
 <a href="#mustshowlatency_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3650,7 +3682,7 @@ The following state arguments are supported:
 <a href="#mustshowresourcelist_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Show<wbr>Resource<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3658,7 +3690,7 @@ The following state arguments are supported:
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3666,7 +3698,7 @@ The following state arguments are supported:
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3674,7 +3706,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3682,7 +3714,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgetrule">Screen<wbr>Board<wbr>Widget<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgetrule">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3690,7 +3722,7 @@ The following state arguments are supported:
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3698,7 +3730,7 @@ The following state arguments are supported:
 <a href="#serviceservice_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3706,7 +3738,7 @@ The following state arguments are supported:
 <a href="#showlasttriggered_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Last<wbr>Triggered</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3714,7 +3746,7 @@ The following state arguments are supported:
 <a href="#sizeversion_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3722,7 +3754,7 @@ The following state arguments are supported:
 <a href="#sizing_nodejs" style="color: inherit; text-decoration: inherit;">sizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3730,7 +3762,7 @@ The following state arguments are supported:
 <a href="#summarytype_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3738,7 +3770,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3746,7 +3778,7 @@ The following state arguments are supported:
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3754,7 +3786,7 @@ The following state arguments are supported:
 <a href="#textalign_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3762,7 +3794,7 @@ The following state arguments are supported:
 <a href="#textsize_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3770,7 +3802,7 @@ The following state arguments are supported:
 <a href="#tick_nodejs" style="color: inherit; text-decoration: inherit;">tick</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3778,7 +3810,7 @@ The following state arguments are supported:
 <a href="#tickedge_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Edge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3786,7 +3818,7 @@ The following state arguments are supported:
 <a href="#tickpos_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3794,7 +3826,7 @@ The following state arguments are supported:
 <a href="#tiledeves_nodejs" style="color: inherit; text-decoration: inherit;">tile<wbr>Deves</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledef">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledef">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3802,7 +3834,7 @@ The following state arguments are supported:
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3810,7 +3842,7 @@ The following state arguments are supported:
 <a href="#timeframes_nodejs" style="color: inherit; text-decoration: inherit;">timeframes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3818,7 +3850,7 @@ The following state arguments are supported:
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3826,7 +3858,7 @@ The following state arguments are supported:
 <a href="#titlealign_nodejs" style="color: inherit; text-decoration: inherit;">title<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3866,7 @@ The following state arguments are supported:
 <a href="#titlesize_nodejs" style="color: inherit; text-decoration: inherit;">title<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3842,7 +3874,7 @@ The following state arguments are supported:
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3850,7 +3882,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3890,7 @@ The following state arguments are supported:
 <a href="#viztype_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3898,7 @@ The following state arguments are supported:
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3878,7 +3910,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3886,7 +3918,7 @@ The following state arguments are supported:
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3894,7 +3926,7 @@ The following state arguments are supported:
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3902,7 +3934,7 @@ The following state arguments are supported:
 <a href="#alert_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3910,7 +3942,7 @@ The following state arguments are supported:
 <a href="#auto_refresh_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3918,7 +3950,7 @@ The following state arguments are supported:
 <a href="#bgcolor_python" style="color: inherit; text-decoration: inherit;">bgcolor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3926,7 +3958,7 @@ The following state arguments are supported:
 <a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3934,7 +3966,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3942,7 +3974,7 @@ The following state arguments are supported:
 <a href="#color_preference_python" style="color: inherit; text-decoration: inherit;">color_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3950,7 +3982,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3958,7 +3990,7 @@ The following state arguments are supported:
 <a href="#display_format_python" style="color: inherit; text-decoration: inherit;">display_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3966,7 +3998,7 @@ The following state arguments are supported:
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3974,7 +4006,7 @@ The following state arguments are supported:
 <a href="#event_size_python" style="color: inherit; text-decoration: inherit;">event_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3982,7 +4014,7 @@ The following state arguments are supported:
 <a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3990,7 +4022,7 @@ The following state arguments are supported:
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3998,7 +4030,7 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4006,7 +4038,7 @@ The following state arguments are supported:
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4014,7 +4046,7 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4022,7 +4054,7 @@ The following state arguments are supported:
 <a href="#hide_zero_counts_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>zero_<wbr>counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4030,7 +4062,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4038,7 +4070,7 @@ The following state arguments are supported:
 <a href="#layout_version_python" style="color: inherit; text-decoration: inherit;">layout_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4046,7 +4078,7 @@ The following state arguments are supported:
 <a href="#legend_python" style="color: inherit; text-decoration: inherit;">legend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4054,7 +4086,7 @@ The following state arguments are supported:
 <a href="#legend_size_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4062,7 +4094,7 @@ The following state arguments are supported:
 <a href="#logset_python" style="color: inherit; text-decoration: inherit;">logset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4070,7 +4102,7 @@ The following state arguments are supported:
 <a href="#manage_status_show_title_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>status_<wbr>show_<wbr>title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4078,7 +4110,7 @@ The following state arguments are supported:
 <a href="#manage_status_title_align_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>status_<wbr>title_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4086,7 +4118,7 @@ The following state arguments are supported:
 <a href="#manage_status_title_size_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>status_<wbr>title_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4094,7 +4126,7 @@ The following state arguments are supported:
 <a href="#manage_status_title_text_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>status_<wbr>title_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4102,7 +4134,7 @@ The following state arguments are supported:
 <a href="#margin_python" style="color: inherit; text-decoration: inherit;">margin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4110,7 +4142,7 @@ The following state arguments are supported:
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4118,7 +4150,7 @@ The following state arguments are supported:
 <a href="#must_show_breakdown_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>breakdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4126,7 +4158,7 @@ The following state arguments are supported:
 <a href="#must_show_distribution_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4134,7 +4166,7 @@ The following state arguments are supported:
 <a href="#must_show_errors_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4142,7 +4174,7 @@ The following state arguments are supported:
 <a href="#must_show_hits_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>hits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4150,7 +4182,7 @@ The following state arguments are supported:
 <a href="#must_show_latency_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4158,7 +4190,7 @@ The following state arguments are supported:
 <a href="#must_show_resource_list_python" style="color: inherit; text-decoration: inherit;">must_<wbr>show_<wbr>resource_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4166,7 +4198,7 @@ The following state arguments are supported:
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4174,7 +4206,7 @@ The following state arguments are supported:
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4182,7 +4214,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4190,7 +4222,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgetrule">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgetrule">Input[Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4198,7 +4230,7 @@ The following state arguments are supported:
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4206,7 +4238,7 @@ The following state arguments are supported:
 <a href="#service_service_python" style="color: inherit; text-decoration: inherit;">service_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4214,7 +4246,7 @@ The following state arguments are supported:
 <a href="#show_last_triggered_python" style="color: inherit; text-decoration: inherit;">show_<wbr>last_<wbr>triggered</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4222,7 +4254,7 @@ The following state arguments are supported:
 <a href="#size_version_python" style="color: inherit; text-decoration: inherit;">size_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4230,7 +4262,7 @@ The following state arguments are supported:
 <a href="#sizing_python" style="color: inherit; text-decoration: inherit;">sizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4238,7 +4270,7 @@ The following state arguments are supported:
 <a href="#summary_type_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4246,7 +4278,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4254,7 +4286,7 @@ The following state arguments are supported:
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4262,7 +4294,7 @@ The following state arguments are supported:
 <a href="#text_align_python" style="color: inherit; text-decoration: inherit;">text_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4270,7 +4302,7 @@ The following state arguments are supported:
 <a href="#text_size_python" style="color: inherit; text-decoration: inherit;">text_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4310,7 @@ The following state arguments are supported:
 <a href="#tick_python" style="color: inherit; text-decoration: inherit;">tick</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4286,7 +4318,7 @@ The following state arguments are supported:
 <a href="#tick_edge_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>edge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4294,7 +4326,7 @@ The following state arguments are supported:
 <a href="#tick_pos_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4302,7 +4334,7 @@ The following state arguments are supported:
 <a href="#tile_deves_python" style="color: inherit; text-decoration: inherit;">tile_<wbr>deves</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledef">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledef">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4310,7 +4342,7 @@ The following state arguments are supported:
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4318,7 +4350,7 @@ The following state arguments are supported:
 <a href="#timeframes_python" style="color: inherit; text-decoration: inherit;">timeframes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4326,7 +4358,7 @@ The following state arguments are supported:
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4334,7 +4366,7 @@ The following state arguments are supported:
 <a href="#title_align_python" style="color: inherit; text-decoration: inherit;">title_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4342,7 +4374,7 @@ The following state arguments are supported:
 <a href="#title_size_python" style="color: inherit; text-decoration: inherit;">title_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4350,7 +4382,7 @@ The following state arguments are supported:
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4358,7 +4390,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4366,7 +4398,7 @@ The following state arguments are supported:
 <a href="#viz_type_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4374,7 +4406,7 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4444,7 +4476,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4452,7 +4484,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4460,7 +4492,7 @@ The following state arguments are supported:
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4472,7 +4504,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4480,7 +4512,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4488,7 +4520,7 @@ The following state arguments are supported:
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4734,7 +4766,7 @@ The following state arguments are supported:
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequest">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4742,7 +4774,7 @@ The following state arguments are supported:
 <a href="#viz_nodejs" style="color: inherit; text-decoration: inherit;">viz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4750,7 +4782,7 @@ The following state arguments are supported:
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4758,7 +4790,7 @@ The following state arguments are supported:
 <a href="#customunit_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4766,7 +4798,7 @@ The following state arguments are supported:
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefevent">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefevent">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4774,7 +4806,7 @@ The following state arguments are supported:
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4782,7 +4814,7 @@ The following state arguments are supported:
 <a href="#markers_nodejs" style="color: inherit; text-decoration: inherit;">markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefmarker">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4790,7 +4822,7 @@ The following state arguments are supported:
 <a href="#nogrouphosts_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Group<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4798,7 +4830,7 @@ The following state arguments are supported:
 <a href="#nometrichosts_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Metric<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4806,7 +4838,7 @@ The following state arguments are supported:
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4814,7 +4846,7 @@ The following state arguments are supported:
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4822,7 +4854,7 @@ The following state arguments are supported:
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4830,7 +4862,7 @@ The following state arguments are supported:
 <a href="#style_nodejs" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4838,7 +4870,7 @@ The following state arguments are supported:
 <a href="#textalign_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4850,7 +4882,7 @@ The following state arguments are supported:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4858,7 +4890,7 @@ The following state arguments are supported:
 <a href="#viz_python" style="color: inherit; text-decoration: inherit;">viz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4866,7 +4898,7 @@ The following state arguments are supported:
 <a href="#autoscale_python" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4874,7 +4906,7 @@ The following state arguments are supported:
 <a href="#custom_unit_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4882,7 +4914,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefevent">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefevent">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4890,7 +4922,7 @@ The following state arguments are supported:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4898,7 +4930,7 @@ The following state arguments are supported:
 <a href="#markers_python" style="color: inherit; text-decoration: inherit;">markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4906,7 +4938,7 @@ The following state arguments are supported:
 <a href="#no_group_hosts_python" style="color: inherit; text-decoration: inherit;">no_<wbr>group_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4914,7 +4946,7 @@ The following state arguments are supported:
 <a href="#no_metric_hosts_python" style="color: inherit; text-decoration: inherit;">no_<wbr>metric_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4922,7 +4954,7 @@ The following state arguments are supported:
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4930,7 +4962,7 @@ The following state arguments are supported:
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4938,7 +4970,7 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4946,7 +4978,7 @@ The following state arguments are supported:
 <a href="#style_python" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4954,7 +4986,7 @@ The following state arguments are supported:
 <a href="#text_align_python" style="color: inherit; text-decoration: inherit;">text_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4992,7 +5024,7 @@ The following state arguments are supported:
 <a href="#q_nodejs" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5004,7 +5036,7 @@ The following state arguments are supported:
 <a href="#q_python" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5074,7 +5106,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5082,7 +5114,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5090,7 +5122,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5102,7 +5134,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5110,7 +5142,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5118,7 +5150,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5460,7 +5492,7 @@ The following state arguments are supported:
 <a href="#aggregator_nodejs" style="color: inherit; text-decoration: inherit;">aggregator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5468,7 +5500,7 @@ The following state arguments are supported:
 <a href="#apmquery_nodejs" style="color: inherit; text-decoration: inherit;">apm<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5476,7 +5508,7 @@ The following state arguments are supported:
 <a href="#changetype_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5484,7 +5516,7 @@ The following state arguments are supported:
 <a href="#compareto_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5492,7 +5524,7 @@ The following state arguments are supported:
 <a href="#conditionalformats_nodejs" style="color: inherit; text-decoration: inherit;">conditional<wbr>Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5500,7 +5532,7 @@ The following state arguments are supported:
 <a href="#extracol_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Col</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5508,7 +5540,7 @@ The following state arguments are supported:
 <a href="#increasegood_nodejs" style="color: inherit; text-decoration: inherit;">increase<wbr>Good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5516,7 +5548,7 @@ The following state arguments are supported:
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5524,7 +5556,7 @@ The following state arguments are supported:
 <a href="#logquery_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5532,7 +5564,7 @@ The following state arguments are supported:
 <a href="#metadatajson_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5540,7 +5572,7 @@ The following state arguments are supported:
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5548,7 +5580,7 @@ The following state arguments are supported:
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5556,7 +5588,7 @@ The following state arguments are supported:
 <a href="#orderdir_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5564,7 +5596,7 @@ The following state arguments are supported:
 <a href="#processquery_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5572,7 +5604,7 @@ The following state arguments are supported:
 <a href="#q_nodejs" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5580,7 +5612,7 @@ The following state arguments are supported:
 <a href="#querytype_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5588,7 +5620,7 @@ The following state arguments are supported:
 <a href="#style_nodejs" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5596,7 +5628,7 @@ The following state arguments are supported:
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5604,7 +5636,7 @@ The following state arguments are supported:
 <a href="#textfilter_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5612,7 +5644,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5624,7 +5656,7 @@ The following state arguments are supported:
 <a href="#aggregator_python" style="color: inherit; text-decoration: inherit;">aggregator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5632,7 +5664,7 @@ The following state arguments are supported:
 <a href="#apm_query_python" style="color: inherit; text-decoration: inherit;">apm_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5640,7 +5672,7 @@ The following state arguments are supported:
 <a href="#change_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5648,7 +5680,7 @@ The following state arguments are supported:
 <a href="#compare_to_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5656,7 +5688,7 @@ The following state arguments are supported:
 <a href="#conditional_formats_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5664,7 +5696,7 @@ The following state arguments are supported:
 <a href="#extra_col_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>col</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +5704,7 @@ The following state arguments are supported:
 <a href="#increase_good_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5680,7 +5712,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5688,7 +5720,7 @@ The following state arguments are supported:
 <a href="#log_query_python" style="color: inherit; text-decoration: inherit;">log_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5696,7 +5728,7 @@ The following state arguments are supported:
 <a href="#metadata_json_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5704,7 +5736,7 @@ The following state arguments are supported:
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5712,7 +5744,7 @@ The following state arguments are supported:
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5720,7 +5752,7 @@ The following state arguments are supported:
 <a href="#order_dir_python" style="color: inherit; text-decoration: inherit;">order_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5728,7 +5760,7 @@ The following state arguments are supported:
 <a href="#process_query_python" style="color: inherit; text-decoration: inherit;">process_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5736,7 +5768,7 @@ The following state arguments are supported:
 <a href="#q_python" style="color: inherit; text-decoration: inherit;">q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5744,7 +5776,7 @@ The following state arguments are supported:
 <a href="#query_type_python" style="color: inherit; text-decoration: inherit;">query_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5752,7 +5784,7 @@ The following state arguments are supported:
 <a href="#style_python" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5760,7 +5792,7 @@ The following state arguments are supported:
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5768,7 +5800,7 @@ The following state arguments are supported:
 <a href="#text_filter_python" style="color: inherit; text-decoration: inherit;">text_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5776,7 +5808,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5862,7 +5894,7 @@ The following state arguments are supported:
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5870,7 +5902,7 @@ The following state arguments are supported:
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5878,7 +5910,7 @@ The following state arguments are supported:
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5886,7 +5918,7 @@ The following state arguments are supported:
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5898,7 +5930,7 @@ The following state arguments are supported:
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5906,7 +5938,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5914,7 +5946,7 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5922,7 +5954,7 @@ The following state arguments are supported:
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5992,7 +6024,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6000,7 +6032,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6008,7 +6040,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6020,7 +6052,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6028,7 +6060,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6036,7 +6068,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6106,7 +6138,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6114,7 +6146,7 @@ The following state arguments are supported:
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6122,7 +6154,7 @@ The following state arguments are supported:
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6134,7 +6166,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6142,7 +6174,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6150,7 +6182,7 @@ The following state arguments are supported:
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6220,7 +6252,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6228,7 +6260,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6236,7 +6268,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6248,7 +6280,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6256,7 +6288,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6264,7 +6296,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6302,7 +6334,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6314,7 +6346,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6432,7 +6464,7 @@ The following state arguments are supported:
 <a href="#comparator_nodejs" style="color: inherit; text-decoration: inherit;">comparator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6440,7 +6472,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6448,7 +6480,7 @@ The following state arguments are supported:
 <a href="#custombgcolor_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bg<wbr>Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6456,7 +6488,7 @@ The following state arguments are supported:
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6496,7 @@ The following state arguments are supported:
 <a href="#palette_nodejs" style="color: inherit; text-decoration: inherit;">palette</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6472,7 +6504,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6484,7 +6516,7 @@ The following state arguments are supported:
 <a href="#comparator_python" style="color: inherit; text-decoration: inherit;">comparator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6492,7 +6524,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6500,7 +6532,7 @@ The following state arguments are supported:
 <a href="#custom_bg_color_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bg_<wbr>color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6508,7 +6540,7 @@ The following state arguments are supported:
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6516,7 +6548,7 @@ The following state arguments are supported:
 <a href="#palette_python" style="color: inherit; text-decoration: inherit;">palette</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6524,7 +6556,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6610,7 +6642,7 @@ The following state arguments are supported:
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6618,7 +6650,7 @@ The following state arguments are supported:
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6626,7 +6658,7 @@ The following state arguments are supported:
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">pulumi<wbr>Input<pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6634,7 +6666,7 @@ The following state arguments are supported:
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6646,7 +6678,7 @@ The following state arguments are supported:
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6654,7 +6686,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6662,7 +6694,7 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6670,7 +6702,7 @@ The following state arguments are supported:
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6740,7 +6772,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6748,7 +6780,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6756,7 +6788,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6768,7 +6800,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6776,7 +6808,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6784,7 +6816,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6854,7 +6886,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6862,7 +6894,7 @@ The following state arguments are supported:
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6870,7 +6902,7 @@ The following state arguments are supported:
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">pulumi<wbr>Input<Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6882,7 +6914,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6890,7 +6922,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6898,7 +6930,7 @@ The following state arguments are supported:
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Input[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6968,7 +7000,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6976,7 +7008,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6984,7 +7016,7 @@ The following state arguments are supported:
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6996,7 +7028,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7004,7 +7036,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7012,7 +7044,7 @@ The following state arguments are supported:
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7050,7 +7082,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7062,7 +7094,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7148,7 +7180,7 @@ The following state arguments are supported:
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7156,7 +7188,7 @@ The following state arguments are supported:
 <a href="#filterbies_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7164,7 +7196,7 @@ The following state arguments are supported:
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7172,7 +7204,7 @@ The following state arguments are supported:
 <a href="#searchby_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7184,7 +7216,7 @@ The following state arguments are supported:
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7192,7 +7224,7 @@ The following state arguments are supported:
 <a href="#filter_bies_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7200,7 +7232,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7208,7 +7240,7 @@ The following state arguments are supported:
 <a href="#search_by_python" style="color: inherit; text-decoration: inherit;">search_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

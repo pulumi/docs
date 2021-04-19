@@ -26,19 +26,50 @@ Import is supported using the following syntax
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorMonitorThresholdWindowsArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorMonitorThresholdsArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorThresholdWindowsArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorThresholdsArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +104,32 @@ Import is supported using the following syntax
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MonitorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +138,7 @@ Import is supported using the following syntax
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +162,7 @@ Import is supported using the following syntax
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -678,7 +719,7 @@ Defaults to `false`.
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
@@ -688,7 +729,7 @@ same `@username` notation as events.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -697,7 +738,7 @@ same `@username` notation as events.
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
@@ -708,7 +749,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
@@ -719,7 +760,7 @@ cannot be changed after a monitor is created.
 <a href="#enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
@@ -729,7 +770,7 @@ monitors. Defaults to `false`.
 <a href="#escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +779,7 @@ monitors. Defaults to `false`.
 <a href="#evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
@@ -750,7 +791,7 @@ data during evaluation.
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
@@ -760,7 +801,7 @@ composite monitor).
 <a href="#includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
@@ -770,7 +811,7 @@ Defaults to `true`.
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
@@ -780,7 +821,7 @@ Defaults to `true`.
 <a href="#monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholdwindows">Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholdwindows">pulumi<wbr>Input<Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
@@ -790,7 +831,7 @@ required for, anomaly monitors.
 <a href="#monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholds">pulumi<wbr>Input<Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -799,7 +840,7 @@ required for, anomaly monitors.
 <a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
@@ -809,7 +850,7 @@ results. Should be a non negative integer. Defaults to `300`.
 <a href="#nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
@@ -819,7 +860,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +869,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +878,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +886,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
@@ -855,7 +896,7 @@ re-notify if it's not resolved.
 <a href="#requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
@@ -866,7 +907,7 @@ times` and `in total` aggregation. `false` otherwise.
 <a href="#silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
@@ -877,7 +918,7 @@ removed in the next major version of the Terraform Provider.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
@@ -887,7 +928,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
 <a href="#thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
+        <span class="property-type"><a href="#monitorthresholdwindows">pulumi<wbr>Input<Monitor<wbr>Threshold<wbr>Windows<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
@@ -897,7 +938,7 @@ required for, anomaly monitors.
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#monitorthresholds">pulumi<wbr>Input<Monitor<wbr>Thresholds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -906,7 +947,7 @@ required for, anomaly monitors.
 <a href="#timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
@@ -916,7 +957,7 @@ Defaults to `false`.
 <a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
 {{% /md %}}</dd></dl>
@@ -929,7 +970,7 @@ Defaults to `false`.
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
@@ -939,7 +980,7 @@ same `@username` notation as events.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -948,7 +989,7 @@ same `@username` notation as events.
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
@@ -959,7 +1000,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
@@ -970,7 +1011,7 @@ cannot be changed after a monitor is created.
 <a href="#enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
@@ -980,7 +1021,7 @@ monitors. Defaults to `false`.
 <a href="#escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +1030,7 @@ monitors. Defaults to `false`.
 <a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
@@ -1001,7 +1042,7 @@ data during evaluation.
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
@@ -1011,7 +1052,7 @@ composite monitor).
 <a href="#include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
@@ -1021,7 +1062,7 @@ Defaults to `true`.
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
@@ -1031,7 +1072,7 @@ Defaults to `true`.
 <a href="#monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholdwindows">Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholdwindows">Input[Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
@@ -1041,7 +1082,7 @@ required for, anomaly monitors.
 <a href="#monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholds">Input[Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1091,7 @@ required for, anomaly monitors.
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
@@ -1060,7 +1101,7 @@ results. Should be a non negative integer. Defaults to `300`.
 <a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
@@ -1070,7 +1111,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1079,7 +1120,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +1129,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1137,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
@@ -1106,7 +1147,7 @@ re-notify if it's not resolved.
 <a href="#require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
@@ -1117,7 +1158,7 @@ times` and `in total` aggregation. `false` otherwise.
 <a href="#silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
@@ -1128,7 +1169,7 @@ removed in the next major version of the Terraform Provider.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
@@ -1138,7 +1179,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
 <a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitorthresholdwindows">Input[Monitor<wbr>Threshold<wbr>Windows<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
@@ -1148,7 +1189,7 @@ required for, anomaly monitors.
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitorthresholds">Input[Monitor<wbr>Thresholds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1157,7 +1198,7 @@ required for, anomaly monitors.
 <a href="#timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
@@ -1167,7 +1208,7 @@ Defaults to `false`.
 <a href="#validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
 {{% /md %}}</dd></dl>
@@ -1236,20 +1277,47 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Monitor</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Monitor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorMonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Monitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">monitor_threshold_windows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorMonitorThresholdWindowsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">monitor_thresholds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorMonitorThresholdsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorThresholdWindowsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MonitorThresholdsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Monitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Monitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MonitorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Monitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MonitorState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1860,7 +1928,7 @@ cannot be changed after a monitor is created.
 <a href="#state_enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
@@ -1870,7 +1938,7 @@ monitors. Defaults to `false`.
 <a href="#state_escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1947,7 @@ monitors. Defaults to `false`.
 <a href="#state_evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
@@ -1891,7 +1959,7 @@ data during evaluation.
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
@@ -1901,7 +1969,7 @@ composite monitor).
 <a href="#state_includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
@@ -1911,7 +1979,7 @@ Defaults to `true`.
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
@@ -1921,7 +1989,7 @@ Defaults to `true`.
 <a href="#state_message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
@@ -1931,7 +1999,7 @@ same `@username` notation as events.
 <a href="#state_monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholdwindows">Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholdwindows">pulumi<wbr>Input<Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
@@ -1941,7 +2009,7 @@ required for, anomaly monitors.
 <a href="#state_monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholds">pulumi<wbr>Input<Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +2018,7 @@ required for, anomaly monitors.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +2027,7 @@ required for, anomaly monitors.
 <a href="#state_newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
@@ -1969,7 +2037,7 @@ results. Should be a non negative integer. Defaults to `300`.
 <a href="#state_nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
@@ -1979,7 +2047,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2056,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2065,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2073,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
@@ -2016,7 +2084,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
 <a href="#state_renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
@@ -2026,7 +2094,7 @@ re-notify if it's not resolved.
 <a href="#state_requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
@@ -2037,7 +2105,7 @@ times` and `in total` aggregation. `false` otherwise.
 <a href="#state_silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
@@ -2048,7 +2116,7 @@ removed in the next major version of the Terraform Provider.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
@@ -2058,7 +2126,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
 <a href="#state_thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
+        <span class="property-type"><a href="#monitorthresholdwindows">pulumi<wbr>Input<Monitor<wbr>Threshold<wbr>Windows<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
@@ -2068,7 +2136,7 @@ required for, anomaly monitors.
 <a href="#state_thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#monitorthresholds">pulumi<wbr>Input<Monitor<wbr>Thresholds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2077,7 +2145,7 @@ required for, anomaly monitors.
 <a href="#state_timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
@@ -2087,7 +2155,7 @@ Defaults to `false`.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
@@ -2098,7 +2166,7 @@ cannot be changed after a monitor is created.
 <a href="#state_validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
 {{% /md %}}</dd></dl>
@@ -2111,7 +2179,7 @@ cannot be changed after a monitor is created.
 <a href="#state_enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
@@ -2121,7 +2189,7 @@ monitors. Defaults to `false`.
 <a href="#state_escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2198,7 @@ monitors. Defaults to `false`.
 <a href="#state_evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
@@ -2142,7 +2210,7 @@ data during evaluation.
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
@@ -2152,7 +2220,7 @@ composite monitor).
 <a href="#state_include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
@@ -2162,7 +2230,7 @@ Defaults to `true`.
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
@@ -2172,7 +2240,7 @@ Defaults to `true`.
 <a href="#state_message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
@@ -2182,7 +2250,7 @@ same `@username` notation as events.
 <a href="#state_monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholdwindows">Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholdwindows">Input[Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
@@ -2192,7 +2260,7 @@ required for, anomaly monitors.
 <a href="#state_monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitormonitorthresholds">Input[Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2269,7 @@ required for, anomaly monitors.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2278,7 @@ required for, anomaly monitors.
 <a href="#state_new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
@@ -2220,7 +2288,7 @@ results. Should be a non negative integer. Defaults to `300`.
 <a href="#state_no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
@@ -2230,7 +2298,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2307,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2248,7 +2316,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2324,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
@@ -2267,7 +2335,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
 <a href="#state_renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
@@ -2277,7 +2345,7 @@ re-notify if it's not resolved.
 <a href="#state_require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
@@ -2288,7 +2356,7 @@ times` and `in total` aggregation. `false` otherwise.
 <a href="#state_silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
@@ -2299,7 +2367,7 @@ removed in the next major version of the Terraform Provider.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
@@ -2309,7 +2377,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
 <a href="#state_threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitorthresholdwindows">Input[Monitor<wbr>Threshold<wbr>Windows<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
@@ -2319,7 +2387,7 @@ required for, anomaly monitors.
 <a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitorthresholds">Input[Monitor<wbr>Thresholds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2328,7 +2396,7 @@ required for, anomaly monitors.
 <a href="#state_timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
@@ -2338,7 +2406,7 @@ Defaults to `false`.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
@@ -2349,7 +2417,7 @@ cannot be changed after a monitor is created.
 <a href="#state_validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
 {{% /md %}}</dd></dl>
@@ -2413,7 +2481,7 @@ cannot be changed after a monitor is created.
 <a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2489,7 @@ cannot be changed after a monitor is created.
 <a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2433,7 +2501,7 @@ cannot be changed after a monitor is created.
 <a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2509,7 @@ cannot be changed after a monitor is created.
 <a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2559,7 +2627,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2567,7 +2635,7 @@ cannot be changed after a monitor is created.
 <a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2643,7 @@ cannot be changed after a monitor is created.
 <a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2651,7 @@ cannot be changed after a monitor is created.
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2659,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +2667,7 @@ cannot be changed after a monitor is created.
 <a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2679,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2687,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2627,7 +2695,7 @@ cannot be changed after a monitor is created.
 <a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2635,7 +2703,7 @@ cannot be changed after a monitor is created.
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2711,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2651,7 +2719,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2773,7 @@ cannot be changed after a monitor is created.
 <a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2781,7 @@ cannot be changed after a monitor is created.
 <a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2725,7 +2793,7 @@ cannot be changed after a monitor is created.
 <a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2801,7 @@ cannot be changed after a monitor is created.
 <a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2851,7 +2919,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2927,7 @@ cannot be changed after a monitor is created.
 <a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2935,7 @@ cannot be changed after a monitor is created.
 <a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2943,7 @@ cannot be changed after a monitor is created.
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2951,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2891,7 +2959,7 @@ cannot be changed after a monitor is created.
 <a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2903,7 +2971,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2979,7 @@ cannot be changed after a monitor is created.
 <a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2987,7 @@ cannot be changed after a monitor is created.
 <a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2995,7 @@ cannot be changed after a monitor is created.
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +3003,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2943,7 +3011,7 @@ cannot be changed after a monitor is created.
 <a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

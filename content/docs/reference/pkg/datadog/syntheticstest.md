@@ -89,8 +89,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -189,8 +189,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -302,8 +302,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -523,8 +523,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -713,8 +713,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -900,8 +900,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1242,19 +1242,45 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">, </span><span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, Any]]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestBrowserVariableArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestConfigVariableArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestOptionsListArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestBasicauthArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestClientCertificateArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestStepArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestVariableArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1289,22 +1315,32 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SyntheticsTestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1313,7 +1349,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1337,7 +1373,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1768,7 +1804,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
 documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
@@ -1779,7 +1815,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-required"
@@ -1788,7 +1824,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1797,7 +1833,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 {{% /md %}}</dd><dt class="property-required"
@@ -1806,7 +1842,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1815,7 +1851,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#assertions_nodejs" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<{[key: string]: any}>[]></span>
     </dt>
     <dd>{{% md %}}List of assertions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1824,7 +1860,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#browservariables_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1869,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#configvariables_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1878,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#deviceids_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
 (only available for `browser` tests).
@@ -1852,7 +1888,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
 using the same `@username` notation as events.
@@ -1862,7 +1898,7 @@ using the same `@username` notation as events.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1906,7 @@ using the same `@username` notation as events.
 <a href="#optionslist_nodejs" style="color: inherit; text-decoration: inherit;">options<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1914,7 @@ using the same `@username` notation as events.
 <a href="#requestbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1923,7 @@ using the same `@username` notation as events.
 <a href="#requestclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
 below.
@@ -1897,7 +1933,7 @@ below.
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Header name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1942,7 @@ below.
 <a href="#requestquery_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1951,7 @@ below.
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Step<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Steps for browser tests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1960,7 @@ below.
 <a href="#subtype_nodejs" style="color: inherit; text-decoration: inherit;">subtype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1969,7 @@ below.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
 synthetics page of the UI. Default is an empty list (`[]`).
@@ -1943,7 +1979,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
@@ -1956,7 +1992,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
 documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
@@ -1967,7 +2003,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-required"
@@ -1976,7 +2012,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Input[Synthetics<wbr>Test<wbr>Request<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1985,7 +2021,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 {{% /md %}}</dd><dt class="property-required"
@@ -1994,7 +2030,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2003,7 +2039,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Mapping[str, Any]]</span>
+        <span class="property-type">Input[Mapping[str, Any]]]]</span>
     </dt>
     <dd>{{% md %}}List of assertions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2012,7 +2048,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#browser_variables_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Sequence[Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">Input[Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +2057,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#config_variables_python" style="color: inherit; text-decoration: inherit;">config_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Sequence[Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">Input[Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2066,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#device_ids_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
 (only available for `browser` tests).
@@ -2040,7 +2076,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
 using the same `@username` notation as events.
@@ -2050,7 +2086,7 @@ using the same `@username` notation as events.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Input[Synthetics<wbr>Test<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2094,7 @@ using the same `@username` notation as events.
 <a href="#options_list_python" style="color: inherit; text-decoration: inherit;">options_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">Input[Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2102,7 @@ using the same `@username` notation as events.
 <a href="#request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Input[Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2111,7 @@ using the same `@username` notation as events.
 <a href="#request_client_certificate_python" style="color: inherit; text-decoration: inherit;">request_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Input[Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
 below.
@@ -2085,7 +2121,7 @@ below.
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Header name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2130,7 @@ below.
 <a href="#request_query_python" style="color: inherit; text-decoration: inherit;">request_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2139,7 @@ below.
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Sequence[Synthetics<wbr>Test<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">Input[Synthetics<wbr>Test<wbr>Step<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Steps for browser tests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2148,7 @@ below.
 <a href="#subtype_python" style="color: inherit; text-decoration: inherit;">subtype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2157,7 @@ below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
 synthetics page of the UI. Default is an empty list (`[]`).
@@ -2131,7 +2167,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Sequence[Synthetics<wbr>Test<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">Input[Synthetics<wbr>Test<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
@@ -2236,20 +2272,43 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SyntheticsTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SyntheticsTest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SyntheticsTest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">, </span><span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">) -&gt;</span> SyntheticsTest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, Any]]]]]</span> = None<span class="p">,</span>
+        <span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestBrowserVariableArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestConfigVariableArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestOptionsListArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestBasicauthArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SyntheticsTestRequestClientCertificateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestStepArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SyntheticsTestVariableArgs]]]]</span> = None<span class="p">) -&gt;</span> SyntheticsTest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SyntheticsTest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SyntheticsTestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SyntheticsTest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SyntheticsTestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2752,7 +2811,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_assertions_nodejs" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<{[key: string]: any}>[]></span>
     </dt>
     <dd>{{% md %}}List of assertions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2761,7 +2820,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_browservariables_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2770,7 +2829,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_configvariables_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2779,7 +2838,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_deviceids_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
 (only available for `browser` tests).
@@ -2789,7 +2848,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
 documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
@@ -2800,7 +2859,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#state_message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
 using the same `@username` notation as events.
@@ -2810,7 +2869,7 @@ using the same `@username` notation as events.
 <a href="#state_monitorid_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2878,7 @@ using the same `@username` notation as events.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2828,7 +2887,7 @@ using the same `@username` notation as events.
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2895,7 @@ using the same `@username` notation as events.
 <a href="#state_optionslist_nodejs" style="color: inherit; text-decoration: inherit;">options<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2903,7 @@ using the same `@username` notation as events.
 <a href="#state_request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2853,7 +2912,7 @@ using the same `@username` notation as events.
 <a href="#state_requestbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2862,7 +2921,7 @@ using the same `@username` notation as events.
 <a href="#state_requestclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
 below.
@@ -2872,7 +2931,7 @@ below.
 <a href="#state_requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Header name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2940,7 @@ below.
 <a href="#state_requestquery_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2890,7 +2949,7 @@ below.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2899,7 +2958,7 @@ below.
 <a href="#state_steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Step<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Steps for browser tests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2908,7 +2967,7 @@ below.
 <a href="#state_subtype_nodejs" style="color: inherit; text-decoration: inherit;">subtype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2917,7 +2976,7 @@ below.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
 synthetics page of the UI. Default is an empty list (`[]`).
@@ -2927,7 +2986,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2936,7 +2995,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">pulumi<wbr>Input<pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
@@ -2949,7 +3008,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Mapping[str, Any]]</span>
+        <span class="property-type">Input[Mapping[str, Any]]]]</span>
     </dt>
     <dd>{{% md %}}List of assertions.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2958,7 +3017,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_browser_variables_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Sequence[Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">Input[Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2967,7 +3026,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_config_variables_python" style="color: inherit; text-decoration: inherit;">config_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Sequence[Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">Input[Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2976,7 +3035,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_device_ids_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
 (only available for `browser` tests).
@@ -2986,7 +3045,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
 documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
@@ -2997,7 +3056,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#state_message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
 using the same `@username` notation as events.
@@ -3007,7 +3066,7 @@ using the same `@username` notation as events.
 <a href="#state_monitor_id_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3016,7 +3075,7 @@ using the same `@username` notation as events.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3025,7 +3084,7 @@ using the same `@username` notation as events.
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Input[Synthetics<wbr>Test<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -3033,7 +3092,7 @@ using the same `@username` notation as events.
 <a href="#state_options_list_python" style="color: inherit; text-decoration: inherit;">options_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">Input[Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3100,7 @@ using the same `@username` notation as events.
 <a href="#state_request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Input[Synthetics<wbr>Test<wbr>Request<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3050,7 +3109,7 @@ using the same `@username` notation as events.
 <a href="#state_request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Input[Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3059,7 +3118,7 @@ using the same `@username` notation as events.
 <a href="#state_request_client_certificate_python" style="color: inherit; text-decoration: inherit;">request_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Input[Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
 below.
@@ -3069,7 +3128,7 @@ below.
 <a href="#state_request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Header name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3137,7 @@ below.
 <a href="#state_request_query_python" style="color: inherit; text-decoration: inherit;">request_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3087,7 +3146,7 @@ below.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3096,7 +3155,7 @@ below.
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Sequence[Synthetics<wbr>Test<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">Input[Synthetics<wbr>Test<wbr>Step<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Steps for browser tests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3105,7 +3164,7 @@ below.
 <a href="#state_subtype_python" style="color: inherit; text-decoration: inherit;">subtype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3173,7 @@ below.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
 synthetics page of the UI. Default is an empty list (`[]`).
@@ -3124,7 +3183,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3133,7 +3192,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Sequence[Synthetics<wbr>Test<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">Input[Synthetics<wbr>Test<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
@@ -3245,7 +3304,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3253,7 +3312,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3261,7 +3320,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3328,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3336,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3289,7 +3348,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3297,7 +3356,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3364,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3372,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3380,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3407,7 +3466,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3415,7 +3474,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3482,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3490,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3443,7 +3502,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3451,7 +3510,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3518,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3526,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3617,7 +3676,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#tickevery_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Every</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3684,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#acceptselfsigned_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Self<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3692,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3700,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#followredirects_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3708,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#minfailureduration_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Failure<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3716,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#minlocationfailed_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Location<wbr>Failed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3724,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retrycount_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3732,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retryinterval_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3685,7 +3744,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#tick_every_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>every</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3752,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#accept_self_signed_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>self_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3760,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3768,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#follow_redirects_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3776,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#min_failure_duration_python" style="color: inherit; text-decoration: inherit;">min_<wbr>failure_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3725,7 +3784,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#min_location_failed_python" style="color: inherit; text-decoration: inherit;">min_<wbr>location_<wbr>failed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3733,7 +3792,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3741,7 +3800,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retry_interval_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3891,7 +3950,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#acceptselfsigned_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Self<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3958,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3907,7 +3966,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#followredirects_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3915,7 +3974,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#minfailureduration_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Failure<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3923,7 +3982,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#minlocationfailed_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Location<wbr>Failed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3931,7 +3990,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#monitoroptions_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3939,7 +3998,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslistretry">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3947,7 +4006,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#tickevery_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Every</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3959,7 +4018,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#accept_self_signed_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>self_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3967,7 +4026,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +4034,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#follow_redirects_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,7 +4042,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#min_failure_duration_python" style="color: inherit; text-decoration: inherit;">min_<wbr>failure_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3991,7 +4050,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#min_location_failed_python" style="color: inherit; text-decoration: inherit;">min_<wbr>location_<wbr>failed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3999,7 +4058,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#monitor_options_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">Input[Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4007,7 +4066,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslistretry">Input[Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4074,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#tick_every_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>every</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4053,7 +4112,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4065,7 +4124,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4119,7 +4178,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4186,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4139,7 +4198,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4206,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4281,7 +4340,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4289,7 +4348,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#dnsserver_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4297,7 +4356,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4305,7 +4364,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4313,7 +4372,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4321,7 +4380,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4329,7 +4388,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4341,7 +4400,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4349,7 +4408,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#dns_server_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4357,7 +4416,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4365,7 +4424,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4373,7 +4432,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4381,7 +4440,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4389,7 +4448,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,7 +4502,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4451,7 +4510,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4463,7 +4522,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4471,7 +4530,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4525,7 +4584,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4533,7 +4592,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">pulumi<wbr>Input<Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4545,7 +4604,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">Input[Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4553,7 +4612,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">Input[Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4607,7 +4666,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4615,7 +4674,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4627,7 +4686,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4635,7 +4694,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4689,7 +4748,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4697,7 +4756,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4709,7 +4768,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4776,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4819,7 +4878,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4827,7 +4886,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4835,7 +4894,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4843,7 +4902,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allowfailure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4851,7 +4910,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4863,7 +4922,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4871,7 +4930,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4879,7 +4938,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4946,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#allow_failure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4954,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4997,7 +5056,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5005,7 +5064,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5013,7 +5072,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5021,7 +5080,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5088,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5041,7 +5100,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5049,7 +5108,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5057,7 +5116,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5065,7 +5124,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5073,7 +5132,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
