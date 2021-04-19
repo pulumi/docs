@@ -56,7 +56,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-splunk/sdk/go/splunk"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,19 +122,41 @@ const monitor = new splunk.InputsMonitor("monitor", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[InputsMonitorAclArgs]</span> = None<span class="p">, </span><span class="nx">blacklist</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crc_salt</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">follow_tail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_segment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignore_older_than</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recursive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rename_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_before_close</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">whitelist</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InputsMonitorAclArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">blacklist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">crc_salt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">follow_tail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">host_regex</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">host_segment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">ignore_older_than</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">recursive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">rename_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">time_before_close</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">whitelist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InputsMonitorArgs]</a></span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInputsMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InputsMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInputsMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InputsMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InputsMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InputsMonitorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -169,22 +191,32 @@ const monitor = new splunk.InputsMonitor("monitor", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InputsMonitorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,7 +600,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputsmonitoracl">Inputs<wbr>Monitor<wbr>Acl</a></span>
+        <span class="property-type"><a href="#inputsmonitoracl">pulumi<wbr>Input<Inputs<wbr>Monitor<wbr>Acl<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -577,7 +609,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#blacklist_nodejs" style="color: inherit; text-decoration: inherit;">blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. The file path that matches this regular expression is not indexed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -586,7 +618,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#crcsalt_nodejs" style="color: inherit; text-decoration: inherit;">crc<wbr>Salt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string that modifies the file tracking identity for files in this input. The magic value <SOURCE> invokes special behavior.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +627,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if input monitoring is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -604,7 +636,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#followtail_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Tail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to true, files that are seen for the first time is read from the end.
 {{% /md %}}</dd><dt class="property-optional"
@@ -613,7 +645,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the host field for events from this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -622,7 +654,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostregex_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. If the path for a file matches this regular expression, the captured value is used to populate the host field for events from this data input. The regular expression must have one capture group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -631,7 +663,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostsegment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Use the specified slash-separate segment of the filepath as the host field value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +672,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ignoreolderthan_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Older<wbr>Than</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a time value. If the modification time of a file being monitored falls outside of this rolling time window, the file is no longer being monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +681,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Which index events from this input should be stored in. Defaults to default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -658,7 +690,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file or directory path to monitor on the system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -667,7 +699,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#recursive_nodejs" style="color: inherit; text-decoration: inherit;">recursive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Setting this to false prevents monitoring of any subdirectories encountered within this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -676,7 +708,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#renamesource_nodejs" style="color: inherit; text-decoration: inherit;">rename<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the source field for events from this data input. The same source should not be used for multiple data inputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +717,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the sourcetype field for incoming events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +726,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#timebeforeclose_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Before<wbr>Close</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When Splunk software reaches the end of a file that is being read, the file is kept open for a minimum of the number of seconds specified in this value. After this period has elapsed, the file is checked again for more data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +735,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#whitelist_nodejs" style="color: inherit; text-decoration: inherit;">whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. Only file paths that match this regular expression are indexed.
 {{% /md %}}</dd></dl>
@@ -716,7 +748,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputsmonitoracl">Inputs<wbr>Monitor<wbr>Acl<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputsmonitoracl">Input[Inputs<wbr>Monitor<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +757,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#blacklist_python" style="color: inherit; text-decoration: inherit;">blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. The file path that matches this regular expression is not indexed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +766,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#crc_salt_python" style="color: inherit; text-decoration: inherit;">crc_<wbr>salt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string that modifies the file tracking identity for files in this input. The magic value <SOURCE> invokes special behavior.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +775,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if input monitoring is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +784,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#follow_tail_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>tail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to true, files that are seen for the first time is read from the end.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +793,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the host field for events from this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +802,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#host_regex_python" style="color: inherit; text-decoration: inherit;">host_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. If the path for a file matches this regular expression, the captured value is used to populate the host field for events from this data input. The regular expression must have one capture group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -779,7 +811,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#host_segment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Use the specified slash-separate segment of the filepath as the host field value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -788,7 +820,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ignore_older_than_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>older_<wbr>than</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a time value. If the modification time of a file being monitored falls outside of this rolling time window, the file is no longer being monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -797,7 +829,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Which index events from this input should be stored in. Defaults to default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -806,7 +838,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file or directory path to monitor on the system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -815,7 +847,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#recursive_python" style="color: inherit; text-decoration: inherit;">recursive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Setting this to false prevents monitoring of any subdirectories encountered within this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -824,7 +856,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rename_source_python" style="color: inherit; text-decoration: inherit;">rename_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the source field for events from this data input. The same source should not be used for multiple data inputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +865,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the sourcetype field for incoming events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +874,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#time_before_close_python" style="color: inherit; text-decoration: inherit;">time_<wbr>before_<wbr>close</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When Splunk software reaches the end of a file that is being read, the file is kept open for a minimum of the number of seconds specified in this value. After this period has elapsed, the file is checked again for more data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +883,7 @@ The InputsMonitor resource accepts the following [input]({{< relref "/docs/intro
 <a href="#whitelist_python" style="color: inherit; text-decoration: inherit;">whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. Only file paths that match this regular expression are indexed.
 {{% /md %}}</dd></dl>
@@ -920,20 +952,38 @@ Get an existing InputsMonitor resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InputsMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InputsMonitor</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InputsMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InputsMonitor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[InputsMonitorAclArgs]</span> = None<span class="p">, </span><span class="nx">blacklist</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crc_salt</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">follow_tail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_segment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignore_older_than</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recursive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rename_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_before_close</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">whitelist</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InputsMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InputsMonitorAclArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">blacklist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">crc_salt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">follow_tail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">host_regex</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">host_segment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_older_than</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recursive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">rename_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">time_before_close</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">whitelist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> InputsMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInputsMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InputsMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InputsMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInputsMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InputsMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InputsMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InputsMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InputsMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InputsMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InputsMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1338,7 +1388,7 @@ The following state arguments are supported:
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputsmonitoracl">Inputs<wbr>Monitor<wbr>Acl</a></span>
+        <span class="property-type"><a href="#inputsmonitoracl">pulumi<wbr>Input<Inputs<wbr>Monitor<wbr>Acl<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1397,7 @@ The following state arguments are supported:
 <a href="#state_blacklist_nodejs" style="color: inherit; text-decoration: inherit;">blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. The file path that matches this regular expression is not indexed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1406,7 @@ The following state arguments are supported:
 <a href="#state_crcsalt_nodejs" style="color: inherit; text-decoration: inherit;">crc<wbr>Salt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string that modifies the file tracking identity for files in this input. The magic value <SOURCE> invokes special behavior.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1415,7 @@ The following state arguments are supported:
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if input monitoring is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1424,7 @@ The following state arguments are supported:
 <a href="#state_followtail_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Tail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to true, files that are seen for the first time is read from the end.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1433,7 @@ The following state arguments are supported:
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the host field for events from this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1442,7 @@ The following state arguments are supported:
 <a href="#state_hostregex_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. If the path for a file matches this regular expression, the captured value is used to populate the host field for events from this data input. The regular expression must have one capture group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1451,7 @@ The following state arguments are supported:
 <a href="#state_hostsegment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Use the specified slash-separate segment of the filepath as the host field value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1460,7 @@ The following state arguments are supported:
 <a href="#state_ignoreolderthan_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Older<wbr>Than</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a time value. If the modification time of a file being monitored falls outside of this rolling time window, the file is no longer being monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1469,7 @@ The following state arguments are supported:
 <a href="#state_index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Which index events from this input should be stored in. Defaults to default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1478,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file or directory path to monitor on the system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1487,7 @@ The following state arguments are supported:
 <a href="#state_recursive_nodejs" style="color: inherit; text-decoration: inherit;">recursive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Setting this to false prevents monitoring of any subdirectories encountered within this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1496,7 @@ The following state arguments are supported:
 <a href="#state_renamesource_nodejs" style="color: inherit; text-decoration: inherit;">rename<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the source field for events from this data input. The same source should not be used for multiple data inputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1505,7 @@ The following state arguments are supported:
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to populate in the sourcetype field for incoming events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1514,7 @@ The following state arguments are supported:
 <a href="#state_timebeforeclose_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Before<wbr>Close</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When Splunk software reaches the end of a file that is being read, the file is kept open for a minimum of the number of seconds specified in this value. After this period has elapsed, the file is checked again for more data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1523,7 @@ The following state arguments are supported:
 <a href="#state_whitelist_nodejs" style="color: inherit; text-decoration: inherit;">whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. Only file paths that match this regular expression are indexed.
 {{% /md %}}</dd></dl>
@@ -1486,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputsmonitoracl">Inputs<wbr>Monitor<wbr>Acl<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputsmonitoracl">Input[Inputs<wbr>Monitor<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_blacklist_python" style="color: inherit; text-decoration: inherit;">blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. The file path that matches this regular expression is not indexed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_crc_salt_python" style="color: inherit; text-decoration: inherit;">crc_<wbr>salt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string that modifies the file tracking identity for files in this input. The magic value <SOURCE> invokes special behavior.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if input monitoring is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_follow_tail_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>tail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to true, files that are seen for the first time is read from the end.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the host field for events from this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_host_regex_python" style="color: inherit; text-decoration: inherit;">host_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. If the path for a file matches this regular expression, the captured value is used to populate the host field for events from this data input. The regular expression must have one capture group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_host_segment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Use the specified slash-separate segment of the filepath as the host field value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1608,7 @@ The following state arguments are supported:
 <a href="#state_ignore_older_than_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>older_<wbr>than</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a time value. If the modification time of a file being monitored falls outside of this rolling time window, the file is no longer being monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1617,7 @@ The following state arguments are supported:
 <a href="#state_index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Which index events from this input should be stored in. Defaults to default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file or directory path to monitor on the system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_recursive_python" style="color: inherit; text-decoration: inherit;">recursive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Setting this to false prevents monitoring of any subdirectories encountered within this data input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1644,7 @@ The following state arguments are supported:
 <a href="#state_rename_source_python" style="color: inherit; text-decoration: inherit;">rename_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the source field for events from this data input. The same source should not be used for multiple data inputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1653,7 @@ The following state arguments are supported:
 <a href="#state_sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to populate in the sourcetype field for incoming events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1662,7 @@ The following state arguments are supported:
 <a href="#state_time_before_close_python" style="color: inherit; text-decoration: inherit;">time_<wbr>before_<wbr>close</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When Splunk software reaches the end of a file that is being read, the file is kept open for a minimum of the number of seconds specified in this value. After this period has elapsed, the file is checked again for more data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_whitelist_python" style="color: inherit; text-decoration: inherit;">whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a regular expression for a file path. Only file paths that match this regular expression are indexed.
 {{% /md %}}</dd></dl>
@@ -1829,7 +1879,7 @@ The following state arguments are supported:
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1887,7 @@ The following state arguments are supported:
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1895,7 @@ The following state arguments are supported:
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1903,7 @@ The following state arguments are supported:
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1861,7 +1911,7 @@ The following state arguments are supported:
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1919,7 @@ The following state arguments are supported:
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1927,7 @@ The following state arguments are supported:
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1935,7 @@ The following state arguments are supported:
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1943,7 @@ The following state arguments are supported:
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1951,7 @@ The following state arguments are supported:
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1959,7 @@ The following state arguments are supported:
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1971,7 @@ The following state arguments are supported:
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1979,7 @@ The following state arguments are supported:
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1987,7 @@ The following state arguments are supported:
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1995,7 @@ The following state arguments are supported:
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +2003,7 @@ The following state arguments are supported:
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +2011,7 @@ The following state arguments are supported:
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +2019,7 @@ The following state arguments are supported:
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2027,7 @@ The following state arguments are supported:
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2035,7 @@ The following state arguments are supported:
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2043,7 @@ The following state arguments are supported:
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2051,7 @@ The following state arguments are supported:
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
