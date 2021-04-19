@@ -18,6 +18,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Azure-Native]({{< relref "./azure" >}})
 * [AzureAD]({{< relref "./azuread" >}})
 * [Google Cloud]({{< relref "./gcp" >}})
+* [Google-Native]({{< relref "./google-native" >}})
 * [Kubernetes]({{< relref "./kubernetes" >}})
 
 ## Cloud Providers
