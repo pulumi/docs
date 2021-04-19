@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.kusto.getAttachedDatabaseConfigur
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing an attached database configuration.
-API Version: 2020-09-18.
+API Version: 2021-01-01.
 
 
 
@@ -22,17 +22,20 @@ API Version: 2020-09-18.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_attached_database_configuration(</span><span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAttachedDatabaseConfigurationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_attached_database_configuration(</span><span class="nx">attached_database_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAttachedDatabaseConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAttachedDatabaseConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAttachedDatabaseConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAttachedDatabaseConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAttachedDatabaseConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAttachedDatabaseConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAttachedDatabaseConfiguration` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-09-18.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAttachedDatabaseConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAttachedDatabaseConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAttachedDatabaseConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -244,7 +247,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tablelevelsharingproperties_csharp">
+<a href="#tablelevelsharingproperties_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Level<wbr>Sharing<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablelevelsharingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Outputs.<wbr>Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Table level sharing specifications{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -320,7 +331,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tablelevelsharingproperties_go">
+<a href="#tablelevelsharingproperties_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Level<wbr>Sharing<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablelevelsharingpropertiesresponse">Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Table level sharing specifications{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -396,7 +415,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tablelevelsharingproperties_nodejs">
+<a href="#tablelevelsharingproperties_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Level<wbr>Sharing<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablelevelsharingpropertiesresponse">Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Table level sharing specifications{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -472,7 +499,233 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="table_level_sharing_properties_python">
+<a href="#table_level_sharing_properties_python" style="color: inherit; text-decoration: inherit;">table_<wbr>level_<wbr>sharing_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablelevelsharingpropertiesresponse">Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Table level sharing specifications{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="tablelevelsharingpropertiesresponse">Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexclude_csharp">
+<a href="#externaltablestoexclude_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoinclude_csharp">
+<a href="#externaltablestoinclude_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexclude_csharp">
+<a href="#materializedviewstoexclude_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoinclude_csharp">
+<a href="#materializedviewstoinclude_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexclude_csharp">
+<a href="#tablestoexclude_csharp" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoinclude_csharp">
+<a href="#tablestoinclude_csharp" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexclude_go">
+<a href="#externaltablestoexclude_go" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoinclude_go">
+<a href="#externaltablestoinclude_go" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexclude_go">
+<a href="#materializedviewstoexclude_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoinclude_go">
+<a href="#materializedviewstoinclude_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexclude_go">
+<a href="#tablestoexclude_go" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoinclude_go">
+<a href="#tablestoinclude_go" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexclude_nodejs">
+<a href="#externaltablestoexclude_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoinclude_nodejs">
+<a href="#externaltablestoinclude_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexclude_nodejs">
+<a href="#materializedviewstoexclude_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>Views<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoinclude_nodejs">
+<a href="#materializedviewstoinclude_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>Views<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexclude_nodejs">
+<a href="#tablestoexclude_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>To<wbr>Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoinclude_nodejs">
+<a href="#tablestoinclude_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>To<wbr>Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="external_tables_to_exclude_python">
+<a href="#external_tables_to_exclude_python" style="color: inherit; text-decoration: inherit;">external_<wbr>tables_<wbr>to_<wbr>exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="external_tables_to_include_python">
+<a href="#external_tables_to_include_python" style="color: inherit; text-decoration: inherit;">external_<wbr>tables_<wbr>to_<wbr>include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materialized_views_to_exclude_python">
+<a href="#materialized_views_to_exclude_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>views_<wbr>to_<wbr>exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materialized_views_to_include_python">
+<a href="#materialized_views_to_include_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>views_<wbr>to_<wbr>include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tables_to_exclude_python">
+<a href="#tables_to_exclude_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>to_<wbr>exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tables_to_include_python">
+<a href="#tables_to_include_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>to_<wbr>include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

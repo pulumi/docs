@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-ns1/sdk/v2/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -132,17 +132,18 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDNSSec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDNSSecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDNSSec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDNSSecArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_sec(</span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDNSSecResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_sec(</span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDNSSecResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDNSSec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDNSSecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDNSSecResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDNSSec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetDNSSecArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDNSSecResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetDNSSec` in the Go SDK.
 
@@ -151,7 +152,7 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDNSSec </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDNSSecArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDNSSecArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -398,7 +399,7 @@ below.
 <a href="#dnskeys_csharp" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationdnskey">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationdnskey">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -407,7 +408,7 @@ below.
 <a href="#ds_csharp" style="color: inherit; text-decoration: inherit;">Ds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationd">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs&gt;</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationd">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>D&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -491,7 +492,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationdnskey">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationdnskey">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -500,7 +501,7 @@ below.
 <a href="#ds_python" style="color: inherit; text-decoration: inherit;">ds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationd">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationd">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>D]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -854,7 +855,7 @@ below.
 <a href="#dnskeys_csharp" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnsseckeysdnskey">List&lt;Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdnsseckeysdnskey">List&lt;Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -920,7 +921,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnsseckeysdnskey">Sequence[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdnsseckeysdnskey">Sequence[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd><dt class="property-required"

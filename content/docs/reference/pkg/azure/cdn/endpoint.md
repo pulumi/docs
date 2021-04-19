@@ -26,19 +26,43 @@ CDN Endpoints can be imported using the `resource id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">,</span>
+             <span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +97,32 @@ CDN Endpoints can be imported using the `resource id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +131,7 @@ CDN Endpoints can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +155,7 @@ CDN Endpoints can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -508,7 +542,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -544,7 +578,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +587,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +596,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,20 +966,41 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1413,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2242,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2196,7 +2251,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2205,7 +2260,7 @@ The following state arguments are supported:
 <a href="#cookiesconditions_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2214,7 +2269,7 @@ The following state arguments are supported:
 <a href="#devicecondition_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2223,7 +2278,7 @@ The following state arguments are supported:
 <a href="#httpversionconditions_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2232,7 +2287,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2296,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2305,7 @@ The following state arguments are supported:
 <a href="#postargconditions_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Arg<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2314,7 @@ The following state arguments are supported:
 <a href="#querystringconditions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2323,7 @@ The following state arguments are supported:
 <a href="#remoteaddressconditions_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2332,7 @@ The following state arguments are supported:
 <a href="#requestbodyconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2341,7 @@ The following state arguments are supported:
 <a href="#requestheaderconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2350,7 @@ The following state arguments are supported:
 <a href="#requestmethodcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2359,7 @@ The following state arguments are supported:
 <a href="#requestschemecondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Scheme<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2368,7 @@ The following state arguments are supported:
 <a href="#requesturiconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2377,7 @@ The following state arguments are supported:
 <a href="#urlfileextensionconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Extension<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2386,7 @@ The following state arguments are supported:
 <a href="#urlfilenameconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Name<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2395,7 @@ The following state arguments are supported:
 <a href="#urlpathconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2404,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2413,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5805,7 +5860,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5814,7 +5869,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5823,7 +5878,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5832,7 +5887,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5841,7 +5896,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5850,7 +5905,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>

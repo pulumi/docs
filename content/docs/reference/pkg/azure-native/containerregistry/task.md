@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure-native.containerregistry.Task resource w
 
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
-API Version: 2019-04-01.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 
@@ -44,7 +44,9 @@ class MyStack : Stack
             {
                 Type = "SystemAssigned",
             },
+            IsSystemTask = false,
             Location = "eastus",
+            LogTemplate = "acr/tasks:{{.Run.OS}}",
             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
@@ -53,9 +55,32 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNative.ContainerRegistry.Inputs.TaskStepPropertiesArgs
+            Step = 
             {
-                ContextPath = "src",
+                { "arguments", 
+                {
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
             },
             Tags = 
             {
@@ -68,6 +93,8 @@ class MyStack : Stack
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Token",
                 },
                 SourceTriggers = 
                 {
@@ -113,78 +140,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
-			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
-				Cpu: pulumi.Int(2),
-			},
-			Identity: &containerregistry.IdentityPropertiesArgs{
-				Type: "SystemAssigned",
-			},
-			Location: pulumi.String("eastus"),
-			Platform: &containerregistry.PlatformPropertiesArgs{
-				Architecture: pulumi.String("amd64"),
-				Os:           pulumi.String("Linux"),
-			},
-			RegistryName:      pulumi.String("myRegistry"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Status:            pulumi.String("Enabled"),
-			Step: &containerregistry.TaskStepPropertiesArgs{
-				ContextPath: pulumi.String("src"),
-			},
-			Tags: pulumi.StringMap{
-				"testkey": pulumi.String("value"),
-			},
-			TaskName: pulumi.String("mytTask"),
-			Trigger: &containerregistry.TriggerPropertiesArgs{
-				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
-					BaseImageTriggerType: pulumi.String("Runtime"),
-					Name:                 pulumi.String("myBaseImageTrigger"),
-				},
-				SourceTriggers: containerregistry.SourceTriggerArray{
-					&containerregistry.SourceTriggerArgs{
-						Name: pulumi.String("mySourceTrigger"),
-						SourceRepository: &containerregistry.SourcePropertiesArgs{
-							Branch:        pulumi.String("master"),
-							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
-							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
-								Token:     pulumi.String("xxxxx"),
-								TokenType: pulumi.String("PAT"),
-							},
-							SourceControlType: pulumi.String("Github"),
-						},
-						SourceTriggerEvents: pulumi.StringArray{
-							pulumi.String("commit"),
-						},
-					},
-				},
-				TimerTriggers: containerregistry.TimerTriggerArray{
-					&containerregistry.TimerTriggerArgs{
-						Name:     pulumi.String("myTimerTrigger"),
-						Schedule: pulumi.String("30 9 * * 1-5"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -203,7 +159,9 @@ task = azure_native.containerregistry.Task("task",
     identity=azure_native.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
+    is_system_task=False,
     location="eastus",
+    log_template="acr/tasks:{{.Run.OS}}",
     platform=azure_native.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
         os="Linux",
@@ -211,9 +169,26 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_native.containerregistry.TaskStepPropertiesArgs(
-        context_path="src",
-    ),
+    step={
+        "arguments": [
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=False,
+                name="mytestargument",
+                value="mytestvalue",
+            ),
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=True,
+                name="mysecrettestargument",
+                value="mysecrettestvalue",
+            ),
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
     tags={
         "testkey": "value",
     },
@@ -222,6 +197,8 @@ task = azure_native.containerregistry.Task("task",
         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
+            update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+            update_trigger_payload_type="Token",
         ),
         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
@@ -262,7 +239,9 @@ const task = new azure_native.containerregistry.Task("task", {
     identity: {
         type: "SystemAssigned",
     },
+    isSystemTask: false,
     location: "eastus",
+    logTemplate: "acr/tasks:{{.Run.OS}}",
     platform: {
         architecture: "amd64",
         os: "Linux",
@@ -271,7 +250,24 @@ const task = new azure_native.containerregistry.Task("task", {
     resourceGroupName: "myResourceGroup",
     status: "Enabled",
     step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
         contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
     },
     tags: {
         testkey: "value",
@@ -281,6 +277,8 @@ const task = new azure_native.containerregistry.Task("task", {
         baseImageTrigger: {
             baseImageTriggerType: "Runtime",
             name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Token",
         },
         sourceTriggers: [{
             name: "mySourceTrigger",
@@ -300,6 +298,134 @@ const task = new azure_native.containerregistry.Task("task", {
             schedule: "30 9 * * 1-5",
         }],
     },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Tasks_Create_QuickTask
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+        {
+            IsSystemTask = true,
+            Location = "eastus",
+            LogTemplate = "acr/tasks:{{.Run.OS}}",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "quicktask",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+			IsSystemTask:      pulumi.Bool(true),
+			Location:          pulumi.String("eastus"),
+			LogTemplate:       pulumi.String("acr/tasks:{{.Run.OS}}"),
+			RegistryName:      pulumi.String("myRegistry"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Status:            pulumi.String("Enabled"),
+			Tags: pulumi.StringMap{
+				"testkey": pulumi.String("value"),
+			},
+			TaskName: pulumi.String("quicktask"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+task = azure_native.containerregistry.Task("task",
+    is_system_task=True,
+    location="eastus",
+    log_template="acr/tasks:{{.Run.OS}}",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    tags={
+        "testkey": "value",
+    },
+    task_name="quicktask")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const task = new azure_native.containerregistry.Task("task", {
+    isSystemTask: true,
+    location: "eastus",
+    logTemplate: "acr/tasks:{{.Run.OS}}",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    tags: {
+        testkey: "value",
+    },
+    taskName: "quicktask",
 });
 
 ```
@@ -337,6 +463,7 @@ class MyStack : Stack
                     { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
                 },
             },
+            IsSystemTask = false,
             Location = "eastus",
             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
             {
@@ -346,9 +473,32 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNative.ContainerRegistry.Inputs.TaskStepPropertiesArgs
+            Step = 
             {
-                ContextPath = "src",
+                { "arguments", 
+                {
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
             },
             Tags = 
             {
@@ -361,6 +511,8 @@ class MyStack : Stack
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Default",
                 },
                 SourceTriggers = 
                 {
@@ -428,6 +580,7 @@ task = azure_native.containerregistry.Task("task",
             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_native.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
+    is_system_task=False,
     location="eastus",
     platform=azure_native.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
@@ -436,9 +589,26 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_native.containerregistry.TaskStepPropertiesArgs(
-        context_path="src",
-    ),
+    step={
+        "arguments": [
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=False,
+                name="mytestargument",
+                value="mytestvalue",
+            ),
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=True,
+                name="mysecrettestargument",
+                value="mysecrettestvalue",
+            ),
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
     tags={
         "testkey": "value",
     },
@@ -447,6 +617,8 @@ task = azure_native.containerregistry.Task("task",
         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
+            update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+            update_trigger_payload_type="Default",
         ),
         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
@@ -490,6 +662,7 @@ const task = new azure_native.containerregistry.Task("task", {
             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
         },
     },
+    isSystemTask: false,
     location: "eastus",
     platform: {
         architecture: "amd64",
@@ -499,7 +672,24 @@ const task = new azure_native.containerregistry.Task("task", {
     resourceGroupName: "myResourceGroup",
     status: "Enabled",
     step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
         contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
     },
     tags: {
         testkey: "value",
@@ -509,6 +699,8 @@ const task = new azure_native.containerregistry.Task("task", {
         baseImageTrigger: {
             baseImageTriggerType: "Runtime",
             name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Default",
         },
         sourceTriggers: [{
             name: "mySourceTrigger",
@@ -566,6 +758,7 @@ class MyStack : Stack
                     { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
                 },
             },
+            IsSystemTask = false,
             Location = "eastus",
             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
             {
@@ -575,9 +768,32 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNative.ContainerRegistry.Inputs.TaskStepPropertiesArgs
+            Step = 
             {
-                ContextPath = "src",
+                { "arguments", 
+                {
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
             },
             Tags = 
             {
@@ -590,6 +806,8 @@ class MyStack : Stack
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Default",
                 },
                 SourceTriggers = 
                 {
@@ -658,6 +876,7 @@ task = azure_native.containerregistry.Task("task",
             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_native.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
+    is_system_task=False,
     location="eastus",
     platform=azure_native.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
@@ -666,9 +885,26 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_native.containerregistry.TaskStepPropertiesArgs(
-        context_path="src",
-    ),
+    step={
+        "arguments": [
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=False,
+                name="mytestargument",
+                value="mytestvalue",
+            ),
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=True,
+                name="mysecrettestargument",
+                value="mysecrettestvalue",
+            ),
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
     tags={
         "testkey": "value",
     },
@@ -677,6 +913,8 @@ task = azure_native.containerregistry.Task("task",
         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
+            update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+            update_trigger_payload_type="Default",
         ),
         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
@@ -721,6 +959,7 @@ const task = new azure_native.containerregistry.Task("task", {
             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
         },
     },
+    isSystemTask: false,
     location: "eastus",
     platform: {
         architecture: "amd64",
@@ -730,7 +969,24 @@ const task = new azure_native.containerregistry.Task("task", {
     resourceGroupName: "myResourceGroup",
     status: "Enabled",
     step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
         contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
     },
     tags: {
         testkey: "value",
@@ -740,6 +996,8 @@ const task = new azure_native.containerregistry.Task("task", {
         baseImageTrigger: {
             baseImageTriggerType: "Runtime",
             name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Default",
         },
         sourceTriggers: [{
             name: "mySourceTrigger",
@@ -792,6 +1050,7 @@ class MyStack : Stack
             {
                 Type = "SystemAssigned",
             },
+            IsSystemTask = false,
             Location = "eastus",
             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
             {
@@ -801,9 +1060,32 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNative.ContainerRegistry.Inputs.TaskStepPropertiesArgs
+            Step = 
             {
-                ContextPath = "src",
+                { "arguments", 
+                {
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
             },
             Tags = 
             {
@@ -861,78 +1143,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
-			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
-				Cpu: pulumi.Int(2),
-			},
-			Identity: &containerregistry.IdentityPropertiesArgs{
-				Type: "SystemAssigned",
-			},
-			Location: pulumi.String("eastus"),
-			Platform: &containerregistry.PlatformPropertiesArgs{
-				Architecture: pulumi.String("amd64"),
-				Os:           pulumi.String("Linux"),
-			},
-			RegistryName:      pulumi.String("myRegistry"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Status:            pulumi.String("Enabled"),
-			Step: &containerregistry.TaskStepPropertiesArgs{
-				ContextPath: pulumi.String("src"),
-			},
-			Tags: pulumi.StringMap{
-				"testkey": pulumi.String("value"),
-			},
-			TaskName: pulumi.String("mytTask"),
-			Trigger: &containerregistry.TriggerPropertiesArgs{
-				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
-					BaseImageTriggerType: pulumi.String("Runtime"),
-					Name:                 pulumi.String("myBaseImageTrigger"),
-				},
-				SourceTriggers: containerregistry.SourceTriggerArray{
-					&containerregistry.SourceTriggerArgs{
-						Name: pulumi.String("mySourceTrigger"),
-						SourceRepository: &containerregistry.SourcePropertiesArgs{
-							Branch:        pulumi.String("master"),
-							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
-							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
-								Token:     pulumi.String("xxxxx"),
-								TokenType: pulumi.String("PAT"),
-							},
-							SourceControlType: pulumi.String("Github"),
-						},
-						SourceTriggerEvents: pulumi.StringArray{
-							pulumi.String("commit"),
-						},
-					},
-				},
-				TimerTriggers: containerregistry.TimerTriggerArray{
-					&containerregistry.TimerTriggerArgs{
-						Name:     pulumi.String("myTimerTrigger"),
-						Schedule: pulumi.String("30 9 * * 1-5"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -951,6 +1162,7 @@ task = azure_native.containerregistry.Task("task",
     identity=azure_native.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
+    is_system_task=False,
     location="eastus",
     platform=azure_native.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
@@ -959,9 +1171,26 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_native.containerregistry.TaskStepPropertiesArgs(
-        context_path="src",
-    ),
+    step={
+        "arguments": [
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=False,
+                name="mytestargument",
+                value="mytestvalue",
+            ),
+            azure_native.containerregistry.ArgumentArgs(
+                is_secret=True,
+                name="mysecrettestargument",
+                value="mysecrettestvalue",
+            ),
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
     tags={
         "testkey": "value",
     },
@@ -1010,6 +1239,7 @@ const task = new azure_native.containerregistry.Task("task", {
     identity: {
         type: "SystemAssigned",
     },
+    isSystemTask: false,
     location: "eastus",
     platform: {
         architecture: "amd64",
@@ -1019,7 +1249,24 @@ const task = new azure_native.containerregistry.Task("task", {
     resourceGroupName: "myResourceGroup",
     status: "Enabled",
     step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
         contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
     },
     tags: {
         testkey: "value",
@@ -1069,19 +1316,41 @@ const task = new azure_native.containerregistry.Task("task", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Task</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Task</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[AgentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[CredentialsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[PlatformPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TaskStatus]]</span> = None<span class="p">, </span><span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[TaskStepPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[TriggerPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[AgentPropertiesArgs]</span> = None<span class="p">,</span>
+         <span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[CredentialsArgs]</span> = None<span class="p">,</span>
+         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">,</span>
+         <span class="nx">is_system_task</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">log_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[PlatformPropertiesArgs]</span> = None<span class="p">,</span>
+         <span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TaskStatus]]</span> = None<span class="p">,</span>
+         <span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[Union[DockerBuildStepArgs, EncodedTaskStepArgs, FileTaskStepArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+         <span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+         <span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[TriggerPropertiesArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTask</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Task</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTask</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Task</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Task</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Task</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1116,22 +1385,32 @@ const task = new azure_native.containerregistry.Task("task", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TaskArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1215,14 +1494,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="platform_csharp">
-<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -1237,15 +1508,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="step_csharp">
-<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_csharp">
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
@@ -1254,6 +1517,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentpoolname_csharp">
+<a href="#agentpoolname_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1271,6 +1542,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="issystemtask_csharp">
+<a href="#issystemtask_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Task</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1279,6 +1558,22 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logtemplate_csharp">
+<a href="#logtemplate_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1286,6 +1581,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#taskstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dockerbuildstep">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Args</a> | <a href="#encodedtaskstep">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Args</a> | <a href="#filetaskstep">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>File<wbr>Task<wbr>Step<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1323,14 +1626,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="platform_go">
-<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -1345,15 +1640,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="step_go">
-<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_go">
 <a href="#agentconfiguration_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
@@ -1362,6 +1649,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentpoolname_go">
+<a href="#agentpoolname_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1379,6 +1674,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="issystemtask_go">
+<a href="#issystemtask_go" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Task</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1387,6 +1690,22 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logtemplate_go">
+<a href="#logtemplate_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1394,6 +1713,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dockerbuildstep">Docker<wbr>Build<wbr>Step</a> | <a href="#encodedtaskstep">Encoded<wbr>Task<wbr>Step</a> | <a href="#filetaskstep">File<wbr>Task<wbr>Step</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1431,14 +1758,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="platform_nodejs">
-<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
@@ -1453,29 +1772,29 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="step_nodejs">
-<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_nodejs">
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentpoolname_nodejs">
+<a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials</a></span>
+        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,9 +1802,17 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issystemtask_nodejs">
+<a href="#issystemtask_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Task</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1495,6 +1822,22 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logtemplate_nodejs">
+<a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1502,6 +1845,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dockerbuildstep">Docker<wbr>Build<wbr>Step<wbr>Args</a> | <a href="#encodedtaskstep">Encoded<wbr>Task<wbr>Step<wbr>Args</a> | <a href="#filetaskstep">File<wbr>Task<wbr>Step<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1531,21 +1882,13 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties</a></span>
+        <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="platform_python">
-<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -1561,15 +1904,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="step_python">
-<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_configuration_python">
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
@@ -1578,6 +1913,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agent_pool_name_python">
+<a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1595,6 +1938,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_system_task_python">
+<a href="#is_system_task_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>task</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1603,6 +1954,22 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1610,6 +1977,14 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dockerbuildstep">Docker<wbr>Build<wbr>Step<wbr>Args</a> | <a href="#encodedtaskstep">Encoded<wbr>Task<wbr>Step<wbr>Args</a> | <a href="#filetaskstep">File<wbr>Task<wbr>Step<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1686,6 +2061,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -1729,6 +2112,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1774,6 +2165,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1817,6 +2216,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1973,6 +2380,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>386</dd><dt>ARM</dt>
     <dd>arm</dd><dt>ARM64</dt>
     <dd>arm64</dd></dl>
+{{% /choosable %}}
+
+<h4 id="argument">Argument</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_csharp">
+<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_go">
+<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_nodejs">
+<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="argumentresponse">Argument<wbr>Response</h4>
@@ -2650,7 +3171,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_csharp">
+<a href="#updatetriggerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_csharp">
+<a href="#updatetriggerpayloadtype_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#updatetriggerpayloadtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Update<wbr>Trigger<wbr>Payload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2678,7 +3215,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_go">
+<a href="#updatetriggerendpoint_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_go">
+<a href="#updatetriggerpayloadtype_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#updatetriggerpayloadtype">Update<wbr>Trigger<wbr>Payload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2706,7 +3259,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_nodejs">
+<a href="#updatetriggerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_nodejs">
+<a href="#updatetriggerpayloadtype_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#updatetriggerpayloadtype">Update<wbr>Trigger<wbr>Payload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2734,7 +3303,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_trigger_endpoint_python">
+<a href="#update_trigger_endpoint_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_trigger_payload_type_python">
+<a href="#update_trigger_payload_type_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>payload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#updatetriggerpayloadtype">Update<wbr>Trigger<wbr>Payload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</h4>
@@ -2764,7 +3349,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_csharp">
+<a href="#updatetriggerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_csharp">
+<a href="#updatetriggerpayloadtype_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2792,7 +3393,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_go">
+<a href="#updatetriggerendpoint_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_go">
+<a href="#updatetriggerpayloadtype_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2820,7 +3437,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerendpoint_nodejs">
+<a href="#updatetriggerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetriggerpayloadtype_nodejs">
+<a href="#updatetriggerpayloadtype_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2848,7 +3481,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_trigger_endpoint_python">
+<a href="#update_trigger_endpoint_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_trigger_payload_type_python">
+<a href="#update_trigger_payload_type_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>payload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagetriggertype">Base<wbr>Image<wbr>Trigger<wbr>Type</h4>
@@ -2930,7 +3579,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -2940,7 +3589,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3020,7 +3669,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -3030,7 +3679,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3144,7 +3793,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -3153,7 +3802,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3278,7 +3927,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -3287,7 +3936,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3323,6 +3972,280 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dockerbuildstep">Docker<wbr>Build<wbr>Step</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dockerfilepath_csharp">
+<a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arguments_csharp">
+<a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argument">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_csharp">
+<a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_csharp">
+<a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagenames_csharp">
+<a href="#imagenames_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ispushenabled_csharp">
+<a href="#ispushenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Push<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nocache_csharp">
+<a href="#nocache_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dockerfilepath_go">
+<a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arguments_go">
+<a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argument">[]Argument</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_go">
+<a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_go">
+<a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagenames_go">
+<a href="#imagenames_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ispushenabled_go">
+<a href="#ispushenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Push<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nocache_go">
+<a href="#nocache_go" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dockerfilepath_nodejs">
+<a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arguments_nodejs">
+<a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argument">Argument<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_nodejs">
+<a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_nodejs">
+<a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagenames_nodejs">
+<a href="#imagenames_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ispushenabled_nodejs">
+<a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nocache_nodejs">
+<a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="docker_file_path_python">
+<a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arguments_python">
+<a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_access_token_python">
+<a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_path_python">
+<a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_names_python">
+<a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_push_enabled_python">
+<a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_cache_python">
+<a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</h4>
@@ -3486,7 +4409,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3502,7 +4425,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,6 +4554,184 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="encodedtaskstep">Encoded<wbr>Task<wbr>Step</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encodedtaskcontent_csharp">
+<a href="#encodedtaskcontent_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Task<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_csharp">
+<a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_csharp">
+<a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encodedvaluescontent_csharp">
+<a href="#encodedvaluescontent_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Values<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encodedtaskcontent_go">
+<a href="#encodedtaskcontent_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Task<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_go">
+<a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_go">
+<a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encodedvaluescontent_go">
+<a href="#encodedvaluescontent_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Values<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">[]Set<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encodedtaskcontent_nodejs">
+<a href="#encodedtaskcontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_nodejs">
+<a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_nodejs">
+<a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encodedvaluescontent_nodejs">
+<a href="#encodedvaluescontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">Set<wbr>Value<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encoded_task_content_python">
+<a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_access_token_python">
+<a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_path_python">
+<a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoded_values_content_python">
+<a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -3744,7 +4845,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3784,7 +4885,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3839,6 +4940,184 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
         <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filetaskstep">File<wbr>Task<wbr>Step</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="taskfilepath_csharp">
+<a href="#taskfilepath_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_csharp">
+<a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_csharp">
+<a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuesfilepath_csharp">
+<a href="#valuesfilepath_csharp" style="color: inherit; text-decoration: inherit;">Values<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="taskfilepath_go">
+<a href="#taskfilepath_go" style="color: inherit; text-decoration: inherit;">Task<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_go">
+<a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_go">
+<a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">[]Set<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuesfilepath_go">
+<a href="#valuesfilepath_go" style="color: inherit; text-decoration: inherit;">Values<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="taskfilepath_nodejs">
+<a href="#taskfilepath_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_nodejs">
+<a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contextpath_nodejs">
+<a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">Set<wbr>Value<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuesfilepath_nodejs">
+<a href="#valuesfilepath_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="task_file_path_python">
+<a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_access_token_python">
+<a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_path_python">
+<a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_file_path_python">
+<a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</h4>
@@ -3954,7 +5233,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3986,7 +5265,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4162,7 +5441,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4320,7 +5599,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4869,6 +6148,120 @@ used as is without any modification.{{% /md %}}</dd></dl>
     <dd>Vaultsecret</dd></dl>
 {{% /choosable %}}
 
+<h4 id="setvalue">Set<wbr>Value</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_csharp">
+<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_go">
+<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="issecret_nodejs">
+<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="setvalueresponse">Set<wbr>Value<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -5116,7 +6509,7 @@ webhooks for notifications.{{% /md %}}</dd></dl>
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinfo">Auth<wbr>Info</a></span>
+        <span class="property-type"><a href="#authinfo">Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd></dl>
@@ -5266,7 +6659,7 @@ webhooks for notifications.{{% /md %}}</dd></dl>
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd></dl>
@@ -5540,7 +6933,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5712,7 +7105,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5769,6 +7162,216 @@ the source registry during the run.{{% /md %}}</dd></dl>
     <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="taskstatus">Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
@@ -5793,88 +7396,6 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <dl class="tabular"><dt>DISABLED</dt>
     <dd>Disabled</dd><dt>ENABLED</dt>
     <dd>Enabled</dd></dl>
-{{% /choosable %}}
-
-<h4 id="taskstepproperties">Task<wbr>Step<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="contextaccesstoken_csharp">
-<a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contextpath_csharp">
-<a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="contextaccesstoken_go">
-<a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contextpath_go">
-<a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="contextaccesstoken_nodejs">
-<a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contextpath_nodejs">
-<a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="context_access_token_python">
-<a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="context_path_python">
-<a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timertrigger">Timer<wbr>Trigger</h4>
@@ -6196,7 +7717,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#baseimagetrigger_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6204,7 +7725,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcetriggers_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetrigger">Source<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#sourcetrigger">Source<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6212,7 +7733,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timertriggers_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertrigger">Timer<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#timertrigger">Timer<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6310,7 +7831,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#baseimagetrigger_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6318,7 +7839,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcetriggers_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">Source<wbr>Trigger<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">Source<wbr>Trigger<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6326,7 +7847,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timertriggers_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">Timer<wbr>Trigger<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">Timer<wbr>Trigger<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6383,6 +7904,32 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <dl class="tabular"><dt>DISABLED</dt>
     <dd>Disabled</dd><dt>ENABLED</dt>
     <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+<h4 id="updatetriggerpayloadtype">Update<wbr>Trigger<wbr>Payload<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Token</dt>
+    <dd>Token</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Update<wbr>Trigger<wbr>Payload<wbr>Type<wbr>Default</dt>
+    <dd>Default</dd><dt>Update<wbr>Trigger<wbr>Payload<wbr>Type<wbr>Token</dt>
+    <dd>Token</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Token</dt>
+    <dd>Token</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>Default</dd><dt>TOKEN</dt>
+    <dd>Token</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useridentityproperties">User<wbr>Identity<wbr>Properties</h4>

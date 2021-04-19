@@ -151,19 +151,29 @@ const moveResource = new azure_native.migrate.MoveResource("moveResource", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MoveResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MoveResourcePropertiesArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMoveResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MoveResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMoveResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MoveResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,22 +208,32 @@ const moveResource = new azure_native.migrate.MoveResource("moveResource", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MoveResourceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,7 +417,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceproperties">Move<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#moveresourceproperties">Move<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1375,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1537,7 +1557,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2050,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings[]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2058,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings[]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2212,7 +2232,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2240,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2638,7 +2658,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#automaticresolution_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2670,7 +2690,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#manualresolution_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2840,7 +2860,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2930,7 +2950,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3036,7 +3056,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependsonoverrides_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverride">Move<wbr>Resource<wbr>Dependency<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverride">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3052,7 +3072,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings</a> | <a href="#diskencryptionsetresourcesettings">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings</a> | <a href="#keyvaultresourcesettings">Key<wbr>Vault<wbr>Resource<wbr>Settings</a> | <a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings</a> | <a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings</a> | <a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings</a> | <a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings</a> | <a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings</a> | <a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings</a> | <a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings</a> | <a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings</a> | <a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings</a> | <a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#diskencryptionsetresourcesettings">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#keyvaultresourcesettings">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3286,7 +3306,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3294,7 +3314,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3310,7 +3330,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#movestatus_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3334,7 +3354,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3350,7 +3370,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependsonoverrides_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3366,7 +3386,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3496,7 +3516,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3586,7 +3606,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3594,7 +3614,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#jobstatus_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3708,7 +3728,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings[]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3822,7 +3842,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3912,7 +3932,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#securityrules_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityrule">Nsg<wbr>Security<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#nsgsecurityrule">Nsg<wbr>Security<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3994,7 +4014,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#securityrules_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4164,7 +4184,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4172,7 +4192,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancernatrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereference">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereference">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4212,7 +4232,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreference">Public<wbr>Ip<wbr>Reference</a></span>
+        <span class="property-type"><a href="#publicipreference">Public<wbr>Ip<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4220,7 +4240,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4438,7 +4458,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4446,7 +4466,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancernatrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4486,7 +4506,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4494,7 +4514,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6724,7 +6744,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreference">Nsg<wbr>Reference</a></span>
+        <span class="property-type"><a href="#nsgreference">Nsg<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6838,7 +6858,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7332,7 +7352,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettings">Subnet<wbr>Resource<wbr>Settings[]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettings">Subnet<wbr>Resource<wbr>Settings<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7518,7 +7538,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}

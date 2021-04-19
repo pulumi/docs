@@ -35,18 +35,17 @@ class MyStack : Stack
     {
         var example = Output.Create(EquinixMetal.GetOperatingSystem.InvokeAsync(new EquinixMetal.GetOperatingSystemArgs
         {
-            Name = "Container Linux",
-            Distro = "coreos",
-            Version = "alpha",
-            ProvisionableOn = "c1.small.x86",
+            Distro = "ubuntu",
+            Version = "20.04",
+            ProvisionableOn = "c3.medium.x86",
         }));
         var server = new EquinixMetal.Device("server", new EquinixMetal.DeviceArgs
         {
-            Hostname = "tf.coreos2",
-            Plan = "c1.small.x86",
+            Hostname = "tf.ubuntu",
+            Plan = "c3.medium.x86",
             Facilities = 
             {
-                "ewr1",
+                "ny5",
             },
             OperatingSystem = example.Apply(example => example.Id),
             BillingCycle = "hourly",
@@ -67,30 +66,28 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "Container Linux"
-		opt1 := "coreos"
-		opt2 := "alpha"
-		opt3 := "c1.small.x86"
+		opt0 := "ubuntu"
+		opt1 := "20.04"
+		opt2 := "c3.medium.x86"
 		example, err := equinix - metal.GetOperatingSystem(ctx, &equinix-metal.GetOperatingSystemArgs{
-			Name:            &opt0,
-			Distro:          &opt1,
-			Version:         &opt2,
-			ProvisionableOn: &opt3,
+			Distro:          &opt0,
+			Version:         &opt1,
+			ProvisionableOn: &opt2,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		_, err = equinix - metal.NewDevice(ctx, "server", &equinix-metal.DeviceArgs{
-			Hostname: pulumi.String("tf.coreos2"),
-			Plan:     pulumi.String("c1.small.x86"),
+			Hostname: pulumi.String("tf.ubuntu"),
+			Plan:     pulumi.String("c3.medium.x86"),
 			Facilities: pulumi.StringArray{
-				pulumi.String("ewr1"),
+				pulumi.String("ny5"),
 			},
 			OperatingSystem: pulumi.String(example.Id),
 			BillingCycle:    pulumi.String("hourly"),
@@ -114,14 +111,13 @@ func main() {
 import pulumi
 import pulumi_equinix_metal as equinix_metal
 
-example = equinix_metal.get_operating_system(name="Container Linux",
-    distro="coreos",
-    version="alpha",
-    provisionable_on="c1.small.x86")
+example = equinix_metal.get_operating_system(distro="ubuntu",
+    version="20.04",
+    provisionable_on="c3.medium.x86")
 server = equinix_metal.Device("server",
-    hostname="tf.coreos2",
-    plan="c1.small.x86",
-    facilities=["ewr1"],
+    hostname="tf.ubuntu",
+    plan="c3.medium.x86",
+    facilities=["ny5"],
     operating_system=example.id,
     billing_cycle="hourly",
     project_id=local["project_id"])
@@ -139,15 +135,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as equinix_metal from "@pulumi/equinix-metal";
 
 const example = equinix_metal.getOperatingSystem({
-    name: "Container Linux",
-    distro: "coreos",
-    version: "alpha",
-    provisionableOn: "c1.small.x86",
+    distro: "ubuntu",
+    version: "20.04",
+    provisionableOn: "c3.medium.x86",
 });
 const server = new equinix_metal.Device("server", {
-    hostname: "tf.coreos2",
-    plan: "c1.small.x86",
-    facilities: ["ewr1"],
+    hostname: "tf.ubuntu",
+    plan: "c3.medium.x86",
+    facilities: ["ny5"],
     operatingSystem: example.then(example => example.id),
     billingCycle: "hourly",
     projectId: local.project_id,
@@ -172,17 +167,21 @@ const server = new equinix_metal.Device("server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOperatingSystem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOperatingSystemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOperatingSystem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOperatingSystemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_operating_system(</span><span class="nx">distro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisionable_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOperatingSystemResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_operating_system(</span><span class="nx">distro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">provisionable_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOperatingSystemResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOperatingSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOperatingSystemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOperatingSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetOperatingSystemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetOperatingSystem` in the Go SDK.
 
@@ -191,7 +190,7 @@ const server = new equinix_metal.Device("server", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOperatingSystem </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOperatingSystemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOperatingSystemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOperatingSystemArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

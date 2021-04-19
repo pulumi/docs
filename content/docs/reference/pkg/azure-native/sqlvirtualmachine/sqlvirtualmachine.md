@@ -65,7 +65,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -473,7 +473,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -711,7 +711,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -787,19 +787,42 @@ const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlImageSku]]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlManagementMode]]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlServerLicenseType]]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlImageSku]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlManagementMode]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlServerLicenseType]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -834,22 +857,32 @@ const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1225,7 +1258,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autobackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1266,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autopatchingsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1274,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1282,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#keyvaultcredentialsettings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1298,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#serverconfigurationsmanagementsettings_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Configurations<wbr>Management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1354,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageconfigurationsettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1378,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfcdomaincredentials_nodejs" style="color: inherit; text-decoration: inherit;">wsfc<wbr>Domain<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3696,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3704,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3712,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3720,7 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3842,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3850,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4696,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4704,7 +4737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4712,7 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4874,7 +4907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4882,7 +4915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4890,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

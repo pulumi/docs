@@ -26,19 +26,34 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">,</span>
+            <span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">,</span>
+            <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +88,32 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +122,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +146,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -346,7 +371,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#taskspec_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -355,7 +380,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -364,7 +389,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#convergeconfig_nodejs" style="color: inherit; text-decoration: inherit;">converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -373,7 +398,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpointspec_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -382,7 +407,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Service<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicelabel">Service<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -391,7 +416,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -409,7 +434,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rollbackconfig_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -418,7 +443,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -572,20 +597,31 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">,</span>
+        <span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">,</span>
+        <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -864,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_convergeconfig_nodejs" style="color: inherit; text-decoration: inherit;">converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_endpointspec_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +927,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Service<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicelabel">Service<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +954,7 @@ The following state arguments are supported:
 <a href="#state_rollbackconfig_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +963,7 @@ The following state arguments are supported:
 <a href="#state_taskspec_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +972,7 @@ The following state arguments are supported:
 <a href="#state_updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -1318,7 +1354,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd></dl>
@@ -1696,7 +1732,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicated_nodejs" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, which contains atm only the amount of `replicas`
 {{% /md %}}</dd></dl>
@@ -2177,7 +2213,7 @@ casting and precision errors.
 <a href="#containerspec_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See ContainerSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2231,7 @@ casting and precision errors.
 <a href="#logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Log Driver below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2249,7 @@ casting and precision errors.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Placement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2258,7 @@ casting and precision errors.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Resources below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2267,7 @@ casting and precision errors.
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Restart Policy below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2724,7 +2760,7 @@ casting and precision errors.
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Configs below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2778,7 @@ casting and precision errors.
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See DNS Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2769,7 +2805,7 @@ casting and precision errors.
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2787,7 +2823,7 @@ casting and precision errors.
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2804,7 +2840,7 @@ casting and precision errors.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2849,7 @@ casting and precision errors.
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2858,7 @@ casting and precision errors.
 <a href="#privileges_nodejs" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Privileges below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2876,7 @@ casting and precision errors.
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Secrets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3959,7 +3995,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3986,7 +4022,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3995,7 +4031,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -4313,7 +4349,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4509,7 +4545,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credentialspec_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For managed service account (Windows only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4518,7 +4554,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#selinuxcontext_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SELinux labels of the container
 {{% /md %}}</dd></dl>
@@ -5265,7 +5301,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#platforms_nodejs" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform[]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
 {{% /md %}}</dd><dt class="property-optional"
@@ -5463,7 +5499,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5472,7 +5508,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#reservation_nodejs" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd></dl>
@@ -5571,7 +5607,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5787,7 +5823,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"

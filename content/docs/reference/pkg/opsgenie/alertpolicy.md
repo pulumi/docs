@@ -90,7 +90,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -237,19 +237,45 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">continue_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ignore_original_actions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_responders</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responders</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyResponderArgs]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyTimeRestrictionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">continue_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyFilterArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">ignore_original_actions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">ignore_original_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">ignore_original_responders</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">ignore_original_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">policy_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">responders</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyResponderArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyTimeRestrictionArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,22 +310,32 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -398,7 +434,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_csharp">
@@ -407,7 +443,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_csharp">
@@ -416,7 +452,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuepolicy_csharp">
@@ -425,7 +461,8 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -433,7 +470,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_csharp">
@@ -442,7 +479,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -451,7 +488,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">List&lt;Alert<wbr>Policy<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalactions_csharp">
@@ -460,7 +497,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaldetails_csharp">
@@ -469,7 +506,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalresponders_csharp">
@@ -478,7 +515,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaltags_csharp">
@@ -487,7 +524,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -514,7 +551,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responders_csharp">
@@ -523,7 +560,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">List&lt;Alert<wbr>Policy<wbr>Responder<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -532,7 +569,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -541,7 +578,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_csharp">
@@ -581,7 +618,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_go">
@@ -590,7 +627,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_go">
@@ -599,7 +636,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuepolicy_go">
@@ -608,7 +645,8 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -616,7 +654,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_go">
@@ -625,7 +663,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -634,7 +672,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalactions_go">
@@ -643,7 +681,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaldetails_go">
@@ -652,7 +690,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalresponders_go">
@@ -661,7 +699,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaltags_go">
@@ -670,7 +708,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -697,7 +735,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responders_go">
@@ -706,7 +744,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -715,7 +753,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -724,7 +762,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_go">
@@ -764,7 +802,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_nodejs">
@@ -773,7 +811,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_nodejs">
@@ -782,7 +820,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuepolicy_nodejs">
@@ -791,7 +829,8 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -799,7 +838,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_nodejs">
@@ -808,16 +847,16 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfilter">Alert<wbr>Policy<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#alertpolicyfilter">Alert<wbr>Policy<wbr>Filter<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalactions_nodejs">
@@ -826,7 +865,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaldetails_nodejs">
@@ -835,7 +874,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginalresponders_nodejs">
@@ -844,7 +883,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreoriginaltags_nodejs">
@@ -853,7 +892,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -880,16 +919,16 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responders_nodejs">
 <a href="#responders_nodejs" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyresponder">Alert<wbr>Policy<wbr>Responder[]</a></span>
+        <span class="property-type"><a href="#alertpolicyresponder">Alert<wbr>Policy<wbr>Responder<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -898,7 +937,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -907,7 +946,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_nodejs">
@@ -923,7 +962,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction[]</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -947,7 +986,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_description_python">
@@ -956,7 +995,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_python">
@@ -965,7 +1004,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continue_policy_python">
@@ -974,7 +1013,8 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -982,7 +1022,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_python">
@@ -991,7 +1031,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
@@ -1000,7 +1040,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">Sequence[Alert<wbr>Policy<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_original_actions_python">
@@ -1009,7 +1049,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_original_details_python">
@@ -1018,7 +1058,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_original_responders_python">
@@ -1027,7 +1067,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_original_tags_python">
@@ -1036,7 +1076,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1063,7 +1103,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responders_python">
@@ -1072,7 +1112,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">Sequence[Alert<wbr>Policy<wbr>Responder<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -1081,7 +1121,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1090,7 +1130,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_id_python">
@@ -1175,20 +1215,42 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">continue_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ignore_original_actions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_responders</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ignore_original_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responders</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyResponderArgs]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyTimeRestrictionArgs]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">continue_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyFilterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_original_actions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_original_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_original_responders</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_original_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">policy_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">responders</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyResponderArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyTimeRestrictionArgs]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlertPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AlertPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlertPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AlertPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1299,7 +1361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_csharp">
@@ -1308,7 +1370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_csharp">
@@ -1317,7 +1379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_continuepolicy_csharp">
@@ -1326,7 +1388,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1334,7 +1397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_csharp">
@@ -1343,7 +1406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
@@ -1352,7 +1415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">List&lt;Alert<wbr>Policy<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalactions_csharp">
@@ -1361,7 +1424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaldetails_csharp">
@@ -1370,7 +1433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalresponders_csharp">
@@ -1379,7 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaltags_csharp">
@@ -1388,7 +1451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_csharp">
@@ -1424,7 +1487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responders_csharp">
@@ -1433,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">List&lt;Alert<wbr>Policy<wbr>Responder<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
@@ -1442,7 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1451,7 +1514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
@@ -1482,7 +1545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_go">
@@ -1491,7 +1554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_go">
@@ -1500,7 +1563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_continuepolicy_go">
@@ -1509,7 +1572,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1517,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_go">
@@ -1526,7 +1590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
@@ -1535,7 +1599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalactions_go">
@@ -1544,7 +1608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaldetails_go">
@@ -1553,7 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalresponders_go">
@@ -1562,7 +1626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaltags_go">
@@ -1571,7 +1635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_go">
@@ -1607,7 +1671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responders_go">
@@ -1616,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
@@ -1625,7 +1689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1634,7 +1698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
@@ -1665,7 +1729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_nodejs">
@@ -1674,7 +1738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_nodejs">
@@ -1683,7 +1747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_continuepolicy_nodejs">
@@ -1692,7 +1756,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1700,7 +1765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_nodejs">
@@ -1709,16 +1774,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfilter">Alert<wbr>Policy<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#alertpolicyfilter">Alert<wbr>Policy<wbr>Filter<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalactions_nodejs">
@@ -1727,7 +1792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaldetails_nodejs">
@@ -1736,7 +1801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginalresponders_nodejs">
@@ -1745,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreoriginaltags_nodejs">
@@ -1754,7 +1819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_nodejs">
@@ -1790,16 +1855,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responders_nodejs">
 <a href="#state_responders_nodejs" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyresponder">Alert<wbr>Policy<wbr>Responder[]</a></span>
+        <span class="property-type"><a href="#alertpolicyresponder">Alert<wbr>Policy<wbr>Responder<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
@@ -1808,7 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1817,7 +1882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
@@ -1833,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction[]</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1848,7 +1913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If ignore_original_actions field is set to true, this will replace the original actions.
+    <dd>{{% md %}}Actions to add to the alerts original actions value as a list of strings. If `ignore_original_actions` field is set to `true`, this will replace the original actions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_description_python">
@@ -1857,7 +1922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the alert. You can use {{description}} to refer to the original alert description. Default value is {{description}}
+    <dd>{{% md %}}Description of the alert. You can use `{{description}}` to refer to the original alert description. Default: `{{description}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_python">
@@ -1866,7 +1931,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Alias of the alert. You can use {{alias}} to refer to the original alias. Default value is {{alias}}
+    <dd>{{% md %}}Alias of the alert. You can use `{{alias}}` to refer to the original alias. Default: `{{alias}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_continue_policy_python">
@@ -1875,7 +1940,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}It will trigger other modify policies if set to `true`. Default: `false`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1883,7 +1949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If policy should be enabled. Default: true
+    <dd>{{% md %}}If policy should be enabled. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_python">
@@ -1892,7 +1958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity field of the alert. You can use {{entity}} to refer to the original entity. Default value is {{entity}}
+    <dd>{{% md %}}Entity field of the alert. You can use `{{entity}}` to refer to the original entity. Default: `{{entity}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
@@ -1901,7 +1967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyfilter">Sequence[Alert<wbr>Policy<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: filter {} - this means 'match-all'. This is a block, structure is documented below.
+    <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_original_actions_python">
@@ -1910,7 +1976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original actions of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original actions of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_original_details_python">
@@ -1919,7 +1985,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original details of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original details of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_original_responders_python">
@@ -1928,7 +1994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original responders of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original responders of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_original_tags_python">
@@ -1937,7 +2003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, policy will ignore the original tags of the alert. Default value is false
+    <dd>{{% md %}}If set to `true`, policy will ignore the original tags of the alert. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_python">
@@ -1973,7 +2039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Priority of the alert. Should be one of P1, P2, P3, P4, or P5
+    <dd>{{% md %}}Priority of the alert. Should be one of `P1`, `P2`, `P3`, `P4`, or `P5`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responders_python">
@@ -1982,7 +2048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyresponder">Sequence[Alert<wbr>Policy<wbr>Responder<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If ignoreOriginalResponders field is set to true, this will replace the original responders. The possible values for responders are: user, team. This is a block, structure is documented below.
+    <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
@@ -1991,7 +2057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source field of the alert. You can use {{source}} to refer to the original source. Default value is {{source}}
+    <dd>{{% md %}}Source field of the alert. You can use `{{source}}` to refer to the original source. Default: `{{source}}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2000,7 +2066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If ignoreOriginalResponders field is set to true, this will replace the original responders.
+    <dd>{{% md %}}Tags to add to the alerts original tags value as a list of strings. If `ignore_original_responders` field is set to `true`, this will replace the original responders.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
@@ -2051,7 +2117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2073,7 +2139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2084,7 +2150,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfiltercondition">Alert<wbr>Policy<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#alertpolicyfiltercondition">Alert<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2117,7 +2183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2132,7 +2198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_csharp">
@@ -2141,7 +2207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
@@ -2168,7 +2234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -2190,7 +2256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_go">
@@ -2199,7 +2265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
@@ -2226,7 +2292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -2248,7 +2314,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_nodejs">
@@ -2257,7 +2323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
@@ -2284,7 +2350,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
@@ -2306,7 +2372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_python">
@@ -2315,7 +2381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
@@ -2342,7 +2408,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
@@ -2375,7 +2441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -2415,7 +2481,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2455,7 +2521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -2495,7 +2561,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -2528,7 +2594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_csharp">
@@ -2537,7 +2603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">List&lt;Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of days and hours definitions for field type = "weekday-and-time-of-day". This is a block, structure is documented below.
+    <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2550,7 +2616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_go">
@@ -2559,7 +2625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">[]Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}List of days and hours definitions for field type = "weekday-and-time-of-day". This is a block, structure is documented below.
+    <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2572,16 +2638,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of days and hours definitions for field type = "weekday-and-time-of-day". This is a block, structure is documented below.
+    <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2594,7 +2660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of responder. Acceptable values are: user or team
+    <dd>{{% md %}}Type of responder. Acceptable values are: `user` or `team`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_python">
@@ -2603,7 +2669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Sequence[Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of days and hours definitions for field type = "weekday-and-time-of-day". This is a block, structure is documented below.
+    <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2618,7 +2684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ending day of restriction (eg. "wednesday)
+    <dd>{{% md %}}Ending day of restriction (eg. `wednesday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_csharp">
@@ -2645,7 +2711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting day of restriction (eg. "monday")
+    <dd>{{% md %}}Starting day of restriction (eg. `monday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_csharp">
@@ -2676,7 +2742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ending day of restriction (eg. "wednesday)
+    <dd>{{% md %}}Ending day of restriction (eg. `wednesday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_go">
@@ -2703,7 +2769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting day of restriction (eg. "monday")
+    <dd>{{% md %}}Starting day of restriction (eg. `monday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_go">
@@ -2734,7 +2800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ending day of restriction (eg. "wednesday)
+    <dd>{{% md %}}Ending day of restriction (eg. `wednesday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_nodejs">
@@ -2761,7 +2827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting day of restriction (eg. "monday")
+    <dd>{{% md %}}Starting day of restriction (eg. `monday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_nodejs">
@@ -2792,7 +2858,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Ending day of restriction (eg. "wednesday)
+    <dd>{{% md %}}Ending day of restriction (eg. `wednesday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_hour_python">
@@ -2819,7 +2885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting day of restriction (eg. "monday")
+    <dd>{{% md %}}Starting day of restriction (eg. `monday`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_python">

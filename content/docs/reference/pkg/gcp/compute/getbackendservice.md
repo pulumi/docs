@@ -23,17 +23,19 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backend_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackendServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backend_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackendServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackendService` in the Go SDK.
 
@@ -42,7 +44,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1469,7 +1471,7 @@ The following output properties are available:
 <a href="#cachekeypolicies_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">List&lt;Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">List&lt;Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1519,7 @@ The following output properties are available:
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicynegativecachingpolicy">List&lt;Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicynegativecachingpolicy">List&lt;Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1697,7 +1699,7 @@ The following output properties are available:
 <a href="#cache_key_policies_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1745,7 +1747,7 @@ The following output properties are available:
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicynegativecachingpolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicynegativecachingpolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2041,7 +2043,7 @@ The following output properties are available:
 <a href="#connecttimeouts_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeouts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">List&lt;Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">List&lt;Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2197,7 +2199,7 @@ The following output properties are available:
 <a href="#connect_timeouts_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeouts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">Sequence[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">Sequence[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2337,7 +2339,7 @@ The following output properties are available:
 <a href="#httpcookies_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">List&lt;Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">List&lt;Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2421,7 +2423,7 @@ The following output properties are available:
 <a href="#http_cookies_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2470,7 +2472,7 @@ The following output properties are available:
 <a href="#ttls_csharp" style="color: inherit; text-decoration: inherit;">Ttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">List&lt;Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">List&lt;Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2559,7 @@ The following output properties are available:
 <a href="#ttls_python" style="color: inherit; text-decoration: inherit;">ttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2857,7 +2859,7 @@ The following output properties are available:
 <a href="#baseejectiontimes_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">List&lt;Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">List&lt;Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2905,7 +2907,7 @@ The following output properties are available:
 <a href="#intervals_csharp" style="color: inherit; text-decoration: inherit;">Intervals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">List&lt;Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">List&lt;Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3133,7 +3135,7 @@ The following output properties are available:
 <a href="#base_ejection_times_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3181,7 +3183,7 @@ The following output properties are available:
 <a href="#intervals_python" style="color: inherit; text-decoration: inherit;">intervals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

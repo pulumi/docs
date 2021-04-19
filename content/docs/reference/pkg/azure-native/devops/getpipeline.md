@@ -22,17 +22,19 @@ API Version: 2020-07-13-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pipeline(</span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPipelineResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pipeline(</span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPipelineResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPipeline` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-07-13-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipeline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -544,7 +546,7 @@ The following output properties are available:
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +554,7 @@ The following output properties are available:
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -604,7 +606,7 @@ The following output properties are available:
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +614,7 @@ The following output properties are available:
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -652,7 +654,7 @@ The following output properties are available:
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +786,7 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

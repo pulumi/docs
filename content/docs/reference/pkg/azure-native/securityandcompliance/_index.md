@@ -48,6 +48,6 @@ Explore the resources and functions of the azure-native.securityandcompliance mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0-alpha.1618844820+db5e5a54</dd>
 </dl>
 

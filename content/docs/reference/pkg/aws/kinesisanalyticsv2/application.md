@@ -126,9 +126,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesisanalyticsv2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -507,9 +507,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesisanalyticsv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1000,19 +1000,34 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">,</span>
+                <span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1047,22 +1062,32 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1071,7 +1096,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1095,7 +1120,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1338,7 +1363,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1372,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,20 +1751,36 @@ Get an existing Application resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2108,7 +2149,7 @@ The following state arguments are supported:
 <a href="#state_applicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2167,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2554,7 @@ The following state arguments are supported:
 <a href="#applicationcodeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2522,7 +2563,7 @@ The following state arguments are supported:
 <a href="#applicationsnapshotconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Snapshot<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2531,7 +2572,7 @@ The following state arguments are supported:
 <a href="#environmentproperties_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2540,7 +2581,7 @@ The following state arguments are supported:
 <a href="#flinkapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2590,7 @@ The following state arguments are supported:
 <a href="#runconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2558,7 +2599,7 @@ The following state arguments are supported:
 <a href="#sqlapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2608,7 @@ The following state arguments are supported:
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
 {{% /md %}}</dd></dl>
@@ -2702,7 +2743,7 @@ The following state arguments are supported:
 <a href="#codecontent_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
 {{% /md %}}</dd></dl>
@@ -2783,7 +2824,7 @@ The following state arguments are supported:
 <a href="#s3contentlocation_nodejs" style="color: inherit; text-decoration: inherit;">s3Content<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3035,7 +3076,7 @@ The following state arguments are supported:
 <a href="#propertygroups_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
 {{% /md %}}</dd></dl>
@@ -3215,7 +3256,7 @@ The following state arguments are supported:
 <a href="#checkpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3224,7 +3265,7 @@ The following state arguments are supported:
 <a href="#monitoringconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3233,7 +3274,7 @@ The following state arguments are supported:
 <a href="#parallelismconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">parallelism<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
 {{% /md %}}</dd></dl>
@@ -3785,7 +3826,7 @@ The following state arguments are supported:
 <a href="#applicationrestoreconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Restore<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restore behavior of a restarting application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3794,7 +3835,7 @@ The following state arguments are supported:
 <a href="#flinkrunconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
 {{% /md %}}</dd></dl>
@@ -4037,7 +4078,7 @@ The following state arguments are supported:
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4046,7 +4087,7 @@ The following state arguments are supported:
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4055,7 +4096,7 @@ The following state arguments are supported:
 <a href="#referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
 {{% /md %}}</dd></dl>
@@ -4269,7 +4310,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4303,7 +4344,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputparallelism_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4312,7 +4353,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputprocessingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
@@ -4322,7 +4363,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputstartingpositionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Starting<wbr>Position<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4331,7 +4372,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4340,7 +4381,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
@@ -4519,7 +4560,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputlambdaprocessor_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Lambda<wbr>Processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
@@ -4663,7 +4704,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -4672,7 +4713,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4897,7 +4938,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -4987,7 +5028,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4996,7 +5037,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -5453,7 +5494,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#destinationschema_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
 {{% /md %}}</dd><dt class="property-required"
@@ -5471,7 +5512,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5480,7 +5521,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5489,7 +5530,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#lambdaoutput_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5863,7 +5904,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#referenceschema_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5872,7 +5913,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#s3referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">s3Reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
 {{% /md %}}</dd><dt class="property-required"
@@ -6005,7 +6046,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6014,7 +6055,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6239,7 +6280,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -6329,7 +6370,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6338,7 +6379,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>

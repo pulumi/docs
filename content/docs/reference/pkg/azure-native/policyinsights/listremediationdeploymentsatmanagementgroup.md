@@ -22,17 +22,21 @@ API Version: 2019-07-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listRemediationDeploymentsAtManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listRemediationDeploymentsAtManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_remediation_deployments_at_management_group(</span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_groups_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">top</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListRemediationDeploymentsAtManagementGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_remediation_deployments_at_management_group(</span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                     <span class="nx">management_groups_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                     <span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                     <span class="nx">top</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListRemediationDeploymentsAtManagementGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListRemediationDeploymentsAtManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListRemediationDeploymentsAtManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListRemediationDeploymentsAtManagementGroup` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2019-07-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListRemediationDeploymentsAtManagementGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListRemediationDeploymentsAtManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListRemediationDeploymentsAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -300,7 +304,7 @@ The following output properties are available:
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typederrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#typederrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Typed<wbr>Error<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -316,7 +320,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Internal error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -432,7 +436,7 @@ The following output properties are available:
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typederrorinforesponse">Sequence[Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#typederrorinforesponse">Sequence[Typed<wbr>Error<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -448,7 +452,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">Sequence[Error<wbr>Definition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Sequence[Error<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Internal error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -496,7 +500,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +680,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">

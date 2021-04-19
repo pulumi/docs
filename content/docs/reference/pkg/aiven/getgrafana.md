@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,17 +122,36 @@ const gr1 = aiven.getGrafana({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGrafana<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGrafanaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGrafanaResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGrafana<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGrafanaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGrafanaResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_grafana(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGrafanaComponentArgs]]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GetGrafanaGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GetGrafanaGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGrafanaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGrafanaResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_grafana(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGrafanaComponent]]</span> = None<span class="p">,</span>
+                <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GetGrafanaGrafana]</span> = None<span class="p">,</span>
+                <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GetGrafanaGrafanaUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGrafanaServiceIntegration]]</span> = None<span class="p">,</span>
+                <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGrafanaResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGrafana<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGrafanaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGrafanaResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGrafana<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGrafanaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGrafanaResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGrafana` in the Go SDK.
 
@@ -141,7 +160,7 @@ const gr1 = aiven.getGrafana({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGrafana </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGrafanaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGrafanaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGrafanaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGrafanaArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +213,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanacomponent">List&lt;Get<wbr>Grafana<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getgrafanacomponent">List&lt;Get<wbr>Grafana<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +221,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafana">Get<wbr>Grafana<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafana">Get<wbr>Grafana<wbr>Grafana</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -211,7 +230,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafanauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfig">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfig">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -280,7 +299,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanaserviceintegration">List&lt;Get<wbr>Grafana<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getgrafanaserviceintegration">List&lt;Get<wbr>Grafana<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +816,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanacomponent">Sequence[Get<wbr>Grafana<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgrafanacomponent">Sequence[Get<wbr>Grafana<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +824,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafana">Get<wbr>Grafana<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafana">Get<wbr>Grafana<wbr>Grafana</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +833,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfig">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfig">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -883,7 +902,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanaserviceintegration">Sequence[Get<wbr>Grafana<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgrafanaserviceintegration">Sequence[Get<wbr>Grafana<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2115,7 @@ built-in login.
 <a href="#authgenericoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgenericoauth">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgenericoauth">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2124,7 @@ built-in login.
 <a href="#authgithub_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgithub">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgithub">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2133,7 @@ built-in login.
 <a href="#authgitlab_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgitlab">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgitlab">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2142,7 @@ built-in login.
 <a href="#authgoogle_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgoogle">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgoogle">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2226,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#externalimagestorage_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigexternalimagestorage">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigexternalimagestorage">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2262,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivateaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivateaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2270,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivatelinkaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivatelinkaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2289,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigpublicaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigpublicaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2317,7 @@ when a new service is being created.
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigsmtpserver">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigsmtpserver">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2969,7 +2988,7 @@ built-in login.
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgenericoauth">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgenericoauth">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2997,7 @@ built-in login.
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgithub">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgithub">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +3006,7 @@ built-in login.
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgitlab">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgitlab">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +3015,7 @@ built-in login.
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgoogle">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigauthgoogle">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3080,7 +3099,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigexternalimagestorage">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigexternalimagestorage">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -3116,7 +3135,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivateaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivateaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3124,7 +3143,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivatelinkaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigprivatelinkaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3143,7 +3162,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigpublicaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigpublicaccess">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3171,7 +3190,7 @@ when a new service is being created.
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgrafanagrafanauserconfigsmtpserver">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#getgrafanagrafanauserconfigsmtpserver">Get<wbr>Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"

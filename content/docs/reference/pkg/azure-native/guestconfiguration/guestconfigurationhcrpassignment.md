@@ -83,7 +83,7 @@ package main
 
 import (
 	guestconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/guestconfiguration"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -215,19 +215,31 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[GuestConfigurationAssignmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                     <span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[GuestConfigurationAssignmentPropertiesArgs]</span> = None<span class="p">,</span>
+                                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestConfigurationHCRPAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestConfigurationHCRPAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -262,22 +274,32 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GuestConfigurationHCRPAssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -509,7 +531,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -746,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -958,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reasons_nodejs" style="color: inherit; text-decoration: inherit;">reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1208,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
+        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2058,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2300,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestassignmentreport_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Assignment<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2486,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2494,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting</a></span>
+        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2720,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

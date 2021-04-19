@@ -648,19 +648,35 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateFileCustomizerArgs, ImageTemplatePowerShellCustomizerArgs, ImageTemplateRestartCustomizerArgs, ImageTemplateShellCustomizerArgs, ImageTemplateWindowsUpdateCustomizerArgs]]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateManagedImageDistributorArgs, ImageTemplateSharedImageDistributorArgs, ImageTemplateVhdDistributorArgs]]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[ImageTemplateManagedImageSourceArgs, ImageTemplatePlatformImageSourceArgs, ImageTemplateSharedImageVersionSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateVmProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                <span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateFileCustomizerArgs, ImageTemplatePowerShellCustomizerArgs, ImageTemplateRestartCustomizerArgs, ImageTemplateShellCustomizerArgs, ImageTemplateWindowsUpdateCustomizerArgs]]]</span> = None<span class="p">,</span>
+                                <span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateManagedImageDistributorArgs, ImageTemplateSharedImageDistributorArgs, ImageTemplateVhdDistributorArgs]]]</span> = None<span class="p">,</span>
+                                <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateIdentityArgs]</span> = None<span class="p">,</span>
+                                <span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[ImageTemplateManagedImageSourceArgs, ImageTemplatePlatformImageSourceArgs, ImageTemplateSharedImageVersionSourceArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                <span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateVmProfileArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineImageTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineImageTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -695,22 +711,32 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -966,7 +992,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#distribute_nodejs" style="color: inherit; text-decoration: inherit;">distribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor | Image<wbr>Template<wbr>Vhd<wbr>Distributor[]</span>
+        <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Args | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Args | Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -974,7 +1000,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity</a></span>
+        <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -990,7 +1016,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1032,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Template<wbr>File<wbr>Customizer | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Restart<wbr>Customizer | Image<wbr>Template<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer[]</span>
+        <span class="property-type">Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Args | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Args | Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Args | Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Args | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1064,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#vmprofile_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</a></span>
+        <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2565,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2743,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4649,7 +4675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4763,7 +4789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -128,17 +128,19 @@ export const version = policy.then(policy => policy.version);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganizationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrganizationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganizationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrganizationPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization_policy(</span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization_policy(</span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOrganizationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOrganizationPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOrganizationPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOrganizationPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOrganizationPolicy` in the Go SDK.
 
@@ -147,7 +149,7 @@ export const version = policy.then(policy => policy.version);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganizationPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrganizationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrganizationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -630,7 +632,7 @@ The following output properties are available:
 <a href="#allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -638,7 +640,7 @@ The following output properties are available:
 <a href="#denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List&lt;Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -738,7 +740,7 @@ The following output properties are available:
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -746,7 +748,7 @@ The following output properties are available:
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

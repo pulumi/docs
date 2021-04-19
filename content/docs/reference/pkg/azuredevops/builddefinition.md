@@ -271,8 +271,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuredevops/sdk/v2/go/azuredevops"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -370,19 +370,34 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuildDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuildDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -417,22 +432,32 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BuildDefinitionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,7 +466,7 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -465,7 +490,7 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -699,7 +724,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +742,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#citrigger_nodejs" style="color: inherit; text-decoration: inherit;">ci<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +769,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#pullrequesttrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +787,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -952,20 +977,32 @@ Get an existing BuildDefinition resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BuildDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BuildDefinition</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BuildDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BuildDefinition</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">) -&gt;</span> BuildDefinition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">,</span>
+        <span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">) -&gt;</span> BuildDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuildDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BuildDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuildDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BuildDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BuildDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BuildDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BuildDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BuildDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1271,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_citrigger_nodejs" style="color: inherit; text-decoration: inherit;">ci<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_pullrequesttrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -1505,7 +1542,7 @@ The following state arguments are supported:
 <a href="#override_nodejs" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverride">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverride">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use a this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1713,7 @@ The following state arguments are supported:
 <a href="#branchfilters_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1731,7 @@ The following state arguments are supported:
 <a href="#pathfilters_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2096,7 @@ The following state arguments are supported:
 <a href="#forks_nodejs" style="color: inherit; text-decoration: inherit;">forks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set permissions for Forked repositories.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2121,7 @@ The following state arguments are supported:
 <a href="#override_nodejs" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2353,7 @@ The following state arguments are supported:
 <a href="#branchfilters_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2325,7 +2362,7 @@ The following state arguments are supported:
 <a href="#pathfilters_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd></dl>
