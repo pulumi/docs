@@ -208,19 +208,32 @@ const myImage = new docker.Image(customImage, {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,22 +268,56 @@ const myImage = new docker.Image(customImage, {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
-        <span>resource_name</span>
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
+        <span>image_name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"></span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
+        <span>build</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"></span>
+    </dt>
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
+        <span>local_image_name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"></span>
+    </dt>
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
+        <span>registry</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"></span>
+    </dt>
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
+        <span>skip_push</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"></span>
+    </dt>
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -279,7 +326,7 @@ const myImage = new docker.Image(customImage, {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -303,7 +350,7 @@ const myImage = new docker.Image(customImage, {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -454,7 +501,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#dockerbuild">pulumi<wbr>Input<Docker<wbr>Build<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +509,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
@@ -472,7 +519,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#localimagename_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
@@ -482,7 +529,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistry">Image<wbr>Registry</a></span>
+        <span class="property-type"><a href="#imageregistry">pulumi<wbr>Input<Image<wbr>Registry<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +537,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#skippush_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -502,7 +549,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#dockerbuild">Input[Docker<wbr>Build<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +557,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
@@ -520,7 +567,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#local_image_name_python" style="color: inherit; text-decoration: inherit;">local_<wbr>image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
@@ -530,7 +577,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistry">Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistry">Input[Image<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +585,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#skip_push_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stages_nodejs" style="color: inherit; text-decoration: inherit;">stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -781,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -923,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachefrom_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean | <a href="#cachefrom">Cache<wbr>From</a></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean> | <a href="#cachefrom">pulumi<wbr>Input<Cache<wbr>From<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extraoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_from_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
+        <span class="property-type">pulumi.<wbr>Input[bool] | <a href="#cachefrom">Input[Cache<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -991,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extra_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
