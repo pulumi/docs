@@ -169,10 +169,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -438,19 +438,52 @@ const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouteMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouteMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouteMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouteMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RouteMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouteMapArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -485,22 +518,32 @@ const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RouteMapArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -509,7 +552,7 @@ const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -533,7 +576,7 @@ const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1082,7 +1125,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1091,7 +1134,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cenregionid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
 {{% /md %}}</dd><dt class="property-required"
@@ -1100,7 +1143,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mapresult_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 {{% /md %}}</dd><dt class="property-required"
@@ -1109,7 +1152,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 {{% /md %}}</dd><dt class="property-required"
@@ -1118,7 +1161,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transmitdirection_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1170,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#aspathmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Path<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,7 +1179,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cidrmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1188,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#communitymatchmode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1154,7 +1197,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#communityoperatemode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Operate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1163,7 +1206,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the route map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1215,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destinationchildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Child<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1224,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destinationcidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1233,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destinationinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1242,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destinationinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1251,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destinationroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Route<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1260,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#matchasns_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Asns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1269,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#matchcommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Community<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1278,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nextpriority_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1287,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#operatecommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">operate<wbr>Community<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1296,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preference_nodejs" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1305,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#prependaspaths_nodejs" style="color: inherit; text-decoration: inherit;">prepend<wbr>As<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1314,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#routetypes_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1323,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourcechildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Child<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1332,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1341,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1350,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceregionids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Region<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1359,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Route<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd></dl>
@@ -1329,7 +1372,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1338,7 +1381,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cen_region_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>region_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
 {{% /md %}}</dd><dt class="property-required"
@@ -1347,7 +1390,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#map_result_python" style="color: inherit; text-decoration: inherit;">map_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 {{% /md %}}</dd><dt class="property-required"
@@ -1356,7 +1399,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 {{% /md %}}</dd><dt class="property-required"
@@ -1365,7 +1408,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transmit_direction_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1417,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#as_path_match_mode_python" style="color: inherit; text-decoration: inherit;">as_<wbr>path_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1426,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cidr_match_mode_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1435,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#community_match_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1444,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#community_operate_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>operate_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1453,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1462,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destination_child_instance_types_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>child_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1471,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destination_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1480,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destination_instance_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1489,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destination_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1498,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#destination_route_table_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>route_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1507,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#match_asns_python" style="color: inherit; text-decoration: inherit;">match_<wbr>asns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1516,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#match_community_sets_python" style="color: inherit; text-decoration: inherit;">match_<wbr>community_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1525,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#next_priority_python" style="color: inherit; text-decoration: inherit;">next_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1534,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#operate_community_sets_python" style="color: inherit; text-decoration: inherit;">operate_<wbr>community_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1543,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1552,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#prepend_as_paths_python" style="color: inherit; text-decoration: inherit;">prepend_<wbr>as_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1518,7 +1561,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#route_types_python" style="color: inherit; text-decoration: inherit;">route_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1570,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_child_instance_types_python" style="color: inherit; text-decoration: inherit;">source_<wbr>child_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1579,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_instance_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1588,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1597,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_region_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>region_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1606,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_route_table_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>route_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd></dl>
@@ -1700,20 +1743,51 @@ Get an existing RouteMap resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RouteMap</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RouteMap</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">route_map_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteMap</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">route_map_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> RouteMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouteMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouteMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RouteMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouteMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RouteMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouteMapState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RouteMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RouteMapState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2350,7 +2424,7 @@ The following state arguments are supported:
 <a href="#state_aspathmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Path<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2368,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_cenregionid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_cidrmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_communitymatchmode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Match<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2395,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_communityoperatemode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Operate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2404,7 +2478,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the route map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2487,7 @@ The following state arguments are supported:
 <a href="#state_destinationchildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Child<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2496,7 @@ The following state arguments are supported:
 <a href="#state_destinationcidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2505,7 @@ The following state arguments are supported:
 <a href="#state_destinationinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2514,7 @@ The following state arguments are supported:
 <a href="#state_destinationinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2523,7 @@ The following state arguments are supported:
 <a href="#state_destinationroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Route<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2532,7 @@ The following state arguments are supported:
 <a href="#state_mapresult_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2467,7 +2541,7 @@ The following state arguments are supported:
 <a href="#state_matchasns_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Asns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2476,7 +2550,7 @@ The following state arguments are supported:
 <a href="#state_matchcommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Community<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2485,7 +2559,7 @@ The following state arguments are supported:
 <a href="#state_nextpriority_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2568,7 @@ The following state arguments are supported:
 <a href="#state_operatecommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">operate<wbr>Community<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2577,7 @@ The following state arguments are supported:
 <a href="#state_preference_nodejs" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2512,7 +2586,7 @@ The following state arguments are supported:
 <a href="#state_prependaspaths_nodejs" style="color: inherit; text-decoration: inherit;">prepend<wbr>As<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2521,7 +2595,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2530,7 +2604,7 @@ The following state arguments are supported:
 <a href="#state_routemapid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Map<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2538,7 +2612,7 @@ The following state arguments are supported:
 <a href="#state_routetypes_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2621,7 @@ The following state arguments are supported:
 <a href="#state_sourcechildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Child<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2630,7 @@ The following state arguments are supported:
 <a href="#state_sourceinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2639,7 @@ The following state arguments are supported:
 <a href="#state_sourceinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2574,7 +2648,7 @@ The following state arguments are supported:
 <a href="#state_sourceregionids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Region<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2583,7 +2657,7 @@ The following state arguments are supported:
 <a href="#state_sourceroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Route<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2592,7 +2666,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The status of route map. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2601,7 +2675,7 @@ The following state arguments are supported:
 <a href="#state_transmitdirection_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 {{% /md %}}</dd></dl>
@@ -2614,7 +2688,7 @@ The following state arguments are supported:
 <a href="#state_as_path_match_mode_python" style="color: inherit; text-decoration: inherit;">as_<wbr>path_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2623,7 +2697,7 @@ The following state arguments are supported:
 <a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2632,7 +2706,7 @@ The following state arguments are supported:
 <a href="#state_cen_region_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>region_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2641,7 +2715,7 @@ The following state arguments are supported:
 <a href="#state_cidr_match_mode_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2724,7 @@ The following state arguments are supported:
 <a href="#state_community_match_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>match_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2659,7 +2733,7 @@ The following state arguments are supported:
 <a href="#state_community_operate_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>operate_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2668,7 +2742,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2677,7 +2751,7 @@ The following state arguments are supported:
 <a href="#state_destination_child_instance_types_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>child_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2686,7 +2760,7 @@ The following state arguments are supported:
 <a href="#state_destination_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2695,7 +2769,7 @@ The following state arguments are supported:
 <a href="#state_destination_instance_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2704,7 +2778,7 @@ The following state arguments are supported:
 <a href="#state_destination_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2713,7 +2787,7 @@ The following state arguments are supported:
 <a href="#state_destination_route_table_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>route_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2722,7 +2796,7 @@ The following state arguments are supported:
 <a href="#state_map_result_python" style="color: inherit; text-decoration: inherit;">map_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2805,7 @@ The following state arguments are supported:
 <a href="#state_match_asns_python" style="color: inherit; text-decoration: inherit;">match_<wbr>asns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2814,7 @@ The following state arguments are supported:
 <a href="#state_match_community_sets_python" style="color: inherit; text-decoration: inherit;">match_<wbr>community_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2823,7 @@ The following state arguments are supported:
 <a href="#state_next_priority_python" style="color: inherit; text-decoration: inherit;">next_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2832,7 @@ The following state arguments are supported:
 <a href="#state_operate_community_sets_python" style="color: inherit; text-decoration: inherit;">operate_<wbr>community_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2841,7 @@ The following state arguments are supported:
 <a href="#state_preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2850,7 @@ The following state arguments are supported:
 <a href="#state_prepend_as_paths_python" style="color: inherit; text-decoration: inherit;">prepend_<wbr>as_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2859,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2794,7 +2868,7 @@ The following state arguments are supported:
 <a href="#state_route_map_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>map_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2802,7 +2876,7 @@ The following state arguments are supported:
 <a href="#state_route_types_python" style="color: inherit; text-decoration: inherit;">route_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2885,7 @@ The following state arguments are supported:
 <a href="#state_source_child_instance_types_python" style="color: inherit; text-decoration: inherit;">source_<wbr>child_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2894,7 @@ The following state arguments are supported:
 <a href="#state_source_instance_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2829,7 +2903,7 @@ The following state arguments are supported:
 <a href="#state_source_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2912,7 @@ The following state arguments are supported:
 <a href="#state_source_region_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>region_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2847,7 +2921,7 @@ The following state arguments are supported:
 <a href="#state_source_route_table_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>route_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2856,7 +2930,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The status of route map. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2865,7 +2939,7 @@ The following state arguments are supported:
 <a href="#state_transmit_direction_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 {{% /md %}}</dd></dl>

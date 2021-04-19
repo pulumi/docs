@@ -146,8 +146,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/eci"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -402,19 +402,42 @@ const example = new alicloud.eci.ContainerGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupEciSecurityContextArgs]</span> = None<span class="p">, </span><span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupHostAliasArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupInitContainerArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupContainerArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+                   <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerGroupDnsConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerGroupEciSecurityContextArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupHostAliasArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupInitContainerArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+                   <span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupVolumeArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -449,22 +472,32 @@ const example = new alicloud.eci.ContainerGroup("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -473,7 +506,7 @@ const example = new alicloud.eci.ContainerGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -497,7 +530,7 @@ const example = new alicloud.eci.ContainerGroup("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -862,7 +895,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#containergroupname_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -871,7 +904,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainer">Container<wbr>Group<wbr>Container[]</a></span>
+        <span class="property-type"><a href="#containergroupcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Container<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of containers.
 {{% /md %}}</dd><dt class="property-required"
@@ -880,7 +913,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the container group belongs. Container groups within the same security group can access each other.
 {{% /md %}}</dd><dt class="property-required"
@@ -889,7 +922,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the VSwitch. Currently, container groups can only be deployed in VPC networks. The number of IP addresses in the VSwitch CIDR block determines the maximum number of container groups that can be created in the VSwitch. Before you can create an ECI instance, plan the CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -898,7 +931,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +940,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfig">Container<wbr>Group<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfig">pulumi.<wbr>Input<Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The structure of dnsConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +949,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ecisecuritycontext_nodejs" style="color: inherit; text-decoration: inherit;">eci<wbr>Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontext">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontext">pulumi.<wbr>Input<Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +957,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hostaliases_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergrouphostalias">Container<wbr>Group<wbr>Host<wbr>Alias[]</a></span>
+        <span class="property-type"><a href="#containergrouphostalias">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}HostAliases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -933,7 +966,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initcontainers_nodejs" style="color: inherit; text-decoration: inherit;">init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainer">Container<wbr>Group<wbr>Init<wbr>Container[]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of initContainers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -942,7 +975,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +984,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +993,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ramrolename_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +1002,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +1011,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group. Default to `Always`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +1020,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +1028,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolume">Container<wbr>Group<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#containergroupvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1037,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the zone where you want to deploy the container group. If no value is specified, the system assigns a zone to the container group. By default, no value is specified.
 {{% /md %}}</dd></dl>
@@ -1017,7 +1050,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#container_group_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1026,7 +1059,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainer">Sequence[Container<wbr>Group<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupcontainer">Input[Container<wbr>Group<wbr>Container<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of containers.
 {{% /md %}}</dd><dt class="property-required"
@@ -1035,7 +1068,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the container group belongs. Container groups within the same security group can access each other.
 {{% /md %}}</dd><dt class="property-required"
@@ -1044,7 +1077,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the VSwitch. Currently, container groups can only be deployed in VPC networks. The number of IP addresses in the VSwitch CIDR block determines the maximum number of container groups that can be created in the VSwitch. Before you can create an ECI instance, plan the CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1086,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1095,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfig">Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfig">Input[Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The structure of dnsConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1104,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#eci_security_context_python" style="color: inherit; text-decoration: inherit;">eci_<wbr>security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontext">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontext">Input[Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1112,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergrouphostalias">Sequence[Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergrouphostalias">Input[Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}HostAliases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +1121,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainer">Sequence[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainer">Input[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of initContainers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +1130,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1139,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1148,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ram_role_name_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1157,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1166,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group. Default to `Always`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1175,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1183,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolume">Sequence[Container<wbr>Group<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupvolume">Input[Container<wbr>Group<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1192,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the zone where you want to deploy the container group. If no value is specified, the system assigns a zone to the container group. By default, no value is specified.
 {{% /md %}}</dd></dl>
@@ -1264,20 +1297,40 @@ Get an existing ContainerGroup resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContainerGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContainerGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupEciSecurityContextArgs]</span> = None<span class="p">, </span><span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupHostAliasArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupInitContainerArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContainerGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupContainerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerGroupDnsConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerGroupEciSecurityContextArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupHostAliasArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupInitContainerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerGroupVolumeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ContainerGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContainerGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContainerGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ContainerGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1714,7 +1767,7 @@ The following state arguments are supported:
 <a href="#state_containergroupname_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainer">Container<wbr>Group<wbr>Container[]</a></span>
+        <span class="property-type"><a href="#containergroupcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Container<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of containers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1785,7 @@ The following state arguments are supported:
 <a href="#state_cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfig">Container<wbr>Group<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfig">pulumi.<wbr>Input<Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The structure of dnsConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1750,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_ecisecuritycontext_nodejs" style="color: inherit; text-decoration: inherit;">eci<wbr>Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontext">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontext">pulumi.<wbr>Input<Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1758,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_hostaliases_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergrouphostalias">Container<wbr>Group<wbr>Host<wbr>Alias[]</a></span>
+        <span class="property-type"><a href="#containergrouphostalias">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}HostAliases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1820,7 @@ The following state arguments are supported:
 <a href="#state_initcontainers_nodejs" style="color: inherit; text-decoration: inherit;">init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainer">Container<wbr>Group<wbr>Init<wbr>Container[]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of initContainers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1829,7 @@ The following state arguments are supported:
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1838,7 @@ The following state arguments are supported:
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_ramrolename_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1856,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1865,7 @@ The following state arguments are supported:
 <a href="#state_restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group. Default to `Always`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1874,7 @@ The following state arguments are supported:
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the container group belongs. Container groups within the same security group can access each other.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1883,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1892,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1900,7 @@ The following state arguments are supported:
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolume">Container<wbr>Group<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#containergroupvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the VSwitch. Currently, container groups can only be deployed in VPC networks. The number of IP addresses in the VSwitch CIDR block determines the maximum number of container groups that can be created in the VSwitch. Before you can create an ECI instance, plan the CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the zone where you want to deploy the container group. If no value is specified, the system assigns a zone to the container group. By default, no value is specified.
 {{% /md %}}</dd></dl>
@@ -1878,7 +1931,7 @@ The following state arguments are supported:
 <a href="#state_container_group_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainer">Sequence[Container<wbr>Group<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupcontainer">Input[Container<wbr>Group<wbr>Container<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of containers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfig">Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfig">Input[Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The structure of dnsConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_eci_security_context_python" style="color: inherit; text-decoration: inherit;">eci_<wbr>security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontext">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontext">Input[Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1975,7 @@ The following state arguments are supported:
 <a href="#state_host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergrouphostalias">Sequence[Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergrouphostalias">Input[Container<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}HostAliases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1984,7 @@ The following state arguments are supported:
 <a href="#state_init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainer">Sequence[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainer">Input[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of initContainers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1993,7 @@ The following state arguments are supported:
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +2002,7 @@ The following state arguments are supported:
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +2011,7 @@ The following state arguments are supported:
 <a href="#state_ram_role_name_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +2020,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2029,7 @@ The following state arguments are supported:
 <a href="#state_restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group. Default to `Always`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the container group belongs. Container groups within the same security group can access each other.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +2056,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2064,7 @@ The following state arguments are supported:
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolume">Sequence[Container<wbr>Group<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupvolume">Input[Container<wbr>Group<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2073,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the VSwitch. Currently, container groups can only be deployed in VPC networks. The number of IP addresses in the VSwitch CIDR block determines the maximum number of container groups that can be created in the VSwitch. Before you can create an ECI instance, plan the CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2082,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the zone where you want to deploy the container group. If no value is specified, the system assigns a zone to the container group. By default, no value is specified.
 {{% /md %}}</dd></dl>
@@ -2309,7 +2362,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image of the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -2318,7 +2371,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2380,7 @@ The following state arguments are supported:
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2389,7 @@ The following state arguments are supported:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The commands run by the init container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2398,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2407,7 @@ The following state arguments are supported:
 <a href="#environmentvars_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainerenvironmentvar">Container<wbr>Group<wbr>Container<wbr>Environment<wbr>Var[]</a></span>
+        <span class="property-type"><a href="#containergroupcontainerenvironmentvar">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of environmentVars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2416,7 @@ The following state arguments are supported:
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number GPUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2372,7 +2425,7 @@ The following state arguments are supported:
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The restart policy of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2434,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2443,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainerport">Container<wbr>Group<wbr>Container<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#containergroupcontainerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Container<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2399,7 +2452,7 @@ The following state arguments are supported:
 <a href="#ready_nodejs" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2460,7 @@ The following state arguments are supported:
 <a href="#restartcount_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2468,7 @@ The following state arguments are supported:
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainervolumemount">Container<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#containergroupcontainervolumemount">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of volumeMounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2477,7 @@ The following state arguments are supported:
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
 {{% /md %}}</dd></dl>
@@ -2437,7 +2490,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image of the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -2446,7 +2499,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2508,7 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2517,7 @@ The following state arguments are supported:
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The commands run by the init container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2526,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2535,7 @@ The following state arguments are supported:
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainerenvironmentvar">Sequence[Container<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupcontainerenvironmentvar">Input[Container<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of environmentVars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2544,7 @@ The following state arguments are supported:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number GPUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2553,7 @@ The following state arguments are supported:
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The restart policy of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2562,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2518,7 +2571,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainerport">Sequence[Container<wbr>Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupcontainerport">Input[Container<wbr>Group<wbr>Container<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2527,7 +2580,7 @@ The following state arguments are supported:
 <a href="#ready_python" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2588,7 @@ The following state arguments are supported:
 <a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2543,7 +2596,7 @@ The following state arguments are supported:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupcontainervolumemount">Sequence[Container<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupcontainervolumemount">Input[Container<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of volumeMounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2552,7 +2605,7 @@ The following state arguments are supported:
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
 {{% /md %}}</dd></dl>
@@ -2611,7 +2664,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the variable. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2673,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -2633,7 +2686,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the variable. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2695,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -2701,7 +2754,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2763,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values: TCP and UDP.
 {{% /md %}}</dd></dl>
@@ -2723,7 +2776,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2732,7 +2785,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values: TCP and UDP.
 {{% /md %}}</dd></dl>
@@ -2809,7 +2862,7 @@ The following state arguments are supported:
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2871,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2880,7 @@ The following state arguments are supported:
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Default to `false`.
 {{% /md %}}</dd></dl>
@@ -2840,7 +2893,7 @@ The following state arguments are supported:
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2902,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2911,7 @@ The following state arguments are supported:
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Default to `false`.
 {{% /md %}}</dd></dl>
@@ -2935,7 +2988,7 @@ The following state arguments are supported:
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2944,7 +2997,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfigoption">Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfigoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2953,7 +3006,7 @@ The following state arguments are supported:
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
 {{% /md %}}</dd></dl>
@@ -2966,7 +3019,7 @@ The following state arguments are supported:
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2975,7 +3028,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdnsconfigoption">Sequence[Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupdnsconfigoption">Input[Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2984,7 +3037,7 @@ The following state arguments are supported:
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
 {{% /md %}}</dd></dl>
@@ -3043,7 +3096,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3052,7 +3105,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3065,7 +3118,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3074,7 +3127,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3113,7 +3166,7 @@ The following state arguments are supported:
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontextsysctl">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl[]</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontextsysctl">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3125,7 +3178,7 @@ The following state arguments are supported:
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupecisecuritycontextsysctl">Sequence[Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupecisecuritycontextsysctl">Input[Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3183,7 +3236,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3192,7 +3245,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3205,7 +3258,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3214,7 +3267,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3273,7 +3326,7 @@ The following state arguments are supported:
 <a href="#hostnames_nodejs" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Adds a host name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3335,7 @@ The following state arguments are supported:
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Adds an IP address.
 {{% /md %}}</dd></dl>
@@ -3295,7 +3348,7 @@ The following state arguments are supported:
 <a href="#hostnames_python" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Adds a host name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3304,7 +3357,7 @@ The following state arguments are supported:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Adds an IP address.
 {{% /md %}}</dd></dl>
@@ -3575,7 +3628,7 @@ The following state arguments are supported:
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3637,7 @@ The following state arguments are supported:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The commands run by the init container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3593,7 +3646,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3602,7 +3655,7 @@ The following state arguments are supported:
 <a href="#environmentvars_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainerenvironmentvar">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var[]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainerenvironmentvar">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of environmentVars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3664,7 @@ The following state arguments are supported:
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number GPUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3673,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3629,7 +3682,7 @@ The following state arguments are supported:
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The restart policy of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3638,7 +3691,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3647,7 +3700,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3656,7 +3709,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainerport">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3665,7 +3718,7 @@ The following state arguments are supported:
 <a href="#ready_nodejs" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3726,7 @@ The following state arguments are supported:
 <a href="#restartcount_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3734,7 @@ The following state arguments are supported:
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainervolumemount">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainervolumemount">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The structure of volumeMounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3690,7 +3743,7 @@ The following state arguments are supported:
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
 {{% /md %}}</dd></dl>
@@ -3703,7 +3756,7 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3712,7 +3765,7 @@ The following state arguments are supported:
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The commands run by the init container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3721,7 +3774,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3730,7 +3783,7 @@ The following state arguments are supported:
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainerenvironmentvar">Sequence[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainerenvironmentvar">Input[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of environmentVars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3739,7 +3792,7 @@ The following state arguments are supported:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number GPUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3748,7 +3801,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3757,7 +3810,7 @@ The following state arguments are supported:
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The restart policy of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3766,7 +3819,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3775,7 +3828,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3784,7 +3837,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainerport">Sequence[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainerport">Input[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3793,7 +3846,7 @@ The following state arguments are supported:
 <a href="#ready_python" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3854,7 @@ The following state arguments are supported:
 <a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3862,7 @@ The following state arguments are supported:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupinitcontainervolumemount">Sequence[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupinitcontainervolumemount">Input[Container<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The structure of volumeMounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3818,7 +3871,7 @@ The following state arguments are supported:
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
 {{% /md %}}</dd></dl>
@@ -3877,7 +3930,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the variable. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3886,7 +3939,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3899,7 +3952,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the variable. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3908,7 +3961,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the variable. The value can be 0 to 256 characters in length.
 {{% /md %}}</dd></dl>
@@ -3967,7 +4020,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3976,7 +4029,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values: TCP and UDP.
 {{% /md %}}</dd></dl>
@@ -3989,7 +4042,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3998,7 +4051,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values: TCP and UDP.
 {{% /md %}}</dd></dl>
@@ -4075,7 +4128,7 @@ The following state arguments are supported:
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4084,7 +4137,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4146,7 @@ The following state arguments are supported:
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Default to `false`.
 {{% /md %}}</dd></dl>
@@ -4106,7 +4159,7 @@ The following state arguments are supported:
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4115,7 +4168,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4124,7 +4177,7 @@ The following state arguments are supported:
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Default to `false`.
 {{% /md %}}</dd></dl>
@@ -4345,7 +4398,7 @@ The following state arguments are supported:
 <a href="#configfilevolumeconfigfiletopaths_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolumeconfigfilevolumeconfigfiletopath">Container<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#containergroupvolumeconfigfilevolumeconfigfiletopath">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}ConfigFileVolumeConfigFileToPaths.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4354,7 +4407,7 @@ The following state arguments are supported:
 <a href="#diskvolumediskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Volume<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4363,7 +4416,7 @@ The following state arguments are supported:
 <a href="#diskvolumefstype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Volume<wbr>Fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system type of DiskVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4425,7 @@ The following state arguments are supported:
 <a href="#flexvolumedriver_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4381,7 +4434,7 @@ The following state arguments are supported:
 <a href="#flexvolumefstype_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4390,7 +4443,7 @@ The following state arguments are supported:
 <a href="#flexvolumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects. Each object is a key-value pair contained in a JSON string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4399,7 +4452,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4408,7 +4461,7 @@ The following state arguments are supported:
 <a href="#nfsvolumepath_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4417,7 +4470,7 @@ The following state arguments are supported:
 <a href="#nfsvolumereadonly_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The nfs volume read only. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4426,7 +4479,7 @@ The following state arguments are supported:
 <a href="#nfsvolumeserver_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4435,7 +4488,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd></dl>
@@ -4448,7 +4501,7 @@ The following state arguments are supported:
 <a href="#config_file_volume_config_file_to_paths_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>volume_<wbr>config_<wbr>file_<wbr>to_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupvolumeconfigfilevolumeconfigfiletopath">Sequence[Container<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containergroupvolumeconfigfilevolumeconfigfiletopath">Input[Container<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}ConfigFileVolumeConfigFileToPaths.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4457,7 +4510,7 @@ The following state arguments are supported:
 <a href="#disk_volume_disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>volume_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4466,7 +4519,7 @@ The following state arguments are supported:
 <a href="#disk_volume_fs_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>volume_<wbr>fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system type of DiskVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4475,7 +4528,7 @@ The following state arguments are supported:
 <a href="#flex_volume_driver_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4484,7 +4537,7 @@ The following state arguments are supported:
 <a href="#flex_volume_fs_type_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4493,7 +4546,7 @@ The following state arguments are supported:
 <a href="#flex_volume_options_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects. Each object is a key-value pair contained in a JSON string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4502,7 +4555,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the mounted volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4511,7 +4564,7 @@ The following state arguments are supported:
 <a href="#nfs_volume_path_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4520,7 +4573,7 @@ The following state arguments are supported:
 <a href="#nfs_volume_read_only_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The nfs volume read only. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4529,7 +4582,7 @@ The following state arguments are supported:
 <a href="#nfs_volume_server_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4538,7 +4591,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd></dl>
@@ -4597,7 +4650,7 @@ The following state arguments are supported:
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4606,7 +4659,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative file path.
 {{% /md %}}</dd></dl>
@@ -4619,7 +4672,7 @@ The following state arguments are supported:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4628,7 +4681,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative file path.
 {{% /md %}}</dd></dl>

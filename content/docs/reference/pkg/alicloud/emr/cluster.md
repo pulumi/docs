@@ -1332,19 +1332,47 @@ const gateway = new alicloud.emr.Cluster("gateway", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterBootstrapActionArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterHostGroupArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1379,22 +1407,32 @@ const gateway = new alicloud.emr.Cluster("gateway", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1403,7 +1441,7 @@ const gateway = new alicloud.emr.Cluster("gateway", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1427,7 +1465,7 @@ const gateway = new alicloud.emr.Cluster("gateway", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1882,7 +1920,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-required"
@@ -1891,7 +1929,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#emrver_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Ver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd><dt class="property-required"
@@ -1900,7 +1938,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1947,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Bootstrap<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1955,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1926,7 +1964,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deposittype_nodejs" style="color: inherit; text-decoration: inherit;">deposit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1973,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#easenable_nodejs" style="color: inherit; text-decoration: inherit;">eas<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}High security cluster (true) or not. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1944,7 +1982,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#highavailabilityenable_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +1991,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostgroups_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Host<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2000,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#isopenpublicip_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Open<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +2008,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Ssh key pair.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2017,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterpwd_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Master ssh password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2026,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2035,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optionsoftwarelists_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Software<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +2044,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +2053,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#relatedclusterid_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2024,7 +2062,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2071,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sshenable_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2080,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2089,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#uselocalmetadb_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Metadb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local metadb. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2098,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#userdefinedemrecsrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2107,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
 {{% /md %}}</dd></dl>
@@ -2082,7 +2120,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-required"
@@ -2091,7 +2129,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#emr_ver_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>ver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd><dt class="property-required"
@@ -2100,7 +2138,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2147,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Input[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2155,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2164,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deposit_type_python" style="color: inherit; text-decoration: inherit;">deposit_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2173,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#eas_enable_python" style="color: inherit; text-decoration: inherit;">eas_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}High security cluster (true) or not. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2182,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#high_availability_enable_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2191,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Sequence[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">Input[Cluster<wbr>Host<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2200,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#is_open_public_ip_python" style="color: inherit; text-decoration: inherit;">is_<wbr>open_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2170,7 +2208,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Ssh key pair.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2217,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#master_pwd_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Master ssh password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2188,7 +2226,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2235,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2244,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2253,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#related_cluster_id_python" style="color: inherit; text-decoration: inherit;">related_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2224,7 +2262,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2233,7 +2271,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ssh_enable_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2242,7 +2280,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2289,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#use_local_metadb_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>metadb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local metadb. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2298,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#user_defined_emr_ecs_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2269,7 +2307,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
 {{% /md %}}</dd></dl>
@@ -2338,20 +2376,44 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterBootstrapActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterHostGroupArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2860,7 +2922,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Bootstrap<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2930,7 @@ The following state arguments are supported:
 <a href="#state_chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2877,7 +2939,7 @@ The following state arguments are supported:
 <a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2886,7 +2948,7 @@ The following state arguments are supported:
 <a href="#state_deposittype_nodejs" style="color: inherit; text-decoration: inherit;">deposit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2895,7 +2957,7 @@ The following state arguments are supported:
 <a href="#state_easenable_nodejs" style="color: inherit; text-decoration: inherit;">eas<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}High security cluster (true) or not. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2904,7 +2966,7 @@ The following state arguments are supported:
 <a href="#state_emrver_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Ver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2913,7 +2975,7 @@ The following state arguments are supported:
 <a href="#state_highavailabilityenable_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2922,7 +2984,7 @@ The following state arguments are supported:
 <a href="#state_hostgroups_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Host<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +2993,7 @@ The following state arguments are supported:
 <a href="#state_isopenpublicip_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Open<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +3001,7 @@ The following state arguments are supported:
 <a href="#state_keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Ssh key pair.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2948,7 +3010,7 @@ The following state arguments are supported:
 <a href="#state_masterpwd_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Master ssh password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2957,7 +3019,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +3028,7 @@ The following state arguments are supported:
 <a href="#state_optionsoftwarelists_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Software<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2975,7 +3037,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2984,7 +3046,7 @@ The following state arguments are supported:
 <a href="#state_relatedclusterid_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2993,7 +3055,7 @@ The following state arguments are supported:
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3002,7 +3064,7 @@ The following state arguments are supported:
 <a href="#state_sshenable_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3011,7 +3073,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3020,7 +3082,7 @@ The following state arguments are supported:
 <a href="#state_uselocalmetadb_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Metadb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local metadb. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +3091,7 @@ The following state arguments are supported:
 <a href="#state_userdefinedemrecsrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +3100,7 @@ The following state arguments are supported:
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3047,7 +3109,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 {{% /md %}}</dd></dl>
@@ -3060,7 +3122,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Input[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3068,7 +3130,7 @@ The following state arguments are supported:
 <a href="#state_charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3077,7 +3139,7 @@ The following state arguments are supported:
 <a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3086,7 +3148,7 @@ The following state arguments are supported:
 <a href="#state_deposit_type_python" style="color: inherit; text-decoration: inherit;">deposit_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3095,7 +3157,7 @@ The following state arguments are supported:
 <a href="#state_eas_enable_python" style="color: inherit; text-decoration: inherit;">eas_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}High security cluster (true) or not. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3104,7 +3166,7 @@ The following state arguments are supported:
 <a href="#state_emr_ver_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>ver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3175,7 @@ The following state arguments are supported:
 <a href="#state_high_availability_enable_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3184,7 @@ The following state arguments are supported:
 <a href="#state_host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Sequence[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">Input[Cluster<wbr>Host<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3193,7 @@ The following state arguments are supported:
 <a href="#state_is_open_public_ip_python" style="color: inherit; text-decoration: inherit;">is_<wbr>open_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +3201,7 @@ The following state arguments are supported:
 <a href="#state_key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Ssh key pair.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3148,7 +3210,7 @@ The following state arguments are supported:
 <a href="#state_master_pwd_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Master ssh password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3157,7 +3219,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3166,7 +3228,7 @@ The following state arguments are supported:
 <a href="#state_option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3175,7 +3237,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3184,7 +3246,7 @@ The following state arguments are supported:
 <a href="#state_related_cluster_id_python" style="color: inherit; text-decoration: inherit;">related_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3255,7 @@ The following state arguments are supported:
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3202,7 +3264,7 @@ The following state arguments are supported:
 <a href="#state_ssh_enable_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3211,7 +3273,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3220,7 +3282,7 @@ The following state arguments are supported:
 <a href="#state_use_local_metadb_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>metadb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local metadb. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3229,7 +3291,7 @@ The following state arguments are supported:
 <a href="#state_user_defined_emr_ecs_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3238,7 +3300,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3309,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 {{% /md %}}</dd></dl>
@@ -3333,7 +3395,7 @@ The following state arguments are supported:
 <a href="#arg_nodejs" style="color: inherit; text-decoration: inherit;">arg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}bootstrap action args, e.g. "--a=b".
 {{% /md %}}</dd><dt class="property-optional"
@@ -3342,7 +3404,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3351,7 +3413,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}bootstrap action path, e.g. "oss://bucket/path".
 {{% /md %}}</dd></dl>
@@ -3364,7 +3426,7 @@ The following state arguments are supported:
 <a href="#arg_python" style="color: inherit; text-decoration: inherit;">arg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}bootstrap action args, e.g. "--a=b".
 {{% /md %}}</dd><dt class="property-optional"
@@ -3373,7 +3435,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3382,7 +3444,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}bootstrap action path, e.g. "oss://bucket/path".
 {{% /md %}}</dd></dl>
@@ -3655,7 +3717,7 @@ The following state arguments are supported:
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Auto renew for prepaid, true of false. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3726,7 @@ The following state arguments are supported:
 <a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3673,7 +3735,7 @@ The following state arguments are supported:
 <a href="#diskcapacity_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data disk capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3682,7 +3744,7 @@ The following state arguments are supported:
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data disk count.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3691,7 +3753,7 @@ The following state arguments are supported:
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,local_disk,cloud_essd.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3700,7 +3762,7 @@ The following state arguments are supported:
 <a href="#gpudriver_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3708,7 +3770,7 @@ The following state arguments are supported:
 <a href="#hostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}host group name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3717,7 +3779,7 @@ The following state arguments are supported:
 <a href="#hostgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}host group type, supported value: MASTER, CORE or TASK, supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3726,7 +3788,7 @@ The following state arguments are supported:
 <a href="#instancelist_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance list for cluster scale down. This value follows the json format, e.g. ["instance_id1","instance_id2"]. escape character for " is \".
 {{% /md %}}</dd><dt class="property-optional"
@@ -3735,7 +3797,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host Ecs instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3744,7 +3806,7 @@ The following state arguments are supported:
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host number in this group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3753,7 +3815,7 @@ The following state arguments are supported:
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3762,7 +3824,7 @@ The following state arguments are supported:
 <a href="#sysdiskcapacity_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System disk capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3771,7 +3833,7 @@ The following state arguments are supported:
 <a href="#sysdisktype_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.
 {{% /md %}}</dd></dl>
@@ -3784,7 +3846,7 @@ The following state arguments are supported:
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Auto renew for prepaid, true of false. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3793,7 +3855,7 @@ The following state arguments are supported:
 <a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3802,7 +3864,7 @@ The following state arguments are supported:
 <a href="#disk_capacity_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data disk capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3811,7 +3873,7 @@ The following state arguments are supported:
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data disk count.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3820,7 +3882,7 @@ The following state arguments are supported:
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,local_disk,cloud_essd.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3829,7 +3891,7 @@ The following state arguments are supported:
 <a href="#gpu_driver_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3899,7 @@ The following state arguments are supported:
 <a href="#host_group_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}host group name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3846,7 +3908,7 @@ The following state arguments are supported:
 <a href="#host_group_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}host group type, supported value: MASTER, CORE or TASK, supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3855,7 +3917,7 @@ The following state arguments are supported:
 <a href="#instance_list_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance list for cluster scale down. This value follows the json format, e.g. ["instance_id1","instance_id2"]. escape character for " is \".
 {{% /md %}}</dd><dt class="property-optional"
@@ -3864,7 +3926,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host Ecs instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3873,7 +3935,7 @@ The following state arguments are supported:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host number in this group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3882,7 +3944,7 @@ The following state arguments are supported:
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3891,7 +3953,7 @@ The following state arguments are supported:
 <a href="#sys_disk_capacity_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>disk_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System disk capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3900,7 +3962,7 @@ The following state arguments are supported:
 <a href="#sys_disk_type_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.
 {{% /md %}}</dd></dl>

@@ -26,19 +26,61 @@ Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EdgeKubernetesAddonArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EdgeKubernetesLogConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EdgeKubernetesWorkerDataDiskArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEdgeKubernetes</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EdgeKubernetes</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEdgeKubernetes</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EdgeKubernetes</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EdgeKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +115,32 @@ Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EdgeKubernetesArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +149,7 @@ Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +173,7 @@ Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -820,7 +872,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd><dt class="property-required"
@@ -829,7 +881,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workernumber_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd><dt class="property-required"
@@ -838,7 +890,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workervswitchids_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +898,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesaddon">Edge<wbr>Kubernetes<wbr>Addon[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">pulumi.<wbr>Input<pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Addon<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +906,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +915,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +924,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +933,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clustercacert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +942,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable cluster deletion protection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +951,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +960,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#installcloudmonitor_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Cloud<wbr>Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +969,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#isenterprisesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +978,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +987,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +996,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +1004,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +1013,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +1021,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#newnatgateway_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +1030,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nodecidrmask_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Cidr<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +1039,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password`, `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +1048,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}[Flannel Specific] The CIDR block for the pod network when using Flannel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1057,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#proxymode_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +1066,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rdsinstances_nodejs" style="color: inherit; text-decoration: inherit;">rds<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1074,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1083,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1092,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1101,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#slbinternetenabled_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Internet<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1110,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1119,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1128,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1137,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1146,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1155,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1164,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerdisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1173,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerdisksnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1182,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workerinstancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1142,7 +1194,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_instance_types_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd><dt class="property-required"
@@ -1151,7 +1203,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_number_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd><dt class="property-required"
@@ -1160,7 +1212,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1168,7 +1220,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesaddon">Sequence[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Input[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1228,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1237,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1246,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1255,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cluster_ca_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1264,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable cluster deletion protection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1273,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1282,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#install_cloud_monitor_python" style="color: inherit; text-decoration: inherit;">install_<wbr>cloud_<wbr>monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1291,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#is_enterprise_security_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1300,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1309,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1318,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Input[Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1326,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1335,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1343,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#new_nat_gateway_python" style="color: inherit; text-decoration: inherit;">new_<wbr>nat_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1300,7 +1352,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#node_cidr_mask_python" style="color: inherit; text-decoration: inherit;">node_<wbr>cidr_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1361,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password`, `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1370,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}[Flannel Specific] The CIDR block for the pod network when using Flannel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1379,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#proxy_mode_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1388,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rds_instances_python" style="color: inherit; text-decoration: inherit;">rds_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1396,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1405,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1414,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1423,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#slb_internet_enabled_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>internet_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1432,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1441,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1450,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1459,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Input[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1468,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1477,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1486,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1495,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_disk_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1504,7 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
 <a href="#worker_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,20 +1816,65 @@ Get an existing EdgeKubernetes resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EdgeKubernetesState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EdgeKubernetes</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EdgeKubernetesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EdgeKubernetes</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesCertificateAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> EdgeKubernetes</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EdgeKubernetesAddonArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EdgeKubernetesCertificateAuthorityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EdgeKubernetesConnectionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EdgeKubernetesLogConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EdgeKubernetesWorkerDataDiskArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EdgeKubernetesWorkerNodeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> EdgeKubernetes</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEdgeKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EdgeKubernetesState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EdgeKubernetes</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEdgeKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EdgeKubernetesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EdgeKubernetes</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EdgeKubernetes</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EdgeKubernetesState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EdgeKubernetes</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EdgeKubernetesState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2652,7 +2749,7 @@ The following state arguments are supported:
 <a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesaddon">Edge<wbr>Kubernetes<wbr>Addon[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">pulumi.<wbr>Input<pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Addon<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2757,7 @@ The following state arguments are supported:
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2766,7 @@ The following state arguments are supported:
 <a href="#state_certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetescertificateauthority">Edge<wbr>Kubernetes<wbr>Certificate<wbr>Authority</a></span>
+        <span class="property-type"><a href="#edgekubernetescertificateauthority">pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Certificate<wbr>Authority<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2678,7 +2775,7 @@ The following state arguments are supported:
 <a href="#state_clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2784,7 @@ The following state arguments are supported:
 <a href="#state_clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2696,7 +2793,7 @@ The following state arguments are supported:
 <a href="#state_clustercacert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2705,7 +2802,7 @@ The following state arguments are supported:
 <a href="#state_connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Connections<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2810,7 @@ The following state arguments are supported:
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable cluster deletion protection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2722,7 +2819,7 @@ The following state arguments are supported:
 <a href="#state_forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2828,7 @@ The following state arguments are supported:
 <a href="#state_installcloudmonitor_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Cloud<wbr>Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2837,7 @@ The following state arguments are supported:
 <a href="#state_isenterprisesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2846,7 @@ The following state arguments are supported:
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2855,7 @@ The following state arguments are supported:
 <a href="#state_kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2864,7 @@ The following state arguments are supported:
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2872,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2881,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2889,7 @@ The following state arguments are supported:
 <a href="#state_natgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2898,7 @@ The following state arguments are supported:
 <a href="#state_newnatgateway_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2907,7 @@ The following state arguments are supported:
 <a href="#state_nodecidrmask_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Cidr<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2916,7 @@ The following state arguments are supported:
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password`, `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2925,7 @@ The following state arguments are supported:
 <a href="#state_podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}[Flannel Specific] The CIDR block for the pod network when using Flannel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2837,7 +2934,7 @@ The following state arguments are supported:
 <a href="#state_proxymode_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2846,7 +2943,7 @@ The following state arguments are supported:
 <a href="#state_rdsinstances_nodejs" style="color: inherit; text-decoration: inherit;">rds<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2854,7 +2951,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2863,7 +2960,7 @@ The following state arguments are supported:
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2969,7 @@ The following state arguments are supported:
 <a href="#state_servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2978,7 @@ The following state arguments are supported:
 <a href="#state_slbinternet_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2986,7 @@ The following state arguments are supported:
 <a href="#state_slbinternetenabled_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Internet<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2995,7 @@ The following state arguments are supported:
 <a href="#state_slbintranet_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Intranet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +3004,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +3013,7 @@ The following state arguments are supported:
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2925,7 +3022,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +3031,7 @@ The following state arguments are supported:
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +3040,7 @@ The following state arguments are supported:
 <a href="#state_workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +3049,7 @@ The following state arguments are supported:
 <a href="#state_workerdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2961,7 +3058,7 @@ The following state arguments are supported:
 <a href="#state_workerdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2970,7 +3067,7 @@ The following state arguments are supported:
 <a href="#state_workerdisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2979,7 +3076,7 @@ The following state arguments are supported:
 <a href="#state_workerdisksnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2988,7 +3085,7 @@ The following state arguments are supported:
 <a href="#state_workerinstancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2996,7 +3093,7 @@ The following state arguments are supported:
 <a href="#state_workerinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3102,7 @@ The following state arguments are supported:
 <a href="#state_workernodes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkernode">Edge<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">pulumi.<wbr>Input<pulumi.<wbr>Input<Edge<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +3111,7 @@ The following state arguments are supported:
 <a href="#state_workernumber_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +3120,7 @@ The following state arguments are supported:
 <a href="#state_workervswitchids_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3035,7 +3132,7 @@ The following state arguments are supported:
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesaddon">Sequence[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Input[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3043,7 +3140,7 @@ The following state arguments are supported:
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3052,7 +3149,7 @@ The following state arguments are supported:
 <a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetescertificateauthority">Edge<wbr>Kubernetes<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekubernetescertificateauthority">Input[Edge<wbr>Kubernetes<wbr>Certificate<wbr>Authority<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Nested attribute containing certificate authority data for your cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3061,7 +3158,7 @@ The following state arguments are supported:
 <a href="#state_client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3070,7 +3167,7 @@ The following state arguments are supported:
 <a href="#state_client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3079,7 +3176,7 @@ The following state arguments are supported:
 <a href="#state_cluster_ca_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3088,7 +3185,7 @@ The following state arguments are supported:
 <a href="#state_connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Input[Edge<wbr>Kubernetes<wbr>Connections<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3096,7 +3193,7 @@ The following state arguments are supported:
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable cluster deletion protection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3105,7 +3202,7 @@ The following state arguments are supported:
 <a href="#state_force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3211,7 @@ The following state arguments are supported:
 <a href="#state_install_cloud_monitor_python" style="color: inherit; text-decoration: inherit;">install_<wbr>cloud_<wbr>monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3123,7 +3220,7 @@ The following state arguments are supported:
 <a href="#state_is_enterprise_security_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3132,7 +3229,7 @@ The following state arguments are supported:
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3141,7 +3238,7 @@ The following state arguments are supported:
 <a href="#state_kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3247,7 @@ The following state arguments are supported:
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Input[Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3158,7 +3255,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3264,7 @@ The following state arguments are supported:
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3175,7 +3272,7 @@ The following state arguments are supported:
 <a href="#state_nat_gateway_id_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3184,7 +3281,7 @@ The following state arguments are supported:
 <a href="#state_new_nat_gateway_python" style="color: inherit; text-decoration: inherit;">new_<wbr>nat_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3290,7 @@ The following state arguments are supported:
 <a href="#state_node_cidr_mask_python" style="color: inherit; text-decoration: inherit;">node_<wbr>cidr_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 {{% /md %}}</dd><dt class="property-optional"
@@ -3202,7 +3299,7 @@ The following state arguments are supported:
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password`, `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3211,7 +3308,7 @@ The following state arguments are supported:
 <a href="#state_pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}[Flannel Specific] The CIDR block for the pod network when using Flannel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3220,7 +3317,7 @@ The following state arguments are supported:
 <a href="#state_proxy_mode_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3229,7 +3326,7 @@ The following state arguments are supported:
 <a href="#state_rds_instances_python" style="color: inherit; text-decoration: inherit;">rds_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3237,7 +3334,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3246,7 +3343,7 @@ The following state arguments are supported:
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3255,7 +3352,7 @@ The following state arguments are supported:
 <a href="#state_service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3264,7 +3361,7 @@ The following state arguments are supported:
 <a href="#state_slb_internet_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3272,7 +3369,7 @@ The following state arguments are supported:
 <a href="#state_slb_internet_enabled_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>internet_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3281,7 +3378,7 @@ The following state arguments are supported:
 <a href="#state_slb_intranet_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>intranet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3290,7 +3387,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3299,7 +3396,7 @@ The following state arguments are supported:
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3308,7 +3405,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3317,7 +3414,7 @@ The following state arguments are supported:
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3326,7 +3423,7 @@ The following state arguments are supported:
 <a href="#state_worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Input[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3335,7 +3432,7 @@ The following state arguments are supported:
 <a href="#state_worker_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3344,7 +3441,7 @@ The following state arguments are supported:
 <a href="#state_worker_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3353,7 +3450,7 @@ The following state arguments are supported:
 <a href="#state_worker_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3362,7 +3459,7 @@ The following state arguments are supported:
 <a href="#state_worker_disk_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3371,7 +3468,7 @@ The following state arguments are supported:
 <a href="#state_worker_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3379,7 +3476,7 @@ The following state arguments are supported:
 <a href="#state_worker_instance_types_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd><dt class="property-optional"
@@ -3388,7 +3485,7 @@ The following state arguments are supported:
 <a href="#state_worker_nodes_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgekubernetesworkernode">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">Input[Edge<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3397,7 +3494,7 @@ The following state arguments are supported:
 <a href="#state_worker_number_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3406,7 +3503,7 @@ The following state arguments are supported:
 <a href="#state_worker_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3487,7 +3584,7 @@ The following state arguments are supported:
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3592,7 @@ The following state arguments are supported:
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3600,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd></dl>
@@ -3516,7 +3613,7 @@ The following state arguments are supported:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3524,7 +3621,7 @@ The following state arguments are supported:
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3629,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd></dl>
@@ -3609,7 +3706,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3618,7 +3715,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3627,7 +3724,7 @@ The following state arguments are supported:
 <a href="#clustercert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
 {{% /md %}}</dd></dl>
@@ -3640,7 +3737,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3649,7 +3746,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3658,7 +3755,7 @@ The following state arguments are supported:
 <a href="#cluster_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The base64 encoded cluster certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.
 {{% /md %}}</dd></dl>
@@ -3745,7 +3842,7 @@ The following state arguments are supported:
 <a href="#apiserverinternet_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3850,7 @@ The following state arguments are supported:
 <a href="#apiserverintranet_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Intranet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3858,7 @@ The following state arguments are supported:
 <a href="#masterpublicip_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3866,7 @@ The following state arguments are supported:
 <a href="#servicedomain_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3781,7 +3878,7 @@ The following state arguments are supported:
 <a href="#api_server_internet_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3789,7 +3886,7 @@ The following state arguments are supported:
 <a href="#api_server_intranet_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>intranet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,7 +3894,7 @@ The following state arguments are supported:
 <a href="#master_public_ip_python" style="color: inherit; text-decoration: inherit;">master_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3902,7 @@ The following state arguments are supported:
 <a href="#service_domain_python" style="color: inherit; text-decoration: inherit;">service_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3859,7 +3956,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3964,7 @@ The following state arguments are supported:
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3879,7 +3976,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3887,7 +3984,7 @@ The following state arguments are supported:
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4065,7 +4162,7 @@ The following state arguments are supported:
 <a href="#autosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node data disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4171,7 @@ The following state arguments are supported:
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4083,7 +4180,7 @@ The following state arguments are supported:
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4091,7 +4188,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4100,7 +4197,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4108,7 +4205,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4117,7 +4214,7 @@ The following state arguments are supported:
 <a href="#performancelevel_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4126,7 +4223,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4135,7 +4232,7 @@ The following state arguments are supported:
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4147,7 +4244,7 @@ The following state arguments are supported:
 <a href="#auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node data disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4156,7 +4253,7 @@ The following state arguments are supported:
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4165,7 +4262,7 @@ The following state arguments are supported:
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4173,7 +4270,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4182,7 +4279,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4190,7 +4287,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4199,7 +4296,7 @@ The following state arguments are supported:
 <a href="#performance_level_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4208,7 +4305,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4217,7 +4314,7 @@ The following state arguments are supported:
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4293,7 +4390,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4302,7 +4399,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4311,7 +4408,7 @@ The following state arguments are supported:
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd></dl>
@@ -4324,7 +4421,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4333,7 +4430,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4342,7 +4439,7 @@ The following state arguments are supported:
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd></dl>

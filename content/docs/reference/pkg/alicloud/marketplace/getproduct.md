@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/marketplace"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -137,17 +137,19 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProduct<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProductResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProduct<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProductArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProductResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">available_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">available_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProductResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetProductArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProductResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetProduct` in the Go SDK.
 
@@ -156,7 +158,7 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProduct </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProductArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProductArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -458,7 +460,7 @@ The following output properties are available:
 <a href="#skuses_csharp" style="color: inherit; text-decoration: inherit;">Skuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskus">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskus">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing sku attributes of an object. Each element contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -578,7 +580,7 @@ The following output properties are available:
 <a href="#skuses_python" style="color: inherit; text-decoration: inherit;">skuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskus">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskus">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus]</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing sku attributes of an object. Each element contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -595,7 +597,7 @@ The following output properties are available:
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskusimage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskusimage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom ECS images, Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -604,7 +606,7 @@ The following output properties are available:
 <a href="#packageversions_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskuspackageversion">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskuspackageversion">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of package version details of this product sku, Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -715,7 +717,7 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskusimage">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskusimage">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom ECS images, Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -724,7 +726,7 @@ The following output properties are available:
 <a href="#package_versions_python" style="color: inherit; text-decoration: inherit;">package_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskuspackageversion">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskuspackageversion">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}The list of package version details of this product sku, Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"

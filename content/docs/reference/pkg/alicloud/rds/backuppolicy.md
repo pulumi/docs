@@ -81,11 +81,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/rds"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -235,19 +235,44 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackupPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -282,22 +307,32 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BackupPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +341,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -330,7 +365,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -735,7 +770,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +779,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +788,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +797,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -771,7 +806,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -780,7 +815,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -789,7 +824,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -798,7 +833,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +842,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +851,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +860,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +869,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -843,7 +878,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -852,7 +887,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +896,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -870,7 +905,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -879,7 +914,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +923,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -897,7 +932,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
@@ -910,7 +945,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +954,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +963,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +972,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -946,7 +981,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -955,7 +990,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -964,7 +999,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -973,7 +1008,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +1017,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +1026,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +1035,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1044,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1018,7 +1053,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1027,7 +1062,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1071,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1045,7 +1080,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1054,7 +1089,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1098,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1072,7 +1107,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
@@ -1141,20 +1176,41 @@ Get an existing BackupPolicy resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BackupPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BackupPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BackupPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BackupPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackupPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> BackupPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BackupPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BackupPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BackupPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BackupPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BackupPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BackupPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1613,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1640,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1649,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1658,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1667,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1721,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1730,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1748,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1757,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1775,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
@@ -1788,7 +1844,7 @@ The following state arguments are supported:
 <a href="#state_archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1853,7 @@ The following state arguments are supported:
 <a href="#state_archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1862,7 @@ The following state arguments are supported:
 <a href="#state_archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1815,7 +1871,7 @@ The following state arguments are supported:
 <a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1824,7 +1880,7 @@ The following state arguments are supported:
 <a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1833,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1842,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1925,7 @@ The following state arguments are supported:
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1896,7 +1952,7 @@ The following state arguments are supported:
 <a href="#state_log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1905,7 +1961,7 @@ The following state arguments are supported:
 <a href="#state_log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1970,7 @@ The following state arguments are supported:
 <a href="#state_log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1923,7 +1979,7 @@ The following state arguments are supported:
 <a href="#state_log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1932,7 +1988,7 @@ The following state arguments are supported:
 <a href="#state_preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1997,7 @@ The following state arguments are supported:
 <a href="#state_preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1950,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>

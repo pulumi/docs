@@ -106,19 +106,56 @@ const _default = new alicloud.edas.K8sApplication("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_descriotion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_args</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">edas_container_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">image_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_slb_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_slb_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">internet_slb_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_target_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">jdk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_m_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">limit_mem</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">liveness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_volume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logical_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_descs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nas_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pre_stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requests_m_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requests_mem</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">web_container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">application_descriotion</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">command_args</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">edas_container_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">image_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">internet_slb_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">internet_slb_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">internet_slb_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">internet_target_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">jdk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">limit_m_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">limit_mem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">liveness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">local_volume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">logical_region_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">mount_descs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">nas_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">package_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">package_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">post_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">pre_stop</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">readiness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">requests_m_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">requests_mem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">web_container</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewK8sApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">K8sApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewK8sApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">K8sApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">K8sApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">K8sApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,22 +190,32 @@ const _default = new alicloud.edas.K8sApplication("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">K8sApplicationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -177,7 +224,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -201,7 +248,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -822,7 +869,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 {{% /md %}}</dd><dt class="property-required"
@@ -831,7 +878,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +887,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#applicationdescriotion_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Descriotion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +896,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +905,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#commandargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +914,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#edascontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">edas<wbr>Container<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +923,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +932,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +941,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internetslbid_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +950,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internetslbport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +959,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internetslbprotocol_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +968,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internettargetport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Target<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +977,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#jdk_nodejs" style="color: inherit; text-decoration: inherit;">jdk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +986,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#limitmcpu_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>MCpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +995,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#limitmem_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +1004,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#liveness_nodejs" style="color: inherit; text-decoration: inherit;">liveness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +1013,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localvolume_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +1022,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logicalregionid_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +1031,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mountdescs_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Descs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +1040,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +1049,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nasid_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1058,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1067,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1076,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1085,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Execute script after startup
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1094,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1103,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#readiness_nodejs" style="color: inherit; text-decoration: inherit;">readiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1112,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of application instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1121,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#requestsmcpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>MCpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1130,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#requestsmem_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1139,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#webcontainer_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 {{% /md %}}</dd></dl>
@@ -1105,7 +1152,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 {{% /md %}}</dd><dt class="property-required"
@@ -1114,7 +1161,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1170,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#application_descriotion_python" style="color: inherit; text-decoration: inherit;">application_<wbr>descriotion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1179,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1188,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#command_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1197,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#edas_container_version_python" style="color: inherit; text-decoration: inherit;">edas_<wbr>container_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1206,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1215,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1224,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internet_slb_id_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1233,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internet_slb_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1242,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internet_slb_protocol_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1251,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#internet_target_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>target_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1260,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#jdk_python" style="color: inherit; text-decoration: inherit;">jdk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1269,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#limit_m_cpu_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>m_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1278,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#limit_mem_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1287,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#liveness_python" style="color: inherit; text-decoration: inherit;">liveness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1296,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#local_volume_python" style="color: inherit; text-decoration: inherit;">local_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1305,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logical_region_id_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>region_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1314,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mount_descs_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>descs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1323,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1332,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nas_id_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1341,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1350,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1359,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1368,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
 {{% /md %}}</dd><dt class="property-optional"
@@ -1330,7 +1377,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1386,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#readiness_python" style="color: inherit; text-decoration: inherit;">readiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1395,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1404,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#requests_m_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>m_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1413,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#requests_mem_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1422,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 <a href="#web_container_python" style="color: inherit; text-decoration: inherit;">web_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 {{% /md %}}</dd></dl>
@@ -1444,20 +1491,53 @@ Get an existing K8sApplication resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">K8sApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">K8sApplication</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">K8sApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">K8sApplication</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_descriotion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_args</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">edas_container_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">image_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_slb_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_slb_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">internet_slb_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_target_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">jdk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_m_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">limit_mem</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">liveness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_volume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logical_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_descs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nas_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pre_stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requests_m_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requests_mem</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">web_container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> K8sApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">application_descriotion</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">command_args</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">edas_container_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">image_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_slb_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_slb_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_slb_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_target_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">jdk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">limit_m_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">limit_mem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">liveness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local_volume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logical_region_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mount_descs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nas_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">package_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">package_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">post_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pre_stop</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">readiness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">requests_m_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">requests_mem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">web_container</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> K8sApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetK8sApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">K8sApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">K8sApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetK8sApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">K8sApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">K8sApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">K8sApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">K8sApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">K8sApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">K8sApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2132,7 +2212,7 @@ The following state arguments are supported:
 <a href="#state_applicationdescriotion_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Descriotion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2221,7 @@ The following state arguments are supported:
 <a href="#state_applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2230,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2239,7 @@ The following state arguments are supported:
 <a href="#state_command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2248,7 @@ The following state arguments are supported:
 <a href="#state_commandargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2257,7 @@ The following state arguments are supported:
 <a href="#state_edascontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">edas<wbr>Container<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2266,7 @@ The following state arguments are supported:
 <a href="#state_envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2275,7 @@ The following state arguments are supported:
 <a href="#state_imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2284,7 @@ The following state arguments are supported:
 <a href="#state_internetslbid_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2293,7 @@ The following state arguments are supported:
 <a href="#state_internetslbport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2302,7 @@ The following state arguments are supported:
 <a href="#state_internetslbprotocol_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2311,7 @@ The following state arguments are supported:
 <a href="#state_internettargetport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Target<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2240,7 +2320,7 @@ The following state arguments are supported:
 <a href="#state_jdk_nodejs" style="color: inherit; text-decoration: inherit;">jdk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2249,7 +2329,7 @@ The following state arguments are supported:
 <a href="#state_limitmcpu_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>MCpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2338,7 @@ The following state arguments are supported:
 <a href="#state_limitmem_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2347,7 @@ The following state arguments are supported:
 <a href="#state_liveness_nodejs" style="color: inherit; text-decoration: inherit;">liveness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2356,7 @@ The following state arguments are supported:
 <a href="#state_localvolume_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2365,7 @@ The following state arguments are supported:
 <a href="#state_logicalregionid_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2374,7 @@ The following state arguments are supported:
 <a href="#state_mountdescs_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Descs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2383,7 @@ The following state arguments are supported:
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2392,7 @@ The following state arguments are supported:
 <a href="#state_nasid_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2401,7 @@ The following state arguments are supported:
 <a href="#state_packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2410,7 @@ The following state arguments are supported:
 <a href="#state_packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2419,7 @@ The following state arguments are supported:
 <a href="#state_packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2428,7 @@ The following state arguments are supported:
 <a href="#state_poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Execute script after startup
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2437,7 @@ The following state arguments are supported:
 <a href="#state_prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2446,7 @@ The following state arguments are supported:
 <a href="#state_readiness_nodejs" style="color: inherit; text-decoration: inherit;">readiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2455,7 @@ The following state arguments are supported:
 <a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of application instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2464,7 @@ The following state arguments are supported:
 <a href="#state_requestsmcpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>MCpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2473,7 @@ The following state arguments are supported:
 <a href="#state_requestsmem_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2482,7 @@ The following state arguments are supported:
 <a href="#state_webcontainer_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 {{% /md %}}</dd></dl>
@@ -2415,7 +2495,7 @@ The following state arguments are supported:
 <a href="#state_application_descriotion_python" style="color: inherit; text-decoration: inherit;">application_<wbr>descriotion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2504,7 @@ The following state arguments are supported:
 <a href="#state_application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -2433,7 +2513,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2442,7 +2522,7 @@ The following state arguments are supported:
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2531,7 @@ The following state arguments are supported:
 <a href="#state_command_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2540,7 @@ The following state arguments are supported:
 <a href="#state_edas_container_version_python" style="color: inherit; text-decoration: inherit;">edas_<wbr>container_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2469,7 +2549,7 @@ The following state arguments are supported:
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2558,7 @@ The following state arguments are supported:
 <a href="#state_image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2567,7 @@ The following state arguments are supported:
 <a href="#state_internet_slb_id_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2496,7 +2576,7 @@ The following state arguments are supported:
 <a href="#state_internet_slb_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2505,7 +2585,7 @@ The following state arguments are supported:
 <a href="#state_internet_slb_protocol_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2594,7 @@ The following state arguments are supported:
 <a href="#state_internet_target_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>target_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2603,7 @@ The following state arguments are supported:
 <a href="#state_jdk_python" style="color: inherit; text-decoration: inherit;">jdk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2532,7 +2612,7 @@ The following state arguments are supported:
 <a href="#state_limit_m_cpu_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>m_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2621,7 @@ The following state arguments are supported:
 <a href="#state_limit_mem_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2630,7 @@ The following state arguments are supported:
 <a href="#state_liveness_python" style="color: inherit; text-decoration: inherit;">liveness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2639,7 @@ The following state arguments are supported:
 <a href="#state_local_volume_python" style="color: inherit; text-decoration: inherit;">local_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2648,7 @@ The following state arguments are supported:
 <a href="#state_logical_region_id_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>region_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2657,7 @@ The following state arguments are supported:
 <a href="#state_mount_descs_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>descs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2666,7 @@ The following state arguments are supported:
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2675,7 @@ The following state arguments are supported:
 <a href="#state_nas_id_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2684,7 @@ The following state arguments are supported:
 <a href="#state_package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2693,7 @@ The following state arguments are supported:
 <a href="#state_package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2702,7 @@ The following state arguments are supported:
 <a href="#state_package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2711,7 @@ The following state arguments are supported:
 <a href="#state_post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
 {{% /md %}}</dd><dt class="property-optional"
@@ -2640,7 +2720,7 @@ The following state arguments are supported:
 <a href="#state_pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
 {{% /md %}}</dd><dt class="property-optional"
@@ -2649,7 +2729,7 @@ The following state arguments are supported:
 <a href="#state_readiness_python" style="color: inherit; text-decoration: inherit;">readiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2658,7 +2738,7 @@ The following state arguments are supported:
 <a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2667,7 +2747,7 @@ The following state arguments are supported:
 <a href="#state_requests_m_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>m_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 {{% /md %}}</dd><dt class="property-optional"
@@ -2676,7 +2756,7 @@ The following state arguments are supported:
 <a href="#state_requests_mem_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2685,7 +2765,7 @@ The following state arguments are supported:
 <a href="#state_web_container_python" style="color: inherit; text-decoration: inherit;">web_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 {{% /md %}}</dd></dl>

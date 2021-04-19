@@ -147,9 +147,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ga"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ga"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -406,19 +406,31 @@ const exampleForwardingRule = new alicloud.ga.ForwardingRule("exampleForwardingR
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ForwardingRuleRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">rule_conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ForwardingRuleRuleConditionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">forwarding_rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">rule_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ForwardingRuleRuleActionArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">rule_conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ForwardingRuleRuleConditionArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -453,22 +465,32 @@ const exampleForwardingRule = new alicloud.ga.ForwardingRule("exampleForwardingR
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -477,7 +499,7 @@ const exampleForwardingRule = new alicloud.ga.ForwardingRule("exampleForwardingR
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -501,7 +523,7 @@ const exampleForwardingRule = new alicloud.ga.ForwardingRule("exampleForwardingR
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -672,7 +694,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -681,7 +703,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -690,7 +712,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ruleactions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleaction">Forwarding<wbr>Rule<wbr>Rule<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 {{% /md %}}</dd><dt class="property-required"
@@ -699,7 +721,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingrulerulecondition">Forwarding<wbr>Rule<wbr>Rule<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#forwardingrulerulecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Forwarding condition list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +730,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#forwardingrulename_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding policy name. The length of the name is 2-128 English or Chinese characters. It must start with uppercase and lowercase letters or Chinese characters. It can contain numbers, half width period (.), underscores (_) And dash (-).
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +739,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Forwarding policy priority.
 {{% /md %}}</dd></dl>
@@ -730,7 +752,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -739,7 +761,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -748,7 +770,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rule_actions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleaction">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleaction">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 {{% /md %}}</dd><dt class="property-required"
@@ -757,7 +779,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingrulerulecondition">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingrulerulecondition">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Forwarding condition list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +788,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#forwarding_rule_name_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding policy name. The length of the name is 2-128 English or Chinese characters. It must start with uppercase and lowercase letters or Chinese characters. It can contain numbers, half width period (.), underscores (_) And dash (-).
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +797,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Forwarding policy priority.
 {{% /md %}}</dd></dl>
@@ -916,20 +938,30 @@ Get an existing ForwardingRule resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ForwardingRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ForwardingRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_rule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ForwardingRuleRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">rule_conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ForwardingRuleRuleConditionArgs]]</span> = None<span class="p">) -&gt;</span> ForwardingRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">forwarding_rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">forwarding_rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">forwarding_rule_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ForwardingRuleRuleActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ForwardingRuleRuleConditionArgs]]]]</span> = None<span class="p">) -&gt;</span> ForwardingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1190,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_forwardingruleid_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding Policy ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1240,7 @@ The following state arguments are supported:
 <a href="#state_forwardingrulename_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding policy name. The length of the name is 2-128 English or Chinese characters. It must start with uppercase and lowercase letters or Chinese characters. It can contain numbers, half width period (.), underscores (_) And dash (-).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1249,7 @@ The following state arguments are supported:
 <a href="#state_forwardingrulestatus_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding Policy Status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Forwarding policy priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_ruleactions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleaction">Forwarding<wbr>Rule<wbr>Rule<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingrulerulecondition">Forwarding<wbr>Rule<wbr>Rule<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#forwardingrulerulecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Forwarding condition list.
 {{% /md %}}</dd></dl>
@@ -1266,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_forwarding_rule_id_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding Policy ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_forwarding_rule_name_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding policy name. The length of the name is 2-128 English or Chinese characters. It must start with uppercase and lowercase letters or Chinese characters. It can contain numbers, half width period (.), underscores (_) And dash (-).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_forwarding_rule_status_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding Policy Status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Forwarding policy priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_rule_actions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleaction">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleaction">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Forward action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingrulerulecondition">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingrulerulecondition">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Forwarding condition list.
 {{% /md %}}</dd></dl>
@@ -1415,7 +1447,7 @@ The following state arguments are supported:
 <a href="#forwardgroupconfig_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Group<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfig">Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config</a></span>
+        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfig">pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Forwarding configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1424,7 +1456,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Forwarding priority.
 {{% /md %}}</dd><dt class="property-required"
@@ -1433,7 +1465,7 @@ The following state arguments are supported:
 <a href="#ruleactiontype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forward action type. Default: forwardgroup.
 {{% /md %}}</dd></dl>
@@ -1446,7 +1478,7 @@ The following state arguments are supported:
 <a href="#forward_group_config_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>group_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfig">Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfig">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Forwarding configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1455,7 +1487,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Forwarding priority.
 {{% /md %}}</dd><dt class="property-required"
@@ -1464,7 +1496,7 @@ The following state arguments are supported:
 <a href="#rule_action_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forward action type. Default: forwardgroup.
 {{% /md %}}</dd></dl>
@@ -1505,7 +1537,7 @@ The following state arguments are supported:
 <a href="#servergrouptuples_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Group<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfigservergrouptuple">Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple[]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfigservergrouptuple">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Terminal node group configuration.
 {{% /md %}}</dd></dl>
@@ -1518,7 +1550,7 @@ The following state arguments are supported:
 <a href="#server_group_tuples_python" style="color: inherit; text-decoration: inherit;">server_<wbr>group_<wbr>tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfigservergrouptuple">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleactionforwardgroupconfigservergrouptuple">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Action<wbr>Forward<wbr>Group<wbr>Config<wbr>Server<wbr>Group<wbr>Tuple<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Terminal node group configuration.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1591,7 @@ The following state arguments are supported:
 <a href="#endpointgroupid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Terminal node group ID.
 {{% /md %}}</dd></dl>
@@ -1572,7 +1604,7 @@ The following state arguments are supported:
 <a href="#endpoint_group_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Terminal node group ID.
 {{% /md %}}</dd></dl>
@@ -1649,7 +1681,7 @@ The following state arguments are supported:
 <a href="#ruleconditiontype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding condition type. Valid value: `Host`, `Path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1690,7 @@ The following state arguments are supported:
 <a href="#hostconfigs_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleconditionhostconfig">Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleconditionhostconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Domain name configuration information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1699,7 @@ The following state arguments are supported:
 <a href="#pathconfig_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleconditionpathconfig">Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config</a></span>
+        <span class="property-type"><a href="#forwardingruleruleconditionpathconfig">pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Path configuration information.
 {{% /md %}}</dd></dl>
@@ -1680,7 +1712,7 @@ The following state arguments are supported:
 <a href="#rule_condition_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding condition type. Valid value: `Host`, `Path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1721,7 @@ The following state arguments are supported:
 <a href="#host_configs_python" style="color: inherit; text-decoration: inherit;">host_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleconditionhostconfig">Sequence[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingruleruleconditionhostconfig">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Host<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Domain name configuration information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1730,7 @@ The following state arguments are supported:
 <a href="#path_config_python" style="color: inherit; text-decoration: inherit;">path_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleruleconditionpathconfig">Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingruleruleconditionpathconfig">Input[Forwarding<wbr>Rule<wbr>Rule<wbr>Condition<wbr>Path<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Path configuration information.
 {{% /md %}}</dd></dl>
@@ -1739,7 +1771,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The domain name is 3-128 characters long, which can contain letters, numbers, dashes (-) and width period (.), and supports the use of asterisk (*) and width question mark (?) as wildcard characters.
 {{% /md %}}</dd></dl>
@@ -1752,7 +1784,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The domain name is 3-128 characters long, which can contain letters, numbers, dashes (-) and width period (.), and supports the use of asterisk (*) and width question mark (?) as wildcard characters.
 {{% /md %}}</dd></dl>
@@ -1793,7 +1825,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The domain name is 3-128 characters long, which can contain letters, numbers, dashes (-) and width period (.), and supports the use of asterisk (*) and width question mark (?) as wildcard characters.
 {{% /md %}}</dd></dl>
@@ -1806,7 +1838,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The domain name is 3-128 characters long, which can contain letters, numbers, dashes (-) and width period (.), and supports the use of asterisk (*) and width question mark (?) as wildcard characters.
 {{% /md %}}</dd></dl>
