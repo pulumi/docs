@@ -18,19 +18,55 @@ meta_desc: "Documentation for the okta.deprecated.OauthApp resource with example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OauthAppJwkArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OauthAppUserArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOauthApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OauthApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOauthApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OauthApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OauthApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OauthAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +101,32 @@ meta_desc: "Documentation for the okta.deprecated.OauthApp resource with example
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OauthAppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +135,7 @@ meta_desc: "Documentation for the okta.deprecated.OauthApp resource with example
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +159,7 @@ meta_desc: "Documentation for the okta.deprecated.OauthApp resource with example
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -728,7 +774,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd><dt class="property-required"
@@ -737,7 +783,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of client application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +792,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#autokeyrotation_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +801,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +810,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#clientbasicsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Basic<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +819,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +828,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#clienturi_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +837,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#consentmethod_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED.
 Default value is TRUSTED
@@ -801,7 +847,7 @@ Default value is TRUSTED
 <a href="#customclientid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
@@ -811,7 +857,7 @@ no-op, use client_id for that behavior instead.
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here
 https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per
@@ -822,7 +868,7 @@ app type.
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +877,7 @@ app type.
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +886,7 @@ app type.
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +895,7 @@ app type.
 <a href="#implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +904,7 @@ app type.
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a
 custom domain URL as the issuer of ID token for this client.
@@ -868,7 +914,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#jwks_nodejs" style="color: inherit; text-decoration: inherit;">jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappjwk">Oauth<wbr>App<wbr>Jwk[]</a></span>
+        <span class="property-type"><a href="#oauthappjwk">pulumi.<wbr>Input<pulumi.<wbr>Input<Oauth<wbr>App<wbr>Jwk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +922,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +931,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +940,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +949,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +958,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#omitsecret_nodejs" style="color: inherit; text-decoration: inherit;">omit<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false
 your app will be recreated.
@@ -922,7 +968,7 @@ your app will be recreated.
 <a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +977,7 @@ your app will be recreated.
 <a href="#postlogoutredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout
 {{% /md %}}</dd><dt class="property-optional"
@@ -940,7 +986,7 @@ your app will be recreated.
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +995,7 @@ your app will be recreated.
 <a href="#redirecturis_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service. Note: see
 okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
@@ -959,7 +1005,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#responsetypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +1014,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +1023,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1032,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#tosuri_nodejs" style="color: inherit; text-decoration: inherit;">tos<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1041,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappuser">Oauth<wbr>App<wbr>User[]</a></span>
+        <span class="property-type"><a href="#oauthappuser">pulumi.<wbr>Input<pulumi.<wbr>Input<Oauth<wbr>App<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd></dl>
@@ -1008,7 +1054,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd><dt class="property-required"
@@ -1017,7 +1063,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of client application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1072,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#auto_key_rotation_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1081,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1090,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#client_basic_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>basic_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1099,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1108,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#client_uri_python" style="color: inherit; text-decoration: inherit;">client_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1117,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#consent_method_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED.
 Default value is TRUSTED
@@ -1081,7 +1127,7 @@ Default value is TRUSTED
 <a href="#custom_client_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
@@ -1091,7 +1137,7 @@ no-op, use client_id for that behavior instead.
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here
 https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per
@@ -1102,7 +1148,7 @@ app type.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1157,7 @@ app type.
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1166,7 @@ app type.
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1175,7 @@ app type.
 <a href="#implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1184,7 @@ app type.
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a
 custom domain URL as the issuer of ID token for this client.
@@ -1148,7 +1194,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#jwks_python" style="color: inherit; text-decoration: inherit;">jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappjwk">Sequence[Oauth<wbr>App<wbr>Jwk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauthappjwk">Input[Oauth<wbr>App<wbr>Jwk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1202,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1211,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1220,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1229,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +1238,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#omit_secret_python" style="color: inherit; text-decoration: inherit;">omit_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false
 your app will be recreated.
@@ -1202,7 +1248,7 @@ your app will be recreated.
 <a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1257,7 @@ your app will be recreated.
 <a href="#post_logout_redirect_uris_python" style="color: inherit; text-decoration: inherit;">post_<wbr>logout_<wbr>redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1266,7 @@ your app will be recreated.
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1275,7 @@ your app will be recreated.
 <a href="#redirect_uris_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service. Note: see
 okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
@@ -1239,7 +1285,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#response_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1294,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1303,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1312,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#tos_uri_python" style="color: inherit; text-decoration: inherit;">tos_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1321,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappuser">Sequence[Oauth<wbr>App<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauthappuser">Input[Oauth<wbr>App<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd></dl>
@@ -1452,20 +1498,55 @@ Get an existing OauthApp resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OauthAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OauthApp</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OauthAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OauthApp</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">) -&gt;</span> OauthApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OauthAppJwkArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OauthAppUserArgs]]]]</span> = None<span class="p">) -&gt;</span> OauthApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOauthApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OauthAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OauthApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOauthApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OauthAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OauthApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OauthApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OauthAppState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OauthApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OauthAppState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2188,7 +2269,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_autokeyrotation_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2278,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2287,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_clientbasicsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Basic<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2296,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2224,7 +2305,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth client secret key. This will be in plain text in your statefile unless you set omit_secret above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2233,7 +2314,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_clienturi_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2242,7 +2323,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_consentmethod_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED.
 Default value is TRUSTED
@@ -2252,7 +2333,7 @@ Default value is TRUSTED
 <a href="#state_customclientid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
@@ -2262,7 +2343,7 @@ no-op, use client_id for that behavior instead.
 <a href="#state_granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here
 https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per
@@ -2273,7 +2354,7 @@ app type.
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2363,7 @@ app type.
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2372,7 @@ app type.
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -2300,7 +2381,7 @@ app type.
 <a href="#state_implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2390,7 @@ app type.
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a
 custom domain URL as the issuer of ID token for this client.
@@ -2319,7 +2400,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_jwks_nodejs" style="color: inherit; text-decoration: inherit;">jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappjwk">Oauth<wbr>App<wbr>Jwk[]</a></span>
+        <span class="property-type"><a href="#oauthappjwk">pulumi.<wbr>Input<pulumi.<wbr>Input<Oauth<wbr>App<wbr>Jwk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2408,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2417,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2426,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2435,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2444,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2372,7 +2453,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2462,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_omitsecret_nodejs" style="color: inherit; text-decoration: inherit;">omit<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false
 your app will be recreated.
@@ -2391,7 +2472,7 @@ your app will be recreated.
 <a href="#state_policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2400,7 +2481,7 @@ your app will be recreated.
 <a href="#state_postlogoutredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout
 {{% /md %}}</dd><dt class="property-optional"
@@ -2409,7 +2490,7 @@ your app will be recreated.
 <a href="#state_profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2499,7 @@ your app will be recreated.
 <a href="#state_redirecturis_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service. Note: see
 okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
@@ -2428,7 +2509,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_responsetypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2518,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2527,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2536,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2545,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_tosuri_nodejs" style="color: inherit; text-decoration: inherit;">tos<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2554,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of client application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2563,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappuser">Oauth<wbr>App<wbr>User[]</a></span>
+        <span class="property-type"><a href="#oauthappuser">pulumi.<wbr>Input<pulumi.<wbr>Input<Oauth<wbr>App<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd></dl>
@@ -2495,7 +2576,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_auto_key_rotation_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2585,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2594,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_client_basic_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>basic_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2522,7 +2603,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2531,7 +2612,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key. This will be in plain text in your statefile unless you set omit_secret above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2540,7 +2621,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_client_uri_python" style="color: inherit; text-decoration: inherit;">client_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2630,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_consent_method_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED.
 Default value is TRUSTED
@@ -2559,7 +2640,7 @@ Default value is TRUSTED
 <a href="#state_custom_client_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
@@ -2569,7 +2650,7 @@ no-op, use client_id for that behavior instead.
 <a href="#state_grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here
 https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per
@@ -2580,7 +2661,7 @@ app type.
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2670,7 @@ app type.
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2679,7 @@ app type.
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2688,7 @@ app type.
 <a href="#state_implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2697,7 @@ app type.
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a
 custom domain URL as the issuer of ID token for this client.
@@ -2626,7 +2707,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_jwks_python" style="color: inherit; text-decoration: inherit;">jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappjwk">Sequence[Oauth<wbr>App<wbr>Jwk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauthappjwk">Input[Oauth<wbr>App<wbr>Jwk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2715,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2724,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2733,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2661,7 +2742,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2670,7 +2751,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2679,7 +2760,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2688,7 +2769,7 @@ custom domain URL as the issuer of ID token for this client.
 <a href="#state_omit_secret_python" style="color: inherit; text-decoration: inherit;">omit_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false
 your app will be recreated.
@@ -2698,7 +2779,7 @@ your app will be recreated.
 <a href="#state_policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2788,7 @@ your app will be recreated.
 <a href="#state_post_logout_redirect_uris_python" style="color: inherit; text-decoration: inherit;">post_<wbr>logout_<wbr>redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2797,7 @@ your app will be recreated.
 <a href="#state_profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2725,7 +2806,7 @@ your app will be recreated.
 <a href="#state_redirect_uris_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service. Note: see
 okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
@@ -2735,7 +2816,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_response_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2744,7 +2825,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2753,7 +2834,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2762,7 +2843,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2771,7 +2852,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_tos_uri_python" style="color: inherit; text-decoration: inherit;">tos_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2780,7 +2861,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of client application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2789,7 +2870,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthappuser">Sequence[Oauth<wbr>App<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauthappuser">Input[Oauth<wbr>App<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd></dl>
@@ -2885,7 +2966,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2893,7 +2974,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +2982,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#e_nodejs" style="color: inherit; text-decoration: inherit;">e</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2990,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#n_nodejs" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2921,7 +3002,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2929,7 +3010,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2937,7 +3018,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#e_python" style="color: inherit; text-decoration: inherit;">e</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2945,7 +3026,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#n_python" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3031,7 +3112,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3039,7 +3120,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3047,7 +3128,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3055,7 +3136,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3067,7 +3148,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3075,7 +3156,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3083,7 +3164,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3172,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

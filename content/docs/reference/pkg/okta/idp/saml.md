@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -149,19 +149,56 @@ const example = new okta.idp.Saml("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_link_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_link_group_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">acs_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acs_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deprovisioned_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_clock_skew</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_master</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provisioning_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_signature_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_signature_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_formats</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subject_match_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_match_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">account_link_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">account_link_group_includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">acs_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">acs_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">deprovisioned_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">groups_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">groups_assignments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">groups_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">groups_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">kid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">max_clock_skew</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">name_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">profile_master</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">provisioning_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">request_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">request_signature_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">response_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">response_signature_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">sso_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">sso_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_formats</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_match_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_match_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">suspended_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">username_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaml</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaml</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,22 +233,32 @@ const example = new okta.idp.Saml("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SamlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -220,7 +267,7 @@ const example = new okta.idp.Saml("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -244,7 +291,7 @@ const example = new okta.idp.Saml("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -863,7 +910,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
 {{% /md %}}</dd><dt class="property-required"
@@ -872,7 +919,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
 {{% /md %}}</dd><dt class="property-required"
@@ -881,7 +928,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +937,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accountlinkaction_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +946,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accountlinkgroupincludes_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Group<wbr>Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -908,7 +955,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +963,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#acstype_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +972,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#deprovisionedaction_nodejs" style="color: inherit; text-decoration: inherit;">deprovisioned<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +981,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groupsaction_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +990,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groupsassignments_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +999,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groupsattribute_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +1008,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groupsfilters_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +1017,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +1026,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#maxclockskew_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Clock<wbr>Skew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +1035,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1044,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nameformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1053,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#profilemaster_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1062,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#provisioningaction_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1071,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#requestsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1080,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#requestsignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1089,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#responsesignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1098,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#responsesignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1107,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ssobinding_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1116,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ssodestination_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1125,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1134,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1143,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subjectformats_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1152,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subjectmatchattribute_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1161,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subjectmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1170,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#suspendedaction_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1179,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd></dl>
@@ -1145,7 +1192,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
 {{% /md %}}</dd><dt class="property-required"
@@ -1154,7 +1201,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
 {{% /md %}}</dd><dt class="property-required"
@@ -1163,7 +1210,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1219,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#account_link_action_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1228,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#account_link_group_includes_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>group_<wbr>includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1190,7 +1237,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1245,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#acs_type_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1254,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#deprovisioned_action_python" style="color: inherit; text-decoration: inherit;">deprovisioned_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1263,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groups_action_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1272,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groups_assignments_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1281,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groups_attribute_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1290,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groups_filters_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1299,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1308,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#max_clock_skew_python" style="color: inherit; text-decoration: inherit;">max_<wbr>clock_<wbr>skew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1317,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1326,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1335,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#profile_master_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1344,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#provisioning_action_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1353,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#request_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1362,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#request_signature_scope_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1371,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#response_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1380,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#response_signature_scope_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1389,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sso_binding_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1398,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sso_destination_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1407,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1416,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1425,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subject_formats_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1434,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subject_match_attribute_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1443,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#subject_match_type_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1452,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#suspended_action_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1461,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd></dl>
@@ -1555,20 +1602,55 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SamlState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Saml</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SamlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Saml</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_link_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_link_group_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">acs_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acs_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deprovisioned_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_clock_skew</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_master</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provisioning_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_signature_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_signature_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_formats</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subject_match_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_match_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Saml</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_link_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">account_link_group_includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">acs_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">acs_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">deprovisioned_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_assignments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_clock_skew</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_master</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">provisioning_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">request_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">request_signature_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">response_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">response_signature_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_formats</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_match_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_match_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">suspended_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">username_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Saml</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SamlState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SamlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Saml</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SamlState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Saml</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SamlState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2277,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_accountlinkaction_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2368,7 @@ The following state arguments are supported:
 <a href="#state_accountlinkgroupincludes_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Group<wbr>Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2295,7 +2377,7 @@ The following state arguments are supported:
 <a href="#state_acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2385,7 @@ The following state arguments are supported:
 <a href="#state_acstype_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2394,7 @@ The following state arguments are supported:
 <a href="#state_audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2403,7 @@ The following state arguments are supported:
 <a href="#state_deprovisionedaction_nodejs" style="color: inherit; text-decoration: inherit;">deprovisioned<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2412,7 @@ The following state arguments are supported:
 <a href="#state_groupsaction_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2421,7 @@ The following state arguments are supported:
 <a href="#state_groupsassignments_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2430,7 @@ The following state arguments are supported:
 <a href="#state_groupsattribute_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2439,7 @@ The following state arguments are supported:
 <a href="#state_groupsfilters_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2448,7 @@ The following state arguments are supported:
 <a href="#state_issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2457,7 @@ The following state arguments are supported:
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2466,7 @@ The following state arguments are supported:
 <a href="#state_kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2475,7 @@ The following state arguments are supported:
 <a href="#state_maxclockskew_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Clock<wbr>Skew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2484,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2493,7 @@ The following state arguments are supported:
 <a href="#state_nameformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2502,7 @@ The following state arguments are supported:
 <a href="#state_profilemaster_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2511,7 @@ The following state arguments are supported:
 <a href="#state_provisioningaction_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2520,7 @@ The following state arguments are supported:
 <a href="#state_requestsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2529,7 @@ The following state arguments are supported:
 <a href="#state_requestsignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2538,7 @@ The following state arguments are supported:
 <a href="#state_responsesignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2465,7 +2547,7 @@ The following state arguments are supported:
 <a href="#state_responsesignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2474,7 +2556,7 @@ The following state arguments are supported:
 <a href="#state_ssobinding_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2483,7 +2565,7 @@ The following state arguments are supported:
 <a href="#state_ssodestination_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2492,7 +2574,7 @@ The following state arguments are supported:
 <a href="#state_ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2583,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2592,7 @@ The following state arguments are supported:
 <a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2601,7 @@ The following state arguments are supported:
 <a href="#state_subjectformats_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2610,7 @@ The following state arguments are supported:
 <a href="#state_subjectmatchattribute_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2619,7 @@ The following state arguments are supported:
 <a href="#state_subjectmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2628,7 @@ The following state arguments are supported:
 <a href="#state_suspendedaction_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2637,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2646,7 @@ The following state arguments are supported:
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd></dl>
@@ -2577,7 +2659,7 @@ The following state arguments are supported:
 <a href="#state_account_link_action_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2668,7 @@ The following state arguments are supported:
 <a href="#state_account_link_group_includes_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>group_<wbr>includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2595,7 +2677,7 @@ The following state arguments are supported:
 <a href="#state_acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2685,7 @@ The following state arguments are supported:
 <a href="#state_acs_type_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2694,7 @@ The following state arguments are supported:
 <a href="#state_audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2703,7 @@ The following state arguments are supported:
 <a href="#state_deprovisioned_action_python" style="color: inherit; text-decoration: inherit;">deprovisioned_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2630,7 +2712,7 @@ The following state arguments are supported:
 <a href="#state_groups_action_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2639,7 +2721,7 @@ The following state arguments are supported:
 <a href="#state_groups_assignments_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2648,7 +2730,7 @@ The following state arguments are supported:
 <a href="#state_groups_attribute_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2657,7 +2739,7 @@ The following state arguments are supported:
 <a href="#state_groups_filters_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2666,7 +2748,7 @@ The following state arguments are supported:
 <a href="#state_issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2757,7 @@ The following state arguments are supported:
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2766,7 @@ The following state arguments are supported:
 <a href="#state_kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2775,7 @@ The following state arguments are supported:
 <a href="#state_max_clock_skew_python" style="color: inherit; text-decoration: inherit;">max_<wbr>clock_<wbr>skew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2784,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2793,7 @@ The following state arguments are supported:
 <a href="#state_name_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2802,7 @@ The following state arguments are supported:
 <a href="#state_profile_master_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2811,7 @@ The following state arguments are supported:
 <a href="#state_provisioning_action_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2738,7 +2820,7 @@ The following state arguments are supported:
 <a href="#state_request_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2747,7 +2829,7 @@ The following state arguments are supported:
 <a href="#state_request_signature_scope_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2838,7 @@ The following state arguments are supported:
 <a href="#state_response_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2765,7 +2847,7 @@ The following state arguments are supported:
 <a href="#state_response_signature_scope_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2856,7 @@ The following state arguments are supported:
 <a href="#state_sso_binding_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2865,7 @@ The following state arguments are supported:
 <a href="#state_sso_destination_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2874,7 @@ The following state arguments are supported:
 <a href="#state_sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2883,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2892,7 @@ The following state arguments are supported:
 <a href="#state_subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2901,7 @@ The following state arguments are supported:
 <a href="#state_subject_formats_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2910,7 @@ The following state arguments are supported:
 <a href="#state_subject_match_attribute_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2837,7 +2919,7 @@ The following state arguments are supported:
 <a href="#state_subject_match_type_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2846,7 +2928,7 @@ The following state arguments are supported:
 <a href="#state_suspended_action_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2855,7 +2937,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2864,7 +2946,7 @@ The following state arguments are supported:
 <a href="#state_username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd></dl>

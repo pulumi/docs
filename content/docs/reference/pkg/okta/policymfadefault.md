@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -111,19 +111,40 @@ const defaultPolicyMfaDefault = new okta.PolicyMfaDefault("default", {});
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hotp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_email</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">hotp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PolicyMfaDefaultArgs]</a></span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyMfaDefault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyMfaDefault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyMfaDefault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyMfaDefault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyMfaDefault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PolicyMfaDefaultArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,22 +179,32 @@ const defaultPolicyMfaDefault = new okta.PolicyMfaDefault("default", {});
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PolicyMfaDefaultArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -182,7 +213,7 @@ const defaultPolicyMfaDefault = new okta.PolicyMfaDefault("default", {});
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -206,7 +237,7 @@ const defaultPolicyMfaDefault = new okta.PolicyMfaDefault("default", {});
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -539,7 +570,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#duo_nodejs" style="color: inherit; text-decoration: inherit;">duo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +579,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#fidou2f_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>U2f</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -557,7 +588,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#fidowebauthn_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>Webauthn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -566,7 +597,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#googleotp_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -575,7 +606,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#hotp_nodejs" style="color: inherit; text-decoration: inherit;">hotp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}HMAC-based One-Time Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +615,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktacall_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Call</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +624,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktaemail_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +633,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktaotp_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +642,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktapassword_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +651,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktapush_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +660,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktaquestion_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +669,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#oktasms_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Sms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +678,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#rsatoken_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +687,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#symantecvip_nodejs" style="color: inherit; text-decoration: inherit;">symantec<wbr>Vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +696,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#yubikeytoken_nodejs" style="color: inherit; text-decoration: inherit;">yubikey<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd></dl>
@@ -678,7 +709,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +718,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +727,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +736,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +745,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#hotp_python" style="color: inherit; text-decoration: inherit;">hotp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HMAC-based One-Time Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +754,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +763,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_email_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +772,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +781,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +790,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +799,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +808,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +817,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +826,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +835,7 @@ The PolicyMfaDefault resource accepts the following [input]({{< relref "/docs/in
 <a href="#yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd></dl>
@@ -1053,20 +1084,42 @@ Get an existing PolicyMfaDefault resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyMfaDefaultState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyMfaDefault</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyMfaDefaultState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyMfaDefault</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_included_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hotp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_email</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> PolicyMfaDefault</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">default_included_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hotp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> PolicyMfaDefault</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyMfaDefault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyMfaDefaultState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyMfaDefault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyMfaDefault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyMfaDefaultState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyMfaDefault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyMfaDefault</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyMfaDefaultState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyMfaDefault</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PolicyMfaDefaultState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1543,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_defaultincludedgroupid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Included<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the default Okta group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1605,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default policy description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1614,7 @@ The following state arguments are supported:
 <a href="#state_duo_nodejs" style="color: inherit; text-decoration: inherit;">duo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_fidou2f_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>U2f</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_fidowebauthn_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>Webauthn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1641,7 @@ The following state arguments are supported:
 <a href="#state_googleotp_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1597,7 +1650,7 @@ The following state arguments are supported:
 <a href="#state_hotp_nodejs" style="color: inherit; text-decoration: inherit;">hotp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}HMAC-based One-Time Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1606,7 +1659,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default policy name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_oktacall_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Call</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_oktaemail_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1686,7 @@ The following state arguments are supported:
 <a href="#state_oktaotp_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_oktapassword_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_oktapush_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_oktaquestion_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1669,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_oktasms_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Sms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default policy priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1740,7 @@ The following state arguments are supported:
 <a href="#state_rsatoken_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1749,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default policy status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1758,7 @@ The following state arguments are supported:
 <a href="#state_symantecvip_nodejs" style="color: inherit; text-decoration: inherit;">symantec<wbr>Vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1767,7 @@ The following state arguments are supported:
 <a href="#state_yubikeytoken_nodejs" style="color: inherit; text-decoration: inherit;">yubikey<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd></dl>
@@ -1727,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_default_included_group_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>included_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the default Okta group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1789,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default policy description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1807,7 @@ The following state arguments are supported:
 <a href="#state_fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1816,7 @@ The following state arguments are supported:
 <a href="#state_fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1825,7 @@ The following state arguments are supported:
 <a href="#state_google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1834,7 @@ The following state arguments are supported:
 <a href="#state_hotp_python" style="color: inherit; text-decoration: inherit;">hotp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HMAC-based One-Time Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1843,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default policy name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1861,7 @@ The following state arguments are supported:
 <a href="#state_okta_email_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1870,7 @@ The following state arguments are supported:
 <a href="#state_okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1879,7 @@ The following state arguments are supported:
 <a href="#state_okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1888,7 @@ The following state arguments are supported:
 <a href="#state_okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1897,7 @@ The following state arguments are supported:
 <a href="#state_okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1906,7 @@ The following state arguments are supported:
 <a href="#state_okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1862,7 +1915,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default policy priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1924,7 @@ The following state arguments are supported:
 <a href="#state_rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1880,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default policy status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1889,7 +1942,7 @@ The following state arguments are supported:
 <a href="#state_symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1898,7 +1951,7 @@ The following state arguments are supported:
 <a href="#state_yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd></dl>

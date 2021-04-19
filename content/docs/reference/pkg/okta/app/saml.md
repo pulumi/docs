@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -191,19 +191,64 @@ const example = new okta.app.Saml("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAttributeStatementArgs]]</span> = None<span class="p">, </span><span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authn_context_class_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">honor_force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_years_valid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SamlAttributeStatementArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">authn_context_class_ref</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">honor_force_authn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">key_years_valid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SamlUserArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaml</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaml</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Saml</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -238,22 +283,32 @@ const example = new okta.app.Saml("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SamlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -262,7 +317,7 @@ const example = new okta.app.Saml("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -286,7 +341,7 @@ const example = new okta.app.Saml("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1053,7 +1108,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}label of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1117,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1126,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom login page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1135,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1144,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#acsendpoints_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of ACS endpoints. You can configure a maximum of 100 endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1153,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1162,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#assertionsigned_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1171,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#attributestatements_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samlattributestatement">Saml<wbr>Attribute<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#samlattributestatement">pulumi.<wbr>Input<pulumi.<wbr>Input<Saml<wbr>Attribute<wbr>Statement<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1180,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Audience restriction.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1189,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1198,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1207,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#defaultrelaystate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Relay<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1216,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1225,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1234,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}features enabled. Notice: you can't currently configure provisioning features via the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1243,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1252,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1261,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1270,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#honorforceauthn_nodejs" style="color: inherit; text-decoration: inherit;">honor<wbr>Force<wbr>Authn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1279,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#idpissuer_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML issuer ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1288,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key. Required to be set with `key_years_valid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1297,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#keyyearsvalid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Years<wbr>Valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid (2 - 10 years).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1306,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1315,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1324,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#requestcompressed_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1333,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#responsesigned_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1342,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1351,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#singlelogoutcertificate_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests. 
 Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`, see [official documentation](https://developer.okta.com/docs/reference/api/apps/#service-provider-certificate).
@@ -1306,7 +1361,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#singlelogoutissuer_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1370,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#singlelogouturl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1379,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML service provider issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1388,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1397,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1406,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#subjectnameidformat_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1415,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#subjectnameidtemplate_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1424,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1433,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template suffix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1442,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1451,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samluser">Saml<wbr>User[]</a></span>
+        <span class="property-type"><a href="#samluser">pulumi.<wbr>Input<pulumi.<wbr>Input<Saml<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application.
 {{% /md %}}</dd></dl>
@@ -1409,7 +1464,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}label of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1418,7 +1473,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1482,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom login page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1491,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1500,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#acs_endpoints_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of ACS endpoints. You can configure a maximum of 100 endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1509,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1518,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#assertion_signed_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1527,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#attribute_statements_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samlattributestatement">Sequence[Saml<wbr>Attribute<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#samlattributestatement">Input[Saml<wbr>Attribute<wbr>Statement<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1536,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Audience restriction.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1545,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1554,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1563,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#default_relay_state_python" style="color: inherit; text-decoration: inherit;">default_<wbr>relay_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1572,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1581,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1590,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}features enabled. Notice: you can't currently configure provisioning features via the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1599,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1608,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1617,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1626,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#honor_force_authn_python" style="color: inherit; text-decoration: inherit;">honor_<wbr>force_<wbr>authn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1635,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#idp_issuer_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1644,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key. Required to be set with `key_years_valid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1653,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#key_years_valid_python" style="color: inherit; text-decoration: inherit;">key_<wbr>years_<wbr>valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid (2 - 10 years).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1662,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1671,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1680,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#request_compressed_python" style="color: inherit; text-decoration: inherit;">request_<wbr>compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1689,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#response_signed_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1698,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1707,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#single_logout_certificate_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests. 
 Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`, see [official documentation](https://developer.okta.com/docs/reference/api/apps/#service-provider-certificate).
@@ -1662,7 +1717,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#single_logout_issuer_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1726,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#single_logout_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1735,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML service provider issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1744,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1753,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1762,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#subject_name_id_format_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1771,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#subject_name_id_template_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1725,7 +1780,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1789,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template suffix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1798,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1807,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samluser">Sequence[Saml<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#samluser">Input[Saml<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application.
 {{% /md %}}</dd></dl>
@@ -2181,20 +2236,71 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SamlState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Saml</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SamlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Saml</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAttributeStatementArgs]]</span> = None<span class="p">, </span><span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authn_context_class_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">honor_force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_post_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_redirect_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_years_valid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlUserArgs]]</span> = None<span class="p">) -&gt;</span> Saml</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SamlAttributeStatementArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">audience</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authn_context_class_ref</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">entity_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">entity_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">honor_force_authn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">http_post_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">http_redirect_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_years_valid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">preconfigured_app</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">single_logout_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">single_logout_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">single_logout_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SamlUserArgs]]]]</span> = None<span class="p">) -&gt;</span> Saml</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SamlState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SamlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Saml</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Saml</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SamlState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Saml</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SamlState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3195,7 +3301,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3204,7 +3310,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom login page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3213,7 +3319,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3222,7 +3328,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_acsendpoints_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of ACS endpoints. You can configure a maximum of 100 endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3231,7 +3337,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3240,7 +3346,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_assertionsigned_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3355,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_attributestatements_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samlattributestatement">Saml<wbr>Attribute<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#samlattributestatement">pulumi.<wbr>Input<pulumi.<wbr>Input<Saml<wbr>Attribute<wbr>Statement<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3364,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Audience restriction.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3267,7 +3373,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3382,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3391,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The raw signing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3400,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_defaultrelaystate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Relay<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3303,7 +3409,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3312,7 +3418,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3321,7 +3427,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_entitykey_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the `entity_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3330,7 +3436,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_entityurl_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entity URL for instance [http://www.okta.com/exk1fcia6d6EMsf331d8](http://www.okta.com/exk1fcia6d6EMsf331d8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3339,7 +3445,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}features enabled. Notice: you can't currently configure provisioning features via the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3348,7 +3454,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3357,7 +3463,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3366,7 +3472,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -3375,7 +3481,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_honorforceauthn_nodejs" style="color: inherit; text-decoration: inherit;">honor<wbr>Force<wbr>Authn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3384,7 +3490,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_httppostbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Post<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}`urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post` location from the SAML metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3393,7 +3499,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_httpredirectbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}`urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` location from the SAML metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3402,7 +3508,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_idpissuer_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML issuer ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3411,7 +3517,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate key ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3420,7 +3526,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key. Required to be set with `key_years_valid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3429,7 +3535,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_keyyearsvalid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Years<wbr>Valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid (2 - 10 years).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3438,7 +3544,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}label of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3447,7 +3553,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The raw SAML metadata in XML.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3456,7 +3562,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_metadataurl_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3571,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the attribute statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3474,7 +3580,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3483,7 +3589,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3492,7 +3598,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_requestcompressed_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3501,7 +3607,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_responsesigned_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3510,7 +3616,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3519,7 +3625,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3528,7 +3634,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_singlelogoutcertificate_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests. 
 Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`, see [official documentation](https://developer.okta.com/docs/reference/api/apps/#service-provider-certificate).
@@ -3538,7 +3644,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_singlelogoutissuer_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3547,7 +3653,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_singlelogouturl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3556,7 +3662,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML service provider issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3565,7 +3671,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3574,7 +3680,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3583,7 +3689,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_subjectnameidformat_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3592,7 +3698,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_subjectnameidtemplate_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3601,7 +3707,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3610,7 +3716,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template suffix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3619,7 +3725,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3628,7 +3734,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samluser">Saml<wbr>User[]</a></span>
+        <span class="property-type"><a href="#samluser">pulumi.<wbr>Input<pulumi.<wbr>Input<Saml<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application.
 {{% /md %}}</dd></dl>
@@ -3641,7 +3747,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3650,7 +3756,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom login page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3659,7 +3765,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3668,7 +3774,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_acs_endpoints_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of ACS endpoints. You can configure a maximum of 100 endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3677,7 +3783,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3686,7 +3792,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_assertion_signed_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3695,7 +3801,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_attribute_statements_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samlattributestatement">Sequence[Saml<wbr>Attribute<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#samlattributestatement">Input[Saml<wbr>Attribute<wbr>Statement<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3704,7 +3810,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Audience restriction.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3713,7 +3819,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3722,7 +3828,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3731,7 +3837,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The raw signing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3740,7 +3846,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_default_relay_state_python" style="color: inherit; text-decoration: inherit;">default_<wbr>relay_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3749,7 +3855,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3758,7 +3864,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3767,7 +3873,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_entity_key_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the `entity_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3776,7 +3882,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_entity_url_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance [http://www.okta.com/exk1fcia6d6EMsf331d8](http://www.okta.com/exk1fcia6d6EMsf331d8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3785,7 +3891,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}features enabled. Notice: you can't currently configure provisioning features via the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3794,7 +3900,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3803,7 +3909,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3812,7 +3918,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd><dt class="property-optional"
@@ -3821,7 +3927,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_honor_force_authn_python" style="color: inherit; text-decoration: inherit;">honor_<wbr>force_<wbr>authn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3830,7 +3936,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_http_post_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>post_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}`urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post` location from the SAML metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3839,7 +3945,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_http_redirect_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}`urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` location from the SAML metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3848,7 +3954,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_idp_issuer_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3857,7 +3963,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate key ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3866,7 +3972,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key. Required to be set with `key_years_valid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3875,7 +3981,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_key_years_valid_python" style="color: inherit; text-decoration: inherit;">key_<wbr>years_<wbr>valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid (2 - 10 years).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3884,7 +3990,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}label of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3893,7 +3999,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The raw SAML metadata in XML.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3902,7 +4008,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_metadata_url_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3911,7 +4017,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the attribute statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3920,7 +4026,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3929,7 +4035,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3938,7 +4044,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_request_compressed_python" style="color: inherit; text-decoration: inherit;">request_<wbr>compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3947,7 +4053,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_response_signed_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3956,7 +4062,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3965,7 +4071,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3974,7 +4080,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_single_logout_certificate_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests. 
 Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`, see [official documentation](https://developer.okta.com/docs/reference/api/apps/#service-provider-certificate).
@@ -3984,7 +4090,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_single_logout_issuer_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3993,7 +4099,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_single_logout_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4002,7 +4108,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML service provider issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4011,7 +4117,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4020,7 +4126,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}status of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4029,7 +4135,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_subject_name_id_format_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4038,7 +4144,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_subject_name_id_template_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4047,7 +4153,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4056,7 +4162,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template suffix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4065,7 +4171,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4180,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samluser">Sequence[Saml<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#samluser">Input[Saml<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application.
 {{% /md %}}</dd></dl>
@@ -4214,7 +4320,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the attribute statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4223,7 +4329,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of group attribute filter. Valid values are: `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, or `"REGEX"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4232,7 +4338,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Filter value to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4241,7 +4347,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4250,7 +4356,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of attribute statement value. Valid values are: `"EXPRESSION"` or `"GROUP"`. Default is `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4259,7 +4365,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd></dl>
@@ -4272,7 +4378,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the attribute statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4281,7 +4387,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of group attribute filter. Valid values are: `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, or `"REGEX"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4290,7 +4396,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Filter value to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4299,7 +4405,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4308,7 +4414,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of attribute statement value. Valid values are: `"EXPRESSION"` or `"GROUP"`. Default is `"EXPRESSION"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4317,7 +4423,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd></dl>
@@ -4406,7 +4512,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}id of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4415,7 +4521,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4423,7 +4529,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4431,7 +4537,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,7 +4549,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}id of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4452,7 +4558,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4460,7 +4566,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4468,7 +4574,7 @@ Note: should be provided without `-----BEGIN CERTIFICATE-----` and `-----END CER
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

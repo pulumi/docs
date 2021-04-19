@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -133,19 +133,50 @@ const example = new okta.app.SecurePasswordStore("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field1_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field2_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field3</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field3_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurePasswordStoreUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field1_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field2_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field3</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">optional_field3_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SecurePasswordStoreUserArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurePasswordStore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurePasswordStore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurePasswordStore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurePasswordStore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurePasswordStore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurePasswordStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,22 +211,32 @@ const example = new okta.app.SecurePasswordStore("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecurePasswordStoreArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,7 +245,7 @@ const example = new okta.app.SecurePasswordStore("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -228,7 +269,7 @@ const example = new okta.app.SecurePasswordStore("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -741,7 +782,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
 {{% /md %}}</dd><dt class="property-required"
@@ -750,7 +791,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#passwordfield_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login password field.
 {{% /md %}}</dd><dt class="property-required"
@@ -759,7 +800,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -768,7 +809,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login username field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +818,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +827,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +836,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +845,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#credentialsscheme_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +854,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +863,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +872,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +881,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield1_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +890,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield1value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field1Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +899,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield2_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +908,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield2value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field2Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +917,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield3_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +926,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optionalfield3value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field3Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +935,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#revealpassword_nodejs" style="color: inherit; text-decoration: inherit;">reveal<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow user to reveal password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +944,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#sharedpassword_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shared password, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +953,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#sharedusername_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +962,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +971,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +980,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template suffix
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +989,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +998,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securepasswordstoreuser">Secure<wbr>Password<wbr>Store<wbr>User[]</a></span>
+        <span class="property-type"><a href="#securepasswordstoreuser">pulumi.<wbr>Input<pulumi.<wbr>Input<Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
 {{% /md %}}</dd></dl>
@@ -970,7 +1011,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
 {{% /md %}}</dd><dt class="property-required"
@@ -979,7 +1020,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#password_field_python" style="color: inherit; text-decoration: inherit;">password_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login password field.
 {{% /md %}}</dd><dt class="property-required"
@@ -988,7 +1029,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -997,7 +1038,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#username_field_python" style="color: inherit; text-decoration: inherit;">username_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login username field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1047,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1056,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1065,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1074,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#credentials_scheme_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1083,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1092,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1101,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1110,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field1_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1119,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field1_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field1_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1128,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field2_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1137,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field2_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field2_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1146,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field3_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1155,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#optional_field3_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field3_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1164,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#reveal_password_python" style="color: inherit; text-decoration: inherit;">reveal_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow user to reveal password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1173,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#shared_password_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shared password, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1182,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#shared_username_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1191,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1200,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1209,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template suffix
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1218,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1227,7 @@ The SecurePasswordStore resource accepts the following [input]({{< relref "/docs
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securepasswordstoreuser">Sequence[Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securepasswordstoreuser">Input[Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
 {{% /md %}}</dd></dl>
@@ -1327,20 +1368,49 @@ Get an existing SecurePasswordStore resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurePasswordStoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurePasswordStore</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurePasswordStoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurePasswordStore</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field1_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field2_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field3</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_field3_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurePasswordStoreUserArgs]]</span> = None<span class="p">) -&gt;</span> SecurePasswordStore</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field1_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field2_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field3</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optional_field3_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">password_field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">reveal_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">shared_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">shared_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SecurePasswordStoreUserArgs]]]]</span> = None<span class="p">) -&gt;</span> SecurePasswordStore</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurePasswordStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecurePasswordStoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurePasswordStore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurePasswordStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurePasswordStoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurePasswordStore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurePasswordStore</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecurePasswordStoreState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurePasswordStore</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecurePasswordStoreState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1943,7 +2013,7 @@ The following state arguments are supported:
 <a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +2040,7 @@ The following state arguments are supported:
 <a href="#state_credentialsscheme_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2067,7 @@ The following state arguments are supported:
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +2076,7 @@ The following state arguments are supported:
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +2085,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2024,7 +2094,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield1_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2103,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield1value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field1Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield2_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2121,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield2value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field2Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2130,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield3_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2139,7 @@ The following state arguments are supported:
 <a href="#state_optionalfield3value_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Field3Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_passwordfield_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login password field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2157,7 @@ The following state arguments are supported:
 <a href="#state_revealpassword_nodejs" style="color: inherit; text-decoration: inherit;">reveal<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow user to reveal password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_sharedpassword_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shared password, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_sharedusername_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2184,7 @@ The following state arguments are supported:
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2193,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2211,7 @@ The following state arguments are supported:
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2220,7 @@ The following state arguments are supported:
 <a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username template suffix
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2229,7 @@ The following state arguments are supported:
 <a href="#state_usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2238,7 @@ The following state arguments are supported:
 <a href="#state_usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login username field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2247,7 @@ The following state arguments are supported:
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securepasswordstoreuser">Secure<wbr>Password<wbr>Store<wbr>User[]</a></span>
+        <span class="property-type"><a href="#securepasswordstoreuser">pulumi.<wbr>Input<pulumi.<wbr>Input<Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
 {{% /md %}}</dd></dl>
@@ -2190,7 +2260,7 @@ The following state arguments are supported:
 <a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2269,7 @@ The following state arguments are supported:
 <a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2287,7 @@ The following state arguments are supported:
 <a href="#state_credentials_scheme_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2296,7 @@ The following state arguments are supported:
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2305,7 @@ The following state arguments are supported:
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2314,7 @@ The following state arguments are supported:
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2341,7 @@ The following state arguments are supported:
 <a href="#state_optional_field1_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_optional_field1_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field1_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_optional_field2_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2368,7 @@ The following state arguments are supported:
 <a href="#state_optional_field2_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field2_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2377,7 @@ The following state arguments are supported:
 <a href="#state_optional_field3_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional param in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2386,7 @@ The following state arguments are supported:
 <a href="#state_optional_field3_value_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>field3_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of optional value in the login form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2325,7 +2395,7 @@ The following state arguments are supported:
 <a href="#state_password_field_python" style="color: inherit; text-decoration: inherit;">password_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login password field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2334,7 +2404,7 @@ The following state arguments are supported:
 <a href="#state_reveal_password_python" style="color: inherit; text-decoration: inherit;">reveal_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow user to reveal password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2413,7 @@ The following state arguments are supported:
 <a href="#state_shared_password_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shared password, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2352,7 +2422,7 @@ The following state arguments are supported:
 <a href="#state_shared_username_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shared username, required for certain schemes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2361,7 +2431,7 @@ The following state arguments are supported:
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2370,7 +2440,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2388,7 +2458,7 @@ The following state arguments are supported:
 <a href="#state_user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2467,7 @@ The following state arguments are supported:
 <a href="#state_user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username template suffix
 {{% /md %}}</dd><dt class="property-optional"
@@ -2406,7 +2476,7 @@ The following state arguments are supported:
 <a href="#state_user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username template type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2415,7 +2485,7 @@ The following state arguments are supported:
 <a href="#state_username_field_python" style="color: inherit; text-decoration: inherit;">username_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login username field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2494,7 @@ The following state arguments are supported:
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securepasswordstoreuser">Sequence[Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securepasswordstoreuser">Input[Secure<wbr>Password<wbr>Store<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
 {{% /md %}}</dd></dl>
@@ -2520,7 +2590,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2598,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2536,7 +2606,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2614,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2556,7 +2626,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2634,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2642,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2650,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

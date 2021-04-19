@@ -83,8 +83,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -237,19 +237,63 @@ const example = new okta.user.User("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_profile_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">employee_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_memberships</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">honorific_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">honorific_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_answer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_question</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">second_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zip_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">custom_profile_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">employee_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">group_memberships</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">honorific_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">honorific_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">manager</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">profile_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">recovery_answer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">recovery_question</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">second_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">zip_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,22 +328,32 @@ const example = new okta.user.User("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +362,7 @@ const example = new okta.user.User("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -332,7 +386,7 @@ const example = new okta.user.User("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1079,7 +1133,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-required"
@@ -1088,7 +1142,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd><dt class="property-required"
@@ -1097,7 +1151,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd><dt class="property-required"
@@ -1106,7 +1160,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1169,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#adminroles_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1178,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1187,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#costcenter_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1196,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1205,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#customprofileattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1214,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#department_nodejs" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +1223,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1232,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#division_nodejs" style="color: inherit; text-decoration: inherit;">division</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1241,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#employeenumber_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1250,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#groupmemberships_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1259,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#honorificprefix_nodejs" style="color: inherit; text-decoration: inherit;">honorific<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1268,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#honorificsuffix_nodejs" style="color: inherit; text-decoration: inherit;">honorific<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1277,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1286,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1295,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#managerid_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1304,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#middlename_nodejs" style="color: inherit; text-decoration: inherit;">middle<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1313,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1322,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nickname_nodejs" style="color: inherit; text-decoration: inherit;">nick<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1331,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1340,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1349,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1358,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#preferredlanguage_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1367,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#primaryphone_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1376,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#profileurl_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1385,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#recoveryanswer_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1394,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#recoveryquestion_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1403,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#secondemail_nodejs" style="color: inherit; text-decoration: inherit;">second<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1412,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1421,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1430,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1439,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1448,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1457,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1466,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zipcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd></dl>
@@ -1425,7 +1479,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-required"
@@ -1434,7 +1488,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd><dt class="property-required"
@@ -1443,7 +1497,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd><dt class="property-required"
@@ -1452,7 +1506,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1515,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#admin_roles_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1524,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1533,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#cost_center_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1542,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1497,7 +1551,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#custom_profile_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1506,7 +1560,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#department_python" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1515,7 +1569,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1578,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#division_python" style="color: inherit; text-decoration: inherit;">division</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1587,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#employee_number_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1596,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#group_memberships_python" style="color: inherit; text-decoration: inherit;">group_<wbr>memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1605,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#honorific_prefix_python" style="color: inherit; text-decoration: inherit;">honorific_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1614,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#honorific_suffix_python" style="color: inherit; text-decoration: inherit;">honorific_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1623,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1632,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1641,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#manager_id_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1650,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#middle_name_python" style="color: inherit; text-decoration: inherit;">middle_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1659,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mobile_phone_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1668,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nick_name_python" style="color: inherit; text-decoration: inherit;">nick_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1677,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1686,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1695,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1704,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#preferred_language_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1713,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#primary_phone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1722,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#profile_url_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1731,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#recovery_answer_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1740,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#recovery_question_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1749,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#second_email_python" style="color: inherit; text-decoration: inherit;">second_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1758,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1767,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1776,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1785,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1794,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1803,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1812,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zip_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd></dl>
@@ -1863,20 +1917,61 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_profile_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">employee_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_memberships</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">honorific_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">honorific_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">raw_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_answer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_question</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">second_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zip_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_profile_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">employee_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">group_memberships</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">honorific_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">honorific_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">manager</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">postal_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_phone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">raw_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_answer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_question</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">second_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">zip_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2695,7 +2790,7 @@ The following state arguments are supported:
 <a href="#state_adminroles_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2704,7 +2799,7 @@ The following state arguments are supported:
 <a href="#state_city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2713,7 +2808,7 @@ The following state arguments are supported:
 <a href="#state_costcenter_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2722,7 +2817,7 @@ The following state arguments are supported:
 <a href="#state_countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2826,7 @@ The following state arguments are supported:
 <a href="#state_customprofileattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2835,7 @@ The following state arguments are supported:
 <a href="#state_department_nodejs" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2844,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2853,7 @@ The following state arguments are supported:
 <a href="#state_division_nodejs" style="color: inherit; text-decoration: inherit;">division</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2862,7 @@ The following state arguments are supported:
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2871,7 @@ The following state arguments are supported:
 <a href="#state_employeenumber_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2880,7 @@ The following state arguments are supported:
 <a href="#state_firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2794,7 +2889,7 @@ The following state arguments are supported:
 <a href="#state_groupmemberships_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2803,7 +2898,7 @@ The following state arguments are supported:
 <a href="#state_honorificprefix_nodejs" style="color: inherit; text-decoration: inherit;">honorific<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2812,7 +2907,7 @@ The following state arguments are supported:
 <a href="#state_honorificsuffix_nodejs" style="color: inherit; text-decoration: inherit;">honorific<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2916,7 @@ The following state arguments are supported:
 <a href="#state_lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2925,7 @@ The following state arguments are supported:
 <a href="#state_locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2839,7 +2934,7 @@ The following state arguments are supported:
 <a href="#state_login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2943,7 @@ The following state arguments are supported:
 <a href="#state_manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2952,7 @@ The following state arguments are supported:
 <a href="#state_managerid_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2866,7 +2961,7 @@ The following state arguments are supported:
 <a href="#state_middlename_nodejs" style="color: inherit; text-decoration: inherit;">middle<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2970,7 @@ The following state arguments are supported:
 <a href="#state_mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2979,7 @@ The following state arguments are supported:
 <a href="#state_nickname_nodejs" style="color: inherit; text-decoration: inherit;">nick<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2893,7 +2988,7 @@ The following state arguments are supported:
 <a href="#state_organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2902,7 +2997,7 @@ The following state arguments are supported:
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +3006,7 @@ The following state arguments are supported:
 <a href="#state_postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +3015,7 @@ The following state arguments are supported:
 <a href="#state_preferredlanguage_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +3024,7 @@ The following state arguments are supported:
 <a href="#state_primaryphone_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +3033,7 @@ The following state arguments are supported:
 <a href="#state_profileurl_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +3042,7 @@ The following state arguments are supported:
 <a href="#state_rawstatus_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +3051,7 @@ The following state arguments are supported:
 <a href="#state_recoveryanswer_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2965,7 +3060,7 @@ The following state arguments are supported:
 <a href="#state_recoveryquestion_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +3069,7 @@ The following state arguments are supported:
 <a href="#state_secondemail_nodejs" style="color: inherit; text-decoration: inherit;">second<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +3078,7 @@ The following state arguments are supported:
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +3087,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +3096,7 @@ The following state arguments are supported:
 <a href="#state_streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3010,7 +3105,7 @@ The following state arguments are supported:
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3019,7 +3114,7 @@ The following state arguments are supported:
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3028,7 +3123,7 @@ The following state arguments are supported:
 <a href="#state_usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3037,7 +3132,7 @@ The following state arguments are supported:
 <a href="#state_zipcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd></dl>
@@ -3050,7 +3145,7 @@ The following state arguments are supported:
 <a href="#state_admin_roles_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3059,7 +3154,7 @@ The following state arguments are supported:
 <a href="#state_city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3068,7 +3163,7 @@ The following state arguments are supported:
 <a href="#state_cost_center_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3077,7 +3172,7 @@ The following state arguments are supported:
 <a href="#state_country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3086,7 +3181,7 @@ The following state arguments are supported:
 <a href="#state_custom_profile_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3095,7 +3190,7 @@ The following state arguments are supported:
 <a href="#state_department_python" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3104,7 +3199,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3208,7 @@ The following state arguments are supported:
 <a href="#state_division_python" style="color: inherit; text-decoration: inherit;">division</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3217,7 @@ The following state arguments are supported:
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3226,7 @@ The following state arguments are supported:
 <a href="#state_employee_number_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3235,7 @@ The following state arguments are supported:
 <a href="#state_first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3244,7 @@ The following state arguments are supported:
 <a href="#state_group_memberships_python" style="color: inherit; text-decoration: inherit;">group_<wbr>memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3158,7 +3253,7 @@ The following state arguments are supported:
 <a href="#state_honorific_prefix_python" style="color: inherit; text-decoration: inherit;">honorific_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3262,7 @@ The following state arguments are supported:
 <a href="#state_honorific_suffix_python" style="color: inherit; text-decoration: inherit;">honorific_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3271,7 @@ The following state arguments are supported:
 <a href="#state_last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3280,7 @@ The following state arguments are supported:
 <a href="#state_locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3194,7 +3289,7 @@ The following state arguments are supported:
 <a href="#state_login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3203,7 +3298,7 @@ The following state arguments are supported:
 <a href="#state_manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3212,7 +3307,7 @@ The following state arguments are supported:
 <a href="#state_manager_id_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3221,7 +3316,7 @@ The following state arguments are supported:
 <a href="#state_middle_name_python" style="color: inherit; text-decoration: inherit;">middle_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3325,7 @@ The following state arguments are supported:
 <a href="#state_mobile_phone_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3239,7 +3334,7 @@ The following state arguments are supported:
 <a href="#state_nick_name_python" style="color: inherit; text-decoration: inherit;">nick_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3248,7 +3343,7 @@ The following state arguments are supported:
 <a href="#state_organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3257,7 +3352,7 @@ The following state arguments are supported:
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3266,7 +3361,7 @@ The following state arguments are supported:
 <a href="#state_postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3275,7 +3370,7 @@ The following state arguments are supported:
 <a href="#state_preferred_language_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3284,7 +3379,7 @@ The following state arguments are supported:
 <a href="#state_primary_phone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3293,7 +3388,7 @@ The following state arguments are supported:
 <a href="#state_profile_url_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3302,7 +3397,7 @@ The following state arguments are supported:
 <a href="#state_raw_status_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3311,7 +3406,7 @@ The following state arguments are supported:
 <a href="#state_recovery_answer_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3320,7 +3415,7 @@ The following state arguments are supported:
 <a href="#state_recovery_question_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>question</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3329,7 +3424,7 @@ The following state arguments are supported:
 <a href="#state_second_email_python" style="color: inherit; text-decoration: inherit;">second_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3338,7 +3433,7 @@ The following state arguments are supported:
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3347,7 +3442,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3356,7 +3451,7 @@ The following state arguments are supported:
 <a href="#state_street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3365,7 +3460,7 @@ The following state arguments are supported:
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3374,7 +3469,7 @@ The following state arguments are supported:
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3383,7 +3478,7 @@ The following state arguments are supported:
 <a href="#state_user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3392,7 +3487,7 @@ The following state arguments are supported:
 <a href="#state_zip_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd></dl>
