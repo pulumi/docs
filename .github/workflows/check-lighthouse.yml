@@ -1,0 +1,21 @@
+name: "Scheduled jobs: Lighthouse CI"
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Run every day at 3:00PM UTC.
+    - cron:  '0 15 * * *'
+jobs:
+  all:
+    name: Lighthouse
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: cobraz/parse-sitemap@v1
+        with:
+          sitemap-url: https://www.pulumi.com/sitemap.xml
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: ${{ steps.parse-sitemap.outputs.urls }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
