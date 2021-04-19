@@ -157,19 +157,36 @@ const exampleService = new pagerduty.Service("exampleService", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIncidentUrgencyRuleArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceScheduledActionArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSupportHoursArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,22 +221,32 @@ const exampleService = new pagerduty.Service("exampleService", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,7 +255,7 @@ const exampleService = new pagerduty.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -252,7 +279,7 @@ const exampleService = new pagerduty.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -505,7 +532,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#escalationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The escalation policy used by this service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +541,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#acknowledgementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +550,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alertcreation_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -532,7 +559,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alertgrouping_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -541,7 +568,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alertgroupingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -550,7 +577,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#autoresolvetimeout_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Resolve<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +586,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +594,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#incidenturgencyrule_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Urgency<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyrule">Service<wbr>Incident<wbr>Urgency<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyrule">pulumi<wbr>Input<Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +602,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +611,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scheduledactions_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">Service<wbr>Scheduled<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Scheduled<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +619,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#supporthours_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesupporthours">Service<wbr>Support<wbr>Hours</a></span>
+        <span class="property-type"><a href="#servicesupporthours">pulumi<wbr>Input<Service<wbr>Support<wbr>Hours<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -604,7 +631,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#escalation_policy_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The escalation policy used by this service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -613,7 +640,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#acknowledgement_timeout_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -622,7 +649,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alert_creation_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -631,7 +658,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alert_grouping_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +667,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +676,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#auto_resolve_timeout_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>resolve_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -658,7 +685,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +693,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#incident_urgency_rule_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>urgency_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyrule">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyrule">Input[Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +701,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +710,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scheduled_actions_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">Input[Service<wbr>Scheduled<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +718,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#support_hours_python" style="color: inherit; text-decoration: inherit;">support_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesupporthours">Service<wbr>Support<wbr>Hours<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesupporthours">Input[Service<wbr>Support<wbr>Hours<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,20 +914,37 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">last_incident_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIncidentUrgencyRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">last_incident_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceScheduledActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSupportHoursArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1271,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_acknowledgementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_alertcreation_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1333,7 @@ The following state arguments are supported:
 <a href="#state_alertgrouping_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1342,7 @@ The following state arguments are supported:
 <a href="#state_alertgroupingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1351,7 @@ The following state arguments are supported:
 <a href="#state_autoresolvetimeout_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Resolve<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1360,7 @@ The following state arguments are supported:
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1324,7 +1368,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1376,7 @@ The following state arguments are supported:
 <a href="#state_escalationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The escalation policy used by this service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1385,7 @@ The following state arguments are supported:
 <a href="#state_htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_incidenturgencyrule_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Urgency<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyrule">Service<wbr>Incident<wbr>Urgency<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyrule">pulumi<wbr>Input<Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_lastincidenttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Incident<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1409,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1418,7 @@ The following state arguments are supported:
 <a href="#state_scheduledactions_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">Service<wbr>Scheduled<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Scheduled<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1426,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1434,7 @@ The following state arguments are supported:
 <a href="#state_supporthours_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesupporthours">Service<wbr>Support<wbr>Hours</a></span>
+        <span class="property-type"><a href="#servicesupporthours">pulumi<wbr>Input<Service<wbr>Support<wbr>Hours<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1402,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_acknowledgement_timeout_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_alert_creation_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_alert_grouping_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_auto_resolve_timeout_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>resolve_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1499,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_escalation_policy_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The escalation policy used by this service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1524,7 @@ The following state arguments are supported:
 <a href="#state_incident_urgency_rule_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>urgency_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyrule">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyrule">Input[Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1532,7 @@ The following state arguments are supported:
 <a href="#state_last_incident_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>incident_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1540,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_scheduled_actions_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">Input[Service<wbr>Scheduled<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1565,7 @@ The following state arguments are supported:
 <a href="#state_support_hours_python" style="color: inherit; text-decoration: inherit;">support_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesupporthours">Service<wbr>Support<wbr>Hours<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesupporthours">Input[Service<wbr>Support<wbr>Hours<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1624,7 +1668,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1677,7 @@ The following state arguments are supported:
 <a href="#duringsupporthours_nodejs" style="color: inherit; text-decoration: inherit;">during<wbr>Support<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyruleduringsupporthours">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>During<wbr>Support<wbr>Hours</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyruleduringsupporthours">pulumi<wbr>Input<Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>During<wbr>Support<wbr>Hours<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Incidents' urgency during support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1686,7 @@ The following state arguments are supported:
 <a href="#outsidesupporthours_nodejs" style="color: inherit; text-decoration: inherit;">outside<wbr>Support<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyruleoutsidesupporthours">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Outside<wbr>Support<wbr>Hours</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyruleoutsidesupporthours">pulumi<wbr>Input<Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Outside<wbr>Support<wbr>Hours<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Incidents' urgency outside of support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1695,7 @@ The following state arguments are supported:
 <a href="#urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1664,7 +1708,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1673,7 +1717,7 @@ The following state arguments are supported:
 <a href="#during_support_hours_python" style="color: inherit; text-decoration: inherit;">during_<wbr>support_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyruleduringsupporthours">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>During<wbr>Support<wbr>Hours<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyruleduringsupporthours">Input[Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>During<wbr>Support<wbr>Hours<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Incidents' urgency during support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1726,7 @@ The following state arguments are supported:
 <a href="#outside_support_hours_python" style="color: inherit; text-decoration: inherit;">outside_<wbr>support_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidenturgencyruleoutsidesupporthours">Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Outside<wbr>Support<wbr>Hours<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceincidenturgencyruleoutsidesupporthours">Input[Service<wbr>Incident<wbr>Urgency<wbr>Rule<wbr>Outside<wbr>Support<wbr>Hours<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Incidents' urgency outside of support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1735,7 @@ The following state arguments are supported:
 <a href="#urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1750,7 +1794,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1803,7 @@ The following state arguments are supported:
 <a href="#urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1772,7 +1816,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1825,7 @@ The following state arguments are supported:
 <a href="#urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1840,7 +1884,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1893,7 @@ The following state arguments are supported:
 <a href="#urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1862,7 +1906,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1915,7 @@ The following state arguments are supported:
 <a href="#urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The urgency: `low` Notify responders (does not escalate), `high` (follows escalation rules) or `severity_based` Set's the urgency of the incident based on the severity set by the triggering monitoring tool.
 {{% /md %}}</dd></dl>
@@ -1948,7 +1992,7 @@ The following state arguments are supported:
 <a href="#ats_nodejs" style="color: inherit; text-decoration: inherit;">ats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledactionat">Service<wbr>Scheduled<wbr>Action<wbr>At[]</a></span>
+        <span class="property-type"><a href="#servicescheduledactionat">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Scheduled<wbr>Action<wbr>At<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A block representing when the scheduled action will occur.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +2001,7 @@ The following state arguments are supported:
 <a href="#tourgency_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The urgency to change to: `low` (does not escalate), or `high` (follows escalation rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +2010,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd></dl>
@@ -1979,7 +2023,7 @@ The following state arguments are supported:
 <a href="#ats_python" style="color: inherit; text-decoration: inherit;">ats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledactionat">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>At<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledactionat">Input[Service<wbr>Scheduled<wbr>Action<wbr>At<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A block representing when the scheduled action will occur.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2032,7 @@ The following state arguments are supported:
 <a href="#to_urgency_python" style="color: inherit; text-decoration: inherit;">to_<wbr>urgency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The urgency to change to: `low` (does not escalate), or `high` (follows escalation rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2041,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd></dl>
@@ -2056,7 +2100,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Designates either the start or the end of the scheduled action. Can be `support_hours_start` or `support_hours_end`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2065,7 +2109,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of time specification. Currently, this must be set to `named_time`.
 {{% /md %}}</dd></dl>
@@ -2078,7 +2122,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Designates either the start or the end of the scheduled action. Can be `support_hours_start` or `support_hours_end`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2131,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of time specification. Currently, this must be set to `named_time`.
 {{% /md %}}</dd></dl>
@@ -2202,7 +2246,7 @@ Monday and `7` being Sunday.
 <a href="#daysofweeks_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Array of days of week as integers. `1` to `7`, `1` being
 Monday and `7` being Sunday.
@@ -2212,7 +2256,7 @@ Monday and `7` being Sunday.
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The support hours' ending time of day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2265,7 @@ Monday and `7` being Sunday.
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The support hours' starting time of day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2274,7 @@ Monday and `7` being Sunday.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time zone for the support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2283,7 @@ Monday and `7` being Sunday.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd></dl>
@@ -2252,7 +2296,7 @@ Monday and `7` being Sunday.
 <a href="#days_of_weeks_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Array of days of week as integers. `1` to `7`, `1` being
 Monday and `7` being Sunday.
@@ -2262,7 +2306,7 @@ Monday and `7` being Sunday.
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The support hours' ending time of day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2315,7 @@ Monday and `7` being Sunday.
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The support hours' starting time of day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2324,7 @@ Monday and `7` being Sunday.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time zone for the support hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2333,7 @@ Monday and `7` being Sunday.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of scheduled action. Currently, this must be set to `urgency_change`.
 {{% /md %}}</dd></dl>

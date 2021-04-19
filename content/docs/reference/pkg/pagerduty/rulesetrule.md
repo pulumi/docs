@@ -341,19 +341,32 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[RulesetRuleVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleActionsArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleConditionsArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleTimeFrameArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RulesetRuleVariableArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesetRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesetRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -388,22 +401,32 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -412,7 +435,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -436,7 +459,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -625,7 +648,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ruleset_nodejs" style="color: inherit; text-decoration: inherit;">ruleset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ruleset that the rule belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +657,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +666,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Conditions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +675,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the rule is disabled and would therefore not be evaluated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +684,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Position/index of the rule within the ruleset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,7 +693,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +702,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">Ruleset<wbr>Rule<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -692,7 +715,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ruleset_python" style="color: inherit; text-decoration: inherit;">ruleset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ruleset that the rule belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +724,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -710,7 +733,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Input[Ruleset<wbr>Rule<wbr>Conditions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -719,7 +742,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the rule is disabled and would therefore not be evaluated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -728,7 +751,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Position/index of the rule within the ruleset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +760,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#time_frame_python" style="color: inherit; text-decoration: inherit;">time_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Input[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +769,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">Sequence[Ruleset<wbr>Rule<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">Input[Ruleset<wbr>Rule<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -815,20 +838,29 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RulesetRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RulesetRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RulesetRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RulesetRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[RulesetRuleVariableArgs]]</span> = None<span class="p">) -&gt;</span> RulesetRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleActionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleConditionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RulesetRuleTimeFrameArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RulesetRuleVariableArgs]]]]</span> = None<span class="p">) -&gt;</span> RulesetRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RulesetRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RulesetRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RulesetRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RulesetRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RulesetRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RulesetRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1071,7 +1103,7 @@ The following state arguments are supported:
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Conditions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the rule is disabled and would therefore not be evaluated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1130,7 @@ The following state arguments are supported:
 <a href="#state_position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Position/index of the rule within the ruleset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1139,7 @@ The following state arguments are supported:
 <a href="#state_ruleset_nodejs" style="color: inherit; text-decoration: inherit;">ruleset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ruleset that the rule belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_timeframe_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1157,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">Ruleset<wbr>Rule<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -1138,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1179,7 @@ The following state arguments are supported:
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Input[Ruleset<wbr>Rule<wbr>Conditions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the rule is disabled and would therefore not be evaluated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Position/index of the rule within the ruleset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1206,7 @@ The following state arguments are supported:
 <a href="#state_ruleset_python" style="color: inherit; text-decoration: inherit;">ruleset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ruleset that the rule belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_time_frame_python" style="color: inherit; text-decoration: inherit;">time_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Input[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">Sequence[Ruleset<wbr>Rule<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">Input[Ruleset<wbr>Rule<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -1368,7 +1400,7 @@ The following state arguments are supported:
 <a href="#annotates_nodejs" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1409,7 @@ The following state arguments are supported:
 <a href="#eventactions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1418,7 @@ The following state arguments are supported:
 <a href="#extractions_nodejs" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1427,7 @@ The following state arguments are supported:
 <a href="#priorities_nodejs" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">Ruleset<wbr>Rule<wbr>Actions<wbr>Priority[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1436,7 @@ The following state arguments are supported:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">Ruleset<wbr>Rule<wbr>Actions<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1445,7 @@ The following state arguments are supported:
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">Ruleset<wbr>Rule<wbr>Actions<wbr>Severity[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1454,7 @@ The following state arguments are supported:
 <a href="#suppresses_nodejs" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident). Note: If a threshold is set, the rule must also have a `route` action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1463,7 @@ The following state arguments are supported:
 <a href="#suspends_nodejs" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuspend">Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuspend">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering. Note: A rule with a `suspend` action must also have a `route` action.
 {{% /md %}}</dd></dl>
@@ -1444,7 +1476,7 @@ The following state arguments are supported:
 <a href="#annotates_python" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1485,7 @@ The following state arguments are supported:
 <a href="#event_actions_python" style="color: inherit; text-decoration: inherit;">event_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1494,7 @@ The following state arguments are supported:
 <a href="#extractions_python" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1503,7 @@ The following state arguments are supported:
 <a href="#priorities_python" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1512,7 @@ The following state arguments are supported:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1521,7 @@ The following state arguments are supported:
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1530,7 @@ The following state arguments are supported:
 <a href="#suppresses_python" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident). Note: If a threshold is set, the rule must also have a `route` action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1539,7 @@ The following state arguments are supported:
 <a href="#suspends_python" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuspend">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuspend">Input[Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering. Note: A rule with a `suspend` action must also have a `route` action.
 {{% /md %}}</dd></dl>
@@ -1548,7 +1580,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1561,7 +1593,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1602,7 +1634,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1615,7 +1647,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1710,7 +1742,7 @@ The following state arguments are supported:
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The conditions that need to be met for the extraction to happen. Must use valid [RE2 regular expression syntax](https://github.com/google/re2/wiki/Syntax).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1719,7 +1751,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Field where the data is being copied from. Must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,7 +1760,7 @@ The following state arguments are supported:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Field where the data is being copied to. Must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1769,7 @@ The following state arguments are supported:
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A customized field message. This can also include variables extracted from the payload by using string interpolation.
 {{% /md %}}</dd></dl>
@@ -1750,7 +1782,7 @@ The following state arguments are supported:
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The conditions that need to be met for the extraction to happen. Must use valid [RE2 regular expression syntax](https://github.com/google/re2/wiki/Syntax).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1791,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Field where the data is being copied from. Must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1800,7 @@ The following state arguments are supported:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Field where the data is being copied to. Must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1809,7 @@ The following state arguments are supported:
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A customized field message. This can also include variables extracted from the payload by using string interpolation.
 {{% /md %}}</dd></dl>
@@ -1818,7 +1850,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1831,7 +1863,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1872,7 +1904,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1885,7 +1917,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1926,7 +1958,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -1939,7 +1971,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2034,7 +2066,7 @@ The following state arguments are supported:
 <a href="#thresholdtimeamount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Time<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number value of the `threshold_time_unit` before an incident is created. Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2075,7 @@ The following state arguments are supported:
 <a href="#thresholdtimeunit_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +2084,7 @@ The following state arguments are supported:
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of alerts that should be suppressed. Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +2093,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2074,7 +2106,7 @@ The following state arguments are supported:
 <a href="#threshold_time_amount_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>time_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number value of the `threshold_time_unit` before an incident is created. Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2115,7 @@ The following state arguments are supported:
 <a href="#threshold_time_unit_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2124,7 @@ The following state arguments are supported:
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of alerts that should be suppressed. Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2133,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2142,7 +2174,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2155,7 +2187,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2214,7 +2246,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operator to combine sub-conditions. Can be `and` or `or`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2223,7 +2255,7 @@ The following state arguments are supported:
 <a href="#subconditions_nodejs" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition[]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -2236,7 +2268,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operator to combine sub-conditions. Can be `and` or `or`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2245,7 +2277,7 @@ The following state arguments are supported:
 <a href="#subconditions_python" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Input[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -2304,7 +2336,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of operator to apply to the sub-condition. Can be `exists`,`nexists`,`equals`,`nequals`,`contains`,`ncontains`,`matches`, or `nmatches`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2345,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd></dl>
@@ -2326,7 +2358,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of operator to apply to the sub-condition. Can be `exists`,`nexists`,`equals`,`nequals`,`contains`,`ncontains`,`matches`, or `nmatches`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2335,7 +2367,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Input[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd></dl>
@@ -2392,7 +2424,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2432,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2413,7 +2445,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2453,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2480,7 +2512,7 @@ The following state arguments are supported:
 <a href="#activebetweens_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between[]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2489,7 +2521,7 @@ The following state arguments are supported:
 <a href="#scheduledweeklies_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly[]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2502,7 +2534,7 @@ The following state arguments are supported:
 <a href="#active_betweens_python" style="color: inherit; text-decoration: inherit;">active_<wbr>betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Input[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2543,7 @@ The following state arguments are supported:
 <a href="#scheduled_weeklies_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Input[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2570,7 +2602,7 @@ The following state arguments are supported:
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Ending of the scheduled time when the rule should execute.  Unix timestamp in milliseconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2579,7 +2611,7 @@ The following state arguments are supported:
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
 {{% /md %}}</dd></dl>
@@ -2592,7 +2624,7 @@ The following state arguments are supported:
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Ending of the scheduled time when the rule should execute.  Unix timestamp in milliseconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2601,7 +2633,7 @@ The following state arguments are supported:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
 {{% /md %}}</dd></dl>
@@ -2696,7 +2728,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2705,7 +2737,7 @@ The following state arguments are supported:
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2714,7 +2746,7 @@ The following state arguments are supported:
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timezone for the given schedule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2723,7 +2755,7 @@ The following state arguments are supported:
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}An integer array representing which days during the week the rule executes. For example `weekdays = [1,3,7]` would execute on Monday, Wednesday and Sunday.
 {{% /md %}}</dd></dl>
@@ -2736,7 +2768,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2745,7 +2777,7 @@ The following state arguments are supported:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2754,7 +2786,7 @@ The following state arguments are supported:
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timezone for the given schedule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2763,7 +2795,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}An integer array representing which days during the week the rule executes. For example `weekdays = [1,3,7]` would execute on Monday, Wednesday and Sunday.
 {{% /md %}}</dd></dl>
@@ -2834,7 +2866,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2842,7 +2874,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariableparameter">Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariableparameter">pulumi<wbr>Input<pulumi<wbr>Input<Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2850,7 +2882,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2862,7 +2894,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2902,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariableparameter">Sequence[Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariableparameter">Input[Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2878,7 +2910,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2934,7 +2966,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2942,7 +2974,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
@@ -2955,7 +2987,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2963,7 +2995,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates if the alert should be suppressed before the indicated threshold values are met.
 {{% /md %}}</dd></dl>
