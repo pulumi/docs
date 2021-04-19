@@ -85,8 +85,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/ltm"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -159,43 +159,19 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                             <span class="nx">always_send</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">cookie_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">cookie_encryption_passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">cookie_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">hash_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                             <span class="nx">hash_offset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                             <span class="nx">httponly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">match_across_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">match_across_services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">match_across_virtuals</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">override_conn_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_send</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_encryption_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hash_offset</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">httponly</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_pools</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_services</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_virtuals</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">override_conn_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPersistenceProfileCookie</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistenceProfileCookie</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPersistenceProfileCookie</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistenceProfileCookie</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PersistenceProfileCookie</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PersistenceProfileCookieArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,32 +206,22 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PersistenceProfileCookieArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -264,7 +230,7 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -288,7 +254,7 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -675,7 +641,7 @@ limits remain hard limits and are not overridden.
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
 {{% /md %}}</dd><dt class="property-required"
@@ -684,7 +650,7 @@ limits remain hard limits and are not overridden.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +659,7 @@ limits remain hard limits and are not overridden.
 <a href="#alwayssend_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +668,7 @@ limits remain hard limits and are not overridden.
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +676,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookieencryption_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -719,7 +685,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookieencryptionpassphrase_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption<wbr>Passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -728,7 +694,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +703,7 @@ limits remain hard limits and are not overridden.
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +712,7 @@ limits remain hard limits and are not overridden.
 <a href="#hashlength_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +721,7 @@ limits remain hard limits and are not overridden.
 <a href="#hashoffset_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +730,7 @@ limits remain hard limits and are not overridden.
 <a href="#httponly_nodejs" style="color: inherit; text-decoration: inherit;">httponly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +739,7 @@ limits remain hard limits and are not overridden.
 <a href="#matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +748,7 @@ limits remain hard limits and are not overridden.
 <a href="#matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +757,7 @@ limits remain hard limits and are not overridden.
 <a href="#matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +766,7 @@ limits remain hard limits and are not overridden.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +775,7 @@ limits remain hard limits and are not overridden.
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +784,7 @@ limits remain hard limits and are not overridden.
 <a href="#overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
@@ -828,7 +794,7 @@ limits remain hard limits and are not overridden.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
 {{% /md %}}</dd></dl>
@@ -841,7 +807,7 @@ limits remain hard limits and are not overridden.
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
 {{% /md %}}</dd><dt class="property-required"
@@ -850,7 +816,7 @@ limits remain hard limits and are not overridden.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -859,7 +825,7 @@ limits remain hard limits and are not overridden.
 <a href="#always_send_python" style="color: inherit; text-decoration: inherit;">always_<wbr>send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -868,7 +834,7 @@ limits remain hard limits and are not overridden.
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +842,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookie_encryption_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +851,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookie_encryption_passphrase_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption_<wbr>passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +860,7 @@ limits remain hard limits and are not overridden.
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +869,7 @@ limits remain hard limits and are not overridden.
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +878,7 @@ limits remain hard limits and are not overridden.
 <a href="#hash_length_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +887,7 @@ limits remain hard limits and are not overridden.
 <a href="#hash_offset_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +896,7 @@ limits remain hard limits and are not overridden.
 <a href="#httponly_python" style="color: inherit; text-decoration: inherit;">httponly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +905,7 @@ limits remain hard limits and are not overridden.
 <a href="#match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +914,7 @@ limits remain hard limits and are not overridden.
 <a href="#match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +923,7 @@ limits remain hard limits and are not overridden.
 <a href="#match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +932,7 @@ limits remain hard limits and are not overridden.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +941,7 @@ limits remain hard limits and are not overridden.
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +950,7 @@ limits remain hard limits and are not overridden.
 <a href="#override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
@@ -994,7 +960,7 @@ limits remain hard limits and are not overridden.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
 {{% /md %}}</dd></dl>
@@ -1063,40 +1029,20 @@ Get an existing PersistenceProfileCookie resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PersistenceProfileCookieState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PersistenceProfileCookie</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PersistenceProfileCookieState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PersistenceProfileCookie</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">always_send</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cookie_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cookie_encryption_passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cookie_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hash_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">hash_offset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">httponly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">match_across_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">match_across_services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">match_across_virtuals</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">override_conn_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> PersistenceProfileCookie</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_send</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_encryption_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hash_offset</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">httponly</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_pools</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_services</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_across_virtuals</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">override_conn_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> PersistenceProfileCookie</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPersistenceProfileCookie<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PersistenceProfileCookieState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistenceProfileCookie</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPersistenceProfileCookie<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PersistenceProfileCookieState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistenceProfileCookie</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PersistenceProfileCookie</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PersistenceProfileCookieState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PersistenceProfileCookie</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PersistenceProfileCookieState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1537,7 +1483,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_alwayssend_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1492,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1554,7 +1500,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookieencryption_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1509,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookieencryptionpassphrase_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption<wbr>Passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1518,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1527,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1536,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1545,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_hashlength_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1554,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_hashoffset_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1563,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_httponly_nodejs" style="color: inherit; text-decoration: inherit;">httponly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1572,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1581,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1590,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1599,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1608,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1617,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1626,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
@@ -1690,7 +1636,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
 {{% /md %}}</dd></dl>
@@ -1703,7 +1649,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_always_send_python" style="color: inherit; text-decoration: inherit;">always_<wbr>send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1658,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1666,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookie_encryption_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1675,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookie_encryption_passphrase_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption_<wbr>passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1684,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1693,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1702,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1711,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_hash_length_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1720,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_hash_offset_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1729,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_httponly_python" style="color: inherit; text-decoration: inherit;">httponly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1738,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1747,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1756,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1765,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1774,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1783,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1792,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
@@ -1856,7 +1802,7 @@ limits remain hard limits and are not overridden.
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
 {{% /md %}}</dd></dl>

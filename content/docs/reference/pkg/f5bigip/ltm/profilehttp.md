@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/ltm"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -150,51 +150,19 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">accept_xff</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">basic_auth_realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">encrypt_cookie_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">encrypt_cookies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">fallback_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">fallback_status_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">head_erase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">redirect_rewrite</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">request_chunking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">response_chunking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">response_headers_permitteds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">server_agent_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">tm_partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">via_host_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">via_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">via_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">xff_alternative_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accept_xff</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">basic_auth_realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_cookie_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_cookies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fallback_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fallback_status_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">head_erase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_rewrite</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_chunking</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_chunking</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_headers_permitteds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">server_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_request</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xff_alternative_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfileHttp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileHttp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfileHttp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileHttp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProfileHttp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileHttpArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -229,32 +197,22 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProfileHttpArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -263,7 +221,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -287,7 +245,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -822,7 +780,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +789,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#acceptxff_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
@@ -841,7 +799,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +808,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#basicauthrealm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
 {{% /md %}}</dd><dt class="property-optional"
@@ -859,7 +817,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -868,7 +826,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +835,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#encryptcookiesecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookie<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +844,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#encryptcookies_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +853,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#fallbackhost_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,7 +862,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#fallbackstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +871,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#headerase_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Erase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +880,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#headinsert_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Insert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +889,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#insertxforwardedfor_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Xforwarded<wbr>For</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
 {{% /md %}}</dd><dt class="property-optional"
@@ -940,7 +898,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#lwsseparator_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +907,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#oneconnecttransformations_nodejs" style="color: inherit; text-decoration: inherit;">oneconnect<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +916,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#proxytype_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +925,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#redirectrewrite_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +934,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#requestchunking_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +943,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#responsechunking_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +952,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#responseheaderspermitteds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Permitteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +961,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#serveragentname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Agent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
@@ -1013,7 +971,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#tmpartition_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +980,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#viahostname_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +989,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#viarequest_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +998,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#viaresponse_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1007,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#xffalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">xff<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
 {{% /md %}}</dd></dl>
@@ -1062,7 +1020,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1029,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#accept_xff_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
@@ -1081,7 +1039,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1048,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#basic_auth_realm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1057,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1066,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User defined description
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1075,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#encrypt_cookie_secret_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookie_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1084,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#encrypt_cookies_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1093,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#fallback_host_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1102,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#fallback_status_codes_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1111,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#head_erase_python" style="color: inherit; text-decoration: inherit;">head_<wbr>erase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1120,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#head_insert_python" style="color: inherit; text-decoration: inherit;">head_<wbr>insert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1129,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#insert_xforwarded_for_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>xforwarded_<wbr>for</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1138,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#lws_separator_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1147,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#oneconnect_transformations_python" style="color: inherit; text-decoration: inherit;">oneconnect_<wbr>transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1198,7 +1156,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#proxy_type_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1165,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#redirect_rewrite_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1174,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#request_chunking_python" style="color: inherit; text-decoration: inherit;">request_<wbr>chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1183,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#response_chunking_python" style="color: inherit; text-decoration: inherit;">response_<wbr>chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1192,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#response_headers_permitteds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>permitteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1201,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#server_agent_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>agent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
@@ -1253,7 +1211,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#tm_partition_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1220,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#via_host_name_python" style="color: inherit; text-decoration: inherit;">via_<wbr>host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1229,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#via_request_python" style="color: inherit; text-decoration: inherit;">via_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1238,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#via_response_python" style="color: inherit; text-decoration: inherit;">via_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1247,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#xff_alternative_names_python" style="color: inherit; text-decoration: inherit;">xff_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
 {{% /md %}}</dd></dl>
@@ -1358,48 +1316,20 @@ Get an existing ProfileHttp resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProfileHttpState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProfileHttp</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProfileHttpState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProfileHttp</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">accept_xff</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">basic_auth_realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">encrypt_cookie_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">encrypt_cookies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">fallback_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fallback_status_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">head_erase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">redirect_rewrite</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_chunking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">response_chunking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">response_headers_permitteds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">server_agent_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tm_partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">via_host_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">via_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">via_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">xff_alternative_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ProfileHttp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accept_xff</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">basic_auth_realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_cookie_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_cookies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fallback_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fallback_status_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">head_erase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_rewrite</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_chunking</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_chunking</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_headers_permitteds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">server_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_request</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">via_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xff_alternative_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ProfileHttp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileHttp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProfileHttpState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileHttp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileHttp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProfileHttpState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileHttp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProfileHttp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProfileHttpState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProfileHttp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProfileHttpState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1988,7 +1918,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_acceptxff_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
@@ -1998,7 +1928,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +1937,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_basicauthrealm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +1946,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +1955,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +1964,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_encryptcookiesecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookie<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +1973,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_encryptcookies_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +1982,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_fallbackhost_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +1991,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_fallbackstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2000,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_headerase_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Erase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2009,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_headinsert_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Insert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2018,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_insertxforwardedfor_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Xforwarded<wbr>For</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2027,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_lwsseparator_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2106,7 +2036,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2045,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_oneconnecttransformations_nodejs" style="color: inherit; text-decoration: inherit;">oneconnect<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2124,7 +2054,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_proxytype_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2133,7 +2063,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_redirectrewrite_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2072,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_requestchunking_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2081,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_responsechunking_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2090,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_responseheaderspermitteds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Permitteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2169,7 +2099,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_serveragentname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Agent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
@@ -2179,7 +2109,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_tmpartition_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2188,7 +2118,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_viahostname_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2127,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_viarequest_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2136,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_viaresponse_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2145,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_xffalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">xff<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
 {{% /md %}}</dd></dl>
@@ -2228,7 +2158,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_accept_xff_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
@@ -2238,7 +2168,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2177,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_basic_auth_realm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2186,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2195,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User defined description
 {{% /md %}}</dd><dt class="property-optional"
@@ -2274,7 +2204,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_encrypt_cookie_secret_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookie_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -2283,7 +2213,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_encrypt_cookies_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
 {{% /md %}}</dd><dt class="property-optional"
@@ -2292,7 +2222,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_fallback_host_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2231,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_fallback_status_codes_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2310,7 +2240,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_head_erase_python" style="color: inherit; text-decoration: inherit;">head_<wbr>erase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2249,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_head_insert_python" style="color: inherit; text-decoration: inherit;">head_<wbr>insert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2258,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_insert_xforwarded_for_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>xforwarded_<wbr>for</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2267,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_lws_separator_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2276,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
 {{% /md %}}</dd><dt class="property-optional"
@@ -2355,7 +2285,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_oneconnect_transformations_python" style="color: inherit; text-decoration: inherit;">oneconnect_<wbr>transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2364,7 +2294,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_proxy_type_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2373,7 +2303,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_redirect_rewrite_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2382,7 +2312,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_request_chunking_python" style="color: inherit; text-decoration: inherit;">request_<wbr>chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2391,7 +2321,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_response_chunking_python" style="color: inherit; text-decoration: inherit;">response_<wbr>chunking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2400,7 +2330,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_response_headers_permitteds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>permitteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2409,7 +2339,7 @@ XFF (X-forwarded-for) headers, if they exist.
 <a href="#state_server_agent_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>agent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
@@ -2419,7 +2349,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_tm_partition_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2358,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_via_host_name_python" style="color: inherit; text-decoration: inherit;">via_<wbr>host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2367,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_via_request_python" style="color: inherit; text-decoration: inherit;">via_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2376,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_via_response_python" style="color: inherit; text-decoration: inherit;">via_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2385,7 @@ string is specified, then no Server header will be added to such responses
 <a href="#state_xff_alternative_names_python" style="color: inherit; text-decoration: inherit;">xff_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
 {{% /md %}}</dd></dl>
