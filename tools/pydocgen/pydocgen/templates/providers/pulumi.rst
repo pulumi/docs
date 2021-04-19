@@ -139,24 +139,24 @@ Python programs can export values. Exported values are attached to the program's
 Automation API
 --------------
 
-.. automodule:: pulumi.x.automation
+.. automodule:: pulumi.automation
 
-.. autofunction:: pulumi.x.automation.create_stack
+.. autofunction:: pulumi.automation.create_stack
 
-.. autofunction:: pulumi.x.automation.select_stack
+.. autofunction:: pulumi.automation.select_stack
 
-.. autofunction:: pulumi.x.automation.create_or_select_stack
+.. autofunction:: pulumi.automation.create_or_select_stack
 
-.. autoclass:: pulumi.x.automation.LocalWorkspace
+.. autoclass:: pulumi.automation.LocalWorkspace
     :members:
 
-.. autoclass:: pulumi.x.automation.Stack
+.. autoclass:: pulumi.automation.Stack
     :members:
 
-.. autoclass:: pulumi.x.automation.LocalWorkspaceOptions
+.. autoclass:: pulumi.automation.LocalWorkspaceOptions
 
-.. autoclass:: pulumi.x.automation.ProjectSettings
+.. autoclass:: pulumi.automation.ProjectSettings
 
-.. autoclass:: pulumi.x.automation.StackSettings
+.. autoclass:: pulumi.automation.StackSettings
 
-.. autoclass:: pulumi.x.automation.ConfigValue
+.. autoclass:: pulumi.automation.ConfigValue
