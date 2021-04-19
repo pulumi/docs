@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -289,8 +289,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -416,8 +416,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -522,8 +522,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -703,8 +703,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -966,7 +966,7 @@ class MyStack : Stack
                 Enabled = true,
             },
         });
-        var source = new Aws.S3.Bucket("source", new Aws.S3.BucketArgs
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
         {
             Acl = "private",
             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
@@ -997,10 +997,10 @@ class MyStack : Stack
         });
         var replicationPolicy = new Aws.Iam.Policy("replicationPolicy", new Aws.Iam.PolicyArgs
         {
-            Policy = Output.Tuple(source.Arn, source.Arn, destination.Arn).Apply(values =>
+            Policy = Output.Tuple(bucket.Arn, bucket.Arn, destination.Arn).Apply(values =>
             {
-                var sourceArn = values.Item1;
-                var sourceArn1 = values.Item2;
+                var bucketArn = values.Item1;
+                var bucketArn1 = values.Item2;
                 var destinationArn = values.Item3;
                 return @$"{{
   ""Version"": ""2012-10-17"",
@@ -1012,25 +1012,23 @@ class MyStack : Stack
       ],
       ""Effect"": ""Allow"",
       ""Resource"": [
-        ""{sourceArn}""
+        ""{bucketArn}""
       ]
     }},
     {{
       ""Action"": [
-        ""s3:GetObjectVersionForReplication"",
-        ""s3:GetObjectVersionAcl"",
-         ""s3:GetObjectVersionTagging""
+        ""s3:GetObjectVersion"",
+        ""s3:GetObjectVersionAcl""
       ],
       ""Effect"": ""Allow"",
       ""Resource"": [
-        ""{sourceArn1}/*""
+        ""{bucketArn1}/*""
       ]
     }},
     {{
       ""Action"": [
         ""s3:ReplicateObject"",
-        ""s3:ReplicateDelete"",
-        ""s3:ReplicateTags""
+        ""s3:ReplicateDelete""
       ],
       ""Effect"": ""Allow"",
       ""Resource"": ""{destinationArn}/*""
@@ -1062,10 +1060,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1090,7 +1088,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		source, err := s3.NewBucket(ctx, "source", &s3.BucketArgs{
+		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
 			Versioning: &s3.BucketVersioningArgs{
 				Enabled: pulumi.Bool(true),
@@ -1114,11 +1112,11 @@ func main() {
 			return err
 		}
 		replicationPolicy, err := iam.NewPolicy(ctx, "replicationPolicy", &iam.PolicyArgs{
-			Policy: pulumi.All(source.Arn, source.Arn, destination.Arn).ApplyT(func(_args []interface{}) (string, error) {
-				sourceArn := _args[0].(string)
-				sourceArn1 := _args[1].(string)
+			Policy: pulumi.All(bucket.Arn, bucket.Arn, destination.Arn).ApplyT(func(_args []interface{}) (string, error) {
+				bucketArn := _args[0].(string)
+				bucketArn1 := _args[1].(string)
 				destinationArn := _args[2].(string)
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetReplicationConfiguration\",\n", "        \"s3:ListBucket\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn, "\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetObjectVersionForReplication\",\n", "        \"s3:GetObjectVersionAcl\",\n", "         \"s3:GetObjectVersionTagging\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:ReplicateObject\",\n", "        \"s3:ReplicateDelete\",\n", "        \"s3:ReplicateTags\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"", destinationArn, "/*\"\n", "    }\n", "  ]\n", "}\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetReplicationConfiguration\",\n", "        \"s3:ListBucket\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn, "\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetObjectVersion\",\n", "        \"s3:GetObjectVersionAcl\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:ReplicateObject\",\n", "        \"s3:ReplicateDelete\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"", destinationArn, "/*\"\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -1165,7 +1163,7 @@ replication_role = aws.iam.Role("replicationRole", assume_role_policy="""{
 destination = aws.s3.Bucket("destination", versioning=aws.s3.BucketVersioningArgs(
     enabled=True,
 ))
-source = aws.s3.Bucket("source",
+bucket = aws.s3.Bucket("bucket",
     acl="private",
     versioning=aws.s3.BucketVersioningArgs(
         enabled=True,
@@ -1183,7 +1181,7 @@ source = aws.s3.Bucket("source",
         )],
     ),
     opts=pulumi.ResourceOptions(provider=aws["central"]))
-replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(source.arn, source.arn, destination.arn).apply(lambda sourceArn, sourceArn1, destinationArn: f"""{{
+replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(bucket.arn, bucket.arn, destination.arn).apply(lambda bucketArn, bucketArn1, destinationArn: f"""{{
   "Version": "2012-10-17",
   "Statement": [
     {{
@@ -1193,25 +1191,23 @@ replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.al
       ],
       "Effect": "Allow",
       "Resource": [
-        "{source_arn}"
+        "{bucket_arn}"
       ]
     }},
     {{
       "Action": [
-        "s3:GetObjectVersionForReplication",
-        "s3:GetObjectVersionAcl",
-         "s3:GetObjectVersionTagging"
+        "s3:GetObjectVersion",
+        "s3:GetObjectVersionAcl"
       ],
       "Effect": "Allow",
       "Resource": [
-        "{source_arn1}/*"
+        "{bucket_arn1}/*"
       ]
     }},
     {{
       "Action": [
         "s3:ReplicateObject",
-        "s3:ReplicateDelete",
-        "s3:ReplicateTags"
+        "s3:ReplicateDelete"
       ],
       "Effect": "Allow",
       "Resource": "{destination_arn}/*"
@@ -1253,7 +1249,7 @@ const replicationRole = new aws.iam.Role("replicationRole", {assumeRolePolicy: `
 const destination = new aws.s3.Bucket("destination", {versioning: {
     enabled: true,
 }});
-const source = new aws.s3.Bucket("source", {
+const bucket = new aws.s3.Bucket("bucket", {
     acl: "private",
     versioning: {
         enabled: true,
@@ -1283,25 +1279,23 @@ const replicationPolicy = new aws.iam.Policy("replicationPolicy", {policy: pulum
       ],
       "Effect": "Allow",
       "Resource": [
-        "${source.arn}"
+        "${bucket.arn}"
       ]
     },
     {
       "Action": [
-        "s3:GetObjectVersionForReplication",
-        "s3:GetObjectVersionAcl",
-         "s3:GetObjectVersionTagging"
+        "s3:GetObjectVersion",
+        "s3:GetObjectVersionAcl"
       ],
       "Effect": "Allow",
       "Resource": [
-        "${source.arn}/*"
+        "${bucket.arn}/*"
       ]
     },
     {
       "Action": [
         "s3:ReplicateObject",
-        "s3:ReplicateDelete",
-        "s3:ReplicateTags"
+        "s3:ReplicateDelete"
       ],
       "Effect": "Allow",
       "Resource": "${destination.arn}/*"
@@ -1368,9 +1362,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1508,8 +1502,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1619,46 +1613,19 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CannedAcl]]]</span> = None<span class="p">,</span>
-           <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketGrantArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLoggingArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketObjectLockConfigurationArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketReplicationConfigurationArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketServerSideEncryptionConfigurationArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[BucketArgs]</a></span> = None<span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Union[str, CannedAcl]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1693,32 +1660,22 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1727,7 +1684,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1751,7 +1708,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2198,7 +2155,7 @@ developer guide for more information.
 <a href="#accelerationstatus_nodejs" style="color: inherit; text-decoration: inherit;">acceleration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2164,7 @@ developer guide for more information.
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cannedacl">pulumi.<wbr>Input<Canned<wbr>Acl></a></span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2173,7 @@ developer guide for more information.
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2182,7 @@ developer guide for more information.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2191,7 @@ developer guide for more information.
 <a href="#bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2200,7 @@ developer guide for more information.
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2209,7 @@ developer guide for more information.
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2218,7 @@ developer guide for more information.
 <a href="#grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Grant<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketgrant">Bucket<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2227,7 @@ developer guide for more information.
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2236,7 @@ developer guide for more information.
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2245,7 @@ developer guide for more information.
 <a href="#loggings_nodejs" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging[]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2254,7 @@ developer guide for more information.
 <a href="#objectlockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">pulumi.<wbr>Input<Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2263,7 @@ developer guide for more information.
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | pulumi.<wbr>Input<Policy<wbr>Document></span>
+        <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2272,7 @@ developer guide for more information.
 <a href="#replicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2281,7 @@ developer guide for more information.
 <a href="#requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
@@ -2336,7 +2293,7 @@ developer guide for more information.
 <a href="#serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2302,7 @@ developer guide for more information.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2311,7 @@ developer guide for more information.
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2320,7 @@ developer guide for more information.
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2372,7 +2329,7 @@ developer guide for more information.
 <a href="#websitedomain_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2338,7 @@ developer guide for more information.
 <a href="#websiteendpoint_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd></dl>
@@ -2394,7 +2351,7 @@ developer guide for more information.
 <a href="#acceleration_status_python" style="color: inherit; text-decoration: inherit;">acceleration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2360,7 @@ developer guide for more information.
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cannedacl">Input[Canned<wbr>Acl]</a></span>
+        <span class="property-type">str | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,7 +2369,7 @@ developer guide for more information.
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2378,7 @@ developer guide for more information.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2387,7 @@ developer guide for more information.
 <a href="#bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2396,7 @@ developer guide for more information.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">Input[Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2405,7 @@ developer guide for more information.
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2414,7 @@ developer guide for more information.
 <a href="#grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">Input[Bucket<wbr>Grant<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketgrant">Sequence[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2423,7 @@ developer guide for more information.
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2432,7 @@ developer guide for more information.
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2441,7 @@ developer guide for more information.
 <a href="#loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Sequence[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2450,7 @@ developer guide for more information.
 <a href="#object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Input[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2459,7 @@ developer guide for more information.
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | Input[str]</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2468,7 @@ developer guide for more information.
 <a href="#replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2520,7 +2477,7 @@ developer guide for more information.
 <a href="#request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
@@ -2532,7 +2489,7 @@ developer guide for more information.
 <a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2498,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2507,7 @@ developer guide for more information.
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2516,7 @@ developer guide for more information.
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2525,7 @@ developer guide for more information.
 <a href="#website_domain_python" style="color: inherit; text-decoration: inherit;">website_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2534,7 @@ developer guide for more information.
 <a href="#website_endpoint_python" style="color: inherit; text-decoration: inherit;">website_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd></dl>
@@ -2754,46 +2711,20 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CannedAcl]]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketGrantArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLoggingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketObjectLockConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketReplicationConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketServerSideEncryptionConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Union[str, CannedAcl]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3348,7 +3279,7 @@ developer guide for more information.
 <a href="#state_accelerationstatus_nodejs" style="color: inherit; text-decoration: inherit;">acceleration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3357,7 +3288,7 @@ developer guide for more information.
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cannedacl">pulumi.<wbr>Input<Canned<wbr>Acl></a></span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3366,7 +3297,7 @@ developer guide for more information.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3375,7 +3306,7 @@ developer guide for more information.
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3384,7 +3315,7 @@ developer guide for more information.
 <a href="#state_bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3393,7 +3324,7 @@ developer guide for more information.
 <a href="#state_bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3402,7 +3333,7 @@ developer guide for more information.
 <a href="#state_bucketregionaldomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3411,7 +3342,7 @@ developer guide for more information.
 <a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3420,7 +3351,7 @@ developer guide for more information.
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3429,7 +3360,7 @@ developer guide for more information.
 <a href="#state_grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Grant<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketgrant">Bucket<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3438,7 +3369,7 @@ developer guide for more information.
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3447,7 +3378,7 @@ developer guide for more information.
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3456,7 +3387,7 @@ developer guide for more information.
 <a href="#state_loggings_nodejs" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging[]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3396,7 @@ developer guide for more information.
 <a href="#state_objectlockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">pulumi.<wbr>Input<Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3474,7 +3405,7 @@ developer guide for more information.
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | pulumi.<wbr>Input<Policy<wbr>Document></span>
+        <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3483,7 +3414,7 @@ developer guide for more information.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3492,7 +3423,7 @@ developer guide for more information.
 <a href="#state_replicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3501,7 +3432,7 @@ developer guide for more information.
 <a href="#state_requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
@@ -3513,7 +3444,7 @@ developer guide for more information.
 <a href="#state_serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3522,7 +3453,7 @@ developer guide for more information.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3531,7 +3462,7 @@ developer guide for more information.
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3540,7 +3471,7 @@ developer guide for more information.
 <a href="#state_website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3549,7 +3480,7 @@ developer guide for more information.
 <a href="#state_websitedomain_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3558,7 +3489,7 @@ developer guide for more information.
 <a href="#state_websiteendpoint_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd></dl>
@@ -3571,7 +3502,7 @@ developer guide for more information.
 <a href="#state_acceleration_status_python" style="color: inherit; text-decoration: inherit;">acceleration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3511,7 @@ developer guide for more information.
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cannedacl">Input[Canned<wbr>Acl]</a></span>
+        <span class="property-type">str | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3520,7 @@ developer guide for more information.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3598,7 +3529,7 @@ developer guide for more information.
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3607,7 +3538,7 @@ developer guide for more information.
 <a href="#state_bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3616,7 +3547,7 @@ developer guide for more information.
 <a href="#state_bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3625,7 +3556,7 @@ developer guide for more information.
 <a href="#state_bucket_regional_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>regional_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3634,7 +3565,7 @@ developer guide for more information.
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">Input[Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3643,7 +3574,7 @@ developer guide for more information.
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3652,7 +3583,7 @@ developer guide for more information.
 <a href="#state_grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">Input[Bucket<wbr>Grant<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketgrant">Sequence[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3661,7 +3592,7 @@ developer guide for more information.
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3670,7 +3601,7 @@ developer guide for more information.
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3679,7 +3610,7 @@ developer guide for more information.
 <a href="#state_loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Sequence[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3688,7 +3619,7 @@ developer guide for more information.
 <a href="#state_object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Input[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3697,7 +3628,7 @@ developer guide for more information.
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | Input[str]</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3706,7 +3637,7 @@ developer guide for more information.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3715,7 +3646,7 @@ developer guide for more information.
 <a href="#state_replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3724,7 +3655,7 @@ developer guide for more information.
 <a href="#state_request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
@@ -3736,7 +3667,7 @@ developer guide for more information.
 <a href="#state_server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3745,7 +3676,7 @@ developer guide for more information.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3754,7 +3685,7 @@ developer guide for more information.
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3763,7 +3694,7 @@ developer guide for more information.
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3772,7 +3703,7 @@ developer guide for more information.
 <a href="#state_website_domain_python" style="color: inherit; text-decoration: inherit;">website_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3781,7 +3712,7 @@ developer guide for more information.
 <a href="#state_website_endpoint_python" style="color: inherit; text-decoration: inherit;">website_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd></dl>
@@ -3903,7 +3834,7 @@ developer guide for more information.
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3912,7 +3843,7 @@ developer guide for more information.
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3921,7 +3852,7 @@ developer guide for more information.
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3930,7 +3861,7 @@ developer guide for more information.
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3939,7 +3870,7 @@ developer guide for more information.
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -3952,7 +3883,7 @@ developer guide for more information.
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3961,7 +3892,7 @@ developer guide for more information.
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3970,7 +3901,7 @@ developer guide for more information.
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3979,7 +3910,7 @@ developer guide for more information.
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3988,7 +3919,7 @@ developer guide for more information.
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -4083,7 +4014,7 @@ developer guide for more information.
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4092,7 +4023,7 @@ developer guide for more information.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4101,7 +4032,7 @@ developer guide for more information.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4110,7 +4041,7 @@ developer guide for more information.
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd></dl>
@@ -4123,7 +4054,7 @@ developer guide for more information.
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4132,7 +4063,7 @@ developer guide for more information.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4141,7 +4072,7 @@ developer guide for more information.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4150,7 +4081,7 @@ developer guide for more information.
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd></dl>
@@ -4335,7 +4266,7 @@ developer guide for more information.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4344,7 +4275,7 @@ developer guide for more information.
 <a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4353,7 +4284,7 @@ developer guide for more information.
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4362,7 +4293,7 @@ developer guide for more information.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4371,7 +4302,7 @@ developer guide for more information.
 <a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4380,7 +4311,7 @@ developer guide for more information.
 <a href="#noncurrentversiontransitions_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4389,7 +4320,7 @@ developer guide for more information.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4398,7 +4329,7 @@ developer guide for more information.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4407,7 +4338,7 @@ developer guide for more information.
 <a href="#transitions_nodejs" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd></dl>
@@ -4420,7 +4351,7 @@ developer guide for more information.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4429,7 +4360,7 @@ developer guide for more information.
 <a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4438,7 +4369,7 @@ developer guide for more information.
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4447,7 +4378,7 @@ developer guide for more information.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4456,7 +4387,7 @@ developer guide for more information.
 <a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4465,7 +4396,7 @@ developer guide for more information.
 <a href="#noncurrent_version_transitions_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4474,7 +4405,7 @@ developer guide for more information.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4483,7 +4414,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4492,7 +4423,7 @@ developer guide for more information.
 <a href="#transitions_python" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd></dl>
@@ -4569,7 +4500,7 @@ developer guide for more information.
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4578,7 +4509,7 @@ developer guide for more information.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4587,7 +4518,7 @@ developer guide for more information.
 <a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd></dl>
@@ -4600,7 +4531,7 @@ developer guide for more information.
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4609,7 +4540,7 @@ developer guide for more information.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4618,7 +4549,7 @@ developer guide for more information.
 <a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd></dl>
@@ -4659,7 +4590,7 @@ developer guide for more information.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd></dl>
@@ -4672,7 +4603,7 @@ developer guide for more information.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd></dl>
@@ -4731,7 +4662,7 @@ developer guide for more information.
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4740,7 +4671,7 @@ developer guide for more information.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd></dl>
@@ -4753,7 +4684,7 @@ developer guide for more information.
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4762,7 +4693,7 @@ developer guide for more information.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd></dl>
@@ -4839,7 +4770,7 @@ developer guide for more information.
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4848,7 +4779,7 @@ developer guide for more information.
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4857,7 +4788,7 @@ developer guide for more information.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd></dl>
@@ -4870,7 +4801,7 @@ developer guide for more information.
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4879,7 +4810,7 @@ developer guide for more information.
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4888,7 +4819,7 @@ developer guide for more information.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd></dl>
@@ -4947,7 +4878,7 @@ developer guide for more information.
 <a href="#targetbucket_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4956,7 +4887,7 @@ developer guide for more information.
 <a href="#targetprefix_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd></dl>
@@ -4969,7 +4900,7 @@ developer guide for more information.
 <a href="#target_bucket_python" style="color: inherit; text-decoration: inherit;">target_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4978,7 +4909,7 @@ developer guide for more information.
 <a href="#target_prefix_python" style="color: inherit; text-decoration: inherit;">target_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd></dl>
@@ -5037,7 +4968,7 @@ developer guide for more information.
 <a href="#objectlockenabled_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5046,7 +4977,7 @@ developer guide for more information.
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">pulumi.<wbr>Input<Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd></dl>
@@ -5059,7 +4990,7 @@ developer guide for more information.
 <a href="#object_lock_enabled_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5068,7 +4999,7 @@ developer guide for more information.
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Input[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd></dl>
@@ -5109,7 +5040,7 @@ developer guide for more information.
 <a href="#defaultretention_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">pulumi.<wbr>Input<Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd></dl>
@@ -5122,7 +5053,7 @@ developer guide for more information.
 <a href="#default_retention_python" style="color: inherit; text-decoration: inherit;">default_<wbr>retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Input[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd></dl>
@@ -5199,7 +5130,7 @@ developer guide for more information.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5208,7 +5139,7 @@ developer guide for more information.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5217,7 +5148,7 @@ developer guide for more information.
 <a href="#years_nodejs" style="color: inherit; text-decoration: inherit;">years</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd></dl>
@@ -5230,7 +5161,7 @@ developer guide for more information.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5239,7 +5170,7 @@ developer guide for more information.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5248,7 +5179,7 @@ developer guide for more information.
 <a href="#years_python" style="color: inherit; text-decoration: inherit;">years</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd></dl>
@@ -5307,7 +5238,7 @@ developer guide for more information.
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd><dt class="property-required"
@@ -5316,7 +5247,7 @@ developer guide for more information.
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrule">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd></dl>
@@ -5329,7 +5260,7 @@ developer guide for more information.
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd><dt class="property-required"
@@ -5338,7 +5269,7 @@ developer guide for more information.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrule">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrule">Sequence[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd></dl>
@@ -5487,7 +5418,7 @@ developer guide for more information.
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -5496,7 +5427,7 @@ developer guide for more information.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5505,7 +5436,7 @@ developer guide for more information.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5514,7 +5445,7 @@ developer guide for more information.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5523,7 +5454,7 @@ developer guide for more information.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5532,7 +5463,7 @@ developer guide for more information.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -5541,7 +5472,7 @@ developer guide for more information.
 <a href="#sourceselectioncriteria_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Selection<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd></dl>
@@ -5554,7 +5485,7 @@ developer guide for more information.
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -5563,7 +5494,7 @@ developer guide for more information.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5572,7 +5503,7 @@ developer guide for more information.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5581,7 +5512,7 @@ developer guide for more information.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5590,7 +5521,7 @@ developer guide for more information.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5599,7 +5530,7 @@ developer guide for more information.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -5608,7 +5539,7 @@ developer guide for more information.
 <a href="#source_selection_criteria_python" style="color: inherit; text-decoration: inherit;">source_<wbr>selection_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd></dl>
@@ -5723,7 +5654,7 @@ developer guide for more information.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5732,7 +5663,7 @@ developer guide for more information.
 <a href="#accesscontroltranslation_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5741,7 +5672,7 @@ developer guide for more information.
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5750,7 +5681,7 @@ developer guide for more information.
 <a href="#replicakmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
@@ -5760,7 +5691,7 @@ developer guide for more information.
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd></dl>
@@ -5773,7 +5704,7 @@ developer guide for more information.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5782,7 +5713,7 @@ developer guide for more information.
 <a href="#access_control_translation_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5791,7 +5722,7 @@ developer guide for more information.
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5800,7 +5731,7 @@ developer guide for more information.
 <a href="#replica_kms_key_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
@@ -5810,7 +5741,7 @@ developer guide for more information.
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd></dl>
@@ -5851,7 +5782,7 @@ developer guide for more information.
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd></dl>
@@ -5864,7 +5795,7 @@ developer guide for more information.
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd></dl>
@@ -5925,7 +5856,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5934,7 +5865,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -5948,7 +5879,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5957,7 +5888,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -6001,7 +5932,7 @@ in `destination` must be specified as well.
 <a href="#ssekmsencryptedobjects_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">pulumi.<wbr>Input<Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
@@ -6015,7 +5946,7 @@ in `destination` must be specified as well.
 <a href="#sse_kms_encrypted_objects_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms_<wbr>encrypted_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Input[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
@@ -6057,7 +5988,7 @@ in `destination` must be specified as well.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd></dl>
@@ -6070,7 +6001,7 @@ in `destination` must be specified as well.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd></dl>
@@ -6111,7 +6042,7 @@ in `destination` must be specified as well.
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd></dl>
@@ -6124,7 +6055,7 @@ in `destination` must be specified as well.
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd></dl>
@@ -6183,7 +6114,7 @@ in `destination` must be specified as well.
 <a href="#applyserversideencryptionbydefault_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">pulumi.<wbr>Input<Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args></a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6192,7 +6123,7 @@ in `destination` must be specified as well.
 <a href="#bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd></dl>
@@ -6205,7 +6136,7 @@ in `destination` must be specified as well.
 <a href="#apply_server_side_encryption_by_default_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Input[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6214,7 +6145,7 @@ in `destination` must be specified as well.
 <a href="#bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd></dl>
@@ -6273,7 +6204,7 @@ in `destination` must be specified as well.
 <a href="#ssealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6282,7 +6213,7 @@ in `destination` must be specified as well.
 <a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd></dl>
@@ -6295,7 +6226,7 @@ in `destination` must be specified as well.
 <a href="#sse_algorithm_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6304,7 +6235,7 @@ in `destination` must be specified as well.
 <a href="#kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd></dl>
@@ -6363,7 +6294,7 @@ in `destination` must be specified as well.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6372,7 +6303,7 @@ in `destination` must be specified as well.
 <a href="#mfadelete_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd></dl>
@@ -6385,7 +6316,7 @@ in `destination` must be specified as well.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6394,7 +6325,7 @@ in `destination` must be specified as well.
 <a href="#mfa_delete_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd></dl>
@@ -6491,7 +6422,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#errordocument_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6500,7 +6431,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6509,7 +6440,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#redirectallrequeststo_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6518,7 +6449,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | pulumi.<wbr>Input<pulumi.<wbr>Input<Routing<wbr>Rule>[]></span>
+        <span class="property-type">string | Routing<wbr>Rule[]</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.
@@ -6532,7 +6463,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6541,7 +6472,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6550,7 +6481,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#redirect_all_requests_to_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>all_<wbr>requests_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6559,7 +6490,7 @@ describing redirect behavior and when redirects are applied.
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | Input[str]]]</span>
+        <span class="property-type">str | Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.

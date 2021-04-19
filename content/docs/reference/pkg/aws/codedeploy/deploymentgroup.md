@@ -134,10 +134,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codedeploy"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -620,8 +620,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codedeploy"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -761,41 +761,19 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupAlarmConfigurationArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupAutoRollbackConfigurationArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupBlueGreenDeploymentConfigArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupDeploymentStyleArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupEc2TagFilterArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupEc2TagSetArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupEcsServiceArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupLoadBalancerInfoArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupOnPremisesInstanceTagFilterArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupTriggerConfigurationArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -830,32 +808,22 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeploymentGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -864,7 +832,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -888,7 +856,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1065,15 +1033,6 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="triggerconfigurations_csharp">
 <a href="#triggerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
@@ -1213,15 +1172,6 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="triggerconfigurations_go">
 <a href="#triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
@@ -1239,7 +1189,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd><dt class="property-required"
@@ -1248,7 +1198,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deploymentgroupname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1257,7 +1207,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1216,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#alarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1225,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#autorollbackconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rollback<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1234,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1243,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#bluegreendeploymentconfig_nodejs" style="color: inherit; text-decoration: inherit;">blue<wbr>Green<wbr>Deployment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1252,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1261,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deploymentstyle_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1270,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1279,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2tagsets_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1288,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ecsservice_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1297,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#loadbalancerinfo_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,25 +1306,16 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#onpremisesinstancetagfilters_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerconfigurations_nodejs">
 <a href="#triggerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -1387,7 +1328,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd><dt class="property-required"
@@ -1396,7 +1337,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1405,7 +1346,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1355,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Input[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1364,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Input[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1373,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1382,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Input[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1391,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1400,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Input[Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1409,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Input[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1418,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">Input[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1427,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Input[Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1436,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,25 +1445,16 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Input[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_configurations_python">
 <a href="#trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Input[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -1538,33 +1470,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="computeplatform_csharp">
-<a href="#computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="deploymentgroupid_csharp">
-<a href="#deploymentgroupid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1576,33 +1481,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="computeplatform_go">
-<a href="#computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="deploymentgroupid_go">
-<a href="#deploymentgroupid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1616,33 +1494,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="computeplatform_nodejs">
-<a href="#computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="deploymentgroupid_nodejs">
-<a href="#deploymentgroupid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1654,33 +1505,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="compute_platform_python">
-<a href="#compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="deployment_group_id_python">
-<a href="#deployment_group_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1699,41 +1523,20 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DeploymentGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DeploymentGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeploymentGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DeploymentGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupAlarmConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupAutoRollbackConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupBlueGreenDeploymentConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">compute_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupDeploymentStyleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupEc2TagFilterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupEc2TagSetArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupEcsServiceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentGroupLoadBalancerInfoArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupOnPremisesInstanceTagFilterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeploymentGroupTriggerConfigurationArgs]]]]</span> = None<span class="p">) -&gt;</span> DeploymentGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">) -&gt;</span> DeploymentGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DeploymentGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeploymentGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DeploymentGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DeploymentGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DeploymentGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeploymentGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1856,15 +1659,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_arn_csharp">
-<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_autorollbackconfiguration_csharp">
 <a href="#state_autorollbackconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
 </span>
@@ -1892,15 +1686,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_computeplatform_csharp">
-<a href="#state_computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_deploymentconfigname_csharp">
 <a href="#state_deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
 </span>
@@ -1908,15 +1693,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_deploymentgroupid_csharp">
-<a href="#state_deploymentgroupid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_csharp">
@@ -1991,15 +1767,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_tags_csharp">
-<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_triggerconfigurations_csharp">
 <a href="#state_triggerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
@@ -2031,15 +1798,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_arn_go">
-<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_autorollbackconfiguration_go">
 <a href="#state_autorollbackconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
 </span>
@@ -2067,15 +1825,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_computeplatform_go">
-<a href="#state_computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_deploymentconfigname_go">
 <a href="#state_deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
 </span>
@@ -2083,15 +1832,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_deploymentgroupid_go">
-<a href="#state_deploymentgroupid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_go">
@@ -2166,15 +1906,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_tags_go">
-<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_triggerconfigurations_go">
 <a href="#state_triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
@@ -2192,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_alarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,25 +1932,16 @@ The following state arguments are supported:
 <a href="#state_appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_arn_nodejs">
-<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorollbackconfiguration_nodejs">
 <a href="#state_autorollbackconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rollback<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,43 +1959,25 @@ The following state arguments are supported:
 <a href="#state_bluegreendeploymentconfig_nodejs" style="color: inherit; text-decoration: inherit;">blue<wbr>Green<wbr>Deployment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_computeplatform_nodejs">
-<a href="#state_computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_nodejs">
 <a href="#state_deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_deploymentgroupid_nodejs">
-<a href="#state_deploymentgroupid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_nodejs">
 <a href="#state_deploymentgroupname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +1986,7 @@ The following state arguments are supported:
 <a href="#state_deploymentstyle_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +1995,7 @@ The following state arguments are supported:
 <a href="#state_ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2300,7 +2004,7 @@ The following state arguments are supported:
 <a href="#state_ec2tagsets_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2013,7 @@ The following state arguments are supported:
 <a href="#state_ecsservice_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2318,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerinfo_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_onpremisesinstancetagfilters_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,25 +2040,16 @@ The following state arguments are supported:
 <a href="#state_servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_nodejs">
-<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerconfigurations_nodejs">
 <a href="#state_triggerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -2367,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Input[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2376,25 +2071,16 @@ The following state arguments are supported:
 <a href="#state_app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_arn_python">
-<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_rollback_configuration_python">
 <a href="#state_auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Input[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2089,7 @@ The following state arguments are supported:
 <a href="#state_autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,43 +2098,25 @@ The following state arguments are supported:
 <a href="#state_blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Input[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_compute_platform_python">
-<a href="#state_compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The destination platform type for the deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_name_python">
 <a href="#state_deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_deployment_group_id_python">
-<a href="#state_deployment_group_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CodeDeploy deployment group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_group_name_python">
 <a href="#state_deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2125,7 @@ The following state arguments are supported:
 <a href="#state_deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Input[Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2134,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Input[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2143,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">Input[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2152,7 @@ The following state arguments are supported:
 <a href="#state_ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Input[Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2161,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Input[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,25 +2179,16 @@ The following state arguments are supported:
 <a href="#state_service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_python">
-<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_configurations_python">
 <a href="#state_trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Input[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -2619,7 +2278,7 @@ The following state arguments are supported:
 <a href="#alarms_nodejs" style="color: inherit; text-decoration: inherit;">alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2628,7 +2287,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2637,7 +2296,7 @@ The following state arguments are supported:
 <a href="#ignorepollalarmfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Poll<wbr>Alarm<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -2652,7 +2311,7 @@ The following state arguments are supported:
 <a href="#alarms_python" style="color: inherit; text-decoration: inherit;">alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2661,7 +2320,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2670,7 +2329,7 @@ The following state arguments are supported:
 <a href="#ignore_poll_alarm_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>poll_<wbr>alarm_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -2731,7 +2390,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2399,7 @@ The following state arguments are supported:
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd></dl>
@@ -2753,7 +2412,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2762,7 +2421,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd></dl>
@@ -2839,7 +2498,7 @@ The following state arguments are supported:
 <a href="#deploymentreadyoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Ready<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2507,7 @@ The following state arguments are supported:
 <a href="#greenfleetprovisioningoption_nodejs" style="color: inherit; text-decoration: inherit;">green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2516,7 @@ The following state arguments are supported:
 <a href="#terminateblueinstancesondeploymentsuccess_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd></dl>
@@ -2870,7 +2529,7 @@ The following state arguments are supported:
 <a href="#deployment_ready_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>ready_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Input[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2879,7 +2538,7 @@ The following state arguments are supported:
 <a href="#green_fleet_provisioning_option_python" style="color: inherit; text-decoration: inherit;">green_<wbr>fleet_<wbr>provisioning_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Input[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2888,7 +2547,7 @@ The following state arguments are supported:
 <a href="#terminate_blue_instances_on_deployment_success_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Input[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd></dl>
@@ -2951,7 +2610,7 @@ The following state arguments are supported:
 <a href="#actionontimeout_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>On<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2962,7 +2621,7 @@ The following state arguments are supported:
 <a href="#waittimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Time<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd></dl>
@@ -2975,7 +2634,7 @@ The following state arguments are supported:
 <a href="#action_on_timeout_python" style="color: inherit; text-decoration: inherit;">action_<wbr>on_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2986,7 +2645,7 @@ The following state arguments are supported:
 <a href="#wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd></dl>
@@ -3031,7 +2690,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -3046,7 +2705,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -3111,7 +2770,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -3122,7 +2781,7 @@ The following state arguments are supported:
 <a href="#terminationwaittimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd></dl>
@@ -3135,7 +2794,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -3146,7 +2805,7 @@ The following state arguments are supported:
 <a href="#termination_wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd></dl>
@@ -3205,7 +2864,7 @@ The following state arguments are supported:
 <a href="#deploymentoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3214,7 +2873,7 @@ The following state arguments are supported:
 <a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd></dl>
@@ -3227,7 +2886,7 @@ The following state arguments are supported:
 <a href="#deployment_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3236,7 +2895,7 @@ The following state arguments are supported:
 <a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd></dl>
@@ -3313,7 +2972,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3322,7 +2981,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3331,7 +2990,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -3344,7 +3003,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3353,7 +3012,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3362,7 +3021,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -3403,7 +3062,7 @@ The following state arguments are supported:
 <a href="#ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd></dl>
@@ -3416,7 +3075,7 @@ The following state arguments are supported:
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Input[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd></dl>
@@ -3493,7 +3152,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3502,7 +3161,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3511,7 +3170,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -3524,7 +3183,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3533,7 +3192,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3542,7 +3201,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -3601,7 +3260,7 @@ The following state arguments are supported:
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -3610,7 +3269,7 @@ The following state arguments are supported:
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd></dl>
@@ -3623,7 +3282,7 @@ The following state arguments are supported:
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -3632,7 +3291,7 @@ The following state arguments are supported:
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd></dl>
@@ -3709,7 +3368,7 @@ The following state arguments are supported:
 <a href="#elbinfos_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3718,7 +3377,7 @@ The following state arguments are supported:
 <a href="#targetgroupinfos_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3727,7 +3386,7 @@ The following state arguments are supported:
 <a href="#targetgrouppairinfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Pair<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd></dl>
@@ -3740,7 +3399,7 @@ The following state arguments are supported:
 <a href="#elb_infos_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3749,7 +3408,7 @@ The following state arguments are supported:
 <a href="#target_group_infos_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3758,7 +3417,7 @@ The following state arguments are supported:
 <a href="#target_group_pair_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>pair_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd></dl>
@@ -3799,7 +3458,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd></dl>
@@ -3812,7 +3471,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd></dl>
@@ -3853,7 +3512,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd></dl>
@@ -3866,7 +3525,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd></dl>
@@ -3943,7 +3602,7 @@ The following state arguments are supported:
 <a href="#prodtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -3952,7 +3611,7 @@ The following state arguments are supported:
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3961,7 +3620,7 @@ The following state arguments are supported:
 <a href="#testtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">pulumi.<wbr>Input<Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd></dl>
@@ -3974,7 +3633,7 @@ The following state arguments are supported:
 <a href="#prod_traffic_route_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>traffic_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -3983,7 +3642,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3992,7 +3651,7 @@ The following state arguments are supported:
 <a href="#test_traffic_route_python" style="color: inherit; text-decoration: inherit;">test_<wbr>traffic_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Input[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd></dl>
@@ -4033,7 +3692,7 @@ The following state arguments are supported:
 <a href="#listenerarns_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd></dl>
@@ -4046,7 +3705,7 @@ The following state arguments are supported:
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd></dl>
@@ -4087,7 +3746,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd></dl>
@@ -4100,7 +3759,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd></dl>
@@ -4141,7 +3800,7 @@ The following state arguments are supported:
 <a href="#listenerarns_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd></dl>
@@ -4154,7 +3813,7 @@ The following state arguments are supported:
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd></dl>
@@ -4231,7 +3890,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4240,7 +3899,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4249,7 +3908,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -4262,7 +3921,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4271,7 +3930,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4280,7 +3939,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd></dl>
@@ -4357,7 +4016,7 @@ The following state arguments are supported:
 <a href="#triggerevents_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd><dt class="property-required"
@@ -4366,7 +4025,7 @@ The following state arguments are supported:
 <a href="#triggername_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd><dt class="property-required"
@@ -4375,7 +4034,7 @@ The following state arguments are supported:
 <a href="#triggertargetarn_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Target<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd></dl>
@@ -4388,7 +4047,7 @@ The following state arguments are supported:
 <a href="#trigger_events_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd><dt class="property-required"
@@ -4397,7 +4056,7 @@ The following state arguments are supported:
 <a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd><dt class="property-required"
@@ -4406,7 +4065,7 @@ The following state arguments are supported:
 <a href="#trigger_target_arn_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>target_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd></dl>

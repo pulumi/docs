@@ -24,28 +24,19 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">application_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScalingPlanApplicationSourceArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">scaling_instructions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScalingPlanScalingInstructionArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_source</span><span class="p">:</span> <span class="nx">Optional[ScalingPlanApplicationSourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_instructions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingPlanScalingInstructionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScalingPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScalingPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -80,32 +71,22 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ScalingPlanArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -114,7 +95,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -138,7 +119,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -255,7 +236,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationsource_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-required"
@@ -264,7 +245,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scalinginstructions_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">pulumi.<wbr>Input<pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction[]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -273,7 +254,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 {{% /md %}}</dd></dl>
@@ -286,7 +267,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_source_python" style="color: inherit; text-decoration: inherit;">application_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">Input[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-required"
@@ -295,7 +276,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scaling_instructions_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -304,7 +285,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 {{% /md %}}</dd></dl>
@@ -409,26 +390,20 @@ Get an existing ScalingPlan resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ScalingPlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScalingPlan</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ScalingPlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScalingPlan</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">application_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScalingPlanApplicationSourceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scaling_instructions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScalingPlanScalingInstructionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">scaling_plan_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> ScalingPlan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_source</span><span class="p">:</span> <span class="nx">Optional[ScalingPlanApplicationSourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_instructions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingPlanScalingInstructionArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_plan_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ScalingPlan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScalingPlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ScalingPlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScalingPlan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ScalingPlanState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScalingPlan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ScalingPlanState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -617,7 +592,7 @@ The following state arguments are supported:
 <a href="#state_applicationsource_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +601,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +610,7 @@ The following state arguments are supported:
 <a href="#state_scalinginstructions_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">pulumi.<wbr>Input<pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction[]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +619,7 @@ The following state arguments are supported:
 <a href="#state_scalingplanversion_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
 {{% /md %}}</dd></dl>
@@ -657,7 +632,7 @@ The following state arguments are supported:
 <a href="#state_application_source_python" style="color: inherit; text-decoration: inherit;">application_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">Input[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +641,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +650,7 @@ The following state arguments are supported:
 <a href="#state_scaling_instructions_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -684,7 +659,7 @@ The following state arguments are supported:
 <a href="#state_scaling_plan_version_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
 {{% /md %}}</dd></dl>
@@ -752,7 +727,7 @@ The following state arguments are supported:
 <a href="#cloudformationstackarn_nodejs" style="color: inherit; text-decoration: inherit;">cloudformation<wbr>Stack<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +736,7 @@ The following state arguments are supported:
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
 {{% /md %}}</dd></dl>
@@ -774,7 +749,7 @@ The following state arguments are supported:
 <a href="#cloudformation_stack_arn_python" style="color: inherit; text-decoration: inherit;">cloudformation_<wbr>stack_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +758,7 @@ The following state arguments are supported:
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Input[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Sequence[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
 {{% /md %}}</dd></dl>
@@ -842,7 +817,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +826,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The tag values.
 {{% /md %}}</dd></dl>
@@ -864,7 +839,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +848,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The tag values.
 {{% /md %}}</dd></dl>
@@ -1156,7 +1131,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1165,7 +1140,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -1174,7 +1149,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -1183,7 +1158,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1192,7 +1167,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1201,7 +1176,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#targettrackingconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tracking<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
@@ -1211,7 +1186,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#customizedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
@@ -1221,7 +1196,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#disabledynamicscaling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Dynamic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1205,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predefinedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
@@ -1240,7 +1215,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predictivescalingmaxcapacitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
@@ -1250,7 +1225,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predictivescalingmaxcapacitybuffer_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Buffer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1234,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predictivescalingmode_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1243,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scalingpolicyupdatebehavior_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Policy<wbr>Update<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1252,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scheduledactionbuffertime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Action<wbr>Buffer<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
 {{% /md %}}</dd></dl>
@@ -1290,7 +1265,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1299,7 +1274,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -1308,7 +1283,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -1317,7 +1292,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1326,7 +1301,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1335,7 +1310,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#target_tracking_configurations_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
@@ -1345,7 +1320,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#customized_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>load_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
@@ -1355,7 +1330,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#disable_dynamic_scaling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>dynamic_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1364,7 +1339,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predefined_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
@@ -1374,7 +1349,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predictive_scaling_max_capacity_behavior_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>max_<wbr>capacity_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
@@ -1384,7 +1359,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predictive_scaling_max_capacity_buffer_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>max_<wbr>capacity_<wbr>buffer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1368,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predictive_scaling_mode_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1377,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scaling_policy_update_behavior_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>policy_<wbr>update_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1386,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#scheduled_action_buffer_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>action_<wbr>buffer_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
 {{% /md %}}</dd></dl>
@@ -1524,7 +1499,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -1533,7 +1508,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -1542,7 +1517,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1526,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1535,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd></dl>
@@ -1573,7 +1548,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -1582,7 +1557,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -1591,7 +1566,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1575,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1584,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd></dl>
@@ -1668,7 +1643,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predefinedloadmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1652,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd></dl>
@@ -1690,7 +1665,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#predefined_load_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1674,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd></dl>
@@ -1858,7 +1833,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1842,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#customizedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
@@ -1877,7 +1852,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#disablescalein_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1861,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#estimatedinstancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Instance<wbr>Warmup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
@@ -1896,7 +1871,7 @@ This value is used only if the resource is an Auto Scaling group.
 <a href="#predefinedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">pulumi.<wbr>Input<Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
@@ -1906,7 +1881,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#scaleincooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
@@ -1916,7 +1891,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#scaleoutcooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Out<wbr>Cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
@@ -1930,7 +1905,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +1914,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#customized_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>scaling_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
@@ -1949,7 +1924,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1933,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
@@ -1968,7 +1943,7 @@ This value is used only if the resource is an Auto Scaling group.
 <a href="#predefined_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Input[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
@@ -1978,7 +1953,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#scale_in_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
@@ -1988,7 +1963,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#scale_out_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>out_<wbr>cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
@@ -2102,7 +2077,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -2111,7 +2086,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -2120,7 +2095,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2104,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2113,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd></dl>
@@ -2151,7 +2126,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -2160,7 +2135,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -2169,7 +2144,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2178,7 +2153,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2162,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd></dl>
@@ -2246,7 +2221,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#predefinedscalingmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2230,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd></dl>
@@ -2268,7 +2243,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#predefined_scaling_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2252,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd></dl>

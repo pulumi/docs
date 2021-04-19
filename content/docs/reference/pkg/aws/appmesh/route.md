@@ -78,8 +78,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -258,8 +258,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -448,8 +448,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -621,8 +621,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -720,31 +720,19 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouteSpecArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -779,32 +767,22 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -813,7 +791,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -837,7 +815,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1008,7 +986,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -1017,7 +995,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd><dt class="property-required"
@@ -1026,7 +1004,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1013,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1022,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1031,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1066,7 +1044,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -1075,7 +1053,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Input[Route<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd><dt class="property-required"
@@ -1084,7 +1062,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1071,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1080,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1089,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1324,32 +1302,20 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Route</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Route</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouteSpecArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RouteState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Route</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RouteState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Route</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1646,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1655,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1630,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1673,7 +1639,7 @@ The following state arguments are supported:
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1648,7 @@ The following state arguments are supported:
 <a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1657,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1700,7 +1666,7 @@ The following state arguments are supported:
 <a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1709,7 +1675,7 @@ The following state arguments are supported:
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1684,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1693,7 @@ The following state arguments are supported:
 <a href="#state_virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1740,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1742,7 @@ The following state arguments are supported:
 <a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1760,7 @@ The following state arguments are supported:
 <a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1769,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Input[Route<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1778,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1787,7 @@ The following state arguments are supported:
 <a href="#state_virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1945,7 +1911,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#grpcroute_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroute">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The gRPC routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +1920,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#http2route_nodejs" style="color: inherit; text-decoration: inherit;">http2Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2route">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP/2 routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +1929,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#httproute_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +1938,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -1982,7 +1948,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#tcproute_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd></dl>
@@ -1995,7 +1961,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#grpc_route_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroute">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gRPC routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2004,7 +1970,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#http2_route_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2route">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP/2 routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2013,7 +1979,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#http_route_python" style="color: inherit; text-decoration: inherit;">http_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +1988,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -2032,7 +1998,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#tcp_route_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Input[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd></dl>
@@ -2127,7 +2093,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteaction">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2102,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2111,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2120,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -2167,7 +2133,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteaction">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2142,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematch">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2151,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2160,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeout">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -2237,7 +2203,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -2251,7 +2217,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -2311,7 +2277,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2320,7 +2286,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -2333,7 +2299,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2342,7 +2308,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -2439,7 +2405,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata[]</a></span>
     </dt>
     <dd>{{% md %}}The data to match from the gRPC request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2414,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#methodname_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2423,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2467,7 +2433,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd></dl>
@@ -2480,7 +2446,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">Sequence[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data to match from the gRPC request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2489,7 +2455,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#method_name_python" style="color: inherit; text-decoration: inherit;">method_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2498,7 +2464,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2508,7 +2474,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd></dl>
@@ -2585,7 +2551,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2594,7 +2560,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2603,7 +2569,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd></dl>
@@ -2616,7 +2582,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2591,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2600,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd></dl>
@@ -2749,7 +2715,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2724,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2768,7 +2734,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2743,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2752,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2799,7 +2765,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2808,7 +2774,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2818,7 +2784,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2793,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2836,7 +2802,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2895,7 +2861,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -2904,7 +2870,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -2917,7 +2883,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -2926,7 +2892,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -3045,7 +3011,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -3054,7 +3020,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3029,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#grpcretryevents_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of gRPC retry events.
 Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
@@ -3073,7 +3039,7 @@ Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`
 <a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -3084,7 +3050,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -3097,7 +3063,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -3106,7 +3072,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3115,7 +3081,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#grpc_retry_events_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of gRPC retry events.
 Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
@@ -3125,7 +3091,7 @@ Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`
 <a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -3136,7 +3102,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -3195,7 +3161,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3204,7 +3170,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -3217,7 +3183,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3226,7 +3192,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -3285,7 +3251,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3260,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -3307,7 +3273,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3316,7 +3282,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Input[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -3375,7 +3341,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3384,7 +3350,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -3397,7 +3363,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3406,7 +3372,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -3465,7 +3431,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3474,7 +3440,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -3487,7 +3453,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3496,7 +3462,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -3591,7 +3557,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeaction">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -3600,7 +3566,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3609,7 +3575,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeretrypolicy">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3618,7 +3584,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -3631,7 +3597,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeaction">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -3640,7 +3606,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematch">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3649,7 +3615,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3658,7 +3624,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeout">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -3701,7 +3667,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -3715,7 +3681,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -3775,7 +3741,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3784,7 +3750,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -3797,7 +3763,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3806,7 +3772,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -3903,7 +3869,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -3913,7 +3879,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3922,7 +3888,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3931,7 +3897,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd></dl>
@@ -3944,7 +3910,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -3954,7 +3920,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheader">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">Sequence[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3963,7 +3929,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3972,7 +3938,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd></dl>
@@ -4049,7 +4015,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4058,7 +4024,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4067,7 +4033,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheadermatch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd></dl>
@@ -4080,7 +4046,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4089,7 +4055,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4098,7 +4064,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd></dl>
@@ -4213,7 +4179,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4222,7 +4188,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -4232,7 +4198,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4241,7 +4207,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4250,7 +4216,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -4263,7 +4229,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4272,7 +4238,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -4282,7 +4248,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4291,7 +4257,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4300,7 +4266,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -4359,7 +4325,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -4368,7 +4334,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -4381,7 +4347,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -4390,7 +4356,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -4489,7 +4455,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -4498,7 +4464,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4507,7 +4473,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -4518,7 +4484,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -4531,7 +4497,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -4540,7 +4506,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4549,7 +4515,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -4560,7 +4526,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -4619,7 +4585,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4628,7 +4594,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -4641,7 +4607,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4650,7 +4616,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -4709,7 +4675,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeoutidle">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4718,7 +4684,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -4731,7 +4697,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4740,7 +4706,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Input[Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -4799,7 +4765,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4808,7 +4774,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -4821,7 +4787,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4830,7 +4796,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -4889,7 +4855,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4898,7 +4864,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -4911,7 +4877,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4920,7 +4886,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -5015,7 +4981,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -5024,7 +4990,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an HTTP request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5033,7 +4999,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteretrypolicy">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5042,7 +5008,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -5055,7 +5021,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -5064,7 +5030,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an HTTP request match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5073,7 +5039,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteretrypolicy">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5082,7 +5048,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeout">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -5125,7 +5091,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -5139,7 +5105,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -5199,7 +5165,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -5208,7 +5174,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -5221,7 +5187,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -5230,7 +5196,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -5327,7 +5293,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -5337,7 +5303,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5346,7 +5312,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5355,7 +5321,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd></dl>
@@ -5368,7 +5334,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -5378,7 +5344,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5387,7 +5353,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5396,7 +5362,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd></dl>
@@ -5473,7 +5439,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5482,7 +5448,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5491,7 +5457,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd></dl>
@@ -5504,7 +5470,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5513,7 +5479,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5522,7 +5488,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd></dl>
@@ -5637,7 +5603,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5646,7 +5612,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -5656,7 +5622,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5665,7 +5631,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5674,7 +5640,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -5687,7 +5653,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5696,7 +5662,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -5706,7 +5672,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5715,7 +5681,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5724,7 +5690,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -5783,7 +5749,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -5792,7 +5758,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -5805,7 +5771,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd><dt class="property-required"
@@ -5814,7 +5780,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd></dl>
@@ -5913,7 +5879,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -5922,7 +5888,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5931,7 +5897,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -5942,7 +5908,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -5955,7 +5921,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries.
 {{% /md %}}</dd><dt class="property-required"
@@ -5964,7 +5930,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per-retry timeout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5973,7 +5939,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of HTTP retry events.
 Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
@@ -5984,7 +5950,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
 {{% /md %}}</dd></dl>
@@ -6043,7 +6009,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6052,7 +6018,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -6065,7 +6031,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6074,7 +6040,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retry value.
 {{% /md %}}</dd></dl>
@@ -6133,7 +6099,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeoutidle">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6142,7 +6108,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6155,7 +6121,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeoutidle">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6164,7 +6130,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Input[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6223,7 +6189,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6232,7 +6198,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -6245,7 +6211,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6254,7 +6220,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -6313,7 +6279,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6322,7 +6288,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -6335,7 +6301,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6344,7 +6310,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -6403,7 +6369,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6412,7 +6378,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproutetimeout">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -6425,7 +6391,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Input[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6434,7 +6400,7 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproutetimeout">Input[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd></dl>
@@ -6477,7 +6443,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -6491,7 +6457,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Input[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -6551,7 +6517,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -6560,7 +6526,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -6573,7 +6539,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -6582,7 +6548,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd></dl>
@@ -6623,7 +6589,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproutetimeoutidle">pulumi.<wbr>Input<Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args></a></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd></dl>
@@ -6636,7 +6602,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproutetimeoutidle">Input[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd></dl>
@@ -6695,7 +6661,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6704,7 +6670,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>
@@ -6717,7 +6683,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6726,7 +6692,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd></dl>

@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -119,31 +119,19 @@ const example = new aws.sagemaker.UserProfile("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">single_sign_on_user_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">single_sign_on_user_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">user_profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">user_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserProfileUserSettingsArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_user_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_user_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_settings</span><span class="p">:</span> <span class="nx">Optional[UserProfileUserSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,32 +166,22 @@ const example = new aws.sagemaker.UserProfile("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">UserProfileArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,7 +190,7 @@ const example = new aws.sagemaker.UserProfile("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -236,7 +214,7 @@ const example = new aws.sagemaker.UserProfile("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -407,7 +385,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -416,7 +394,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -425,7 +403,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#singlesignonuseridentifier_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -434,7 +412,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#singlesignonuservalue_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -443,7 +421,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -452,7 +430,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#usersettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -465,7 +443,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -474,7 +452,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -483,7 +461,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#single_sign_on_user_identifier_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -492,7 +470,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#single_sign_on_user_value_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -501,7 +479,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -510,7 +488,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#user_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -651,30 +629,20 @@ Get an existing UserProfile resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserProfileState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserProfile</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserProfile</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">home_efs_file_system_uid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">single_sign_on_user_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">single_sign_on_user_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">user_profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">user_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserProfileUserSettingsArgs]]</span> = None<span class="p">) -&gt;</span> UserProfile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">home_efs_file_system_uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_user_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_user_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_settings</span><span class="p">:</span> <span class="nx">Optional[UserProfileUserSettingsArgs]</span> = None<span class="p">) -&gt;</span> UserProfile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserProfileState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserProfile</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserProfileState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserProfile</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserProfileState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -935,7 +903,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +912,7 @@ The following state arguments are supported:
 <a href="#state_domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +921,7 @@ The following state arguments are supported:
 <a href="#state_homeefsfilesystemuid_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +930,7 @@ The following state arguments are supported:
 <a href="#state_singlesignonuseridentifier_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_singlesignonuservalue_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -980,7 +948,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +957,7 @@ The following state arguments are supported:
 <a href="#state_userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -998,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_usersettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -1011,7 +979,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +988,7 @@ The following state arguments are supported:
 <a href="#state_domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +997,7 @@ The following state arguments are supported:
 <a href="#state_home_efs_file_system_uid_python" style="color: inherit; text-decoration: inherit;">home_<wbr>efs_<wbr>file_<wbr>system_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1006,7 @@ The following state arguments are supported:
 <a href="#state_single_sign_on_user_identifier_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1015,7 @@ The following state arguments are supported:
 <a href="#state_single_sign_on_user_value_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1024,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1033,7 @@ The following state arguments are supported:
 <a href="#state_user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1042,7 @@ The following state arguments are supported:
 <a href="#state_user_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -1214,7 +1182,7 @@ The following state arguments are supported:
 <a href="#executionrole_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1191,7 @@ The following state arguments are supported:
 <a href="#jupyterserverappsettings_nodejs" style="color: inherit; text-decoration: inherit;">jupyter<wbr>Server<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1200,7 @@ The following state arguments are supported:
 <a href="#kernelgatewayappsettings_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1209,7 @@ The following state arguments are supported:
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1218,7 @@ The following state arguments are supported:
 <a href="#sharingsettings_nodejs" style="color: inherit; text-decoration: inherit;">sharing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingssharingsettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1227,7 @@ The following state arguments are supported:
 <a href="#tensorboardappsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Board<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1272,7 +1240,7 @@ The following state arguments are supported:
 <a href="#execution_role_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1281,7 +1249,7 @@ The following state arguments are supported:
 <a href="#jupyter_server_app_settings_python" style="color: inherit; text-decoration: inherit;">jupyter_<wbr>server_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1258,7 @@ The following state arguments are supported:
 <a href="#kernel_gateway_app_settings_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1267,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1276,7 @@ The following state arguments are supported:
 <a href="#sharing_settings_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingssharingsettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1285,7 @@ The following state arguments are supported:
 <a href="#tensor_board_app_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>board_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1358,7 +1326,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1371,7 +1339,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1430,7 +1398,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1439,7 +1407,7 @@ The following state arguments are supported:
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>
@@ -1452,7 +1420,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1429,7 @@ The following state arguments are supported:
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>
@@ -1520,7 +1488,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1497,7 @@ The following state arguments are supported:
 <a href="#customimages_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd></dl>
@@ -1542,7 +1510,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1519,7 @@ The following state arguments are supported:
 <a href="#custom_images_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">Sequence[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd></dl>
@@ -1628,7 +1596,7 @@ The following state arguments are supported:
 <a href="#appimageconfigname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Image<wbr>Config<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
 {{% /md %}}</dd><dt class="property-required"
@@ -1637,7 +1605,7 @@ The following state arguments are supported:
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1646,7 +1614,7 @@ The following state arguments are supported:
 <a href="#imageversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
 {{% /md %}}</dd></dl>
@@ -1659,7 +1627,7 @@ The following state arguments are supported:
 <a href="#app_image_config_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>image_<wbr>config_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
 {{% /md %}}</dd><dt class="property-required"
@@ -1668,7 +1636,7 @@ The following state arguments are supported:
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1645,7 @@ The following state arguments are supported:
 <a href="#image_version_number_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
 {{% /md %}}</dd></dl>
@@ -1736,7 +1704,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1713,7 @@ The following state arguments are supported:
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>
@@ -1758,7 +1726,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1735,7 @@ The following state arguments are supported:
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>
@@ -1844,7 +1812,7 @@ The following state arguments are supported:
 <a href="#notebookoutputoption_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Output<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1821,7 @@ The following state arguments are supported:
 <a href="#s3kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">s3Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1862,7 +1830,7 @@ The following state arguments are supported:
 <a href="#s3outputpath_nodejs" style="color: inherit; text-decoration: inherit;">s3Output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
 {{% /md %}}</dd></dl>
@@ -1875,7 +1843,7 @@ The following state arguments are supported:
 <a href="#notebook_output_option_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>output_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1852,7 @@ The following state arguments are supported:
 <a href="#s3_kms_key_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1861,7 @@ The following state arguments are supported:
 <a href="#s3_output_path_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
 {{% /md %}}</dd></dl>
@@ -1934,7 +1902,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">pulumi.<wbr>Input<User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1947,7 +1915,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">Input[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2006,7 +1974,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +1983,7 @@ The following state arguments are supported:
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>
@@ -2028,7 +1996,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +2005,7 @@ The following state arguments are supported:
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
 {{% /md %}}</dd></dl>

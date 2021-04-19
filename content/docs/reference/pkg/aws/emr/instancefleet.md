@@ -104,8 +104,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -270,31 +270,19 @@ const task = new aws.emr.InstanceFleet("task", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">instance_type_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFleetInstanceTypeConfigArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFleetLaunchSpecificationsArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">target_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">target_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFleetInstanceTypeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[InstanceFleetLaunchSpecificationsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFleet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFleet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFleet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFleet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFleet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceFleetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -329,32 +317,22 @@ const task = new aws.emr.InstanceFleet("task", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InstanceFleetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -363,7 +341,7 @@ const task = new aws.emr.InstanceFleet("task", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -387,7 +365,7 @@ const task = new aws.emr.InstanceFleet("task", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -558,7 +536,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +545,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +554,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +563,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +572,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +581,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -616,7 +594,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -625,7 +603,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Input[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +612,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">Input[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +621,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +630,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +639,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -794,30 +772,20 @@ Get an existing InstanceFleet resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceFleetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceFleet</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceFleetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceFleet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_type_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFleetInstanceTypeConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFleetLaunchSpecificationsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">provisioned_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">provisioned_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">target_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">target_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> InstanceFleet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFleetInstanceTypeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[InstanceFleetLaunchSpecificationsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">provisioned_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_on_demand_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_spot_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InstanceFleet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceFleet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceFleetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFleet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceFleet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceFleetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFleet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceFleet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceFleetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceFleet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceFleetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1074,7 +1042,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1051,7 @@ The following state arguments are supported:
 <a href="#state_instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1060,7 @@ The following state arguments are supported:
 <a href="#state_launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1069,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1078,7 @@ The following state arguments are supported:
 <a href="#state_provisionedondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1086,7 @@ The following state arguments are supported:
 <a href="#state_provisionedspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1094,7 @@ The following state arguments are supported:
 <a href="#state_targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1103,7 @@ The following state arguments are supported:
 <a href="#state_targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -1148,7 +1116,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1157,7 +1125,7 @@ The following state arguments are supported:
 <a href="#state_instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Input[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1134,7 @@ The following state arguments are supported:
 <a href="#state_launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">Input[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1175,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1184,7 +1152,7 @@ The following state arguments are supported:
 <a href="#state_provisioned_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1160,7 @@ The following state arguments are supported:
 <a href="#state_provisioned_spot_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1168,7 @@ The following state arguments are supported:
 <a href="#state_target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -1349,7 +1317,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1326,7 @@ The following state arguments are supported:
 <a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1335,7 @@ The following state arguments are supported:
 <a href="#bidpriceaspercentageofondemandprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1344,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1353,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1362,7 @@ The following state arguments are supported:
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -1407,7 +1375,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1384,7 @@ The following state arguments are supported:
 <a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1393,7 @@ The following state arguments are supported:
 <a href="#bid_price_as_percentage_of_on_demand_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price_<wbr>as_<wbr>percentage_<wbr>of_<wbr>on_<wbr>demand_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1402,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Input[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1411,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Input[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1420,7 @@ The following state arguments are supported:
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -1511,7 +1479,7 @@ The following state arguments are supported:
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1488,7 @@ The following state arguments are supported:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -1533,7 +1501,7 @@ The following state arguments are supported:
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1510,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -1637,7 +1605,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -1646,7 +1614,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1655,7 +1623,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1632,7 @@ The following state arguments are supported:
 <a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -1677,7 +1645,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -1686,7 +1654,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1663,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1672,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -1763,7 +1731,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1740,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -1785,7 +1753,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Input[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1762,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Input[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -1835,7 +1803,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -1848,7 +1816,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -1943,7 +1911,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -1952,7 +1920,7 @@ The following state arguments are supported:
 <a href="#timeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -1961,7 +1929,7 @@ The following state arguments are supported:
 <a href="#timeoutdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +1938,7 @@ The following state arguments are supported:
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>
@@ -1983,7 +1951,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -1992,7 +1960,7 @@ The following state arguments are supported:
 <a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -2001,7 +1969,7 @@ The following state arguments are supported:
 <a href="#timeout_duration_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +1978,7 @@ The following state arguments are supported:
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>

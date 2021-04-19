@@ -109,8 +109,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -388,40 +388,19 @@ const service = new aws.ecs.TaskDefinition("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionInferenceAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionPlacementConstraintArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TaskDefinitionProxyConfigurationArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionVolumeArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionVolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TaskDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -456,32 +435,22 @@ const service = new aws.ecs.TaskDefinition("service", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TaskDefinitionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -490,7 +459,7 @@ const service = new aws.ecs.TaskDefinition("service", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -514,7 +483,7 @@ const service = new aws.ecs.TaskDefinition("service", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -859,7 +828,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#containerdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of valid [container
 definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
@@ -874,7 +843,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your task definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +852,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +861,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +870,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#inferenceaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Task<wbr>Definition<wbr>Inference<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +879,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +888,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +897,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +906,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +915,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +924,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#proxyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">pulumi.<wbr>Input<Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +933,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#requirescompatibilities_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Compatibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +942,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +951,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#taskrolearn_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +960,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Task<wbr>Definition<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd></dl>
@@ -1004,7 +973,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#container_definitions_python" style="color: inherit; text-decoration: inherit;">container_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of valid [container
 definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
@@ -1019,7 +988,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for your task definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +997,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1006,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1015,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Input[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Sequence[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1024,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1033,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1042,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1051,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1060,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Input[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1069,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#proxy_configuration_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Input[Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1078,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#requires_compatibilities_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>compatibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1087,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1096,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#task_role_arn_python" style="color: inherit; text-decoration: inherit;">task_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,7 +1105,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">Input[Task<wbr>Definition<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Sequence[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd></dl>
@@ -1277,39 +1246,20 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TaskDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TaskDefinition</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TaskDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TaskDefinition</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionInferenceAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionPlacementConstraintArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TaskDefinitionProxyConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TaskDefinitionVolumeArgs]]]]</span> = None<span class="p">) -&gt;</span> TaskDefinition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionVolumeArgs]]</span> = None<span class="p">) -&gt;</span> TaskDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTaskDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TaskDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTaskDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TaskDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TaskDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TaskDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TaskDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TaskDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1744,7 +1694,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full ARN of the Task Definition (including both `family` and `revision`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1703,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_containerdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of valid [container
 definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
@@ -1768,7 +1718,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1727,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1786,7 +1736,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your task definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1795,7 +1745,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_inferenceaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Task<wbr>Definition<wbr>Inference<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1804,7 +1754,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1813,7 +1763,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1822,7 +1772,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1831,7 +1781,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1840,7 +1790,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1799,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_proxyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">pulumi.<wbr>Input<Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1858,7 +1808,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_requirescompatibilities_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Compatibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1817,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision of the task in a particular family.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1826,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1885,7 +1835,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_taskrolearn_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1844,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Task<wbr>Definition<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Task<wbr>Definition<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd></dl>
@@ -1907,7 +1857,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full ARN of the Task Definition (including both `family` and `revision`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1866,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_container_definitions_python" style="color: inherit; text-decoration: inherit;">container_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of valid [container
 definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
@@ -1931,7 +1881,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1890,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1899,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for your task definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1908,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Input[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Sequence[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1917,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +1926,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +1935,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1944,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1953,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Input[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1962,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_proxy_configuration_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Input[Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1971,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_requires_compatibilities_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>compatibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1980,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the task in a particular family.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +1989,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +1998,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_task_role_arn_python" style="color: inherit; text-decoration: inherit;">task_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2007,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">Input[Task<wbr>Definition<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Sequence[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd></dl>
@@ -2125,7 +2075,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
 {{% /md %}}</dd><dt class="property-required"
@@ -2134,7 +2084,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator type to use.
 {{% /md %}}</dd></dl>
@@ -2147,7 +2097,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
 {{% /md %}}</dd><dt class="property-required"
@@ -2156,7 +2106,7 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 <a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator type to use.
 {{% /md %}}</dd></dl>
@@ -2221,7 +2171,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2180,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster Query Language expression to apply to the constraint.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
@@ -2246,7 +2196,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2205,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster Query Language expression to apply to the constraint.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
@@ -2335,7 +2285,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container that will serve as the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2294,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2353,7 +2303,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
 {{% /md %}}</dd></dl>
@@ -2366,7 +2316,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container that will serve as the App Mesh proxy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2325,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2334,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
 {{% /md %}}</dd></dl>
@@ -2481,7 +2431,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume. This name is referenced in the `sourceVolume`
 parameter of container definition in the `mountPoints` section.
@@ -2491,7 +2441,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#dockervolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">pulumi.<wbr>Input<Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a docker volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2450,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#efsvolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">efs<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">pulumi.<wbr>Input<Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a EFS volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2459,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
 {{% /md %}}</dd></dl>
@@ -2522,7 +2472,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume. This name is referenced in the `sourceVolume`
 parameter of container definition in the `mountPoints` section.
@@ -2532,7 +2482,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#docker_volume_configuration_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Input[Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a docker volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2491,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#efs_volume_configuration_python" style="color: inherit; text-decoration: inherit;">efs_<wbr>volume_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Input[Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a EFS volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2500,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
 {{% /md %}}</dd></dl>
@@ -2663,7 +2613,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">autoprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2622,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2631,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#driveropts_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Docker driver specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2690,7 +2640,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of custom metadata to add to your Docker volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2649,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
 {{% /md %}}</dd></dl>
@@ -2712,7 +2662,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#autoprovision_python" style="color: inherit; text-decoration: inherit;">autoprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2671,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2680,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#driver_opts_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Docker driver specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2739,7 +2689,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom metadata to add to your Docker volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2748,7 +2698,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
 {{% /md %}}</dd></dl>
@@ -2861,7 +2811,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EFS File System.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2870,7 +2820,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">pulumi.<wbr>Input<Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The authorization configuration details for the Amazon EFS file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2879,7 +2829,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#rootdirectory_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2888,7 +2838,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#transitencryption_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2897,7 +2847,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#transitencryptionport_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
 {{% /md %}}</dd></dl>
@@ -2910,7 +2860,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the EFS File System.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2919,7 +2869,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Input[Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization configuration details for the Amazon EFS file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2928,7 +2878,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2937,7 +2887,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#transit_encryption_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2946,7 +2896,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#transit_encryption_port_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
 {{% /md %}}</dd></dl>
@@ -3005,7 +2955,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#accesspointid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Point<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +2964,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#iam_nodejs" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting the Amazon EFS file system. If enabled, transit encryption must be enabled in the EFSVolumeConfiguration. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
 {{% /md %}}</dd></dl>
@@ -3027,7 +2977,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#access_point_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>point_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +2986,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#iam_python" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting the Amazon EFS file system. If enabled, transit encryption must be enabled in the EFSVolumeConfiguration. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
 {{% /md %}}</dd></dl>

@@ -90,8 +90,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -232,39 +232,19 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">abort_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BotAbortStatementArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">child_directed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">clarification_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BotClarificationPromptArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">detect_sentiment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_model_improvements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">idle_session_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">intents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BotIntentArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">nlu_intent_confidence_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">process_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">voice_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">abort_statement</span><span class="p">:</span> <span class="nx">Optional[BotAbortStatementArgs]</span> = None<span class="p">, </span><span class="nx">child_directed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">clarification_prompt</span><span class="p">:</span> <span class="nx">Optional[BotClarificationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detect_sentiment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_model_improvements</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idle_session_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">intents</span><span class="p">:</span> <span class="nx">Optional[Sequence[BotIntentArgs]]</span> = None<span class="p">, </span><span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nlu_intent_confidence_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">process_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">voice_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,32 +279,22 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +303,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -357,7 +327,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -672,7 +642,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#abortstatement_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">pulumi.<wbr>Input<Bot<wbr>Abort<wbr>Statement<wbr>Args></a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-required"
@@ -681,7 +651,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#childdirected_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Directed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 {{% /md %}}</dd><dt class="property-required"
@@ -690,7 +660,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#intents_nodejs" style="color: inherit; text-decoration: inherit;">intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">pulumi.<wbr>Input<pulumi.<wbr>Input<Bot<wbr>Intent<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#botintent">Bot<wbr>Intent[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -699,7 +669,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#clarificationprompt_nodejs" style="color: inherit; text-decoration: inherit;">clarification<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">pulumi.<wbr>Input<Bot<wbr>Clarification<wbr>Prompt<wbr>Args></a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +678,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +687,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +696,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#detectsentiment_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Sentiment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +705,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#enablemodelimprovements_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Model<wbr>Improvements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +714,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#idlesessionttlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Ttl<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +723,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +732,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +741,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#nluintentconfidencethreshold_nodejs" style="color: inherit; text-decoration: inherit;">nlu<wbr>Intent<wbr>Confidence<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +750,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#processbehavior_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +759,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#voiceid_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 {{% /md %}}</dd></dl>
@@ -802,7 +772,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#abort_statement_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">Input[Bot<wbr>Abort<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-required"
@@ -811,7 +781,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#child_directed_python" style="color: inherit; text-decoration: inherit;">child_<wbr>directed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 {{% /md %}}</dd><dt class="property-required"
@@ -820,7 +790,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#intents_python" style="color: inherit; text-decoration: inherit;">intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">Input[Bot<wbr>Intent<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#botintent">Sequence[Bot<wbr>Intent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +799,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#clarification_prompt_python" style="color: inherit; text-decoration: inherit;">clarification_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">Input[Bot<wbr>Clarification<wbr>Prompt<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +808,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +817,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +826,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#detect_sentiment_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>sentiment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +835,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#enable_model_improvements_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>model_<wbr>improvements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +844,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#idle_session_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>ttl_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +853,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +862,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +871,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#nlu_intent_confidence_threshold_python" style="color: inherit; text-decoration: inherit;">nlu_<wbr>intent_<wbr>confidence_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +880,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#process_behavior_python" style="color: inherit; text-decoration: inherit;">process_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +889,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#voice_id_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 {{% /md %}}</dd></dl>
@@ -1252,43 +1222,20 @@ Get an existing Bot resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BotState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bot</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BotState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bot</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">abort_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BotAbortStatementArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">child_directed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">clarification_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BotClarificationPromptArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">detect_sentiment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_model_improvements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">failure_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">idle_session_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">intents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BotIntentArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">nlu_intent_confidence_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">process_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">voice_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Bot</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">abort_statement</span><span class="p">:</span> <span class="nx">Optional[BotAbortStatementArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_directed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">clarification_prompt</span><span class="p">:</span> <span class="nx">Optional[BotClarificationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detect_sentiment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_model_improvements</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failure_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idle_session_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">intents</span><span class="p">:</span> <span class="nx">Optional[Sequence[BotIntentArgs]]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nlu_intent_confidence_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">process_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">voice_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Bot</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BotState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BotState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bot</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BotState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bot</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BotState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1789,7 +1736,7 @@ failure_reason response element.
 <a href="#state_abortstatement_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">pulumi.<wbr>Input<Bot<wbr>Abort<wbr>Statement<wbr>Args></a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1745,7 @@ failure_reason response element.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1753,7 @@ failure_reason response element.
 <a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the bot that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the bot.
@@ -1816,7 +1763,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_childdirected_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Directed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1772,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_clarificationprompt_nodejs" style="color: inherit; text-decoration: inherit;">clarification<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">pulumi.<wbr>Input<Bot<wbr>Clarification<wbr>Prompt<wbr>Args></a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1834,7 +1781,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1790,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the bot version was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1799,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1808,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_detectsentiment_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Sentiment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1817,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_enablemodelimprovements_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Model<wbr>Improvements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1826,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1835,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_idlesessionttlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Ttl<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1844,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_intents_nodejs" style="color: inherit; text-decoration: inherit;">intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">pulumi.<wbr>Input<pulumi.<wbr>Input<Bot<wbr>Intent<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#botintent">Bot<wbr>Intent[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1853,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this bot was updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1862,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1871,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1880,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_nluintentconfidencethreshold_nodejs" style="color: inherit; text-decoration: inherit;">nlu<wbr>Intent<wbr>Confidence<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +1889,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_processbehavior_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +1898,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When you send a request to create or update a bot, Amazon Lex sets the status response
 element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
@@ -1963,7 +1910,7 @@ failure_reason response element.
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +1919,7 @@ failure_reason response element.
 <a href="#state_voiceid_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 {{% /md %}}</dd></dl>
@@ -1985,7 +1932,7 @@ failure_reason response element.
 <a href="#state_abort_statement_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">Input[Bot<wbr>Abort<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1941,7 @@ failure_reason response element.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +1949,7 @@ failure_reason response element.
 <a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the bot that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the bot.
@@ -2012,7 +1959,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_child_directed_python" style="color: inherit; text-decoration: inherit;">child_<wbr>directed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1968,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_clarification_prompt_python" style="color: inherit; text-decoration: inherit;">clarification_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">Input[Bot<wbr>Clarification<wbr>Prompt<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1977,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +1986,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the bot version was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +1995,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2004,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_detect_sentiment_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>sentiment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2013,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_enable_model_improvements_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>model_<wbr>improvements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2022,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2031,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_idle_session_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>ttl_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2040,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_intents_python" style="color: inherit; text-decoration: inherit;">intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">Input[Bot<wbr>Intent<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#botintent">Sequence[Bot<wbr>Intent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2049,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this bot was updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2058,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2067,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2076,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_nlu_intent_confidence_threshold_python" style="color: inherit; text-decoration: inherit;">nlu_<wbr>intent_<wbr>confidence_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2085,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_process_behavior_python" style="color: inherit; text-decoration: inherit;">process_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2094,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When you send a request to create or update a bot, Amazon Lex sets the status response
 element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
@@ -2159,7 +2106,7 @@ failure_reason response element.
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2115,7 @@ failure_reason response element.
 <a href="#state_voice_id_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 {{% /md %}}</dd></dl>
@@ -2244,7 +2191,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatementmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#botabortstatementmessage">Bot<wbr>Abort<wbr>Statement<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2255,7 +2202,7 @@ are documented under message.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2270,7 +2217,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatementmessage">Input[Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#botabortstatementmessage">Sequence[Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2281,7 +2228,7 @@ are documented under message.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2362,7 +2309,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message.
 {{% /md %}}</dd><dt class="property-required"
@@ -2371,7 +2318,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2380,7 +2327,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response.
@@ -2394,7 +2341,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message.
 {{% /md %}}</dd><dt class="property-required"
@@ -2403,7 +2350,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,7 +2359,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response.
@@ -2498,7 +2445,7 @@ slot values into the response card. For more information, see
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information.
 {{% /md %}}</dd><dt class="property-required"
@@ -2507,7 +2454,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationpromptmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#botclarificationpromptmessage">Bot<wbr>Clarification<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2518,7 +2465,7 @@ are documented under message.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2533,7 +2480,7 @@ slot values into the response card. For more information, see
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information.
 {{% /md %}}</dd><dt class="property-required"
@@ -2542,7 +2489,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationpromptmessage">Input[Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#botclarificationpromptmessage">Sequence[Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2553,7 +2500,7 @@ are documented under message.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2634,7 +2581,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the message.
 {{% /md %}}</dd><dt class="property-required"
@@ -2643,7 +2590,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2599,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response.
@@ -2666,7 +2613,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the message.
 {{% /md %}}</dd><dt class="property-required"
@@ -2675,7 +2622,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2631,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response.
@@ -2744,7 +2691,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#intentname_nodejs" style="color: inherit; text-decoration: inherit;">intent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2753,7 +2700,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#intentversion_nodejs" style="color: inherit; text-decoration: inherit;">intent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd></dl>
@@ -2766,7 +2713,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#intent_name_python" style="color: inherit; text-decoration: inherit;">intent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2775,7 +2722,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#intent_version_python" style="color: inherit; text-decoration: inherit;">intent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd></dl>

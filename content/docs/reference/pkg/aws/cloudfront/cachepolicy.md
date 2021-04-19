@@ -90,8 +90,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -229,32 +229,19 @@ const example = new aws.cloudfront.CachePolicy("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">min_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">parameters_in_cache_key_and_forwarded_to_origin</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CachePolicyParametersInCacheKeyAndForwardedToOriginArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[CachePolicyArgs]</a></span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_in_cache_key_and_forwarded_to_origin</span><span class="p">:</span> <span class="nx">Optional[CachePolicyParametersInCacheKeyAndForwardedToOriginArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCachePolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CachePolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCachePolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CachePolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -289,32 +276,22 @@ const example = new aws.cloudfront.CachePolicy("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CachePolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,7 +300,7 @@ const example = new aws.cloudfront.CachePolicy("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -347,7 +324,7 @@ const example = new aws.cloudfront.CachePolicy("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -536,7 +513,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +522,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +531,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +540,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +549,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +558,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +567,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parametersincachekeyandforwardedtoorigin_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -603,7 +580,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +589,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +598,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +607,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +616,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +625,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +634,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_in_cache_key_and_forwarded_to_origin_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>in_<wbr>cache_<wbr>key_<wbr>and_<wbr>forwarded_<wbr>to_<wbr>origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -726,29 +703,20 @@ Get an existing CachePolicy resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CachePolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CachePolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CachePolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CachePolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">min_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">parameters_in_cache_key_and_forwarded_to_origin</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CachePolicyParametersInCacheKeyAndForwardedToOriginArgs]]</span> = None<span class="p">) -&gt;</span> CachePolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_in_cache_key_and_forwarded_to_origin</span><span class="p">:</span> <span class="nx">Optional[CachePolicyParametersInCacheKeyAndForwardedToOriginArgs]</span> = None<span class="p">) -&gt;</span> CachePolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCachePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CachePolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CachePolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCachePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CachePolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CachePolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CachePolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CachePolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CachePolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CachePolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -991,7 +959,7 @@ The following state arguments are supported:
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +986,7 @@ The following state arguments are supported:
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1004,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1013,7 @@ The following state arguments are supported:
 <a href="#state_parametersincachekeyandforwardedtoorigin_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -1058,7 +1026,7 @@ The following state arguments are supported:
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1035,7 @@ The following state arguments are supported:
 <a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1044,7 @@ The following state arguments are supported:
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1053,7 @@ The following state arguments are supported:
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1062,7 @@ The following state arguments are supported:
 <a href="#state_min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1071,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1080,7 @@ The following state arguments are supported:
 <a href="#state_parameters_in_cache_key_and_forwarded_to_origin_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>in_<wbr>cache_<wbr>key_<wbr>and_<wbr>forwarded_<wbr>to_<wbr>origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -1234,7 +1202,7 @@ The following state arguments are supported:
 <a href="#cookiesconfig_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1243,7 +1211,7 @@ The following state arguments are supported:
 <a href="#headersconfig_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1252,7 +1220,7 @@ The following state arguments are supported:
 <a href="#querystringsconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1229,7 @@ The following state arguments are supported:
 <a href="#enableacceptencodingbrotli_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accept<wbr>Encoding<wbr>Brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1238,7 @@ The following state arguments are supported:
 <a href="#enableacceptencodinggzip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accept<wbr>Encoding<wbr>Gzip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
 {{% /md %}}</dd></dl>
@@ -1283,7 +1251,7 @@ The following state arguments are supported:
 <a href="#cookies_config_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1292,7 +1260,7 @@ The following state arguments are supported:
 <a href="#headers_config_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1301,7 +1269,7 @@ The following state arguments are supported:
 <a href="#query_strings_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1278,7 @@ The following state arguments are supported:
 <a href="#enable_accept_encoding_brotli_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accept_<wbr>encoding_<wbr>brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1287,7 @@ The following state arguments are supported:
 <a href="#enable_accept_encoding_gzip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accept_<wbr>encoding_<wbr>gzip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
 {{% /md %}}</dd></dl>
@@ -1374,7 +1342,7 @@ The following state arguments are supported:
 <a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1350,7 @@ The following state arguments are supported:
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1362,7 @@ The following state arguments are supported:
 <a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1370,7 @@ The following state arguments are supported:
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1408,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1420,7 @@ The following state arguments are supported:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1506,7 +1474,7 @@ The following state arguments are supported:
 <a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1482,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1494,7 @@ The following state arguments are supported:
 <a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1502,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1540,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1584,7 +1552,7 @@ The following state arguments are supported:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1606,7 @@ The following state arguments are supported:
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1614,7 @@ The following state arguments are supported:
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">pulumi.<wbr>Input<Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1658,7 +1626,7 @@ The following state arguments are supported:
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1634,7 @@ The following state arguments are supported:
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Input[Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1704,7 +1672,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1716,7 +1684,7 @@ The following state arguments are supported:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -116,19 +116,17 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDirectory<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDirectoryArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDirectoryResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDirectory<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDirectoryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDirectoryResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDirectoryArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDirectoryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDirectory` in the Go SDK.
 
@@ -137,7 +135,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDirectory </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDirectoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDirectoryArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDirectoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDirectoryArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -366,7 +364,7 @@ The following output properties are available:
 <a href="#workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperty">List&lt;Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Property&gt;</a></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-"
@@ -513,7 +511,7 @@ The following output properties are available:
 <a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperty">[]Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Property</a></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-"
@@ -660,7 +658,7 @@ The following output properties are available:
 <a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperty">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Property[]</a></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-"
@@ -807,7 +805,7 @@ The following output properties are available:
 <a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperty">Sequence[Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-"
@@ -1309,7 +1307,7 @@ The following output properties are available:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="getdirectoryworkspacecreationproperty">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Property</h4>
+<h4 id="getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</h4>
 
 
 

@@ -89,8 +89,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -234,8 +234,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -320,8 +320,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -415,8 +415,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -488,50 +488,19 @@ const example = new aws.ecs.Service("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceCapacityProviderStrategyArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceDeploymentCircuitBreakerArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceDeploymentControllerArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceLoadBalancerArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceOrderedPlacementStrategyArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServicePlacementConstraintArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceServiceRegistriesArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ServiceArgs]</a></span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -566,32 +535,22 @@ const example = new aws.ecs.Service("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -600,7 +559,7 @@ const example = new aws.ecs.Service("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -624,7 +583,7 @@ const example = new aws.ecs.Service("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1137,7 +1096,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1105,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1114,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcircuitbreaker_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">pulumi.<wbr>Input<Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1123,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">pulumi.<wbr>Input<Service<wbr>Deployment<wbr>Controller<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1132,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentmaximumpercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Maximum<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1141,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentminimumhealthypercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1150,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#desiredcount_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1159,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enableecsmanagedtags_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1168,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enableexecutecommand_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Execute<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1177,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1227,7 +1186,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#healthcheckgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1195,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iamrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1245,7 +1204,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#launchtype_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1213,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Load<wbr>Balancer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1263,7 +1222,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the service (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1231,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">pulumi.<wbr>Input<Service<wbr>Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1281,7 +1240,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1249,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Placement<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1258,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1267,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#propagatetags_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1276,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schedulingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1285,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">pulumi.<wbr>Input<Service<wbr>Service<wbr>Registries<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1294,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1303,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#taskdefinition_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1312,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#waitforsteadystate_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Steady<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`. The provider will wait for a maximum of 15 minutes for the state to be achieved.
 {{% /md %}}</dd></dl>
@@ -1366,7 +1325,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">Input[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Sequence[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1334,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -1384,7 +1343,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deployment_circuit_breaker_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>circuit_<wbr>breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Input[Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1352,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Input[Service<wbr>Deployment<wbr>Controller<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1361,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deployment_maximum_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>maximum_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1370,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deployment_minimum_healthy_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>minimum_<wbr>healthy_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1379,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#desired_count_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1388,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_ecs_managed_tags_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ecs_<wbr>managed_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1397,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_execute_command_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>execute_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#force_new_deployment_python" style="color: inherit; text-decoration: inherit;">force_<wbr>new_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1456,7 +1415,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#health_check_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1465,7 +1424,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iam_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1433,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#launch_type_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1442,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">Input[Service<wbr>Load<wbr>Balancer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Sequence[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1492,7 +1451,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the service (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1501,7 +1460,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Input[Service<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1469,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">Input[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Sequence[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1478,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">Input[Service<wbr>Placement<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Sequence[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1487,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1496,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#propagate_tags_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1505,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scheduling_strategy_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1514,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Input[Service<wbr>Service<wbr>Registries<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1523,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1532,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#task_definition_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1541,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#wait_for_steady_state_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>steady_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`. The provider will wait for a maximum of 15 minutes for the state to be achieved.
 {{% /md %}}</dd></dl>
@@ -1651,47 +1610,20 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceCapacityProviderStrategyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceDeploymentCircuitBreakerArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceDeploymentControllerArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceLoadBalancerArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceOrderedPlacementStrategyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServicePlacementConstraintArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceServiceRegistriesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2258,7 +2190,7 @@ The following state arguments are supported:
 <a href="#state_capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2199,7 @@ The following state arguments are supported:
 <a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcircuitbreaker_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">pulumi.<wbr>Input<Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">pulumi.<wbr>Input<Service<wbr>Deployment<wbr>Controller<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_deploymentmaximumpercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Maximum<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_deploymentminimumhealthypercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_desiredcount_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_enableecsmanagedtags_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_enableexecutecommand_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Execute<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2271,7 @@ The following state arguments are supported:
 <a href="#state_forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2280,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2289,7 @@ The following state arguments are supported:
 <a href="#state_iamrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2298,7 @@ The following state arguments are supported:
 <a href="#state_launchtype_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Load<wbr>Balancer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the service (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2325,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">pulumi.<wbr>Input<Service<wbr>Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Placement<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_propagatetags_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2370,7 @@ The following state arguments are supported:
 <a href="#state_schedulingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">pulumi.<wbr>Input<Service<wbr>Service<wbr>Registries<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -2465,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_taskdefinition_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2474,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_waitforsteadystate_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Steady<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`. The provider will wait for a maximum of 15 minutes for the state to be achieved.
 {{% /md %}}</dd></dl>
@@ -2487,7 +2419,7 @@ The following state arguments are supported:
 <a href="#state_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">Input[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Sequence[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2496,7 +2428,7 @@ The following state arguments are supported:
 <a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2505,7 +2437,7 @@ The following state arguments are supported:
 <a href="#state_deployment_circuit_breaker_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>circuit_<wbr>breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Input[Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2446,7 @@ The following state arguments are supported:
 <a href="#state_deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Input[Service<wbr>Deployment<wbr>Controller<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2455,7 @@ The following state arguments are supported:
 <a href="#state_deployment_maximum_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>maximum_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2532,7 +2464,7 @@ The following state arguments are supported:
 <a href="#state_deployment_minimum_healthy_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>minimum_<wbr>healthy_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2473,7 @@ The following state arguments are supported:
 <a href="#state_desired_count_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2482,7 @@ The following state arguments are supported:
 <a href="#state_enable_ecs_managed_tags_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ecs_<wbr>managed_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2491,7 @@ The following state arguments are supported:
 <a href="#state_enable_execute_command_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>execute_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2500,7 @@ The following state arguments are supported:
 <a href="#state_force_new_deployment_python" style="color: inherit; text-decoration: inherit;">force_<wbr>new_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2509,7 @@ The following state arguments are supported:
 <a href="#state_health_check_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2518,7 @@ The following state arguments are supported:
 <a href="#state_iam_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2527,7 @@ The following state arguments are supported:
 <a href="#state_launch_type_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2536,7 @@ The following state arguments are supported:
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">Input[Service<wbr>Load<wbr>Balancer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Sequence[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2545,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the service (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2554,7 @@ The following state arguments are supported:
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Input[Service<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2563,7 @@ The following state arguments are supported:
 <a href="#state_ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">Input[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Sequence[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2640,7 +2572,7 @@ The following state arguments are supported:
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">Input[Service<wbr>Placement<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Sequence[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2649,7 +2581,7 @@ The following state arguments are supported:
 <a href="#state_platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2658,7 +2590,7 @@ The following state arguments are supported:
 <a href="#state_propagate_tags_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2667,7 +2599,7 @@ The following state arguments are supported:
 <a href="#state_scheduling_strategy_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2676,7 +2608,7 @@ The following state arguments are supported:
 <a href="#state_service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Input[Service<wbr>Service<wbr>Registries<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2685,7 +2617,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -2694,7 +2626,7 @@ The following state arguments are supported:
 <a href="#state_task_definition_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2703,7 +2635,7 @@ The following state arguments are supported:
 <a href="#state_wait_for_steady_state_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>steady_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`. The provider will wait for a maximum of 15 minutes for the state to be achieved.
 {{% /md %}}</dd></dl>
@@ -2789,7 +2721,7 @@ The following state arguments are supported:
 <a href="#capacityprovider_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2730,7 @@ The following state arguments are supported:
 <a href="#base_nodejs" style="color: inherit; text-decoration: inherit;">base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2807,7 +2739,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Relative percentage of the total number of launched tasks that should use the specified capacity provider.
 {{% /md %}}</dd></dl>
@@ -2820,7 +2752,7 @@ The following state arguments are supported:
 <a href="#capacity_provider_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2829,7 +2761,7 @@ The following state arguments are supported:
 <a href="#base_python" style="color: inherit; text-decoration: inherit;">base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2770,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Relative percentage of the total number of launched tasks that should use the specified capacity provider.
 {{% /md %}}</dd></dl>
@@ -2897,7 +2829,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable the deployment circuit breaker logic for the service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2906,7 +2838,7 @@ The following state arguments are supported:
 <a href="#rollback_nodejs" style="color: inherit; text-decoration: inherit;">rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Amazon ECS to roll back the service if a service deployment fails. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
 {{% /md %}}</dd></dl>
@@ -2919,7 +2851,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the deployment circuit breaker logic for the service.
 {{% /md %}}</dd><dt class="property-required"
@@ -2928,7 +2860,7 @@ The following state arguments are supported:
 <a href="#rollback_python" style="color: inherit; text-decoration: inherit;">rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Amazon ECS to roll back the service if a service deployment fails. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
 {{% /md %}}</dd></dl>
@@ -2969,7 +2901,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
 {{% /md %}}</dd></dl>
@@ -2982,7 +2914,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
 {{% /md %}}</dd></dl>
@@ -3077,7 +3009,7 @@ The following state arguments are supported:
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the container to associate with the load balancer (as it appears in a container definition).
 {{% /md %}}</dd><dt class="property-required"
@@ -3086,7 +3018,7 @@ The following state arguments are supported:
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port on the container to associate with the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3095,7 +3027,7 @@ The following state arguments are supported:
 <a href="#elbname_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the ELB (Classic) to associate with the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3104,7 +3036,7 @@ The following state arguments are supported:
 <a href="#targetgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Load Balancer target group to associate with the service.
 {{% /md %}}</dd></dl>
@@ -3117,7 +3049,7 @@ The following state arguments are supported:
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the container to associate with the load balancer (as it appears in a container definition).
 {{% /md %}}</dd><dt class="property-required"
@@ -3126,7 +3058,7 @@ The following state arguments are supported:
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port on the container to associate with the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3135,7 +3067,7 @@ The following state arguments are supported:
 <a href="#elb_name_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the ELB (Classic) to associate with the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3144,7 +3076,7 @@ The following state arguments are supported:
 <a href="#target_group_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Load Balancer target group to associate with the service.
 {{% /md %}}</dd></dl>
@@ -3221,7 +3153,7 @@ The following state arguments are supported:
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Subnets associated with the task or service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3162,7 @@ The following state arguments are supported:
 <a href="#assignpublicip_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3239,7 +3171,7 @@ The following state arguments are supported:
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd></dl>
@@ -3252,7 +3184,7 @@ The following state arguments are supported:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Subnets associated with the task or service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3261,7 +3193,7 @@ The following state arguments are supported:
 <a href="#assign_public_ip_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3270,7 +3202,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd></dl>
@@ -3335,7 +3267,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3344,7 +3276,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
@@ -3360,7 +3292,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3369,7 +3301,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
@@ -3431,7 +3363,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3440,7 +3372,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
 {{% /md %}}</dd></dl>
@@ -3453,7 +3385,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3462,7 +3394,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
 {{% /md %}}</dd></dl>
@@ -3557,7 +3489,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#registryarn_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3566,7 +3498,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3575,7 +3507,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3516,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port value used if your Service Discovery service specified an SRV record.
 {{% /md %}}</dd></dl>
@@ -3597,7 +3529,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#registry_arn_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3606,7 +3538,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container name value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3615,7 +3547,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3556,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port value used if your Service Discovery service specified an SRV record.
 {{% /md %}}</dd></dl>

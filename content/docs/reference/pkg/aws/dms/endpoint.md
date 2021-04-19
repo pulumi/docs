@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -175,44 +175,19 @@ const test = new aws.dms.Endpoint("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointElasticsearchSettingsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointKafkaSettingsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointKinesisSettingsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointMongodbSettingsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointS3SettingsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointElasticsearchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKafkaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKinesisSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointMongodbSettingsArgs]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointS3SettingsArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,32 +222,22 @@ const test = new aws.dms.Endpoint("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -281,7 +246,7 @@ const test = new aws.dms.Endpoint("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -305,7 +270,7 @@ const test = new aws.dms.Endpoint("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -710,7 +675,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -719,7 +684,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd><dt class="property-required"
@@ -728,7 +693,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enginename_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +702,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +711,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +720,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elasticsearchsettings_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">pulumi.<wbr>Input<Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +729,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extraconnectionattributes_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Connection<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +738,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kafkasettings_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">pulumi.<wbr>Input<Endpoint<wbr>Kafka<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +747,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kinesissettings_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">pulumi.<wbr>Input<Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +756,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +765,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mongodbsettings_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">pulumi.<wbr>Input<Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +774,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +783,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +792,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3settings_nodejs" style="color: inherit; text-decoration: inherit;">s3Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">pulumi.<wbr>Input<Endpoint<wbr>S3Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -836,7 +801,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +810,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#serviceaccessrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +819,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +828,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +837,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd></dl>
@@ -885,7 +850,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -894,7 +859,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd><dt class="property-required"
@@ -903,7 +868,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#engine_name_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +877,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +886,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +895,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Input[Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +904,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extra_connection_attributes_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>connection_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +913,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Input[Endpoint<wbr>Kafka<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +922,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Input[Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +931,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +940,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Input[Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +949,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +958,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +967,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Input[Endpoint<wbr>S3Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +976,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +985,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#service_access_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +994,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1003,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1012,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd></dl>
@@ -1152,42 +1117,20 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointElasticsearchSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointKafkaSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointKinesisSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointMongodbSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointS3SettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointElasticsearchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_connection_attributes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKafkaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointKinesisSettingsArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongodb_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointMongodbSettingsArgs]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">s3_settings</span><span class="p">:</span> <span class="nx">Optional[EndpointS3SettingsArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1664,7 +1607,7 @@ The following state arguments are supported:
 <a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1673,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1625,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchsettings_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">pulumi.<wbr>Input<Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1634,7 @@ The following state arguments are supported:
 <a href="#state_endpointarn_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1700,7 +1643,7 @@ The following state arguments are supported:
 <a href="#state_endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1709,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1661,7 @@ The following state arguments are supported:
 <a href="#state_enginename_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1670,7 @@ The following state arguments are supported:
 <a href="#state_extraconnectionattributes_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Connection<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1679,7 @@ The following state arguments are supported:
 <a href="#state_kafkasettings_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">pulumi.<wbr>Input<Endpoint<wbr>Kafka<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_kinesissettings_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">pulumi.<wbr>Input<Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_mongodbsettings_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">pulumi.<wbr>Input<Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_s3settings_nodejs" style="color: inherit; text-decoration: inherit;">s3Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">pulumi.<wbr>Input<Endpoint<wbr>S3Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1742,7 @@ The following state arguments are supported:
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_serviceaccessrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1760,7 @@ The following state arguments are supported:
 <a href="#state_sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1769,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1778,7 @@ The following state arguments are supported:
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd></dl>
@@ -1848,7 +1791,7 @@ The following state arguments are supported:
 <a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1800,7 @@ The following state arguments are supported:
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1809,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_settings_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Input[Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1818,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_arn_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1827,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1836,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1845,7 @@ The following state arguments are supported:
 <a href="#state_engine_name_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1854,7 @@ The following state arguments are supported:
 <a href="#state_extra_connection_attributes_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>connection_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1863,7 @@ The following state arguments are supported:
 <a href="#state_kafka_settings_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Input[Endpoint<wbr>Kafka<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1872,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_settings_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Input[Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1881,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_mongodb_settings_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Input[Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1965,7 +1908,7 @@ The following state arguments are supported:
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1974,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_s3_settings_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Input[Endpoint<wbr>S3Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +1926,7 @@ The following state arguments are supported:
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1935,7 @@ The following state arguments are supported:
 <a href="#state_service_access_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +1944,7 @@ The following state arguments are supported:
 <a href="#state_ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +1953,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd></dl>
@@ -2123,7 +2066,7 @@ The following state arguments are supported:
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2132,7 +2075,7 @@ The following state arguments are supported:
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2084,7 @@ The following state arguments are supported:
 <a href="#errorretryduration_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2093,7 @@ The following state arguments are supported:
 <a href="#fullloaderrorpercentage_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Error<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd></dl>
@@ -2163,7 +2106,7 @@ The following state arguments are supported:
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2172,7 +2115,7 @@ The following state arguments are supported:
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2124,7 @@ The following state arguments are supported:
 <a href="#error_retry_duration_python" style="color: inherit; text-decoration: inherit;">error_<wbr>retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2133,7 @@ The following state arguments are supported:
 <a href="#full_load_error_percentage_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>error_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
 {{% /md %}}</dd></dl>
@@ -2249,7 +2192,7 @@ The following state arguments are supported:
 <a href="#broker_nodejs" style="color: inherit; text-decoration: inherit;">broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2201,7 @@ The following state arguments are supported:
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd></dl>
@@ -2271,7 +2214,7 @@ The following state arguments are supported:
 <a href="#broker_python" style="color: inherit; text-decoration: inherit;">broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2223,7 @@ The following state arguments are supported:
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
 {{% /md %}}</dd></dl>
@@ -2357,7 +2300,7 @@ The following state arguments are supported:
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2309,7 @@ The following state arguments are supported:
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2318,7 @@ The following state arguments are supported:
 <a href="#streamarn_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd></dl>
@@ -2388,7 +2331,7 @@ The following state arguments are supported:
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2340,7 @@ The following state arguments are supported:
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2406,7 +2349,7 @@ The following state arguments are supported:
 <a href="#stream_arn_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
 {{% /md %}}</dd></dl>
@@ -2537,7 +2480,7 @@ The following state arguments are supported:
 <a href="#authmechanism_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2489,7 @@ The following state arguments are supported:
 <a href="#authsource_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2498,7 @@ The following state arguments are supported:
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2507,7 @@ The following state arguments are supported:
 <a href="#docstoinvestigate_nodejs" style="color: inherit; text-decoration: inherit;">docs<wbr>To<wbr>Investigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2516,7 @@ The following state arguments are supported:
 <a href="#extractdocid_nodejs" style="color: inherit; text-decoration: inherit;">extract<wbr>Doc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2525,7 @@ The following state arguments are supported:
 <a href="#nestinglevel_nodejs" style="color: inherit; text-decoration: inherit;">nesting<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd></dl>
@@ -2595,7 +2538,7 @@ The following state arguments are supported:
 <a href="#auth_mechanism_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2547,7 @@ The following state arguments are supported:
 <a href="#auth_source_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2556,7 @@ The following state arguments are supported:
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2565,7 @@ The following state arguments are supported:
 <a href="#docs_to_investigate_python" style="color: inherit; text-decoration: inherit;">docs_<wbr>to_<wbr>investigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2574,7 @@ The following state arguments are supported:
 <a href="#extract_doc_id_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>doc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2640,7 +2583,7 @@ The following state arguments are supported:
 <a href="#nesting_level_python" style="color: inherit; text-decoration: inherit;">nesting_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
 {{% /md %}}</dd></dl>
@@ -2807,7 +2750,7 @@ The following state arguments are supported:
 <a href="#bucketfolder_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2759,7 @@ The following state arguments are supported:
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2825,7 +2768,7 @@ The following state arguments are supported:
 <a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2834,7 +2777,7 @@ The following state arguments are supported:
 <a href="#csvdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2843,7 +2786,7 @@ The following state arguments are supported:
 <a href="#csvrowdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Row<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2852,7 +2795,7 @@ The following state arguments are supported:
 <a href="#datepartitionenabled_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Partition<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2861,7 +2804,7 @@ The following state arguments are supported:
 <a href="#externaltabledefinition_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Table<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2870,7 +2813,7 @@ The following state arguments are supported:
 <a href="#serviceaccessrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd></dl>
@@ -2883,7 +2826,7 @@ The following state arguments are supported:
 <a href="#bucket_folder_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket Object prefix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2892,7 +2835,7 @@ The following state arguments are supported:
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2901,7 +2844,7 @@ The following state arguments are supported:
 <a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2910,7 +2853,7 @@ The following state arguments are supported:
 <a href="#csv_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2919,7 +2862,7 @@ The following state arguments are supported:
 <a href="#csv_row_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>row_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2928,7 +2871,7 @@ The following state arguments are supported:
 <a href="#date_partition_enabled_python" style="color: inherit; text-decoration: inherit;">date_<wbr>partition_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2937,7 +2880,7 @@ The following state arguments are supported:
 <a href="#external_table_definition_python" style="color: inherit; text-decoration: inherit;">external_<wbr>table_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2946,7 +2889,7 @@ The following state arguments are supported:
 <a href="#service_access_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
 {{% /md %}}</dd></dl>

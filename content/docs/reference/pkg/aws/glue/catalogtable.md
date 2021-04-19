@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -193,8 +193,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -386,38 +386,19 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CatalogTablePartitionIndexArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CatalogTablePartitionKeyArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                 <span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CatalogTableStorageDescriptorArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CatalogTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -452,32 +433,22 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CatalogTableArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -486,7 +457,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -510,7 +481,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -807,7 +778,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +787,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +796,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +805,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +814,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +823,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +832,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partitionindices_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Catalog<wbr>Table<wbr>Partition<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +841,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +850,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#retention_nodejs" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +859,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storagedescriptor_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +868,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tabletype_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +877,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#viewexpandedtext_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Expanded<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -915,7 +886,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vieworiginaltext_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Original<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd></dl>
@@ -928,7 +899,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +908,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +917,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +926,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +935,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +944,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +953,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partition_indices_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">Input[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +962,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">Input[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +971,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +980,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_descriptor_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +989,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#table_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +998,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#view_expanded_text_python" style="color: inherit; text-decoration: inherit;">view_<wbr>expanded_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1007,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#view_original_text_python" style="color: inherit; text-decoration: inherit;">view_<wbr>original_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd></dl>
@@ -1141,36 +1112,20 @@ Get an existing CatalogTable resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CatalogTableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CatalogTable</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CatalogTableState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CatalogTable</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CatalogTablePartitionIndexArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CatalogTablePartitionKeyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CatalogTableStorageDescriptorArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> CatalogTable</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CatalogTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CatalogTableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CatalogTableState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CatalogTable</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CatalogTableState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CatalogTable</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CatalogTableState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1539,7 +1494,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Glue Table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1512,7 @@ The following state arguments are supported:
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1521,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1530,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1539,7 @@ The following state arguments are supported:
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_partitionindices_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Catalog<wbr>Table<wbr>Partition<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1620,7 +1575,7 @@ The following state arguments are supported:
 <a href="#state_retention_nodejs" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_storagedescriptor_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1638,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_tabletype_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1602,7 @@ The following state arguments are supported:
 <a href="#state_viewexpandedtext_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Expanded<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_vieworiginaltext_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Original<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd></dl>
@@ -1669,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Glue Table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_partition_indices_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">Input[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">Input[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1750,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_storage_descriptor_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_table_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_view_expanded_text_python" style="color: inherit; text-decoration: inherit;">view_<wbr>expanded_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1786,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_view_original_text_python" style="color: inherit; text-decoration: inherit;">view_<wbr>original_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd></dl>
@@ -1870,7 +1825,7 @@ The following state arguments are supported:
 <a href="#indexname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the partition index.
 {{% /md %}}</dd><dt class="property-required"
@@ -1879,7 +1834,7 @@ The following state arguments are supported:
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The keys for the partition index.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1843,7 @@ The following state arguments are supported:
 <a href="#indexstatus_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1900,7 +1855,7 @@ The following state arguments are supported:
 <a href="#index_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the partition index.
 {{% /md %}}</dd><dt class="property-required"
@@ -1909,7 +1864,7 @@ The following state arguments are supported:
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The keys for the partition index.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1873,7 @@ The following state arguments are supported:
 <a href="#index_status_python" style="color: inherit; text-decoration: inherit;">index_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +1949,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1958,7 @@ The following state arguments are supported:
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1967,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd></dl>
@@ -2025,7 +1980,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +1989,7 @@ The following state arguments are supported:
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +1998,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd></dl>
@@ -2300,7 +2255,7 @@ The following state arguments are supported:
 <a href="#bucketcolumns_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2264,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2318,7 +2273,7 @@ The following state arguments are supported:
 <a href="#compressed_nodejs" style="color: inherit; text-decoration: inherit;">compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2282,7 @@ The following state arguments are supported:
 <a href="#inputformat_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2291,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2300,7 @@ The following state arguments are supported:
 <a href="#numberofbuckets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2309,7 @@ The following state arguments are supported:
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2318,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2372,7 +2327,7 @@ The following state arguments are supported:
 <a href="#schemareference_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2336,7 @@ The following state arguments are supported:
 <a href="#serdeinfo_nodejs" style="color: inherit; text-decoration: inherit;">ser<wbr>De<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2345,7 @@ The following state arguments are supported:
 <a href="#skewedinfo_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2399,7 +2354,7 @@ The following state arguments are supported:
 <a href="#sortcolumns_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2408,7 +2363,7 @@ The following state arguments are supported:
 <a href="#storedassubdirectories_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>As<wbr>Sub<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd></dl>
@@ -2421,7 +2376,7 @@ The following state arguments are supported:
 <a href="#bucket_columns_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2385,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2394,7 @@ The following state arguments are supported:
 <a href="#compressed_python" style="color: inherit; text-decoration: inherit;">compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2403,7 @@ The following state arguments are supported:
 <a href="#input_format_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2412,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2421,7 @@ The following state arguments are supported:
 <a href="#number_of_buckets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2430,7 @@ The following state arguments are supported:
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2439,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2448,7 @@ The following state arguments are supported:
 <a href="#schema_reference_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2457,7 @@ The following state arguments are supported:
 <a href="#ser_de_info_python" style="color: inherit; text-decoration: inherit;">ser_<wbr>de_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2466,7 @@ The following state arguments are supported:
 <a href="#skewed_info_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2520,7 +2475,7 @@ The following state arguments are supported:
 <a href="#sort_columns_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2484,7 @@ The following state arguments are supported:
 <a href="#stored_as_sub_directories_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>as_<wbr>sub_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd></dl>
@@ -2624,7 +2579,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2633,7 +2588,7 @@ The following state arguments are supported:
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2597,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2606,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd></dl>
@@ -2664,7 +2619,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2673,7 +2628,7 @@ The following state arguments are supported:
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2682,7 +2637,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2691,7 +2646,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd></dl>
@@ -2768,7 +2723,7 @@ The following state arguments are supported:
 <a href="#schemaversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2732,7 @@ The following state arguments are supported:
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">pulumi.<wbr>Input<Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2741,7 @@ The following state arguments are supported:
 <a href="#schemaversionid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
 {{% /md %}}</dd></dl>
@@ -2799,7 +2754,7 @@ The following state arguments are supported:
 <a href="#schema_version_number_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2808,7 +2763,7 @@ The following state arguments are supported:
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Input[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2817,7 +2772,7 @@ The following state arguments are supported:
 <a href="#schema_version_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
 {{% /md %}}</dd></dl>
@@ -2894,7 +2849,7 @@ The following state arguments are supported:
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2903,7 +2858,7 @@ The following state arguments are supported:
 <a href="#schemaarn_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2867,7 @@ The following state arguments are supported:
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
 {{% /md %}}</dd></dl>
@@ -2925,7 +2880,7 @@ The following state arguments are supported:
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +2889,7 @@ The following state arguments are supported:
 <a href="#schema_arn_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +2898,7 @@ The following state arguments are supported:
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
 {{% /md %}}</dd></dl>
@@ -3020,7 +2975,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +2984,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +2993,7 @@ The following state arguments are supported:
 <a href="#serializationlibrary_nodejs" style="color: inherit; text-decoration: inherit;">serialization<wbr>Library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd></dl>
@@ -3051,7 +3006,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3015,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3024,7 @@ The following state arguments are supported:
 <a href="#serialization_library_python" style="color: inherit; text-decoration: inherit;">serialization_<wbr>library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd></dl>
@@ -3146,7 +3101,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnnames_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3155,7 +3110,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnvaluelocationmaps_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of values that appear so frequently as to be considered skewed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3164,7 +3119,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnvalues_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd></dl>
@@ -3177,7 +3132,7 @@ The following state arguments are supported:
 <a href="#skewed_column_names_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3186,7 +3141,7 @@ The following state arguments are supported:
 <a href="#skewed_column_value_location_maps_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>value_<wbr>location_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of values that appear so frequently as to be considered skewed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3195,7 +3150,7 @@ The following state arguments are supported:
 <a href="#skewed_column_values_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd></dl>
@@ -3254,7 +3209,7 @@ The following state arguments are supported:
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd><dt class="property-required"
@@ -3263,7 +3218,7 @@ The following state arguments are supported:
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd></dl>
@@ -3276,7 +3231,7 @@ The following state arguments are supported:
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd><dt class="property-required"
@@ -3285,7 +3240,7 @@ The following state arguments are supported:
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd></dl>
