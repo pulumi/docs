@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: cobraz/parse-sitemap@v1
+        id: parse-sitemap
         with:
           sitemap-url: https://www.pulumi.com/sitemap.xml
       - name: Run Lighthouse
