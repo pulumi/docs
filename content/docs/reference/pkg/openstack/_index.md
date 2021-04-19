@@ -45,6 +45,6 @@ A Pulumi package for creating and managing OpenStack cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.19.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
