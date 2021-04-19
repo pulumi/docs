@@ -38,7 +38,7 @@ class MyStack : Stack
         {
             Label = "my_instance",
             Image = "linode/ubuntu18.04",
-            Region = "us-east",
+            Region = "us-southeast",
             Type = "g6-standard-1",
             RootPass = "bogusPassword$",
             SwapSize = 256,
@@ -54,10 +54,25 @@ class MyStack : Stack
             {
                 new Linode.Inputs.FirewallInboundArgs
                 {
-                    Label = "allow-them",
+                    Label = "allow-http",
                     Action = "ACCEPT",
                     Protocol = "TCP",
                     Ports = "80",
+                    Ipv4s = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                    Ipv6s = 
+                    {
+                        "ff00::/8",
+                    },
+                },
+                new Linode.Inputs.FirewallInboundArgs
+                {
+                    Label = "allow-https",
+                    Action = "ACCEPT",
+                    Protocol = "TCP",
+                    Ports = "443",
                     Ipv4s = 
                     {
                         "0.0.0.0/0",
@@ -73,10 +88,25 @@ class MyStack : Stack
             {
                 new Linode.Inputs.FirewallOutboundArgs
                 {
-                    Label = "reject-them",
+                    Label = "reject-http",
                     Action = "DROP",
                     Protocol = "TCP",
                     Ports = "80",
+                    Ipv4s = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                    Ipv6s = 
+                    {
+                        "ff00::/8",
+                    },
+                },
+                new Linode.Inputs.FirewallOutboundArgs
+                {
+                    Label = "reject-https",
+                    Action = "DROP",
+                    Protocol = "TCP",
+                    Ports = "443",
                     Ipv4s = 
                     {
                         "0.0.0.0/0",
@@ -118,30 +148,50 @@ import pulumi_linode as linode
 my_instance = linode.Instance("myInstance",
     label="my_instance",
     image="linode/ubuntu18.04",
-    region="us-east",
+    region="us-southeast",
     type="g6-standard-1",
     root_pass="bogusPassword$",
     swap_size=256)
 my_firewall = linode.Firewall("myFirewall",
     label="my_firewall",
     tags=["test"],
-    inbounds=[linode.FirewallInboundArgs(
-        label="allow-them",
-        action="ACCEPT",
-        protocol="TCP",
-        ports="80",
-        ipv4s=["0.0.0.0/0"],
-        ipv6s=["ff00::/8"],
-    )],
+    inbounds=[
+        linode.FirewallInboundArgs(
+            label="allow-http",
+            action="ACCEPT",
+            protocol="TCP",
+            ports="80",
+            ipv4s=["0.0.0.0/0"],
+            ipv6s=["ff00::/8"],
+        ),
+        linode.FirewallInboundArgs(
+            label="allow-https",
+            action="ACCEPT",
+            protocol="TCP",
+            ports="443",
+            ipv4s=["0.0.0.0/0"],
+            ipv6s=["ff00::/8"],
+        ),
+    ],
     inbound_policy="DROP",
-    outbounds=[linode.FirewallOutboundArgs(
-        label="reject-them",
-        action="DROP",
-        protocol="TCP",
-        ports="80",
-        ipv4s=["0.0.0.0/0"],
-        ipv6s=["ff00::/8"],
-    )],
+    outbounds=[
+        linode.FirewallOutboundArgs(
+            label="reject-http",
+            action="DROP",
+            protocol="TCP",
+            ports="80",
+            ipv4s=["0.0.0.0/0"],
+            ipv6s=["ff00::/8"],
+        ),
+        linode.FirewallOutboundArgs(
+            label="reject-https",
+            action="DROP",
+            protocol="TCP",
+            ports="443",
+            ipv4s=["0.0.0.0/0"],
+            ipv6s=["ff00::/8"],
+        ),
+    ],
     outbound_policy="ACCEPT",
     linodes=[my_instance.id])
 ```
@@ -160,7 +210,7 @@ import * as linode from "@pulumi/linode";
 const myInstance = new linode.Instance("myInstance", {
     label: "my_instance",
     image: "linode/ubuntu18.04",
-    region: "us-east",
+    region: "us-southeast",
     type: "g6-standard-1",
     rootPass: `bogusPassword$`,
     swapSize: 256,
@@ -168,23 +218,43 @@ const myInstance = new linode.Instance("myInstance", {
 const myFirewall = new linode.Firewall("myFirewall", {
     label: "my_firewall",
     tags: ["test"],
-    inbounds: [{
-        label: "allow-them",
-        action: "ACCEPT",
-        protocol: "TCP",
-        ports: "80",
-        ipv4s: ["0.0.0.0/0"],
-        ipv6s: ["ff00::/8"],
-    }],
+    inbounds: [
+        {
+            label: "allow-http",
+            action: "ACCEPT",
+            protocol: "TCP",
+            ports: "80",
+            ipv4s: ["0.0.0.0/0"],
+            ipv6s: ["ff00::/8"],
+        },
+        {
+            label: "allow-https",
+            action: "ACCEPT",
+            protocol: "TCP",
+            ports: "443",
+            ipv4s: ["0.0.0.0/0"],
+            ipv6s: ["ff00::/8"],
+        },
+    ],
     inboundPolicy: "DROP",
-    outbounds: [{
-        label: "reject-them",
-        action: "DROP",
-        protocol: "TCP",
-        ports: "80",
-        ipv4s: ["0.0.0.0/0"],
-        ipv6s: ["ff00::/8"],
-    }],
+    outbounds: [
+        {
+            label: "reject-http",
+            action: "DROP",
+            protocol: "TCP",
+            ports: "80",
+            ipv4s: ["0.0.0.0/0"],
+            ipv6s: ["ff00::/8"],
+        },
+        {
+            label: "reject-https",
+            action: "DROP",
+            protocol: "TCP",
+            ports: "443",
+            ipv4s: ["0.0.0.0/0"],
+            ipv6s: ["ff00::/8"],
+        },
+    ],
     outboundPolicy: "ACCEPT",
     linodes: [myInstance.id],
 });
@@ -207,19 +277,33 @@ const myFirewall = new linode.Firewall("myFirewall", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallInboundArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+             <span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallOutboundArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -254,22 +338,32 @@ const myFirewall = new linode.Firewall("myFirewall", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -278,7 +372,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -302,7 +396,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -509,7 +603,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -518,7 +612,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -527,7 +621,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +630,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +639,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inbounds_nodejs" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">Firewall<wbr>Inbound[]</a></span>
+        <span class="property-type"><a href="#firewallinbound">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Inbound<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +648,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#linodes_nodejs" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +657,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outbounds_nodejs" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">Firewall<wbr>Outbound[]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Outbound<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +666,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd></dl>
@@ -585,7 +679,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inbound_policy_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -594,7 +688,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -603,7 +697,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outbound_policy_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +706,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +715,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">Sequence[Firewall<wbr>Inbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallinbound">Input[Firewall<wbr>Inbound<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +724,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +733,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">Sequence[Firewall<wbr>Outbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">Input[Firewall<wbr>Outbound<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +742,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd></dl>
@@ -789,20 +883,32 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallDeviceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallInboundArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallOutboundArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1099,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldevice">Firewall<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#firewalldevice">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Device<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The devices associated with this firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_inboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_inbounds_nodejs" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">Firewall<wbr>Inbound[]</a></span>
+        <span class="property-type"><a href="#firewallinbound">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Inbound<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_linodes_nodejs" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_outboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_outbounds_nodejs" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">Firewall<wbr>Outbound[]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Outbound<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd></dl>
@@ -1193,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldevice">Sequence[Firewall<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalldevice">Input[Firewall<wbr>Device<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The devices associated with this firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_inbound_policy_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">Sequence[Firewall<wbr>Inbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallinbound">Input[Firewall<wbr>Inbound<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_outbound_policy_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">Sequence[Firewall<wbr>Outbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">Input[Firewall<wbr>Outbound<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd></dl>
@@ -1394,7 +1500,7 @@ The following state arguments are supported:
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The ID of the underlying entity this device references (i.e. the Linode's ID).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1509,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The ID of the Firewall Device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1518,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1421,7 +1527,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of Firewall Device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1536,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1442,7 +1548,7 @@ The following state arguments are supported:
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The ID of the underlying entity this device references (i.e. the Linode's ID).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1557,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The ID of the Firewall Device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1566,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1575,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of Firewall Device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1584,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1608,7 +1714,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1617,7 +1723,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -1626,7 +1732,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1741,7 @@ The following state arguments are supported:
 <a href="#ipv4s_nodejs" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1750,7 @@ The following state arguments are supported:
 <a href="#ipv6s_nodejs" style="color: inherit; text-decoration: inherit;">ipv6s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1759,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
@@ -1666,7 +1772,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1675,7 +1781,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -1684,7 +1790,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1799,7 @@ The following state arguments are supported:
 <a href="#ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1808,7 @@ The following state arguments are supported:
 <a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1817,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
@@ -1842,7 +1948,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1851,7 +1957,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -1860,7 +1966,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1975,7 @@ The following state arguments are supported:
 <a href="#ipv4s_nodejs" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1984,7 @@ The following state arguments are supported:
 <a href="#ipv6s_nodejs" style="color: inherit; text-decoration: inherit;">ipv6s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1993,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
@@ -1900,7 +2006,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1909,7 +2015,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
@@ -1918,7 +2024,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +2033,7 @@ The following state arguments are supported:
 <a href="#ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +2042,7 @@ The following state arguments are supported:
 <a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +2051,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
