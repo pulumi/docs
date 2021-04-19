@@ -23,19 +23,36 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Record</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Record</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Record</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Record</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordAnswerArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordFilterArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+           <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordRegionArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Record</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRecord</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRecord</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Record</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Record</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -70,22 +87,32 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RecordArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -94,7 +121,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +145,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -397,7 +424,7 @@ is documented below.
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
@@ -407,7 +434,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd><dt class="property-required"
@@ -416,7 +443,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
@@ -426,7 +453,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">Record<wbr>Answer[]</a></span>
+        <span class="property-type"><a href="#recordanswer">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Answer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -436,7 +463,7 @@ Answers are documented below.
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">Record<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#recordfilter">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -446,7 +473,7 @@ Filters are documented below.
 <a href="#link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
@@ -456,7 +483,7 @@ Filters are documented below.
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +491,7 @@ Filters are documented below.
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">Record<wbr>Region[]</a></span>
+        <span class="property-type"><a href="#recordregion">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Region<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -476,7 +503,7 @@ documented below. Please note the ordering requirement!
 <a href="#shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +511,7 @@ documented below. Please note the ordering requirement!
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
@@ -493,7 +520,7 @@ documented below. Please note the ordering requirement!
 <a href="#useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
@@ -509,7 +536,7 @@ is documented below.
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
@@ -519,7 +546,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd><dt class="property-required"
@@ -528,7 +555,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
@@ -538,7 +565,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordanswer">Input[Record<wbr>Answer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -548,7 +575,7 @@ Answers are documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordfilter">Input[Record<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -558,7 +585,7 @@ Filters are documented below.
 <a href="#link_python" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
@@ -568,7 +595,7 @@ Filters are documented below.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +603,7 @@ Filters are documented below.
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordregion">Input[Record<wbr>Region<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -588,7 +615,7 @@ documented below. Please note the ordering requirement!
 <a href="#short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +623,7 @@ documented below. Please note the ordering requirement!
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
@@ -605,7 +632,7 @@ documented below. Please note the ordering requirement!
 <a href="#use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
@@ -677,20 +704,33 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RecordState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Record</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RecordState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Record</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordAnswerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordFilterArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecordRegionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RecordState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RecordState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Record</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RecordState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Record</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RecordState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1023,7 +1063,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#state_answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">Record<wbr>Answer[]</a></span>
+        <span class="property-type"><a href="#recordanswer">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Answer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -1033,7 +1073,7 @@ Answers are documented below.
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
@@ -1043,7 +1083,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">Record<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#recordfilter">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -1053,7 +1093,7 @@ Filters are documented below.
 <a href="#state_link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
@@ -1063,7 +1103,7 @@ Filters are documented below.
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1071,7 +1111,7 @@ Filters are documented below.
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">Record<wbr>Region[]</a></span>
+        <span class="property-type"><a href="#recordregion">pulumi<wbr>Input<pulumi<wbr>Input<Record<wbr>Region<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -1083,7 +1123,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +1131,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1140,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1149,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
@@ -1121,7 +1161,7 @@ is documented below.
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
@@ -1135,7 +1175,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordanswer">Input[Record<wbr>Answer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -1145,7 +1185,7 @@ Answers are documented below.
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
@@ -1155,7 +1195,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordfilter">Input[Record<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -1165,7 +1205,7 @@ Filters are documented below.
 <a href="#state_link_python" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
@@ -1175,7 +1215,7 @@ Filters are documented below.
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1223,7 @@ Filters are documented below.
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordregion">Input[Record<wbr>Region<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -1195,7 +1235,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1243,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1252,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1261,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
@@ -1233,7 +1273,7 @@ is documented below.
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
@@ -1330,7 +1370,7 @@ is documented below.
 <a href="#answer_nodejs" style="color: inherit; text-decoration: inherit;">answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1379,7 @@ is documented below.
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1387,7 @@ is documented below.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1366,7 +1406,7 @@ is documented below.
 <a href="#answer_python" style="color: inherit; text-decoration: inherit;">answer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1415,7 @@ is documented below.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1383,7 +1423,7 @@ is documented below.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1470,7 +1510,7 @@ filter chain.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1519,7 @@ filter chain.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
@@ -1489,7 +1529,7 @@ determined by the filter type.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
@@ -1503,7 +1543,7 @@ filter chain.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1552,7 @@ filter chain.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
@@ -1522,7 +1562,7 @@ determined by the filter type.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
@@ -1580,7 +1620,7 @@ filter chain.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1629,7 @@ filter chain.
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1641,7 @@ filter chain.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1650,7 @@ filter chain.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

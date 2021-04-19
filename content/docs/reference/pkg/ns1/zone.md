@@ -30,19 +30,38 @@ meta_desc: "Documentation for the ns1.Zone resource with examples, input propert
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autogenerate_ns_record</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dnssec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">nx_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retry</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ZoneSecondaryArgs]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">autogenerate_ns_record</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">dnssec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+         <span class="nx">nx_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">primary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">refresh</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">retry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">secondaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ZoneSecondaryArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Zone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Zone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Zone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -77,22 +96,32 @@ meta_desc: "Documentation for the ns1.Zone resource with examples, input propert
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ZoneArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -101,7 +130,7 @@ meta_desc: "Documentation for the ns1.Zone resource with examples, input propert
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -125,7 +154,7 @@ meta_desc: "Documentation for the ns1.Zone resource with examples, input propert
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -444,7 +473,7 @@ Secondaries is documented below.
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -453,7 +482,7 @@ Secondaries is documented below.
 <a href="#additionalprimaries_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Primaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
@@ -463,7 +492,7 @@ zone. Conflicts with `secondaries`.
 <a href="#autogeneratensrecord_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Ns<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +500,7 @@ zone. Conflicts with `secondaries`.
 <a href="#dnssec_nodejs" style="color: inherit; text-decoration: inherit;">dnssec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
 Note that DNSSEC must be enabled on the account by support for this to be set
@@ -482,7 +511,7 @@ to `true`.
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Expiry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -492,7 +521,7 @@ to `true`.
 <a href="#link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target zone(domain name) to link to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -501,7 +530,7 @@ to `true`.
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -512,7 +541,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#nxttl_nodejs" style="color: inherit; text-decoration: inherit;">nx<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -522,7 +551,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
@@ -532,7 +561,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#refresh_nodejs" style="color: inherit; text-decoration: inherit;">refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Refresh. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -542,7 +571,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Retry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -552,7 +581,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#secondaries_nodejs" style="color: inherit; text-decoration: inherit;">secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">Zone<wbr>Secondary[]</a></span>
+        <span class="property-type"><a href="#zonesecondary">pulumi<wbr>Input<pulumi<wbr>Input<Zone<wbr>Secondary<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
@@ -563,7 +592,7 @@ Secondaries is documented below.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
 {{% /md %}}</dd></dl>
@@ -576,7 +605,7 @@ Secondaries is documented below.
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +614,7 @@ Secondaries is documented below.
 <a href="#additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
@@ -595,7 +624,7 @@ zone. Conflicts with `secondaries`.
 <a href="#autogenerate_ns_record_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>ns_<wbr>record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +632,7 @@ zone. Conflicts with `secondaries`.
 <a href="#dnssec_python" style="color: inherit; text-decoration: inherit;">dnssec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
 Note that DNSSEC must be enabled on the account by support for this to be set
@@ -614,7 +643,7 @@ to `true`.
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -624,7 +653,7 @@ to `true`.
 <a href="#link_python" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target zone(domain name) to link to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +662,7 @@ to `true`.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -644,7 +673,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#nx_ttl_python" style="color: inherit; text-decoration: inherit;">nx_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -654,7 +683,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
@@ -664,7 +693,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#refresh_python" style="color: inherit; text-decoration: inherit;">refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -674,7 +703,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Retry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -684,7 +713,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#secondaries_python" style="color: inherit; text-decoration: inherit;">secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">Sequence[Zone<wbr>Secondary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesecondary">Input[Zone<wbr>Secondary<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
@@ -695,7 +724,7 @@ Secondaries is documented below.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
 {{% /md %}}</dd></dl>
@@ -836,20 +865,37 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ZoneState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Zone</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ZoneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Zone</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autogenerate_ns_record</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hostmaster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">nx_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retry</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ZoneSecondaryArgs]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">autogenerate_ns_record</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dnssec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">hostmaster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">nx_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">primary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">refresh</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">retry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">secondaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ZoneSecondaryArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ZoneState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Zone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ZoneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Zone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Zone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ZoneState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Zone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ZoneState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1258,7 +1304,7 @@ Secondaries is documented below.
 <a href="#state_additionalprimaries_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Primaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
@@ -1268,7 +1314,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_autogeneratensrecord_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Ns<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1322,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) Authoritative Name Servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1331,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_dnssec_nodejs" style="color: inherit; text-decoration: inherit;">dnssec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
 Note that DNSSEC must be enabled on the account by support for this to be set
@@ -1296,7 +1342,7 @@ to `true`.
 <a href="#state_expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Expiry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1306,7 +1352,7 @@ to `true`.
 <a href="#state_hostmaster_nodejs" style="color: inherit; text-decoration: inherit;">hostmaster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The SOA Hostmaster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1361,7 @@ to `true`.
 <a href="#state_link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target zone(domain name) to link to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1370,7 @@ to `true`.
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -1335,7 +1381,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#state_nxttl_nodejs" style="color: inherit; text-decoration: inherit;">nx<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1345,7 +1391,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#state_primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
@@ -1355,7 +1401,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_refresh_nodejs" style="color: inherit; text-decoration: inherit;">refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Refresh. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1365,7 +1411,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA Retry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1375,7 +1421,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_secondaries_nodejs" style="color: inherit; text-decoration: inherit;">secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">Zone<wbr>Secondary[]</a></span>
+        <span class="property-type"><a href="#zonesecondary">pulumi<wbr>Input<pulumi<wbr>Input<Zone<wbr>Secondary<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
@@ -1386,7 +1432,7 @@ Secondaries is documented below.
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1441,7 @@ Secondaries is documented below.
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
 {{% /md %}}</dd></dl>
@@ -1408,7 +1454,7 @@ Secondaries is documented below.
 <a href="#state_additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
@@ -1418,7 +1464,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_autogenerate_ns_record_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>ns_<wbr>record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1472,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Authoritative Name Servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1481,7 @@ zone. Conflicts with `secondaries`.
 <a href="#state_dnssec_python" style="color: inherit; text-decoration: inherit;">dnssec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
 Note that DNSSEC must be enabled on the account by support for this to be set
@@ -1446,7 +1492,7 @@ to `true`.
 <a href="#state_expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1456,7 +1502,7 @@ to `true`.
 <a href="#state_hostmaster_python" style="color: inherit; text-decoration: inherit;">hostmaster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The SOA Hostmaster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1465,7 +1511,7 @@ to `true`.
 <a href="#state_link_python" style="color: inherit; text-decoration: inherit;">link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target zone(domain name) to link to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1520,7 @@ to `true`.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -1485,7 +1531,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#state_nx_ttl_python" style="color: inherit; text-decoration: inherit;">nx_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1495,7 +1541,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#state_primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
@@ -1505,7 +1551,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_refresh_python" style="color: inherit; text-decoration: inherit;">refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1515,7 +1561,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA Retry. Conflicts with `primary` and
 `additional_primaries` (default must be accepted).
@@ -1525,7 +1571,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_secondaries_python" style="color: inherit; text-decoration: inherit;">secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">Sequence[Zone<wbr>Secondary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesecondary">Input[Zone<wbr>Secondary<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
@@ -1536,7 +1582,7 @@ Secondaries is documented below.
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1591,7 @@ Secondaries is documented below.
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
 {{% /md %}}</dd></dl>
@@ -1655,7 +1701,7 @@ when the zone changes. Default `false`.
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1710,7 @@ when the zone changes. Default `false`.
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -1675,7 +1721,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#notify_nodejs" style="color: inherit; text-decoration: inherit;">notify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
@@ -1685,7 +1731,7 @@ when the zone changes. Default `false`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
 {{% /md %}}</dd></dl>
@@ -1698,7 +1744,7 @@ when the zone changes. Default `false`.
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1753,7 @@ when the zone changes. Default `false`.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}- List of network IDs (`int`) for which the zone
 should be made available. Default is network 0, the primary NSONE Global
@@ -1718,7 +1764,7 @@ Network. Normally, you should not have to worry about this.
 <a href="#notify_python" style="color: inherit; text-decoration: inherit;">notify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
@@ -1728,7 +1774,7 @@ when the zone changes. Default `false`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
 {{% /md %}}</dd></dl>

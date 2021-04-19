@@ -18,19 +18,55 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[APIKeyArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAPIKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAPIKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +101,32 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">APIKeyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +135,7 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +159,7 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -726,7 +772,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageaccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +781,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageapikeys_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Apikeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +790,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +799,7 @@ Only relevant for the DDI product.
 <a href="#accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -762,7 +808,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
@@ -771,7 +817,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageteams_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +826,7 @@ Only relevant for the DDI product.
 <a href="#accountmanageusers_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +835,7 @@ Only relevant for the DDI product.
 <a href="#accountviewactivitylog_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Activity<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +844,7 @@ Only relevant for the DDI product.
 <a href="#accountviewinvoices_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Invoices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +853,7 @@ Only relevant for the DDI product.
 <a href="#datamanagedatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +862,7 @@ Only relevant for the DDI product.
 <a href="#datamanagedatasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datasources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +871,7 @@ Only relevant for the DDI product.
 <a href="#datapushtodatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Push<wbr>To<wbr>Datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +880,7 @@ Only relevant for the DDI product.
 <a href="#dhcpmanagedhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Manage<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
@@ -844,7 +890,7 @@ Only relevant for the DDI product.
 <a href="#dhcpviewdhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>View<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view DHCP.
 Only relevant for the DDI product.
@@ -854,7 +900,7 @@ Only relevant for the DDI product.
 <a href="#dnsmanagezones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Manage<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +909,7 @@ Only relevant for the DDI product.
 <a href="#dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +918,7 @@ Only relevant for the DDI product.
 <a href="#dnszonesallowbydefault_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +927,7 @@ Only relevant for the DDI product.
 <a href="#dnszonesallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +936,7 @@ Only relevant for the DDI product.
 <a href="#dnszonesdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may not access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +945,7 @@ Only relevant for the DDI product.
 <a href="#ipwhiteliststrict_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelist<wbr>Strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets exclusivity on this IP whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +954,7 @@ Only relevant for the DDI product.
 <a href="#ipwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +963,7 @@ Only relevant for the DDI product.
 <a href="#ipammanageipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Manage<wbr>Ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
@@ -927,7 +973,7 @@ Only relevant for the DDI product.
 <a href="#ipamviewipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>View<wbr>Ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view IPAM.
 Only relevant for the DDI product.
@@ -937,7 +983,7 @@ Only relevant for the DDI product.
 <a href="#monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +992,7 @@ Only relevant for the DDI product.
 <a href="#monitoringmanagelists_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +1001,7 @@ Only relevant for the DDI product.
 <a href="#monitoringviewjobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>View<wbr>Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +1010,7 @@ Only relevant for the DDI product.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The free form name of the apikey.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +1019,7 @@ Only relevant for the DDI product.
 <a href="#securitymanageactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
@@ -983,7 +1029,7 @@ Only relevant for the DDI product.
 <a href="#securitymanageglobal2fa_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Global2fa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +1038,7 @@ Only relevant for the DDI product.
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The teams that the apikey belongs to.
 {{% /md %}}</dd></dl>
@@ -1005,7 +1051,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_account_settings_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>account_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +1060,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_apikeys_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>apikeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +1069,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1032,7 +1078,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_payment_methods_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>payment_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1041,7 +1087,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
@@ -1050,7 +1096,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_teams_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1105,7 @@ Only relevant for the DDI product.
 <a href="#account_manage_users_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1114,7 @@ Only relevant for the DDI product.
 <a href="#account_view_activity_log_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>activity_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1123,7 @@ Only relevant for the DDI product.
 <a href="#account_view_invoices_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>invoices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1132,7 @@ Only relevant for the DDI product.
 <a href="#data_manage_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1141,7 @@ Only relevant for the DDI product.
 <a href="#data_manage_datasources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datasources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1150,7 @@ Only relevant for the DDI product.
 <a href="#data_push_to_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>push_<wbr>to_<wbr>datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1159,7 @@ Only relevant for the DDI product.
 <a href="#dhcp_manage_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>manage_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
@@ -1123,7 +1169,7 @@ Only relevant for the DDI product.
 <a href="#dhcp_view_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>view_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view DHCP.
 Only relevant for the DDI product.
@@ -1133,7 +1179,7 @@ Only relevant for the DDI product.
 <a href="#dns_manage_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>manage_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1188,7 @@ Only relevant for the DDI product.
 <a href="#dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1197,7 @@ Only relevant for the DDI product.
 <a href="#dns_zones_allow_by_default_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allow_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1206,7 @@ Only relevant for the DDI product.
 <a href="#dns_zones_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +1215,7 @@ Only relevant for the DDI product.
 <a href="#dns_zones_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may not access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1224,7 @@ Only relevant for the DDI product.
 <a href="#ip_whitelist_strict_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelist_<wbr>strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets exclusivity on this IP whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1233,7 @@ Only relevant for the DDI product.
 <a href="#ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1242,7 @@ Only relevant for the DDI product.
 <a href="#ipam_manage_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>manage_<wbr>ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
@@ -1206,7 +1252,7 @@ Only relevant for the DDI product.
 <a href="#ipam_view_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>view_<wbr>ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view IPAM.
 Only relevant for the DDI product.
@@ -1216,7 +1262,7 @@ Only relevant for the DDI product.
 <a href="#monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1271,7 @@ Only relevant for the DDI product.
 <a href="#monitoring_manage_lists_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1280,7 @@ Only relevant for the DDI product.
 <a href="#monitoring_view_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>view_<wbr>jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1289,7 @@ Only relevant for the DDI product.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The free form name of the apikey.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1298,7 @@ Only relevant for the DDI product.
 <a href="#security_manage_active_directory_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
@@ -1262,7 +1308,7 @@ Only relevant for the DDI product.
 <a href="#security_manage_global2fa_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>global2fa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1317,7 @@ Only relevant for the DDI product.
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The teams that the apikey belongs to.
 {{% /md %}}</dd></dl>
@@ -1376,20 +1422,53 @@ Get an existing APIKey resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">APIKeyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">APIKey</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">APIKeyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">APIKey</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> APIKey</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> APIKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAPIKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">APIKeyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAPIKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">APIKeyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">APIKey</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">APIKeyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">APIKey</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">APIKeyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2074,7 +2153,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageaccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2162,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageapikeys_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Apikeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2171,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2180,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2110,7 +2189,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
@@ -2119,7 +2198,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageteams_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +2207,7 @@ Only relevant for the DDI product.
 <a href="#state_accountmanageusers_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2216,7 @@ Only relevant for the DDI product.
 <a href="#state_accountviewactivitylog_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Activity<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2146,7 +2225,7 @@ Only relevant for the DDI product.
 <a href="#state_accountviewinvoices_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Invoices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2155,7 +2234,7 @@ Only relevant for the DDI product.
 <a href="#state_datamanagedatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2164,7 +2243,7 @@ Only relevant for the DDI product.
 <a href="#state_datamanagedatasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datasources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2252,7 @@ Only relevant for the DDI product.
 <a href="#state_datapushtodatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Push<wbr>To<wbr>Datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2261,7 @@ Only relevant for the DDI product.
 <a href="#state_dhcpmanagedhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Manage<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
@@ -2192,7 +2271,7 @@ Only relevant for the DDI product.
 <a href="#state_dhcpviewdhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>View<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view DHCP.
 Only relevant for the DDI product.
@@ -2202,7 +2281,7 @@ Only relevant for the DDI product.
 <a href="#state_dnsmanagezones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Manage<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2290,7 @@ Only relevant for the DDI product.
 <a href="#state_dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2299,7 @@ Only relevant for the DDI product.
 <a href="#state_dnszonesallowbydefault_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2308,7 @@ Only relevant for the DDI product.
 <a href="#state_dnszonesallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2317,7 @@ Only relevant for the DDI product.
 <a href="#state_dnszonesdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may not access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2326,7 @@ Only relevant for the DDI product.
 <a href="#state_ipwhiteliststrict_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelist<wbr>Strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets exclusivity on this IP whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2335,7 @@ Only relevant for the DDI product.
 <a href="#state_ipwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2344,7 @@ Only relevant for the DDI product.
 <a href="#state_ipammanageipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Manage<wbr>Ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
@@ -2275,7 +2354,7 @@ Only relevant for the DDI product.
 <a href="#state_ipamviewipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>View<wbr>Ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view IPAM.
 Only relevant for the DDI product.
@@ -2285,7 +2364,7 @@ Only relevant for the DDI product.
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2373,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2382,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoringmanagelists_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2391,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoringviewjobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>View<wbr>Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2400,7 @@ Only relevant for the DDI product.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The free form name of the apikey.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2409,7 @@ Only relevant for the DDI product.
 <a href="#state_securitymanageactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
@@ -2340,7 +2419,7 @@ Only relevant for the DDI product.
 <a href="#state_securitymanageglobal2fa_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Global2fa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2428,7 @@ Only relevant for the DDI product.
 <a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The teams that the apikey belongs to.
 {{% /md %}}</dd></dl>
@@ -2362,7 +2441,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_account_settings_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>account_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2450,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_apikeys_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>apikeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2380,7 +2459,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2468,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_payment_methods_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>payment_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2398,7 +2477,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
@@ -2407,7 +2486,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_teams_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2416,7 +2495,7 @@ Only relevant for the DDI product.
 <a href="#state_account_manage_users_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2425,7 +2504,7 @@ Only relevant for the DDI product.
 <a href="#state_account_view_activity_log_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>activity_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2513,7 @@ Only relevant for the DDI product.
 <a href="#state_account_view_invoices_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>invoices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2522,7 @@ Only relevant for the DDI product.
 <a href="#state_data_manage_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2531,7 @@ Only relevant for the DDI product.
 <a href="#state_data_manage_datasources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datasources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2461,7 +2540,7 @@ Only relevant for the DDI product.
 <a href="#state_data_push_to_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>push_<wbr>to_<wbr>datafeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2470,7 +2549,7 @@ Only relevant for the DDI product.
 <a href="#state_dhcp_manage_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>manage_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
@@ -2480,7 +2559,7 @@ Only relevant for the DDI product.
 <a href="#state_dhcp_view_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>view_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view DHCP.
 Only relevant for the DDI product.
@@ -2490,7 +2569,7 @@ Only relevant for the DDI product.
 <a href="#state_dns_manage_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>manage_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2578,7 @@ Only relevant for the DDI product.
 <a href="#state_dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2587,7 @@ Only relevant for the DDI product.
 <a href="#state_dns_zones_allow_by_default_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allow_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2596,7 @@ Only relevant for the DDI product.
 <a href="#state_dns_zones_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2605,7 @@ Only relevant for the DDI product.
 <a href="#state_dns_zones_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of zones that the apikey may not access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2614,7 @@ Only relevant for the DDI product.
 <a href="#state_ip_whitelist_strict_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelist_<wbr>strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets exclusivity on this IP whitelist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2623,7 @@ Only relevant for the DDI product.
 <a href="#state_ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2632,7 @@ Only relevant for the DDI product.
 <a href="#state_ipam_manage_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>manage_<wbr>ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
@@ -2563,7 +2642,7 @@ Only relevant for the DDI product.
 <a href="#state_ipam_view_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>view_<wbr>ipam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view IPAM.
 Only relevant for the DDI product.
@@ -2573,7 +2652,7 @@ Only relevant for the DDI product.
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2661,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2670,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoring_manage_lists_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2679,7 @@ Only relevant for the DDI product.
 <a href="#state_monitoring_view_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>view_<wbr>jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2688,7 @@ Only relevant for the DDI product.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The free form name of the apikey.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2697,7 @@ Only relevant for the DDI product.
 <a href="#state_security_manage_active_directory_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
@@ -2628,7 +2707,7 @@ Only relevant for the DDI product.
 <a href="#state_security_manage_global2fa_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>global2fa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2637,7 +2716,7 @@ Only relevant for the DDI product.
 <a href="#state_teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The teams that the apikey belongs to.
 {{% /md %}}</dd></dl>
