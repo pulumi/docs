@@ -69,8 +69,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-auth0/sdk/v2/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -175,19 +175,38 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_offline_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">signing_alg</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_consent_for_verifiable_first_party_clients</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_dialect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_lifetime_for_web</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">verification_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">allow_offline_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">enforce_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ResourceServerScopeArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">signing_alg</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">skip_consent_for_verifiable_first_party_clients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">token_dialect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">token_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">token_lifetime_for_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">verification_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ResourceServerArgs]</a></span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResourceServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourceServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResourceServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourceServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResourceServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ResourceServerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,22 +241,32 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ResourceServerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -246,7 +275,7 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -270,7 +299,7 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -567,7 +596,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowofflineaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Offline<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not refresh tokens can be issued for this resource server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +605,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enforcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not authorization polices are enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +614,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Unique identifier for the resource server. Used as the audience parameter for authorization calls. Can not be changed once set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +623,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the resource server. Cannot include `<` or `>` characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +632,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map(String). Used to store additional metadata
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +641,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">pulumi<wbr>Input<pulumi<wbr>Input<Resource<wbr>Server<wbr>Scope<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set(Resource).  List of permissions (scopes) used by this resource server. For details, see Scopes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +650,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#signingalg_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Algorithm used to sign JWTs. Options include `HS256` and `RS256`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +659,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Secret used to sign tokens when using symmetric algorithms (HS256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +668,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#skipconsentforverifiablefirstpartyclients_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to skip user consent for applications flagged as first party.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +677,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tokendialect_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Dialect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Dialect of access tokens that should be issued for this resource server. Options include `access_token` or `access_token_authz` (includes permissions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +686,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server from the token endpoint remain valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +695,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tokenlifetimeforweb_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime<wbr>For<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server via implicit or hybrid flows remain valid. Cannot be greater than the `token_lifetime` value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +704,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#verificationlocation_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd></dl>
@@ -688,7 +717,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allow_offline_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>offline_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not refresh tokens can be issued for this resource server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +726,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enforce_policies_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not authorization polices are enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +735,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Unique identifier for the resource server. Used as the audience parameter for authorization calls. Can not be changed once set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +744,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the resource server. Cannot include `<` or `>` characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +753,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map(String). Used to store additional metadata
 {{% /md %}}</dd><dt class="property-optional"
@@ -733,7 +762,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Sequence[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Input[Resource<wbr>Server<wbr>Scope<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set(Resource).  List of permissions (scopes) used by this resource server. For details, see Scopes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +771,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#signing_alg_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Algorithm used to sign JWTs. Options include `HS256` and `RS256`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -751,7 +780,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Secret used to sign tokens when using symmetric algorithms (HS256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -760,7 +789,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#skip_consent_for_verifiable_first_party_clients_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to skip user consent for applications flagged as first party.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +798,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#token_dialect_python" style="color: inherit; text-decoration: inherit;">token_<wbr>dialect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Dialect of access tokens that should be issued for this resource server. Options include `access_token` or `access_token_authz` (includes permissions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -778,7 +807,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server from the token endpoint remain valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +816,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#token_lifetime_for_web_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime_<wbr>for_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server via implicit or hybrid flows remain valid. Cannot be greater than the `token_lifetime` value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +825,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#verification_location_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd></dl>
@@ -865,20 +894,35 @@ Get an existing ResourceServer resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ResourceServerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ResourceServer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ResourceServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ResourceServer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_offline_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">signing_alg</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_consent_for_verifiable_first_party_clients</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_dialect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_lifetime_for_web</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">verification_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceServer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_offline_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enforce_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ResourceServerScopeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_alg</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">skip_consent_for_verifiable_first_party_clients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">token_dialect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">token_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_lifetime_for_web</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">verification_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ResourceServer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourceServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ResourceServerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourceServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourceServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ResourceServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourceServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ResourceServer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ResourceServerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ResourceServer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ResourceServerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1229,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_allowofflineaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Offline<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not refresh tokens can be issued for this resource server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1282,7 @@ The following state arguments are supported:
 <a href="#state_enforcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not authorization polices are enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Unique identifier for the resource server. Used as the audience parameter for authorization calls. Can not be changed once set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1300,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the resource server. Cannot include `<` or `>` characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map(String). Used to store additional metadata
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1318,7 @@ The following state arguments are supported:
 <a href="#state_scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">pulumi<wbr>Input<pulumi<wbr>Input<Resource<wbr>Server<wbr>Scope<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set(Resource).  List of permissions (scopes) used by this resource server. For details, see Scopes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_signingalg_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Algorithm used to sign JWTs. Options include `HS256` and `RS256`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1336,7 @@ The following state arguments are supported:
 <a href="#state_signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Secret used to sign tokens when using symmetric algorithms (HS256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_skipconsentforverifiablefirstpartyclients_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to skip user consent for applications flagged as first party.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_tokendialect_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Dialect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Dialect of access tokens that should be issued for this resource server. Options include `access_token` or `access_token_authz` (includes permissions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server from the token endpoint remain valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_tokenlifetimeforweb_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime<wbr>For<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server via implicit or hybrid flows remain valid. Cannot be greater than the `token_lifetime` value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_verificationlocation_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd></dl>
@@ -1350,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_allow_offline_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>offline_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not refresh tokens can be issued for this resource server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1403,7 @@ The following state arguments are supported:
 <a href="#state_enforce_policies_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not authorization polices are enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1412,7 @@ The following state arguments are supported:
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Unique identifier for the resource server. Used as the audience parameter for authorization calls. Can not be changed once set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1421,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the resource server. Cannot include `<` or `>` characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1430,7 @@ The following state arguments are supported:
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map(String). Used to store additional metadata
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Sequence[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Input[Resource<wbr>Server<wbr>Scope<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set(Resource).  List of permissions (scopes) used by this resource server. For details, see Scopes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_signing_alg_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Algorithm used to sign JWTs. Options include `HS256` and `RS256`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Secret used to sign tokens when using symmetric algorithms (HS256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_skip_consent_for_verifiable_first_party_clients_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to skip user consent for applications flagged as first party.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_token_dialect_python" style="color: inherit; text-decoration: inherit;">token_<wbr>dialect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Dialect of access tokens that should be issued for this resource server. Options include `access_token` or `access_token_authz` (includes permissions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server from the token endpoint remain valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_token_lifetime_for_web_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime_<wbr>for_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of seconds during which access tokens issued for this resource server via implicit or hybrid flows remain valid. Cannot be greater than the `token_lifetime` value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_verification_location_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd></dl>
@@ -1526,7 +1570,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Name of the permission (scope). Examples include `read:appointments` or `delete:appointments`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1579,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Description of the permission (scope).
 {{% /md %}}</dd></dl>
@@ -1548,7 +1592,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Name of the permission (scope). Examples include `read:appointments` or `delete:appointments`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1601,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Description of the permission (scope).
 {{% /md %}}</dd></dl>

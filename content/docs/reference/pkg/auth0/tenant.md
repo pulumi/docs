@@ -171,19 +171,42 @@ const tenant = new auth0.Tenant("tenant", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantChangePasswordArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantErrorPageArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantFlagsArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantGuardianMfaPageArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+           <span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+           <span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantUniversalLoginArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TenantArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTenant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTenant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,22 +241,32 @@ const tenant = new auth0.Tenant("tenant", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TenantArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +275,7 @@ const tenant = new auth0.Tenant("tenant", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -266,7 +299,7 @@ const tenant = new auth0.Tenant("tenant", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -635,7 +668,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +677,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">pulumi<wbr>Input<Tenant<wbr>Change<wbr>Password<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +686,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultaudience_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +695,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultdirectory_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +704,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultredirectionuri_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirection<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +713,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enabledlocales_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +722,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">pulumi<wbr>Input<Tenant<wbr>Error<wbr>Page<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +731,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
+        <span class="property-type"><a href="#tenantflags">pulumi<wbr>Input<Tenant<wbr>Flags<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +740,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +749,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">pulumi<wbr>Input<Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +758,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idlesessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +767,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#pictureurl_nodejs" style="color: inherit; text-decoration: inherit;">picture<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +776,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sandboxversion_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +785,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +794,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +803,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#supporturl_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -779,7 +812,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">pulumi<wbr>Input<Tenant<wbr>Universal<wbr>Login<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -792,7 +825,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +834,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Input[Tenant<wbr>Change<wbr>Password<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +843,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_audience_python" style="color: inherit; text-decoration: inherit;">default_<wbr>audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +852,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_directory_python" style="color: inherit; text-decoration: inherit;">default_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +861,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_redirection_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirection_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +870,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enabled_locales_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +879,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Input[Tenant<wbr>Error<wbr>Page<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +888,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantflags">Input[Tenant<wbr>Flags<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +897,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +906,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Input[Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +915,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idle_session_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +924,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#picture_url_python" style="color: inherit; text-decoration: inherit;">picture_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +933,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sandbox_version_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +942,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +951,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +960,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#support_url_python" style="color: inherit; text-decoration: inherit;">support_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +969,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Input[Tenant<wbr>Universal<wbr>Login<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -1005,20 +1038,39 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TenantState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Tenant</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TenantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Tenant</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">) -&gt;</span> Tenant</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantChangePasswordArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantErrorPageArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantFlagsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantGuardianMfaPageArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TenantUniversalLoginArgs]]</span> = None<span class="p">) -&gt;</span> Tenant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTenant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TenantState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTenant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TenantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Tenant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TenantState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Tenant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TenantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1441,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">pulumi<wbr>Input<Tenant<wbr>Change<wbr>Password<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1511,7 @@ The following state arguments are supported:
 <a href="#state_defaultaudience_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1520,7 @@ The following state arguments are supported:
 <a href="#state_defaultdirectory_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_defaultredirectionuri_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirection<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1538,7 @@ The following state arguments are supported:
 <a href="#state_enabledlocales_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">pulumi<wbr>Input<Tenant<wbr>Error<wbr>Page<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
+        <span class="property-type"><a href="#tenantflags">pulumi<wbr>Input<Tenant<wbr>Flags<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1565,7 @@ The following state arguments are supported:
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1574,7 @@ The following state arguments are supported:
 <a href="#state_guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">pulumi<wbr>Input<Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1583,7 @@ The following state arguments are supported:
 <a href="#state_idlesessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1592,7 @@ The following state arguments are supported:
 <a href="#state_pictureurl_nodejs" style="color: inherit; text-decoration: inherit;">picture<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_sandboxversion_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1610,7 @@ The following state arguments are supported:
 <a href="#state_sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1619,7 @@ The following state arguments are supported:
 <a href="#state_supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1628,7 @@ The following state arguments are supported:
 <a href="#state_supporturl_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1637,7 @@ The following state arguments are supported:
 <a href="#state_universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">pulumi<wbr>Input<Tenant<wbr>Universal<wbr>Login<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -1598,7 +1650,7 @@ The following state arguments are supported:
 <a href="#state_allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1659,7 @@ The following state arguments are supported:
 <a href="#state_change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Input[Tenant<wbr>Change<wbr>Password<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_default_audience_python" style="color: inherit; text-decoration: inherit;">default_<wbr>audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_default_directory_python" style="color: inherit; text-decoration: inherit;">default_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1686,7 @@ The following state arguments are supported:
 <a href="#state_default_redirection_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirection_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_enabled_locales_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Input[Tenant<wbr>Error<wbr>Page<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantflags">Input[Tenant<wbr>Flags<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Input[Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1740,7 @@ The following state arguments are supported:
 <a href="#state_idle_session_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1749,7 @@ The following state arguments are supported:
 <a href="#state_picture_url_python" style="color: inherit; text-decoration: inherit;">picture_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1758,7 @@ The following state arguments are supported:
 <a href="#state_sandbox_version_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1767,7 @@ The following state arguments are supported:
 <a href="#state_session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1785,7 @@ The following state arguments are supported:
 <a href="#state_support_url_python" style="color: inherit; text-decoration: inherit;">support_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1742,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Input[Tenant<wbr>Universal<wbr>Login<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -1810,7 +1862,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1819,7 +1871,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
 {{% /md %}}</dd></dl>
@@ -1832,7 +1884,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1841,7 +1893,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
 {{% /md %}}</dd></dl>
@@ -1918,7 +1970,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1927,7 +1979,7 @@ The following state arguments are supported:
 <a href="#showloglink_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Log<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1936,7 +1988,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
 {{% /md %}}</dd></dl>
@@ -1949,7 +2001,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1958,7 +2010,7 @@ The following state arguments are supported:
 <a href="#show_log_link_python" style="color: inherit; text-decoration: inherit;">show_<wbr>log_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
 {{% /md %}}</dd><dt class="property-required"
@@ -1967,7 +2019,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
 {{% /md %}}</dd></dl>
@@ -2186,7 +2238,7 @@ The following state arguments are supported:
 <a href="#changepwdflowv1_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Pwd<wbr>Flow<wbr>V1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2247,7 @@ The following state arguments are supported:
 <a href="#disableclickjackprotectionheaders_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Clickjack<wbr>Protection<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2256,7 @@ The following state arguments are supported:
 <a href="#enableapissection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Apis<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2265,7 @@ The following state arguments are supported:
 <a href="#enableclientconnections_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Client<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2274,7 @@ The following state arguments are supported:
 <a href="#enablecustomdomaininemails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Custom<wbr>Domain<wbr>In<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2283,7 @@ The following state arguments are supported:
 <a href="#enabledynamicclientregistration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dynamic<wbr>Client<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2240,7 +2292,7 @@ The following state arguments are supported:
 <a href="#enablelegacylogssearchv2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Legacy<wbr>Logs<wbr>Search<wbr>V2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2249,7 +2301,7 @@ The following state arguments are supported:
 <a href="#enablepipeline2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pipeline2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2310,7 @@ The following state arguments are supported:
 <a href="#enablepublicsignupuserexistserror_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public<wbr>Signup<wbr>User<wbr>Exists<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2319,7 @@ The following state arguments are supported:
 <a href="#universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2328,7 @@ The following state arguments are supported:
 <a href="#usescopedescriptionsforconsent_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Scope<wbr>Descriptions<wbr>For<wbr>Consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2288,7 +2340,7 @@ The following state arguments are supported:
 <a href="#change_pwd_flow_v1_python" style="color: inherit; text-decoration: inherit;">change_<wbr>pwd_<wbr>flow_<wbr>v1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2349,7 @@ The following state arguments are supported:
 <a href="#disable_clickjack_protection_headers_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>clickjack_<wbr>protection_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2358,7 @@ The following state arguments are supported:
 <a href="#enable_apis_section_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>apis_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2367,7 @@ The following state arguments are supported:
 <a href="#enable_client_connections_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>client_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2376,7 @@ The following state arguments are supported:
 <a href="#enable_custom_domain_in_emails_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>custom_<wbr>domain_<wbr>in_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2385,7 @@ The following state arguments are supported:
 <a href="#enable_dynamic_client_registration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dynamic_<wbr>client_<wbr>registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2394,7 @@ The following state arguments are supported:
 <a href="#enable_legacy_logs_search_v2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>legacy_<wbr>logs_<wbr>search_<wbr>v2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2351,7 +2403,7 @@ The following state arguments are supported:
 <a href="#enable_pipeline2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pipeline2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2412,7 @@ The following state arguments are supported:
 <a href="#enable_public_signup_user_exists_error_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public_<wbr>signup_<wbr>user_<wbr>exists_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2369,7 +2421,7 @@ The following state arguments are supported:
 <a href="#universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2378,7 +2430,7 @@ The following state arguments are supported:
 <a href="#use_scope_descriptions_for_consent_python" style="color: inherit; text-decoration: inherit;">use_<wbr>scope_<wbr>descriptions_<wbr>for_<wbr>consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2436,7 +2488,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
 {{% /md %}}</dd><dt class="property-required"
@@ -2445,7 +2497,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
 {{% /md %}}</dd></dl>
@@ -2458,7 +2510,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
 {{% /md %}}</dd><dt class="property-required"
@@ -2467,7 +2519,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
 {{% /md %}}</dd></dl>
@@ -2508,7 +2560,7 @@ The following state arguments are supported:
 <a href="#colors_nodejs" style="color: inherit; text-decoration: inherit;">colors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors</a></span>
+        <span class="property-type"><a href="#tenantuniversallogincolors">pulumi<wbr>Input<Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
 {{% /md %}}</dd></dl>
@@ -2521,7 +2573,7 @@ The following state arguments are supported:
 <a href="#colors_python" style="color: inherit; text-decoration: inherit;">colors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args</a></span>
+        <span class="property-type"><a href="#tenantuniversallogincolors">Input[Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
 {{% /md %}}</dd></dl>
@@ -2580,7 +2632,7 @@ The following state arguments are supported:
 <a href="#pagebackground_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Background</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2641,7 @@ The following state arguments are supported:
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
 {{% /md %}}</dd></dl>
@@ -2602,7 +2654,7 @@ The following state arguments are supported:
 <a href="#page_background_python" style="color: inherit; text-decoration: inherit;">page_<wbr>background</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2663,7 @@ The following state arguments are supported:
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
 {{% /md %}}</dd></dl>

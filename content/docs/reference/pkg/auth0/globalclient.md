@@ -18,19 +18,56 @@ meta_desc: "Documentation for the auth0.GlobalClient resource with examples, inp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[GlobalClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[GlobalClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[GlobalClientRefreshTokenArgs]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientAddonsArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientJwtConfigurationArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientMobileArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientRefreshTokenArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[GlobalClientArgs]</a></span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +102,32 @@ meta_desc: "Documentation for the auth0.GlobalClient resource with examples, inp
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalClientArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +136,7 @@ meta_desc: "Documentation for the auth0.GlobalClient resource with examples, inp
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +160,7 @@ meta_desc: "Documentation for the auth0.GlobalClient resource with examples, inp
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -672,7 +719,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
+        <span class="property-type"><a href="#globalclientaddons">pulumi<wbr>Input<Global<wbr>Client<wbr>Addons<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +727,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +735,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +743,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +751,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#callbacks_nodejs" style="color: inherit; text-decoration: inherit;">callbacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +759,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +767,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clientmetadata_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +775,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +783,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clientsecretrotationtrigger_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +791,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#crossoriginauth_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +799,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#crossoriginloc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Loc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +807,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#customloginpage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +815,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#customloginpageon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +823,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#customloginpagepreview_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +831,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +839,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +847,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#formtemplate_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +855,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +863,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#initiateloginuri_nodejs" style="color: inherit; text-decoration: inherit;">initiate<wbr>Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +871,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#isfirstparty_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>First<wbr>Party</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +879,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#istokenendpointipheadertrusted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +887,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#globalclientjwtconfiguration">pulumi<wbr>Input<Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +895,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +903,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
+        <span class="property-type"><a href="#globalclientmobile">pulumi<wbr>Input<Global<wbr>Client<wbr>Mobile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +911,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +919,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#oidcconformant_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Conformant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -880,7 +927,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
+        <span class="property-type"><a href="#globalclientrefreshtoken">pulumi<wbr>Input<Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +935,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sso_nodejs" style="color: inherit; text-decoration: inherit;">sso</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,7 +943,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ssodisabled_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +951,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +959,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -924,7 +971,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientaddons">Input[Global<wbr>Client<wbr>Addons<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +979,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +987,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +995,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +1003,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#callbacks_python" style="color: inherit; text-decoration: inherit;">callbacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +1011,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +1019,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +1027,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +1035,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1043,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cross_origin_auth_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1051,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cross_origin_loc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>loc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +1059,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#custom_login_page_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +1067,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#custom_login_page_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1075,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#custom_login_page_preview_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,7 +1083,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1091,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +1099,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#form_template_python" style="color: inherit; text-decoration: inherit;">form_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1107,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1115,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#initiate_login_uri_python" style="color: inherit; text-decoration: inherit;">initiate_<wbr>login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1123,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#is_first_party_python" style="color: inherit; text-decoration: inherit;">is_<wbr>first_<wbr>party</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1131,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#is_token_endpoint_ip_header_trusted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>token_<wbr>endpoint_<wbr>ip_<wbr>header_<wbr>trusted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1139,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientjwtconfiguration">Input[Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1147,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1155,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientmobile">Input[Global<wbr>Client<wbr>Mobile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1163,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1171,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#oidc_conformant_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>conformant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1179,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientrefreshtoken">Input[Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1187,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sso_python" style="color: inherit; text-decoration: inherit;">sso</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1195,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sso_disabled_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1203,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1211,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1232,20 +1279,53 @@ Get an existing GlobalClient resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalClient</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalClient</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[GlobalClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[GlobalClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[GlobalClientRefreshTokenArgs]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> GlobalClient</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientAddonsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientJwtConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientMobileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalClientRefreshTokenArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> GlobalClient</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalClient</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalClientState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalClient</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GlobalClientState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1858,7 +1938,7 @@ The following state arguments are supported:
 <a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
+        <span class="property-type"><a href="#globalclientaddons">pulumi<wbr>Input<Global<wbr>Client<wbr>Addons<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1946,7 @@ The following state arguments are supported:
 <a href="#state_allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1954,7 @@ The following state arguments are supported:
 <a href="#state_allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1970,7 @@ The following state arguments are supported:
 <a href="#state_callbacks_nodejs" style="color: inherit; text-decoration: inherit;">callbacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1986,7 @@ The following state arguments are supported:
 <a href="#state_clientmetadata_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1994,7 @@ The following state arguments are supported:
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +2002,7 @@ The following state arguments are supported:
 <a href="#state_clientsecretrotationtrigger_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +2010,7 @@ The following state arguments are supported:
 <a href="#state_crossoriginauth_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_crossoriginloc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Loc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +2026,7 @@ The following state arguments are supported:
 <a href="#state_customloginpage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +2034,7 @@ The following state arguments are supported:
 <a href="#state_customloginpageon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_customloginpagepreview_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +2050,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1986,7 +2066,7 @@ The following state arguments are supported:
 <a href="#state_formtemplate_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1994,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2082,7 @@ The following state arguments are supported:
 <a href="#state_initiateloginuri_nodejs" style="color: inherit; text-decoration: inherit;">initiate<wbr>Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_isfirstparty_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>First<wbr>Party</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2098,7 @@ The following state arguments are supported:
 <a href="#state_istokenendpointipheadertrusted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#globalclientjwtconfiguration">pulumi<wbr>Input<Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,7 +2122,7 @@ The following state arguments are supported:
 <a href="#state_mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
+        <span class="property-type"><a href="#globalclientmobile">pulumi<wbr>Input<Global<wbr>Client<wbr>Mobile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2050,7 +2130,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2138,7 @@ The following state arguments are supported:
 <a href="#state_oidcconformant_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Conformant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2146,7 @@ The following state arguments are supported:
 <a href="#state_refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
+        <span class="property-type"><a href="#globalclientrefreshtoken">pulumi<wbr>Input<Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_sso_nodejs" style="color: inherit; text-decoration: inherit;">sso</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_ssodisabled_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2098,7 +2178,7 @@ The following state arguments are supported:
 <a href="#state_weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2110,7 +2190,7 @@ The following state arguments are supported:
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientaddons">Input[Global<wbr>Client<wbr>Addons<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2118,7 +2198,7 @@ The following state arguments are supported:
 <a href="#state_allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2214,7 @@ The following state arguments are supported:
 <a href="#state_app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_callbacks_python" style="color: inherit; text-decoration: inherit;">callbacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2230,7 @@ The following state arguments are supported:
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2158,7 +2238,7 @@ The following state arguments are supported:
 <a href="#state_client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2246,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2254,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_cross_origin_auth_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2270,7 @@ The following state arguments are supported:
 <a href="#state_cross_origin_loc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>loc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_custom_login_page_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2206,7 +2286,7 @@ The following state arguments are supported:
 <a href="#state_custom_login_page_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2214,7 +2294,7 @@ The following state arguments are supported:
 <a href="#state_custom_login_page_preview_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2222,7 +2302,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2230,7 +2310,7 @@ The following state arguments are supported:
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2238,7 +2318,7 @@ The following state arguments are supported:
 <a href="#state_form_template_python" style="color: inherit; text-decoration: inherit;">form_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2246,7 +2326,7 @@ The following state arguments are supported:
 <a href="#state_grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2254,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_initiate_login_uri_python" style="color: inherit; text-decoration: inherit;">initiate_<wbr>login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2262,7 +2342,7 @@ The following state arguments are supported:
 <a href="#state_is_first_party_python" style="color: inherit; text-decoration: inherit;">is_<wbr>first_<wbr>party</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2270,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_is_token_endpoint_ip_header_trusted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>token_<wbr>endpoint_<wbr>ip_<wbr>header_<wbr>trusted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2358,7 @@ The following state arguments are supported:
 <a href="#state_jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientjwtconfiguration">Input[Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2366,7 @@ The following state arguments are supported:
 <a href="#state_logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2294,7 +2374,7 @@ The following state arguments are supported:
 <a href="#state_mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientmobile">Input[Global<wbr>Client<wbr>Mobile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2302,7 +2382,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2390,7 @@ The following state arguments are supported:
 <a href="#state_oidc_conformant_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>conformant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2398,7 @@ The following state arguments are supported:
 <a href="#state_refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientrefreshtoken">Input[Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2326,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_sso_python" style="color: inherit; text-decoration: inherit;">sso</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2414,7 @@ The following state arguments are supported:
 <a href="#state_sso_disabled_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2422,7 @@ The following state arguments are supported:
 <a href="#state_token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2430,7 @@ The following state arguments are supported:
 <a href="#state_web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2829,7 +2909,7 @@ The following state arguments are supported:
 <a href="#aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2917,7 @@ The following state arguments are supported:
 <a href="#azureblob_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2925,7 @@ The following state arguments are supported:
 <a href="#azuresb_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2933,7 @@ The following state arguments are supported:
 <a href="#box_nodejs" style="color: inherit; text-decoration: inherit;">box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2861,7 +2941,7 @@ The following state arguments are supported:
 <a href="#cloudbees_nodejs" style="color: inherit; text-decoration: inherit;">cloudbees</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2869,7 +2949,7 @@ The following state arguments are supported:
 <a href="#concur_nodejs" style="color: inherit; text-decoration: inherit;">concur</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2877,7 +2957,7 @@ The following state arguments are supported:
 <a href="#dropbox_nodejs" style="color: inherit; text-decoration: inherit;">dropbox</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2885,7 +2965,7 @@ The following state arguments are supported:
 <a href="#echosign_nodejs" style="color: inherit; text-decoration: inherit;">echosign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2973,7 @@ The following state arguments are supported:
 <a href="#egnyte_nodejs" style="color: inherit; text-decoration: inherit;">egnyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +2981,7 @@ The following state arguments are supported:
 <a href="#firebase_nodejs" style="color: inherit; text-decoration: inherit;">firebase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2989,7 @@ The following state arguments are supported:
 <a href="#layer_nodejs" style="color: inherit; text-decoration: inherit;">layer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2997,7 @@ The following state arguments are supported:
 <a href="#mscrm_nodejs" style="color: inherit; text-decoration: inherit;">mscrm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +3005,7 @@ The following state arguments are supported:
 <a href="#newrelic_nodejs" style="color: inherit; text-decoration: inherit;">newrelic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +3013,7 @@ The following state arguments are supported:
 <a href="#office365_nodejs" style="color: inherit; text-decoration: inherit;">office365</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +3021,7 @@ The following state arguments are supported:
 <a href="#rms_nodejs" style="color: inherit; text-decoration: inherit;">rms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +3029,7 @@ The following state arguments are supported:
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +3037,7 @@ The following state arguments are supported:
 <a href="#salesforceapi_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +3045,7 @@ The following state arguments are supported:
 <a href="#salesforcesandboxapi_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Sandbox<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +3053,7 @@ The following state arguments are supported:
 <a href="#samlp_nodejs" style="color: inherit; text-decoration: inherit;">samlp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp</a></span>
+        <span class="property-type"><a href="#globalclientaddonssamlp">pulumi<wbr>Input<Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +3061,7 @@ The following state arguments are supported:
 <a href="#sapapi_nodejs" style="color: inherit; text-decoration: inherit;">sap<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2989,7 +3069,7 @@ The following state arguments are supported:
 <a href="#sentry_nodejs" style="color: inherit; text-decoration: inherit;">sentry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3077,7 @@ The following state arguments are supported:
 <a href="#sharepoint_nodejs" style="color: inherit; text-decoration: inherit;">sharepoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3085,7 @@ The following state arguments are supported:
 <a href="#slack_nodejs" style="color: inherit; text-decoration: inherit;">slack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3013,7 +3093,7 @@ The following state arguments are supported:
 <a href="#springcm_nodejs" style="color: inherit; text-decoration: inherit;">springcm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3101,7 @@ The following state arguments are supported:
 <a href="#wams_nodejs" style="color: inherit; text-decoration: inherit;">wams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3029,7 +3109,7 @@ The following state arguments are supported:
 <a href="#wsfed_nodejs" style="color: inherit; text-decoration: inherit;">wsfed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3037,7 +3117,7 @@ The following state arguments are supported:
 <a href="#zendesk_nodejs" style="color: inherit; text-decoration: inherit;">zendesk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3045,7 +3125,7 @@ The following state arguments are supported:
 <a href="#zoom_nodejs" style="color: inherit; text-decoration: inherit;">zoom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3057,7 +3137,7 @@ The following state arguments are supported:
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3065,7 +3145,7 @@ The following state arguments are supported:
 <a href="#azure_blob_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3153,7 @@ The following state arguments are supported:
 <a href="#azure_sb_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3161,7 @@ The following state arguments are supported:
 <a href="#box_python" style="color: inherit; text-decoration: inherit;">box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3089,7 +3169,7 @@ The following state arguments are supported:
 <a href="#cloudbees_python" style="color: inherit; text-decoration: inherit;">cloudbees</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3177,7 @@ The following state arguments are supported:
 <a href="#concur_python" style="color: inherit; text-decoration: inherit;">concur</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3105,7 +3185,7 @@ The following state arguments are supported:
 <a href="#dropbox_python" style="color: inherit; text-decoration: inherit;">dropbox</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3193,7 @@ The following state arguments are supported:
 <a href="#echosign_python" style="color: inherit; text-decoration: inherit;">echosign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3121,7 +3201,7 @@ The following state arguments are supported:
 <a href="#egnyte_python" style="color: inherit; text-decoration: inherit;">egnyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3129,7 +3209,7 @@ The following state arguments are supported:
 <a href="#firebase_python" style="color: inherit; text-decoration: inherit;">firebase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3137,7 +3217,7 @@ The following state arguments are supported:
 <a href="#layer_python" style="color: inherit; text-decoration: inherit;">layer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3145,7 +3225,7 @@ The following state arguments are supported:
 <a href="#mscrm_python" style="color: inherit; text-decoration: inherit;">mscrm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3153,7 +3233,7 @@ The following state arguments are supported:
 <a href="#newrelic_python" style="color: inherit; text-decoration: inherit;">newrelic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3241,7 @@ The following state arguments are supported:
 <a href="#office365_python" style="color: inherit; text-decoration: inherit;">office365</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3169,7 +3249,7 @@ The following state arguments are supported:
 <a href="#rms_python" style="color: inherit; text-decoration: inherit;">rms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3257,7 @@ The following state arguments are supported:
 <a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3265,7 @@ The following state arguments are supported:
 <a href="#salesforce_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3273,7 @@ The following state arguments are supported:
 <a href="#salesforce_sandbox_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>sandbox_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3281,7 @@ The following state arguments are supported:
 <a href="#samlp_python" style="color: inherit; text-decoration: inherit;">samlp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientaddonssamlp">Input[Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3209,7 +3289,7 @@ The following state arguments are supported:
 <a href="#sap_api_python" style="color: inherit; text-decoration: inherit;">sap_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3297,7 @@ The following state arguments are supported:
 <a href="#sentry_python" style="color: inherit; text-decoration: inherit;">sentry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3225,7 +3305,7 @@ The following state arguments are supported:
 <a href="#sharepoint_python" style="color: inherit; text-decoration: inherit;">sharepoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3233,7 +3313,7 @@ The following state arguments are supported:
 <a href="#slack_python" style="color: inherit; text-decoration: inherit;">slack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3241,7 +3321,7 @@ The following state arguments are supported:
 <a href="#springcm_python" style="color: inherit; text-decoration: inherit;">springcm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3249,7 +3329,7 @@ The following state arguments are supported:
 <a href="#wams_python" style="color: inherit; text-decoration: inherit;">wams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3257,7 +3337,7 @@ The following state arguments are supported:
 <a href="#wsfed_python" style="color: inherit; text-decoration: inherit;">wsfed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3265,7 +3345,7 @@ The following state arguments are supported:
 <a href="#zendesk_python" style="color: inherit; text-decoration: inherit;">zendesk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +3353,7 @@ The following state arguments are supported:
 <a href="#zoom_python" style="color: inherit; text-decoration: inherit;">zoom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3599,7 +3679,7 @@ The following state arguments are supported:
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3607,7 +3687,7 @@ The following state arguments are supported:
 <a href="#authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3695,7 @@ The following state arguments are supported:
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3703,7 @@ The following state arguments are supported:
 <a href="#createupnclaim_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Upn<wbr>Claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3711,7 @@ The following state arguments are supported:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3719,7 @@ The following state arguments are supported:
 <a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3727,7 @@ The following state arguments are supported:
 <a href="#includeattributenameformat_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Attribute<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3735,7 @@ The following state arguments are supported:
 <a href="#lifetimeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3743,7 @@ The following state arguments are supported:
 <a href="#logout_nodejs" style="color: inherit; text-decoration: inherit;">logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout</a></span>
+        <span class="property-type"><a href="#globalclientaddonssamlplogout">pulumi<wbr>Input<Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3671,7 +3751,7 @@ The following state arguments are supported:
 <a href="#mapidentities_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3679,7 +3759,7 @@ The following state arguments are supported:
 <a href="#mapunknownclaimsasis_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Unknown<wbr>Claims<wbr>As<wbr>Is</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3687,7 +3767,7 @@ The following state arguments are supported:
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3695,7 +3775,7 @@ The following state arguments are supported:
 <a href="#nameidentifierformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,7 +3783,7 @@ The following state arguments are supported:
 <a href="#nameidentifierprobes_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3711,7 +3791,7 @@ The following state arguments are supported:
 <a href="#passthroughclaimswithnomapping_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Claims<wbr>With<wbr>No<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3719,7 +3799,7 @@ The following state arguments are supported:
 <a href="#recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3727,7 +3807,7 @@ The following state arguments are supported:
 <a href="#signresponse_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3735,7 +3815,7 @@ The following state arguments are supported:
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3743,7 +3823,7 @@ The following state arguments are supported:
 <a href="#typedattributes_nodejs" style="color: inherit; text-decoration: inherit;">typed<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3755,7 +3835,7 @@ The following state arguments are supported:
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3843,7 @@ The following state arguments are supported:
 <a href="#authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3851,7 @@ The following state arguments are supported:
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3779,7 +3859,7 @@ The following state arguments are supported:
 <a href="#create_upn_claim_python" style="color: inherit; text-decoration: inherit;">create_<wbr>upn_<wbr>claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3787,7 +3867,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3875,7 @@ The following state arguments are supported:
 <a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3883,7 @@ The following state arguments are supported:
 <a href="#include_attribute_name_format_python" style="color: inherit; text-decoration: inherit;">include_<wbr>attribute_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3891,7 @@ The following state arguments are supported:
 <a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3899,7 @@ The following state arguments are supported:
 <a href="#logout_python" style="color: inherit; text-decoration: inherit;">logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientaddonssamlplogout">Input[Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3827,7 +3907,7 @@ The following state arguments are supported:
 <a href="#map_identities_python" style="color: inherit; text-decoration: inherit;">map_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3835,7 +3915,7 @@ The following state arguments are supported:
 <a href="#map_unknown_claims_as_is_python" style="color: inherit; text-decoration: inherit;">map_<wbr>unknown_<wbr>claims_<wbr>as_<wbr>is</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3923,7 @@ The following state arguments are supported:
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3931,7 @@ The following state arguments are supported:
 <a href="#name_identifier_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3939,7 @@ The following state arguments are supported:
 <a href="#name_identifier_probes_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3947,7 @@ The following state arguments are supported:
 <a href="#passthrough_claims_with_no_mapping_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>claims_<wbr>with_<wbr>no_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3955,7 @@ The following state arguments are supported:
 <a href="#recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3963,7 @@ The following state arguments are supported:
 <a href="#sign_response_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3971,7 @@ The following state arguments are supported:
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3979,7 @@ The following state arguments are supported:
 <a href="#typed_attributes_python" style="color: inherit; text-decoration: inherit;">typed_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3953,7 +4033,7 @@ The following state arguments are supported:
 <a href="#callback_nodejs" style="color: inherit; text-decoration: inherit;">callback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3961,7 +4041,7 @@ The following state arguments are supported:
 <a href="#sloenabled_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3973,7 +4053,7 @@ The following state arguments are supported:
 <a href="#callback_python" style="color: inherit; text-decoration: inherit;">callback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +4061,7 @@ The following state arguments are supported:
 <a href="#slo_enabled_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4067,7 +4147,7 @@ The following state arguments are supported:
 <a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4075,7 +4155,7 @@ The following state arguments are supported:
 <a href="#lifetimeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4083,7 +4163,7 @@ The following state arguments are supported:
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4091,7 +4171,7 @@ The following state arguments are supported:
 <a href="#secretencoded_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4103,7 +4183,7 @@ The following state arguments are supported:
 <a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4191,7 @@ The following state arguments are supported:
 <a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4119,7 +4199,7 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4207,7 @@ The following state arguments are supported:
 <a href="#secret_encoded_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4181,7 +4261,7 @@ The following state arguments are supported:
 <a href="#android_nodejs" style="color: inherit; text-decoration: inherit;">android</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android</a></span>
+        <span class="property-type"><a href="#globalclientmobileandroid">pulumi<wbr>Input<Global<wbr>Client<wbr>Mobile<wbr>Android<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4189,7 +4269,7 @@ The following state arguments are supported:
 <a href="#ios_nodejs" style="color: inherit; text-decoration: inherit;">ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios</a></span>
+        <span class="property-type"><a href="#globalclientmobileios">pulumi<wbr>Input<Global<wbr>Client<wbr>Mobile<wbr>Ios<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4201,7 +4281,7 @@ The following state arguments are supported:
 <a href="#android_python" style="color: inherit; text-decoration: inherit;">android</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientmobileandroid">Input[Global<wbr>Client<wbr>Mobile<wbr>Android<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4209,7 +4289,7 @@ The following state arguments are supported:
 <a href="#ios_python" style="color: inherit; text-decoration: inherit;">ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalclientmobileios">Input[Global<wbr>Client<wbr>Mobile<wbr>Ios<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4263,7 +4343,7 @@ The following state arguments are supported:
 <a href="#apppackagename_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Package<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4271,7 +4351,7 @@ The following state arguments are supported:
 <a href="#sha256certfingerprints_nodejs" style="color: inherit; text-decoration: inherit;">sha256Cert<wbr>Fingerprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4283,7 +4363,7 @@ The following state arguments are supported:
 <a href="#app_package_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>package_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +4371,7 @@ The following state arguments are supported:
 <a href="#sha256_cert_fingerprints_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>cert_<wbr>fingerprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4345,7 +4425,7 @@ The following state arguments are supported:
 <a href="#appbundleidentifier_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Bundle<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4353,7 +4433,7 @@ The following state arguments are supported:
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4365,7 +4445,7 @@ The following state arguments are supported:
 <a href="#app_bundle_identifier_python" style="color: inherit; text-decoration: inherit;">app_<wbr>bundle_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4373,7 +4453,7 @@ The following state arguments are supported:
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4507,7 +4587,7 @@ The following state arguments are supported:
 <a href="#expirationtype_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4515,7 +4595,7 @@ The following state arguments are supported:
 <a href="#rotationtype_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4523,7 +4603,7 @@ The following state arguments are supported:
 <a href="#idletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4531,7 +4611,7 @@ The following state arguments are supported:
 <a href="#infiniteidletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4539,7 +4619,7 @@ The following state arguments are supported:
 <a href="#infinitetokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4547,7 +4627,7 @@ The following state arguments are supported:
 <a href="#leeway_nodejs" style="color: inherit; text-decoration: inherit;">leeway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4555,7 +4635,7 @@ The following state arguments are supported:
 <a href="#tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4567,7 +4647,7 @@ The following state arguments are supported:
 <a href="#expiration_type_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4575,7 +4655,7 @@ The following state arguments are supported:
 <a href="#rotation_type_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4583,7 +4663,7 @@ The following state arguments are supported:
 <a href="#idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4591,7 +4671,7 @@ The following state arguments are supported:
 <a href="#infinite_idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>idle_<wbr>token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4599,7 +4679,7 @@ The following state arguments are supported:
 <a href="#infinite_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4607,7 +4687,7 @@ The following state arguments are supported:
 <a href="#leeway_python" style="color: inherit; text-decoration: inherit;">leeway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4615,7 +4695,7 @@ The following state arguments are supported:
 <a href="#token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

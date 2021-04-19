@@ -70,8 +70,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-auth0/sdk/v2/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -171,19 +171,43 @@ const user = new auth0.User("user", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">family_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">phone_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">phone_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">picture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">app_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">family_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">nickname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">phone_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">phone_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">picture</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,22 +242,32 @@ const user = new auth0.User("user", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +276,7 @@ const user = new auth0.User("user", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -266,7 +300,7 @@ const user = new auth0.User("user", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -643,7 +677,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Name of the connection from which the user information was sourced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +686,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#appmetadata_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that impact the user's core functionality, such as how an application functions or what the user can access. Examples include support plans and IDs for external accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +695,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +703,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +712,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the email address has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +721,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#familyname_nodejs" style="color: inherit; text-decoration: inherit;">family<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -695,7 +729,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#givenname_nodejs" style="color: inherit; text-decoration: inherit;">given<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +737,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +745,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nickname_nodejs" style="color: inherit; text-decoration: inherit;">nickname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Preferred nickname or alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -720,7 +754,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, Case-sensitive. Initial password for this user. Used for non-SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +763,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Phone number for the user; follows the E.164 recommendation. Used for SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +772,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#phoneverified_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the phone number has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -747,7 +781,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#picture_nodejs" style="color: inherit; text-decoration: inherit;">picture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +789,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set(String). Set of IDs of roles assigned to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +798,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +807,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usermetadata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that does not impact a user's core functionality. Examples include work address, home address, and user preferences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +816,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Username of the user. Only valid if the connection requires a username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +825,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the user will receive a verification email after creation. Overrides behavior of `email_verified` parameter.
 {{% /md %}}</dd></dl>
@@ -804,7 +838,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection from which the user information was sourced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +847,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#app_metadata_python" style="color: inherit; text-decoration: inherit;">app_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that impact the user's core functionality, such as how an application functions or what the user can access. Examples include support plans and IDs for external accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +856,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +864,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +873,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the email address has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +882,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#family_name_python" style="color: inherit; text-decoration: inherit;">family_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +890,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#given_name_python" style="color: inherit; text-decoration: inherit;">given_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +898,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +906,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nickname_python" style="color: inherit; text-decoration: inherit;">nickname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Preferred nickname or alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +915,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, Case-sensitive. Initial password for this user. Used for non-SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +924,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Phone number for the user; follows the E.164 recommendation. Used for SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +933,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#phone_verified_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the phone number has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +942,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#picture_python" style="color: inherit; text-decoration: inherit;">picture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +950,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set(String). Set of IDs of roles assigned to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +959,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +968,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_metadata_python" style="color: inherit; text-decoration: inherit;">user_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that does not impact a user's core functionality. Examples include work address, home address, and user preferences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +977,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Username of the user. Only valid if the connection requires a username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +986,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the user will receive a verification email after creation. Overrides behavior of `email_verified` parameter.
 {{% /md %}}</dd></dl>
@@ -1021,20 +1055,40 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">family_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">phone_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">phone_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">picture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">family_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nickname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">phone_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">phone_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">picture</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1465,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_appmetadata_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that impact the user's core functionality, such as how an application functions or what the user can access. Examples include support plans and IDs for external accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1482,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Name of the connection from which the user information was sourced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the email address has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_familyname_nodejs" style="color: inherit; text-decoration: inherit;">family<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_givenname_nodejs" style="color: inherit; text-decoration: inherit;">given<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1587,7 @@ The following state arguments are supported:
 <a href="#state_nickname_nodejs" style="color: inherit; text-decoration: inherit;">nickname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Preferred nickname or alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, Case-sensitive. Initial password for this user. Used for non-SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1605,7 @@ The following state arguments are supported:
 <a href="#state_phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Phone number for the user; follows the E.164 recommendation. Used for SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1614,7 @@ The following state arguments are supported:
 <a href="#state_phoneverified_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the phone number has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_picture_nodejs" style="color: inherit; text-decoration: inherit;">picture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1631,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set(String). Set of IDs of roles assigned to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1640,7 @@ The following state arguments are supported:
 <a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_usermetadata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that does not impact a user's core functionality. Examples include work address, home address, and user preferences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1658,7 @@ The following state arguments are supported:
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String. Username of the user. Only valid if the connection requires a username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1667,7 @@ The following state arguments are supported:
 <a href="#state_verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the user will receive a verification email after creation. Overrides behavior of `email_verified` parameter.
 {{% /md %}}</dd></dl>
@@ -1626,7 +1680,7 @@ The following state arguments are supported:
 <a href="#state_app_metadata_python" style="color: inherit; text-decoration: inherit;">app_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that impact the user's core functionality, such as how an application functions or what the user can access. Examples include support plans and IDs for external accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection from which the user information was sourced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the email address has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_family_name_python" style="color: inherit; text-decoration: inherit;">family_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_given_name_python" style="color: inherit; text-decoration: inherit;">given_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1740,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_nickname_python" style="color: inherit; text-decoration: inherit;">nickname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Preferred nickname or alias of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, Case-sensitive. Initial password for this user. Used for non-SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Phone number for the user; follows the E.164 recommendation. Used for SMS connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_phone_verified_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the phone number has been verified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_picture_python" style="color: inherit; text-decoration: inherit;">picture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1792,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set(String). Set of IDs of roles assigned to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. ID of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1810,7 @@ The following state arguments are supported:
 <a href="#state_user_metadata_python" style="color: inherit; text-decoration: inherit;">user_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String, JSON format. Custom fields that store info about the user that does not impact a user's core functionality. Examples include work address, home address, and user preferences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String. Username of the user. Only valid if the connection requires a username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the user will receive a verification email after creation. Overrides behavior of `email_verified` parameter.
 {{% /md %}}</dd></dl>

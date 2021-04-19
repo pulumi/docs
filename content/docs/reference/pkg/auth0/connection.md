@@ -81,8 +81,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-auth0/sdk/v2/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -202,19 +202,34 @@ const myConnection = new auth0.Connection("my_connection", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConnectionOptionsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,22 +264,32 @@ const myConnection = new auth0.Connection("my_connection", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -273,7 +298,7 @@ const myConnection = new auth0.Connection("my_connection", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -297,7 +322,7 @@ const myConnection = new auth0.Connection("my_connection", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -522,7 +547,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -531,7 +556,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name used in login screen
 {{% /md %}}</dd><dt class="property-optional"
@@ -540,7 +565,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#enabledclients_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -549,7 +574,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#isdomainconnection_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Domain<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +583,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +592,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
+        <span class="property-type"><a href="#connectionoptions">pulumi<wbr>Input<Connection<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +601,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#realms_nodejs" style="color: inherit; text-decoration: inherit;">realms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +610,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#strategyversion_nodejs" style="color: inherit; text-decoration: inherit;">strategy<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +619,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd></dl>
@@ -607,7 +632,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +641,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name used in login screen
 {{% /md %}}</dd><dt class="property-optional"
@@ -625,7 +650,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#enabled_clients_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +659,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#is_domain_connection_python" style="color: inherit; text-decoration: inherit;">is_<wbr>domain_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +668,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +677,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptions">Input[Connection<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +686,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,7 +695,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#strategy_version_python" style="color: inherit; text-decoration: inherit;">strategy_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +704,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd></dl>
@@ -748,20 +773,31 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConnectionOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1040,7 +1076,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name used in login screen
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1085,7 @@ The following state arguments are supported:
 <a href="#state_enabledclients_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1094,7 @@ The following state arguments are supported:
 <a href="#state_isdomainconnection_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Domain<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1103,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
+        <span class="property-type"><a href="#connectionoptions">pulumi<wbr>Input<Connection<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_realms_nodejs" style="color: inherit; text-decoration: inherit;">realms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1130,7 @@ The following state arguments are supported:
 <a href="#state_strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1139,7 @@ The following state arguments are supported:
 <a href="#state_strategyversion_nodejs" style="color: inherit; text-decoration: inherit;">strategy<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd></dl>
@@ -1125,7 +1161,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name used in login screen
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_enabled_clients_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1179,7 @@ The following state arguments are supported:
 <a href="#state_is_domain_connection_python" style="color: inherit; text-decoration: inherit;">is_<wbr>domain_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptions">Input[Connection<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1206,7 @@ The following state arguments are supported:
 <a href="#state_realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_strategy_version_python" style="color: inherit; text-decoration: inherit;">strategy_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1233,7 @@ The following state arguments are supported:
 <a href="#state_validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd></dl>
@@ -2433,7 +2469,7 @@ The following state arguments are supported:
 <a href="#adfsserver_nodejs" style="color: inherit; text-decoration: inherit;">adfs<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2442,7 +2478,7 @@ The following state arguments are supported:
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed audiences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2487,7 @@ The following state arguments are supported:
 <a href="#apienableusers_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Enable<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2459,7 +2495,7 @@ The following state arguments are supported:
 <a href="#appdomain_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2468,7 +2504,7 @@ The following state arguments are supported:
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2513,7 @@ The following state arguments are supported:
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2521,7 @@ The following state arguments are supported:
 <a href="#bruteforceprotection_nodejs" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2530,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2539,7 @@ The following state arguments are supported:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2512,7 +2548,7 @@ The following state arguments are supported:
 <a href="#communitybaseurl_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2521,7 +2557,7 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2530,7 +2566,7 @@ The following state arguments are supported:
 <a href="#customscripts_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2539,7 +2575,7 @@ The following state arguments are supported:
 <a href="#debug_nodejs" style="color: inherit; text-decoration: inherit;">debug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2548,7 +2584,7 @@ The following state arguments are supported:
 <a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd><dt class="property-optional"
@@ -2557,7 +2593,7 @@ The following state arguments are supported:
 <a href="#disablecache_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2601,7 @@ The following state arguments are supported:
 <a href="#disablesignup_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Signup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to allow user sign-ups to your application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2574,7 +2610,7 @@ The following state arguments are supported:
 <a href="#discoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2583,7 +2619,7 @@ The following state arguments are supported:
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2627,7 @@ The following state arguments are supported:
 <a href="#domainaliases_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2636,7 @@ The following state arguments are supported:
 <a href="#enableddatabasecustomization_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Database<wbr>Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2608,7 +2644,7 @@ The following state arguments are supported:
 <a href="#fieldsmap_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2617,7 +2653,7 @@ The following state arguments are supported:
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2626,7 +2662,7 @@ The following state arguments are supported:
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2670,7 @@ The following state arguments are supported:
 <a href="#identityapi_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2642,7 +2678,7 @@ The following state arguments are supported:
 <a href="#idpinitiated_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated</a></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">pulumi<wbr>Input<Connection<wbr>Options<wbr>Idp<wbr>Initiated<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2650,7 +2686,7 @@ The following state arguments are supported:
 <a href="#importmode_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2659,7 +2695,7 @@ The following state arguments are supported:
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2703,7 @@ The following state arguments are supported:
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2676,7 +2712,7 @@ The following state arguments are supported:
 <a href="#jwksuri_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2684,7 +2720,7 @@ The following state arguments are supported:
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Key ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2729,7 @@ The following state arguments are supported:
 <a href="#maxgroupstoretrieve_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Groups<wbr>To<wbr>Retrieve</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2738,7 @@ The following state arguments are supported:
 <a href="#messagingservicesid_nodejs" style="color: inherit; text-decoration: inherit;">messaging<wbr>Service<wbr>Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2747,7 @@ The following state arguments are supported:
 <a href="#mfa_nodejs" style="color: inherit; text-decoration: inherit;">mfa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa</a></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">pulumi<wbr>Input<Connection<wbr>Options<wbr>Mfa<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2756,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2765,7 @@ The following state arguments are supported:
 <a href="#passwordcomplexityoptions_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Complexity<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">pulumi<wbr>Input<Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2738,7 +2774,7 @@ The following state arguments are supported:
 <a href="#passworddictionary_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#connectionoptionspassworddictionary">pulumi<wbr>Input<Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2747,7 +2783,7 @@ The following state arguments are supported:
 <a href="#passwordhistories_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Histories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordhistory">Connection<wbr>Options<wbr>Password<wbr>History[]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordhistory">pulumi<wbr>Input<pulumi<wbr>Input<Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2792,7 @@ The following state arguments are supported:
 <a href="#passwordnopersonalinfo_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>No<wbr>Personal<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">pulumi<wbr>Input<Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2765,7 +2801,7 @@ The following state arguments are supported:
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2810,7 @@ The following state arguments are supported:
 <a href="#protocolbinding_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2819,7 @@ The following state arguments are supported:
 <a href="#requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2828,7 @@ The following state arguments are supported:
 <a href="#requiresusername_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2837,7 @@ The following state arguments are supported:
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2846,7 @@ The following state arguments are supported:
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2818,7 +2854,7 @@ The following state arguments are supported:
 <a href="#setuserrootattributes_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>User<wbr>Root<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2863,7 @@ The following state arguments are supported:
 <a href="#signinendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML single login URL for the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2836,7 +2872,7 @@ The following state arguments are supported:
 <a href="#signoutendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Out<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML single logout URL for the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2845,7 +2881,7 @@ The following state arguments are supported:
 <a href="#signsamlrequest_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Saml<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2854,7 +2890,7 @@ The following state arguments are supported:
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sign Request Algorithm
 {{% /md %}}</dd><dt class="property-optional"
@@ -2863,7 +2899,7 @@ The following state arguments are supported:
 <a href="#signingcert_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2908,7 @@ The following state arguments are supported:
 <a href="#strategyversion_nodejs" style="color: inherit; text-decoration: inherit;">strategy<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2917,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2925,7 @@ The following state arguments are supported:
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2934,7 @@ The following state arguments are supported:
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Team ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +2943,7 @@ The following state arguments are supported:
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +2952,7 @@ The following state arguments are supported:
 <a href="#tenantdomain_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2924,7 +2960,7 @@ The following state arguments are supported:
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2932,7 +2968,7 @@ The following state arguments are supported:
 <a href="#totp_nodejs" style="color: inherit; text-decoration: inherit;">totp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp</a></span>
+        <span class="property-type"><a href="#connectionoptionstotp">pulumi<wbr>Input<Connection<wbr>Options<wbr>Totp<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2941,7 +2977,7 @@ The following state arguments are supported:
 <a href="#twiliosid_nodejs" style="color: inherit; text-decoration: inherit;">twilio<wbr>Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2950,7 +2986,7 @@ The following state arguments are supported:
 <a href="#twiliotoken_nodejs" style="color: inherit; text-decoration: inherit;">twilio<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2959,7 +2995,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2968,7 +3004,7 @@ The following state arguments are supported:
 <a href="#usecertauth_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2976,7 +3012,7 @@ The following state arguments are supported:
 <a href="#usekerberos_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +3020,7 @@ The following state arguments are supported:
 <a href="#usewsfed_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Wsfed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2992,7 +3028,7 @@ The following state arguments are supported:
 <a href="#useridattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +3037,7 @@ The following state arguments are supported:
 <a href="#userinfoendpoint_nodejs" style="color: inherit; text-decoration: inherit;">userinfo<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +3045,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation</a></span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">pulumi<wbr>Input<Connection<wbr>Options<wbr>Validation<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3018,7 +3054,7 @@ The following state arguments are supported:
 <a href="#waadcommonendpoint_nodejs" style="color: inherit; text-decoration: inherit;">waad<wbr>Common<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3027,7 +3063,7 @@ The following state arguments are supported:
 <a href="#waadprotocol_nodejs" style="color: inherit; text-decoration: inherit;">waad<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3075,7 @@ The following state arguments are supported:
 <a href="#adfs_server_python" style="color: inherit; text-decoration: inherit;">adfs_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3048,7 +3084,7 @@ The following state arguments are supported:
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed audiences.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3057,7 +3093,7 @@ The following state arguments are supported:
 <a href="#api_enable_users_python" style="color: inherit; text-decoration: inherit;">api_<wbr>enable_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3065,7 +3101,7 @@ The following state arguments are supported:
 <a href="#app_domain_python" style="color: inherit; text-decoration: inherit;">app_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -3074,7 +3110,7 @@ The following state arguments are supported:
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3083,7 +3119,7 @@ The following state arguments are supported:
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3127,7 @@ The following state arguments are supported:
 <a href="#brute_force_protection_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3100,7 +3136,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3109,7 +3145,7 @@ The following state arguments are supported:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3118,7 +3154,7 @@ The following state arguments are supported:
 <a href="#community_base_url_python" style="color: inherit; text-decoration: inherit;">community_<wbr>base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3127,7 +3163,7 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3136,7 +3172,7 @@ The following state arguments are supported:
 <a href="#custom_scripts_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3145,7 +3181,7 @@ The following state arguments are supported:
 <a href="#debug_python" style="color: inherit; text-decoration: inherit;">debug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3154,7 +3190,7 @@ The following state arguments are supported:
 <a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd><dt class="property-optional"
@@ -3163,7 +3199,7 @@ The following state arguments are supported:
 <a href="#disable_cache_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3207,7 @@ The following state arguments are supported:
 <a href="#disable_signup_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>signup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to allow user sign-ups to your application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3180,7 +3216,7 @@ The following state arguments are supported:
 <a href="#discovery_url_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3225,7 @@ The following state arguments are supported:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3233,7 @@ The following state arguments are supported:
 <a href="#domain_aliases_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3206,7 +3242,7 @@ The following state arguments are supported:
 <a href="#enabled_database_customization_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>database_<wbr>customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3214,7 +3250,7 @@ The following state arguments are supported:
 <a href="#fields_map_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3223,7 +3259,7 @@ The following state arguments are supported:
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3232,7 +3268,7 @@ The following state arguments are supported:
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3276,7 @@ The following state arguments are supported:
 <a href="#identity_api_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3248,7 +3284,7 @@ The following state arguments are supported:
 <a href="#idp_initiated_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">Input[Connection<wbr>Options<wbr>Idp<wbr>Initiated<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3256,7 +3292,7 @@ The following state arguments are supported:
 <a href="#import_mode_python" style="color: inherit; text-decoration: inherit;">import_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3265,7 +3301,7 @@ The following state arguments are supported:
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +3309,7 @@ The following state arguments are supported:
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3318,7 @@ The following state arguments are supported:
 <a href="#jwks_uri_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3326,7 @@ The following state arguments are supported:
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Key ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3299,7 +3335,7 @@ The following state arguments are supported:
 <a href="#max_groups_to_retrieve_python" style="color: inherit; text-decoration: inherit;">max_<wbr>groups_<wbr>to_<wbr>retrieve</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3308,7 +3344,7 @@ The following state arguments are supported:
 <a href="#messaging_service_sid_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>service_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3317,7 +3353,7 @@ The following state arguments are supported:
 <a href="#mfa_python" style="color: inherit; text-decoration: inherit;">mfa</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">Input[Connection<wbr>Options<wbr>Mfa<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3326,7 +3362,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3335,7 +3371,7 @@ The following state arguments are supported:
 <a href="#password_complexity_options_python" style="color: inherit; text-decoration: inherit;">password_<wbr>complexity_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Input[Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3344,7 +3380,7 @@ The following state arguments are supported:
 <a href="#password_dictionary_python" style="color: inherit; text-decoration: inherit;">password_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionspassworddictionary">Input[Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3353,7 +3389,7 @@ The following state arguments are supported:
 <a href="#password_histories_python" style="color: inherit; text-decoration: inherit;">password_<wbr>histories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordhistory">Sequence[Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordhistory">Input[Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3362,7 +3398,7 @@ The following state arguments are supported:
 <a href="#password_no_personal_info_python" style="color: inherit; text-decoration: inherit;">password_<wbr>no_<wbr>personal_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Input[Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3371,7 +3407,7 @@ The following state arguments are supported:
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3380,7 +3416,7 @@ The following state arguments are supported:
 <a href="#protocol_binding_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3389,7 +3425,7 @@ The following state arguments are supported:
 <a href="#request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd><dt class="property-optional"
@@ -3398,7 +3434,7 @@ The following state arguments are supported:
 <a href="#requires_username_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3407,7 +3443,7 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3416,7 +3452,7 @@ The following state arguments are supported:
 <a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3424,7 +3460,7 @@ The following state arguments are supported:
 <a href="#set_user_root_attributes_python" style="color: inherit; text-decoration: inherit;">set_<wbr>user_<wbr>root_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3469,7 @@ The following state arguments are supported:
 <a href="#sign_in_endpoint_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML single login URL for the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3478,7 @@ The following state arguments are supported:
 <a href="#sign_out_endpoint_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>out_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML single logout URL for the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3451,7 +3487,7 @@ The following state arguments are supported:
 <a href="#sign_saml_request_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>saml_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3460,7 +3496,7 @@ The following state arguments are supported:
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sign Request Algorithm
 {{% /md %}}</dd><dt class="property-optional"
@@ -3469,7 +3505,7 @@ The following state arguments are supported:
 <a href="#signing_cert_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3514,7 @@ The following state arguments are supported:
 <a href="#strategy_version_python" style="color: inherit; text-decoration: inherit;">strategy_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3487,7 +3523,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3531,7 @@ The following state arguments are supported:
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3504,7 +3540,7 @@ The following state arguments are supported:
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Team ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3513,7 +3549,7 @@ The following state arguments are supported:
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3522,7 +3558,7 @@ The following state arguments are supported:
 <a href="#tenant_domain_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3566,7 @@ The following state arguments are supported:
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3574,7 @@ The following state arguments are supported:
 <a href="#totp_python" style="color: inherit; text-decoration: inherit;">totp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionstotp">Input[Connection<wbr>Options<wbr>Totp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3547,7 +3583,7 @@ The following state arguments are supported:
 <a href="#twilio_sid_python" style="color: inherit; text-decoration: inherit;">twilio_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3556,7 +3592,7 @@ The following state arguments are supported:
 <a href="#twilio_token_python" style="color: inherit; text-decoration: inherit;">twilio_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3565,7 +3601,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3574,7 +3610,7 @@ The following state arguments are supported:
 <a href="#use_cert_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3582,7 +3618,7 @@ The following state arguments are supported:
 <a href="#use_kerberos_python" style="color: inherit; text-decoration: inherit;">use_<wbr>kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3590,7 +3626,7 @@ The following state arguments are supported:
 <a href="#use_wsfed_python" style="color: inherit; text-decoration: inherit;">use_<wbr>wsfed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3598,7 +3634,7 @@ The following state arguments are supported:
 <a href="#user_id_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3607,7 +3643,7 @@ The following state arguments are supported:
 <a href="#userinfo_endpoint_python" style="color: inherit; text-decoration: inherit;">userinfo_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3651,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionsvalidation">Input[Connection<wbr>Options<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3660,7 @@ The following state arguments are supported:
 <a href="#waad_common_endpoint_python" style="color: inherit; text-decoration: inherit;">waad_<wbr>common_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3669,7 @@ The following state arguments are supported:
 <a href="#waad_protocol_python" style="color: inherit; text-decoration: inherit;">waad_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3705,7 +3741,7 @@ The following state arguments are supported:
 <a href="#clientauthorizequery_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authorize<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3713,7 +3749,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3722,7 +3758,7 @@ The following state arguments are supported:
 <a href="#clientprotocol_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3734,7 +3770,7 @@ The following state arguments are supported:
 <a href="#client_authorize_query_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authorize_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3742,7 +3778,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3751,7 +3787,7 @@ The following state arguments are supported:
 <a href="#client_protocol_python" style="color: inherit; text-decoration: inherit;">client_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3809,7 +3845,7 @@ The following state arguments are supported:
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3818,7 +3854,7 @@ The following state arguments are supported:
 <a href="#returnenrollsettings_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Enroll<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
 {{% /md %}}</dd></dl>
@@ -3831,7 +3867,7 @@ The following state arguments are supported:
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3840,7 +3876,7 @@ The following state arguments are supported:
 <a href="#return_enroll_settings_python" style="color: inherit; text-decoration: inherit;">return_<wbr>enroll_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
 {{% /md %}}</dd></dl>
@@ -3881,7 +3917,7 @@ The following state arguments are supported:
 <a href="#minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd></dl>
@@ -3894,7 +3930,7 @@ The following state arguments are supported:
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd></dl>
@@ -3953,7 +3989,7 @@ The following state arguments are supported:
 <a href="#dictionaries_nodejs" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3962,7 +3998,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd></dl>
@@ -3975,7 +4011,7 @@ The following state arguments are supported:
 <a href="#dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3984,7 +4020,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd></dl>
@@ -4043,7 +4079,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4052,7 +4088,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd></dl>
@@ -4065,7 +4101,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4110,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd></dl>
@@ -4115,7 +4151,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd></dl>
@@ -4128,7 +4164,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd></dl>
@@ -4187,7 +4223,7 @@ The following state arguments are supported:
 <a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Length of the one-time password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4196,7 +4232,7 @@ The following state arguments are supported:
 <a href="#timestep_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer. Seconds between allowed generation of new passwords.
 {{% /md %}}</dd></dl>
@@ -4209,7 +4245,7 @@ The following state arguments are supported:
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Length of the one-time password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4218,7 +4254,7 @@ The following state arguments are supported:
 <a href="#time_step_python" style="color: inherit; text-decoration: inherit;">time_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer. Seconds between allowed generation of new passwords.
 {{% /md %}}</dd></dl>
@@ -4259,7 +4295,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username</a></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">pulumi<wbr>Input<Connection<wbr>Options<wbr>Validation<wbr>Username<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
 {{% /md %}}</dd></dl>
@@ -4272,7 +4308,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionoptionsvalidationusername">Input[Connection<wbr>Options<wbr>Validation<wbr>Username<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the `min` and `max` values of username length. `min` and `max` are integers.
 {{% /md %}}</dd></dl>
@@ -4327,7 +4363,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4335,7 +4371,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4347,7 +4383,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4355,7 +4391,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
